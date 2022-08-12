@@ -1,0 +1,44 @@
+/*
+===========================
+===========================
+
+MAIN STYLE
+
+Author: Hung Luong
+Email: luongquochung.249@gmail.com
+
+===========================
+===========================
+ */
+
+// CORE SETUP
+
+// Variables
+@import "variables/color";
+@import "variables/padding";
+@import "variables/zindex";
+
+// Mixins
+
+@import "mixins/transforms";
+@import "mixins/mixins";
+
+// Components
+
+@import "components/typography";
+@import "components/buttons";
+
+// Import Pages Stylesheet
+
+// Main Stylesheet
+
+@import "header";
+@import "main";
+@import "footer";
+
+@import "post_detail";
+@import "post_list";
+
+//Pages Stylesheet
+
+@import "homepage";

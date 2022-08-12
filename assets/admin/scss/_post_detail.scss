@@ -1,0 +1,162 @@
+.post-detail{
+    .container{
+        &.cover{
+            height: 300px;
+
+            margin-top: 100px;
+
+            .mask{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &.post-content{
+            padding-top: $padding-triple;
+
+            .post-content-header{
+                margin-bottom: $padding-triple;
+
+                h6{
+                    color: $primary-darkest;
+
+                    margin-bottom: $padding-base;
+                }
+
+                h4{
+                    color: $gray-base;
+
+                    margin-bottom: $padding-base;
+                }
+
+                p{
+                    font-style: italic;
+
+                    color: $gray-lightest;
+
+                    margin-bottom: $padding-base;
+                }
+
+                .post-feature{
+                    .row{
+                        .feature{
+                            margin-top: $padding-double;
+
+                            h6{
+                                font-style: italic;
+
+                                color: $primary-darkest;
+
+                                margin-bottom: 0;
+
+                                &.subtitle-sm{
+                                    color: $gray-lightest;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .post-content-body{
+                .row{
+                    .left{
+                        article{
+                            margin-bottom: $padding-triple;
+
+                            p{
+                                margin-bottom: $padding-half;
+
+                                color: $gray-lighter;
+                            }
+
+                            img{
+                                width: 100% !important;
+								height: auto !important;
+
+                                display: block;
+
+                                margin-top: $padding-base;
+                                margin-bottom: $padding-base;
+                            }
+
+                            .embed-responsive, iframe{
+                                width: 100% !important;
+
+                                margin-top: $padding-base;
+                                margin-bottom: $padding-base;
+                            }
+                        }
+                    }
+
+                    .right{
+                        .post-related{
+                            margin-bottom: $padding-double;
+
+                            .post-related-header{
+                                margin-bottom: $padding-base;
+
+                                h6{
+                                    text-transform: uppercase;
+
+                                    color: $primary-darkest;
+                                }
+                            }
+
+                            .post-related-body{
+                                .post-item{
+                                    width: 100%;
+
+                                    margin-bottom: $padding-base;
+
+                                    h6{
+                                        margin-bottom: $padding-base;
+
+                                        &.subtitle-sm{
+                                            color: $gray-lightest;
+                                        }
+                                    }
+
+                                    h5{
+                                        font-weight: 400;
+
+                                        margin-bottom: $padding-half;
+
+                                        &.text-wrapper{
+                                            height: 5.5rem;
+                                            -webkit-line-clamp: 3;
+                                        }
+
+                                        a{
+                                            color: $gray-base;
+                                        }
+                                    }
+
+                                    .mask{
+                                        width: 100%;
+                                        height: 230px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//For Devices
+@media (max-width: 767.98px){
+    .post-detail{
+        .container{
+            &.post-content{
+                .row{
+                    > .left{
+                        margin-bottom: $padding-double;
+                    }
+                }
+            }
+        }
+    }
+}

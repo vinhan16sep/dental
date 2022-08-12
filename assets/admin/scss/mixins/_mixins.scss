@@ -1,0 +1,24 @@
+// Display Flex
+
+@mixin d-flex($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+
+    justify-content: $justify;
+    align-items: $align;
+}
+
+//Set Border Radius
+
+@mixin borderRadius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+//Set Box Shadow
+@mixin boxShadow($x, $y, $blur, $color){
+    -webkit-box-shadow:  $x $y $blur $color;
+    -moz-box-shadow:  $x $y $blur $color;
+    box-shadow:  $x $y $blur $color;
+}
