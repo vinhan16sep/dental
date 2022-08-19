@@ -1,0 +1,225 @@
+@import '../settings/mixin';
+
+html,
+body {
+	width: 100%;
+	height: 100vh;
+
+	background-color: var(--bg-bw);
+
+	overflow-x: hidden;
+	@include overflow-y();
+
+	scroll-behavior: smooth;
+}
+
+.page {
+	width: 100%;
+	
+	.page-header {
+		height: 90px;
+
+		@include positionSticky(top, 0, 1030);
+
+		header {
+			height: 100%;
+
+			padding: 0 2rem;
+	
+			background-color: var(--bg-bw);
+	
+			@include d-flex(row, space-between, center);
+	
+			.header-brand {
+				a {
+					display: block;
+	
+					img {
+						height: 56px;
+					}
+				}
+			}
+	
+			.header-menu {
+				@include d-flex(row, center, center);
+	
+				a {
+					padding: 0 2rem;
+	
+					color: var(--secondary);
+	
+					font-size: 1rem;
+					font-weight: 600;
+	
+					text-transform: uppercase;
+	
+					display: block;
+	
+					position: relative;
+					z-index: 1;
+	
+					&:hover {
+						&:before {
+							width: 60%;
+		
+							@include transition();
+						}
+					}
+	
+					&.active {
+						&:before {
+							width: 60%;
+						}
+					}
+	
+					&:before {
+						content: '';
+	
+						width: 0;
+						height: 6px;
+	
+						background-color: var(--primary-alpha-20);
+						
+						position: absolute;
+						bottom: 4px;
+						left: 16px;
+						z-index: -1;
+	
+						@include transition();
+					}
+				}
+			}
+	
+			.header-search {
+				.btn {
+					color: var(--primary);
+	
+					&:hover {
+						border-color: transparent;
+					}
+				}
+			}
+	
+			.header-expand {
+				display: none;
+			}
+		}
+	}
+	
+	.page-view {
+	
+	}
+	
+	.page-footer {
+		.common-features {
+			padding: 4rem 0;
+	
+			background-color: var(--primary);
+	
+			@include positionSticky(bottom);
+	
+			.container {
+				.row {
+					> div {
+						&:not(:last-child){
+							border-right: 1px solid var(--white);
+						}
+
+						.info-item {
+							@include d-flex(column, center, center);
+
+							h5,
+							h6,
+							i {
+								color: var(--white);
+							}
+
+							i {
+								font-size: 2rem;
+
+								margin-bottom: 1.5rem;
+							}
+
+							h6 {
+								text-align: center;
+
+								&:not(:last-child){
+									margin-bottom: 0.5rem;
+								}
+
+								&.subtitle-sm {
+									color: var(--white-alpha-80);
+
+									a {
+										color: var(--white-alpha-80);
+									}
+								}
+
+								a {
+									color: var(--white);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	
+		footer {
+			padding: 8rem 0;
+	
+			background-color: var(--primary-alpha-10);
+	
+			.container {
+				.row {
+					h6 {
+						margin-bottom: 2rem;
+	
+						font-size: 1.25rem;
+						font-weight: 600;
+					}
+	
+					ul {
+						li {
+							&:not(:last-child){
+								margin-bottom: 1.25rem;
+							}
+	
+							img {
+								height: 64px;
+	
+								display: block;
+							}
+	
+							a {
+								font-size: 1rem;
+								font-weight: 400;
+	
+								color: #999;
+	
+								display: block;
+	
+								&:hover {
+									color: var(--secondary);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.footer-copyright {
+			background-color: var(--primary);
+
+			.container {
+				padding-top: 0.75rem;
+				padding-bottom: 0.75rem;
+
+				p {
+					color: var(--white);
+				}
+			}
+		}
+	}
+}

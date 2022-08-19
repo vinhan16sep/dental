@@ -1,23 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<header>
+    <div class="header-brand">
+        <a href="<?php echo base_url('/') ?>">
+            <img src="<?php echo base_url('/assets/img/logo.svg') ?>" alt="Logo Minh Dental">
+        </a>
+    </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="header-menu">
+        <a href="<?php echo base_url('/') ?>">
+            Trang chủ
+        </a>
+        <a href="<?php echo base_url('/about') ?>" class="<?php echo ($this->uri->segment(1) == 'about') ? 'active' : '' ?>">
+            Giới thiệu
+        </a>
+        <a href="<?php echo base_url('/product') ?>" class="<?php echo (($this->uri->segment(1)) == 'product') ? 'active' : ''?>">
+            Sản phẩm
+        </a>
+        <a href="<?php echo base_url('/service') ?>" class="<?php echo (($this->uri->segment(1)) == 'service') ? 'active' : ''?>">
+            Dịch vụ
+        </a>
+        <a href="<?php echo base_url('/blogs') ?>" class="<?php echo (($this->uri->segment(1)) == 'blogs') ? 'active' : ''?>">
+            Tin tức
+        </a>
+        <a href="<?php echo base_url('/contact') ?>" class="<?php echo (($this->uri->segment(1)) == 'contact') ? 'active' : ''?>">
+            Liên hệ
+        </a>
+    </div>
 
-    <title>Dental</title>
-    <!-- Favicon -->
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="<?php echo site_url('assets/') ?>images/favicon.png"> -->
-    <!-- CSS ============================================ -->
-    <!-- <link rel="stylesheet" href="<?php echo site_url('assets/css/') ?>vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo site_url('assets/css/') ?>plugins/animation.css">
-    <link rel="stylesheet" href="<?php echo site_url('assets/css/') ?>plugins/feature.css">
-    <link rel="stylesheet" href="<?php echo site_url('assets/css/') ?>plugins/magnify.min.css">
-    <link rel="stylesheet" href="<?php echo site_url('assets/css/') ?>plugins/slick.css">
-    <link rel="stylesheet" href="<?php echo site_url('assets/css/') ?>plugins/slick-theme.css">
-    <link rel="stylesheet" href="<?php echo site_url('assets/css/') ?>plugins/lightbox.css">
-    <link rel="stylesheet" href="<?php echo site_url('assets/css/') ?>style.css"> -->
-</head>
-<body>
-    <!-- COMMON HERE -->
-    COMMON (SUCH AS BANNER ...) HERE   
+    <div class="header-search">
+        <button class="btn btn-search" type="button">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+
+    <div class="header-expand">
+
+    </div>
+</header>

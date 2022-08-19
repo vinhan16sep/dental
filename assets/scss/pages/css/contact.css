@@ -1,0 +1,117 @@
+.view-contact .container {
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+}
+
+.view-contact .container .overview {
+  margin-bottom: 8rem;
+}
+
+.view-contact .container .overview h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.view-contact .container .address {
+  margin: 8rem 0;
+}
+
+.view-contact .container .address .row > div:last-child h6:before {
+  background-color: transparent;
+}
+
+.view-contact .container .address .row > div h6 {
+  margin-bottom: 4rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.view-contact .container .address .row > div h6:before {
+  content: '';
+  width: 48px;
+  height: 4px;
+  background-color: var(--primary);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.view-contact .container .address .row > div ul li:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.view-contact .container .address .row > div ul li p a {
+  color: var(--secondary);
+}
+
+.view-contact .container .map {
+  height: 500px;
+  background-color: var(--gray-1);
+  border-radius: 0.5rem;
+}
+
+.view-contact .container .map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.view-contact .container .message-form {
+  width: 1050px;
+  margin: 8rem auto 0;
+  padding: 8rem 10rem;
+  background-color: var(--primary-alpha-20);
+  border-radius: 1.5rem;
+}
+
+.view-contact .container .message-form .form-header {
+  margin-bottom: 4rem;
+}
+
+.view-contact .container .message-form .form-header h5 {
+  font-size: 1.75rem;
+  position: relative;
+}
+
+.view-contact .container .message-form .form-header h5:before {
+  content: '';
+  width: 40px;
+  height: 4px;
+  background-color: var(--primary);
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  z-index: 1;
+  -webkit-transform: translate(calc(-40px - 0.75rem), 0);
+  transform: translate(calc(-40px - 0.75rem), 0);
+}
+
+.view-contact .container .message-form .form-body .row .form-group:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.view-contact .container .message-form .form-body .row .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.view-contact .container .message-form .form-body .row .buttons .btn {
+  width: 100px;
+  background-color: var(--white);
+  border-radius: 0;
+}
+
+.view-contact .container .message-form .form-body .row .buttons .btn:hover {
+  color: var(--primary);
+}
+/*# sourceMappingURL=contact.css.map */

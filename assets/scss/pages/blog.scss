@@ -1,0 +1,61 @@
+@import '../settings/mixin';
+
+.view-blog {
+	.container {
+		padding-top: 4rem;
+		padding-bottom: 8rem;
+
+		.overview {
+			margin-bottom: 8rem;
+
+			h3 {
+				font-size: 3rem;
+				font-weight: 600;
+
+				text-transform: uppercase;
+			}
+		}
+
+		.list-items {
+			.item-sizer,
+			.item {
+				width: 33.33%;
+			}
+
+			.item {
+				padding: 0 0.75rem;
+				margin-bottom: 4rem;
+
+				h6 {
+					margin-bottom: 2rem;
+
+					font-size: 1.25rem;
+					font-weight: 600;
+
+					&:before {
+						content: '';
+
+						width: 48px;
+						height: 4px;
+
+						background-color: var(--primary);
+
+						margin-bottom: 0.75rem;
+
+						display: block;
+					}
+				}
+
+				p {
+					margin-bottom: 2rem;
+				}
+
+				img {
+					width: 100%;
+
+					@include borderRadius();
+				}
+			}
+		}
+	}
+}

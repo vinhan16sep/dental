@@ -15,6 +15,10 @@ class MY_Controller extends CI_Controller {
         $this->data['page_title'] = 'Template';
         $this->data['before_head'] = '';
         $this->data['before_body'] = '';
+
+        $this->data['the_view_title'] = 'Minh Dental';
+		$this->data['the_view_css'] = [];
+		$this->data['the_view_js'] = [];
     }
 
     protected function render($the_view = NULL, $template = 'master') {
