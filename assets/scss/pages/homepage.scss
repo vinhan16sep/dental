@@ -162,7 +162,7 @@
 
 								a {
 									&.btn {
-										width: 180px;
+										width: 230px;
 
 										@include borderRadius(0);
 
@@ -416,7 +416,7 @@
 
 										.card-body {
 											p {
-												&.sale-code {
+												&.code {
 													margin-bottom: 0.125rem;
 
 													color: var(--gray-4);

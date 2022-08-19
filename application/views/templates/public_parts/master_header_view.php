@@ -9,19 +9,19 @@
         <a href="<?php echo base_url('/') ?>">
             Trang chủ
         </a>
-        <a href="<?php echo base_url('/about') ?>">
+        <a href="<?php echo base_url('/about') ?>" class="<?php echo ($this->uri->segment(1) == 'about') ? 'active' : '' ?>">
             Giới thiệu
         </a>
-        <a href="<?php echo base_url('/product') ?>">
+        <a href="<?php echo base_url('/product') ?>" class="<?php echo (($this->uri->segment(1)) == 'product') ? 'active' : ''?>">
             Sản phẩm
         </a>
-        <a href="<?php echo base_url('/service') ?>">
+        <a href="<?php echo base_url('/service') ?>" class="<?php echo (($this->uri->segment(1)) == 'service') ? 'active' : ''?>">
             Dịch vụ
         </a>
-        <a href="<?php echo base_url('/blogs') ?>">
+        <a href="<?php echo base_url('/blogs') ?>" class="<?php echo (($this->uri->segment(1)) == 'blogs') ? 'active' : ''?>">
             Tin tức
         </a>
-        <a href="<?php echo base_url('/contact') ?>">
+        <a href="<?php echo base_url('/contact') ?>" class="<?php echo (($this->uri->segment(1)) == 'contact') ? 'active' : ''?>">
             Liên hệ
         </a>
     </div>

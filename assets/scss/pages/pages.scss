@@ -112,14 +112,56 @@ body {
 	
 	.page-footer {
 		.common-features {
-			padding: 2rem 0 ;
+			padding: 4rem 0;
 	
 			background-color: var(--primary);
 	
 			@include positionSticky(bottom);
 	
 			.container {
-				
+				.row {
+					> div {
+						&:not(:last-child){
+							border-right: 1px solid var(--white);
+						}
+
+						.info-item {
+							@include d-flex(column, center, center);
+
+							h5,
+							h6,
+							i {
+								color: var(--white);
+							}
+
+							i {
+								font-size: 2rem;
+
+								margin-bottom: 1.5rem;
+							}
+
+							h6 {
+								text-align: center;
+
+								&:not(:last-child){
+									margin-bottom: 0.5rem;
+								}
+
+								&.subtitle-sm {
+									color: var(--white-alpha-80);
+
+									a {
+										color: var(--white-alpha-80);
+									}
+								}
+
+								a {
+									color: var(--white);
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	
@@ -151,7 +193,7 @@ body {
 	
 							a {
 								font-size: 1rem;
-								font-weight: 600;
+								font-weight: 400;
 	
 								color: #999;
 	

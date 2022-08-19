@@ -10,6 +10,7 @@
 .view-blog .container .overview h3 {
   font-size: 3rem;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .view-blog .container .list-items .item-sizer,

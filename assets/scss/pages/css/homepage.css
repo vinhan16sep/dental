@@ -145,7 +145,7 @@
 }
 
 .view-homepage .section.section-about .container .section-body .about-content .row > div a.btn {
-  width: 180px;
+  width: 230px;
   border-radius: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -387,7 +387,7 @@
   -o-border-top-right-radius: 0.5rem;
 }
 
-.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body p.sale-code {
+.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body p.code {
   margin-bottom: 0.125rem;
   color: var(--gray-4);
 }

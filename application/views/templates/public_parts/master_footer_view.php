@@ -1,5 +1,64 @@
 <div class="common-features">
     <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="info-item">
+                    <i class="fas fa-paper-plane"></i>
+
+                    <h6>
+                        FREE SHIPPING
+                    </h6>
+
+                    <h6 class="subtitle-sm">
+                        NỘI THÀNH HOẶC ĐƠN HÀNG > 500.000 Đ
+                    </h6>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="info-item">
+                    <i class="fas fa-headphones"></i>
+
+                    <h6>
+                        HỖ TRỢ
+                    </h6>
+
+                    <h6 class="subtitle-sm">
+                        HỖ TRỢ 24/7
+                    </h6>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="info-item">
+                    <i class="fas fa-share-alt"></i>
+
+                    <h6>
+                        KHUYẾN MÃI
+                    </h6>
+
+                    <h6 class="subtitle-sm">
+                        PHẦN MỀM QUẢN LÝ PHÒNG KHÁM
+                    </h6>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="info-item">
+                    <i class="fas fa-phone-volume"></i>
+
+                    <h6>
+                        LIÊN HỆ
+                    </h6>
+
+                    <h6 class="subtitle-sm">
+                        <a href="tel: 0985230388">
+                            0985.230.388
+                        </a>
+                    </h6>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

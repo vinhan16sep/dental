@@ -61,24 +61,6 @@ $(document).ready(function () {
 
     getHighlightByCategory();
 
-    let swiperHighlight = new Swiper('#swiperHighlight', {
-        slidesPerView: 'auto',
-        spaceBetween: 24,
-        loop: true,
-        breakpoints: {
-            0: {
-                slidesPerView: 1
-            },
-            1024: {
-                slidesPerView: 'auto'
-            }
-        },
-        navigation: {
-            nextEl: '#swiperHighlight .swiper-button-next',
-            prevEl: '#swiperHighlight .swiper-button-prev'
-        }
-    });
-
     let swiperBlogs = new Swiper('#swiperBlogs', {
         slidesPerView: 3,
         spaceBetween: 24,
@@ -128,27 +110,66 @@ $(document).ready(function () {
 });
 
 function getHighlightByCategory(category = false) {
-    const $wrapper = $('#swiperHighlight');
-    // $wrapper.empty();
+    let url = `/homepage/getHighlightByCategory`;
 
-    // let url = `/homepage/getHighlightByCategory`;
+    if (category) {
+        url += `/${category}`;
+    }
 
-    // if (category) {
-    //     url += `/${category}`;
-    // }
+    $.ajax({
+        url: url,
+        type: 'GET',
+        dataType: 'json',
+        data: {
+            _token: $('meta[name="csrf_token"]').attr('content')
+        },
+        success: (res) => {
+            if (res) {
+                let highlights = res[0].highlights;
 
-    // $.ajax({
-    //     url: url,
-    //     type: 'GET',
-    //     dataType: 'json',
-    //     data: {
-    //         _token: $('meta[name="csrf_token"]').attr('content')
-    //     },
-    //     success: (res) => {
-    //         console.log(res);
-    //     },
-    //     error: () => {}
-    // });
+                const $wrapper = $('#swiperHighlight');
+                $wrapper.find('.swiper-wrapper').empty();
+
+                if (highlights.length > 0) {
+                    for (let i = 0; i < highlights.length; i++) {
+                        let highlight = highlights[i];
+
+                        let $slide = $('.swiper-slide-highlight-prepare').clone().show();
+                        $slide.removeClass('swiper-slide-highlight-prepare');
+
+                        $slide.find('a').attr('href', highlight.url);
+                        $slide.find('img').attr('src', highlight.image);
+                        $slide.find('img').attr('alt', highlight.title);
+                        $slide.find('.code').text(highlight.code);
+                        $slide.find('.title').text(highlight.title);
+                        $slide.find('.made-in').text(highlight.made_in);
+                        $slide.find('.standard').text(highlight.standard);
+
+                        $wrapper.find('.swiper-wrapper').append($slide);
+                    }
+
+                    let swiperHighlight = new Swiper('#swiperHighlight', {
+                        slidesPerView: 'auto',
+                        spaceBetween: 24,
+                        loop: true,
+                        breakpoints: {
+                            0: {
+                                slidesPerView: 1
+                            },
+                            1024: {
+                                slidesPerView: 'auto'
+                            }
+                        },
+                        navigation: {
+                            nextEl: '#swiperHighlight .swiper-button-next',
+                            prevEl: '#swiperHighlight .swiper-button-prev'
+                        }
+                    });
+                }
+            }
+        },
+        error: () => {}
+    });
 
     if (!category) {
         category = 'all';

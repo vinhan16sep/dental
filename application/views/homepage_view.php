@@ -249,106 +249,40 @@
 			</div>
 
 			<div class="section-body">
-				<?php
-					$highlights = [
-						0 => [
-							'code' => 'SP394',
-							'title' => 'Nồi hấp tiệt trùng A123',
-							'rating' => 4.5,
-							'made_in' => 'Trung Quốc',
-							'standard' => 'Class B',
-							'url' => '#',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						],
-						1 => [
-							'code' => 'SP394',
-							'title' => 'Nồi hấp tiệt trùng A123',
-							'rating' => 4.5,
-							'made_in' => 'Trung Quốc',
-							'standard' => 'Class B',
-							'url' => '#',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						],
-						2 => [
-							'code' => 'SP394',
-							'title' => 'Nồi hấp tiệt trùng A123',
-							'rating' => 4.5,
-							'made_in' => 'Trung Quốc',
-							'standard' => 'Class B',
-							'url' => '#',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						],
-						3 => [
-							'code' => 'SP394',
-							'title' => 'Nồi hấp tiệt trùng A123',
-							'rating' => 4.5,
-							'made_in' => 'Trung Quốc',
-							'standard' => 'Class B',
-							'url' => '#',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						],
-						4 => [
-							'code' => 'SP394',
-							'title' => 'Nồi hấp tiệt trùng A123',
-							'rating' => 4.5,
-							'made_in' => 'Trung Quốc',
-							'standard' => 'Class B',
-							'url' => '#',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						]
-					];
-				?>
-
 				<div class="swiper-container" id="swiperHighlight">
 					<div class="swiper-button-next"></div>
 					<div class="swiper-button-prev"></div>
 					
-					<div class="swiper-wrapper">
-						<?php foreach($highlights as $key => $slide): ?>
-							<div class="swiper-slide">
-								<a href="<?php echo base_url('/' . $slide['url']) ?>">
-									<div class="card">
-										<div class="img-mask">
-											<img src="<?php echo $slide['image'] ?>" alt="Dental">
-										</div>
-
-										<div class="card-body">
-											<p class="p-sm sale-code">
-												<?php echo $slide['code'] ?>
-											</p>
-
-											<h5 class="sale-title">
-												<?php echo $slide['title'] ?>
-											</h5>
-
-											<div class="star-rating">
-												<?php for($i = 1; $i < 6; $i++): ?>
-													<?php if($slide['rating'] >= $i): ?>
-														<i class="fas fa-star"></i>
-													<?php else: ?>
-														<?php if($slide['rating'] > ($i - 1)): ?>
-															<i class="fas fa-star-half-alt"></i>
-														<?php else: ?>
-															<i class="far fa-star"></i>
-														<?php endif; ?>
-													<?php endif; ?>
-												<?php endfor; ?>
-											</div>
-
-											<p class="p-sm sale-made-in">
-												Xuất xứ: <?php echo $slide['made_in'] ?>
-											</p>
-
-											<p class="p-sm sale-standard">
-												Tiêu chuẩn: <?php echo $slide['standard'] ?>
-											</p>
-										</div>
-									</div>
-								</a>
-							</div>
-						<?php endforeach; ?>
-					</div>
+					<div class="swiper-wrapper"></div>
 				</div>
+			</div>
+
+			<div class="swiper-slide swiper-slide-highlight-prepare" style="display: none;">
+				<a href="#">
+					<div class="card">
+						<div class="img-mask">
+							<img src="" alt="Dental">
+						</div>
+
+						<div class="card-body">
+							<p class="p-sm code"></p>
+
+							<h5 class="title"></h5>
+
+							<div class="star-rating">
+								
+							</div>
+
+							<p class="p-sm">
+								Xuất xứ: <span class="made-in"></span>
+							</p>
+
+							<p class="p-sm standard">
+								Tiêu chuẩn: <span class="standard"></span>
+							</p>
+						</div>
+					</div>
+				</a>
 			</div>
 		</div>
 	</div>

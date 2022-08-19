@@ -133,12 +133,63 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .page .page-footer .common-features {
-  padding: 2rem 0;
+  padding: 4rem 0;
   background-color: var(--primary);
   position: sticky;
   position: -webkit-sticky;
   bottom: 0;
   z-index: 1;
+}
+
+.page .page-footer .common-features .container .row > div:not(:last-child) {
+  border-right: 1px solid var(--white);
+}
+
+.page .page-footer .common-features .container .row > div .info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page .page-footer .common-features .container .row > div .info-item h5,
+.page .page-footer .common-features .container .row > div .info-item h6,
+.page .page-footer .common-features .container .row > div .info-item i {
+  color: var(--white);
+}
+
+.page .page-footer .common-features .container .row > div .info-item i {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.page .page-footer .common-features .container .row > div .info-item h6 {
+  text-align: center;
+}
+
+.page .page-footer .common-features .container .row > div .info-item h6:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.page .page-footer .common-features .container .row > div .info-item h6.subtitle-sm {
+  color: var(--white-alpha-80);
+}
+
+.page .page-footer .common-features .container .row > div .info-item h6.subtitle-sm a {
+  color: var(--white-alpha-80);
+}
+
+.page .page-footer .common-features .container .row > div .info-item h6 a {
+  color: var(--white);
 }
 
 .page .page-footer footer {
@@ -163,7 +214,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .page .page-footer footer .container .row ul li a {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   color: #999;
   display: block;
 }

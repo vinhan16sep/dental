@@ -35,10 +35,58 @@ class Homepage extends Public_Controller {
 	public function getHighlightByCategory()
 	{
 		$category = $this->input->get('category');
-		echo $category;
 
-		$html = $this->render('_ajax/_homepage_highlight');
+		$highlights = [
+			0 => [
+				'code' => 'SP394',
+				'title' => 'Nồi hấp tiệt trùng A123',
+				'rating' => 4.5,
+				'made_in' => 'Trung Quốc',
+				'standard' => 'Class B',
+				'url' => '#',
+				'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
+			],
+			1 => [
+				'code' => 'SP394',
+				'title' => 'Nồi hấp tiệt trùng A123',
+				'rating' => 4.5,
+				'made_in' => 'Trung Quốc',
+				'standard' => 'Class B',
+				'url' => '#',
+				'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
+			],
+			2 => [
+				'code' => 'SP394',
+				'title' => 'Nồi hấp tiệt trùng A123',
+				'rating' => 4.5,
+				'made_in' => 'Trung Quốc',
+				'standard' => 'Class B',
+				'url' => '#',
+				'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
+			],
+			3 => [
+				'code' => 'SP394',
+				'title' => 'Nồi hấp tiệt trùng A123',
+				'rating' => 4.5,
+				'made_in' => 'Trung Quốc',
+				'standard' => 'Class B',
+				'url' => '#',
+				'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
+			],
+			4 => [
+				'code' => 'SP394',
+				'title' => 'Nồi hấp tiệt trùng A123',
+				'rating' => 4.5,
+				'made_in' => 'Trung Quốc',
+				'standard' => 'Class B',
+				'url' => '#',
+				'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
+			]
+		];
 
-		$this->response->setJson(['html' => $html]);
+		return $this->output
+                ->set_content_type('application/json')
+                ->set_status_header(HTTP_SUCCESS)
+                ->set_output(json_encode(array(['highlights' => $highlights])));
 	}
 }
