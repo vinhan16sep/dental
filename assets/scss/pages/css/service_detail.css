@@ -104,6 +104,10 @@
   padding-left: 4rem;
 }
 
+.view-service-detail .container .service-content .row > div .content-related .related-body .swiper-container {
+  padding-bottom: 3rem;
+}
+
 .view-service-detail .container .service-content .row > div .content-related .related-body .swiper-container:hover .swiper-button-next,
 .view-service-detail .container .service-content .row > div .content-related .related-body .swiper-container:hover .swiper-button-prev {
   -webkit-transform: translate(0, 0);

@@ -18,7 +18,7 @@ $(document).ready(function () {
         loop: true,
         breakpoints: {
             0: {
-                slidesPerView: 1
+                slidesPerView: 2
             },
             1024: {
                 slidesPerView: 'auto'
@@ -27,6 +27,9 @@ $(document).ready(function () {
         navigation: {
             nextEl: '#swiperClient .swiper-button-next',
             prevEl: '#swiperClient .swiper-button-prev'
+        },
+        pagination: {
+            el: '#swiperClient .swiper-pagination'
         }
     });
 
@@ -44,6 +47,9 @@ $(document).ready(function () {
         navigation: {
             nextEl: '#swiperFaq .swiper-button-next',
             prevEl: '#swiperFaq .swiper-button-prev'
+        },
+        pagination: {
+            el: '#swiperFaq .swiper-pagination'
         }
     });
 });

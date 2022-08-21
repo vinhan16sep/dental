@@ -133,3 +133,21 @@
 		}
 	}
 }
+
+@media screen and (max-width: 576.98px) {
+	.view-blog-detail {
+		.container {
+			.blog-overview {
+				.row{
+					> div {
+						h3 {
+							margin-bottom: 4rem;
+							
+							font-size: 2rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}

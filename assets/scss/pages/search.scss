@@ -1,0 +1,35 @@
+@import '../settings/mixin';
+
+.view-search {
+	.container {
+		padding-top: 4rem;
+		padding-bottom: 8rem;
+
+		.overview {
+			margin-bottom: 8rem;
+
+			h3 {
+				font-size: 3rem;
+				font-weight: 600;
+
+				text-transform: uppercase;
+			}
+		}
+
+		.list-items {
+			.list-items-body {
+				.item {
+					.item-row {
+						> div {
+							.img-mask {
+								height: 230px;
+
+								@include borderRadius();
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

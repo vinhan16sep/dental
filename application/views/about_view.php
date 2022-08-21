@@ -145,6 +145,8 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="swiper-container" id="swiperClient">
+								<div class="swiper-pagination"></div>
+
 								<div class="swiper-button-next"></div>
 								<div class="swiper-button-prev"></div>
 								
@@ -195,6 +197,8 @@
 					];
 				?>
 				<div class="swiper-container" id="swiperFaq">
+					<div class="swiper-pagination"></div>
+
 					<div class="swiper-button-next"></div>
 					<div class="swiper-button-prev"></div>
 					

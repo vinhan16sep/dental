@@ -44,6 +44,8 @@
         <script src="<?php echo base_url('assets/plugins/jquery/jquery-3.6.0.min.js') ?>"></script>
         <script src="<?php echo base_url('assets/plugins/bootstrap/js/bootstrap.min.js') ?>"></script>
 
+        <script src="<?php echo base_url('assets/js/common.min.js') ?>"></script>
+
         <?php if(count($the_view_js) > 0):?>
             <?php foreach($the_view_js as $js): ?>
                 <?php echo '<script src="' . base_url($js) . '"></script>' ?>

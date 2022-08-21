@@ -187,7 +187,7 @@
 
 		.container {
 			padding-top: 8rem;
-			padding-bottom: 8rem;
+			padding-bottom: 5rem;
 
 			background-color: var(--secondary-alpha-20);
 
@@ -230,6 +230,8 @@
 				}
 
 				.swiper-container {
+					padding-bottom: 3rem;
+
 					&:hover {
 						.swiper-button-next,
 						.swiper-button-prev {
@@ -381,6 +383,54 @@
 							}
 						}
 					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576.98px) {
+	.view-about {
+		.overview {
+			.container {
+				.overview-header,
+				.overview-body {
+					padding-left: 0;
+				}
+			}
+		}
+
+		.detail {
+			.container {
+				.detail-content {
+					padding-left: 0;
+				}
+			}
+		}
+
+		.library {
+			.library-body {
+				.list-images {
+					.item-sizer,
+					.item {
+						width: 50%;
+					}
+				}
+			}
+		}
+
+		.client {
+			.container {
+				.client-header {
+					padding-left: 3rem;
+				}
+			}
+		}
+
+		.faq {
+			.container {
+				.faq-header {
+					padding-left: 3rem;
 				}
 			}
 		}

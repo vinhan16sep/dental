@@ -20,7 +20,7 @@
 							'rating' => 4.5,
 							'made_in' => 'Trung Quốc',
 							'standard' => 'Class B',
-							'url' => '#',
+							'url' => '/product/detail',
 							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
 						],
 						1 => [
@@ -29,7 +29,7 @@
 							'rating' => 4.5,
 							'made_in' => 'Trung Quốc',
 							'standard' => 'Class B',
-							'url' => '#',
+							'url' => '/product/detail',
 							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
 						],
 						2 => [
@@ -38,7 +38,7 @@
 							'rating' => 4.5,
 							'made_in' => 'Trung Quốc',
 							'standard' => 'Class B',
-							'url' => '#',
+							'url' => '/product/detail',
 							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
 						],
 						3 => [
@@ -47,7 +47,7 @@
 							'rating' => 4.5,
 							'made_in' => 'Trung Quốc',
 							'standard' => 'Class B',
-							'url' => '#',
+							'url' => '/product/detail',
 							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
 						],
 						4 => [
@@ -56,13 +56,15 @@
 							'rating' => 4.5,
 							'made_in' => 'Trung Quốc',
 							'standard' => 'Class B',
-							'url' => '#',
+							'url' => '/product/detail',
 							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
 						]
 					];
 				?>
 
 				<div class="swiper-container" id="swiperHighlight">
+					<div class="swiper-pagination"></div>
+					
 					<div class="swiper-button-next"></div>
 					<div class="swiper-button-prev"></div>
 					
@@ -235,7 +237,7 @@
 						<div class="row">
 							<?php for($i = 0; $i < 11; $i++): ?>
 								<div class="col-lg-4">
-									<a href="#">
+									<a href="<?php echo '/product/detail' ?>">
 										<div class="card">
 											<div class="ratio-wrapper ratio-wrapper-16-9">
 												<div class="img-mask">
