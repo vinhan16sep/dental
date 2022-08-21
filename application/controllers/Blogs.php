@@ -37,9 +37,7 @@ class Blogs extends Public_Controller {
 		$this->data['the_view_css'] = [
 			'assets/scss/pages/css/min/blog_detail.min.css'
 		];
-		$this->data['the_view_js'] = [
-			'assets/js/service_detail/function.min.js'
-		];
+		$this->data['the_view_js'] = [];
 
 		$this->render('blog_detail_view');
 	}

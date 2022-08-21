@@ -14,6 +14,9 @@ $(document).ready(function () {
         navigation: {
             nextEl: '#swiperHighlight .swiper-button-next',
             prevEl: '#swiperHighlight .swiper-button-prev'
+        },
+        pagination: {
+            el: '#swiperHighlight .swiper-pagination'
         }
     });
 });

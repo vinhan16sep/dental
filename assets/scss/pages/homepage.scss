@@ -206,7 +206,7 @@
 		&.section-flash-sale {
 			.container {
 				padding-top: 8rem;
-				padding-bottom: 8rem;
+				padding-bottom: 5rem;
 
 				background-color: var(--primary-alpha-20);
 
@@ -214,6 +214,8 @@
 
 				.section-body {
 					.swiper-container {
+						padding-bottom: 3rem;
+
 						&:hover {
 							.swiper-button-next,
 							.swiper-button-prev {
@@ -305,6 +307,8 @@
 		}
 
 		&.section-highlight {
+			margin-bottom: 5rem;
+
 			.container {
 				.section-header {
 					ul {
@@ -360,6 +364,8 @@
 
 				.section-body {
 					.swiper-container {
+						padding-bottom: 3rem;
+
 						&:hover {
 							.swiper-button-next,
 							.swiper-button-prev {
@@ -447,7 +453,7 @@
 		&.section-blogs {
 			.container {
 				padding-top: 8rem;
-				padding-bottom: 8rem;
+				padding-bottom: 5rem;
 
 				background-color: var(--secondary-alpha-20);
 
@@ -455,6 +461,8 @@
 
 				.section-body {
 					.swiper-container {
+						padding-bottom: 3rem;
+
 						&:hover {
 							.swiper-button-next,
 							.swiper-button-prev {
@@ -538,6 +546,8 @@
 		}
 
 		&.section-client {
+			margin-bottom: 5rem;
+
 			.container {
 				.section-body {
 					.client-content {
@@ -545,6 +555,8 @@
 					}
 					
 					.swiper-container {
+						padding-bottom: 3rem;
+						
 						&:hover {
 							.swiper-button-next,
 							.swiper-button-prev {
@@ -638,6 +650,117 @@
 
 			.section-body {
 				padding-left: calc(100% / 12 - 1.5rem);
+
+				.swiper-container {
+					.swiper-pagination {
+						.swiper-pagination-bullet {
+							border-color: var(--primary);
+
+							&.swiper-pagination-bullet-active {
+								background-color: var(--primary);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576.98px) {
+	.view-homepage {
+		.section {
+			&.section-cover {
+				.cover-content {
+					top: 20%;
+					left: 5%;
+
+					h2 {
+						margin-bottom: 4rem;
+
+						font-size: 2.5rem;
+
+						&:after {
+							width: 130px;
+							height: 6px;
+						}
+					}
+
+					.btn {
+						font-size: 1.125rem;
+					}
+				}
+
+				.swiper-container {
+					width: 100%;
+
+					margin-top: 10rem;
+					margin-left: 1.5rem;
+
+					.swiper-pagination {
+						.swiper-pagination-bullet {
+							width: 30px;
+						}
+					}
+
+					.swiper-wrapper {
+						.swiper-slide {
+							a {
+								.ratio-wrapper {
+									&.ratio-wrapper-16-9 {
+										padding-top: 100%;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.section-about {
+				.container {
+					.section-body {
+						.about-content {
+							.row {
+								> div {
+									&:first-child {
+										margin-bottom: 1.5rem;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.section-highlight {
+				.container {
+					.section-header {
+						ul {
+							display: none;
+						}
+					}
+				}
+			}
+
+			&.section-client {
+				.container {
+					.section-body {
+						.swiper-container {
+							.swiper-wrapper{
+								.swiper-slide {
+									width: auto;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.container {
+				.section-header {
+					padding-left: 3rem;
+				}
 			}
 		}
 	}

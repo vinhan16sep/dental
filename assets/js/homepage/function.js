@@ -56,6 +56,9 @@ $(document).ready(function () {
         navigation: {
             nextEl: '#swiperFlashSale .swiper-button-next',
             prevEl: '#swiperFlashSale .swiper-button-prev'
+        },
+        pagination: {
+            el: '#swiperFlashSale .swiper-pagination'
         }
     });
 
@@ -76,6 +79,9 @@ $(document).ready(function () {
         navigation: {
             nextEl: '#swiperBlogs .swiper-button-next',
             prevEl: '#swiperBlogs .swiper-button-prev'
+        },
+        pagination: {
+            el: '#swiperBlogs .swiper-pagination'
         }
     });
 
@@ -84,7 +90,7 @@ $(document).ready(function () {
         loop: true,
         breakpoints: {
             0: {
-                slidesPerView: 1
+                slidesPerView: 2
             },
             1024: {
                 slidesPerView: 'auto'
@@ -93,6 +99,9 @@ $(document).ready(function () {
         navigation: {
             nextEl: '#swiperClient .swiper-button-next',
             prevEl: '#swiperClient .swiper-button-prev'
+        },
+        pagination: {
+            el: '#swiperClient .swiper-pagination'
         }
     });
 
@@ -163,6 +172,9 @@ function getHighlightByCategory(category = false) {
                         navigation: {
                             nextEl: '#swiperHighlight .swiper-button-next',
                             prevEl: '#swiperHighlight .swiper-button-prev'
+                        },
+                        pagination: {
+                            el: '#swiperHighlight .swiper-pagination'
                         }
                     });
                 }

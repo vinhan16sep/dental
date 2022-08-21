@@ -145,7 +145,7 @@
 
 .view-about .client .container {
   padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-bottom: 5rem;
   background-color: var(--secondary-alpha-20);
   border-radius: 1.5rem;
 }
@@ -192,6 +192,10 @@
 
 .view-about .client .container .client-body .client-content {
   padding-top: 3rem;
+}
+
+.view-about .client .container .client-body .swiper-container {
+  padding-bottom: 3rem;
 }
 
 .view-about .client .container .client-body .swiper-container:hover .swiper-button-next,
@@ -350,5 +354,25 @@
 .view-about .faq .container .faq-body .swiper-container .swiper-wrapper .swiper-slide .card .card-body h6 {
   margin-bottom: 1.5rem;
   font-weight: 600;
+}
+
+@media screen and (max-width: 576.98px) {
+  .view-about .overview .container .overview-header,
+  .view-about .overview .container .overview-body {
+    padding-left: 0;
+  }
+  .view-about .detail .container .detail-content {
+    padding-left: 0;
+  }
+  .view-about .library .library-body .list-images .item-sizer,
+  .view-about .library .library-body .list-images .item {
+    width: 50%;
+  }
+  .view-about .client .container .client-header {
+    padding-left: 3rem;
+  }
+  .view-about .faq .container .faq-header {
+    padding-left: 3rem;
+  }
 }
 /*# sourceMappingURL=about.css.map */

@@ -46,4 +46,11 @@
   width: 100%;
   border-radius: 0.5rem;
 }
+
+@media screen and (max-width: 576.98px) {
+  .view-blog .container .list-items .item-sizer,
+  .view-blog .container .list-items .item {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=blog.css.map */

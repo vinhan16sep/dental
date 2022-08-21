@@ -171,6 +171,8 @@
 				?>
 
 				<div class="swiper-container" id="swiperFlashSale">
+					<div class="swiper-pagination"></div>
+
 					<div class="swiper-button-next"></div>
 					<div class="swiper-button-prev"></div>
 					
@@ -250,6 +252,8 @@
 
 			<div class="section-body">
 				<div class="swiper-container" id="swiperHighlight">
+					<div class="swiper-pagination"></div>
+
 					<div class="swiper-button-next"></div>
 					<div class="swiper-button-prev"></div>
 					
@@ -337,6 +341,8 @@
 				?>
 
 				<div class="swiper-container" id="swiperBlogs">
+					<div class="swiper-pagination"></div>
+
 					<div class="swiper-button-next"></div>
 					<div class="swiper-button-prev"></div>
 					
@@ -397,6 +403,8 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="swiper-container" id="swiperClient">
+								<div class="swiper-pagination"></div>
+								
 								<div class="swiper-button-next"></div>
 								<div class="swiper-button-prev"></div>
 								

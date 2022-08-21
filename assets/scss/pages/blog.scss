@@ -59,3 +59,16 @@
 		}
 	}
 }
+
+@media screen and (max-width: 576.98px) {
+	.view-blog {
+		.container {
+			.list-items {
+				.item-sizer,
+				.item {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

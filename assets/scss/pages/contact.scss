@@ -141,3 +141,29 @@
 		}
 	}
 }
+
+@media screen and (max-width: 576.98px) {
+	.view-contact {
+		.container {
+			.address {
+				.row {
+					> div {
+						&:not(:last-child) {
+							margin-bottom: 2rem;
+						}
+					}
+				}
+			}
+
+			.message-form {
+				width: 100%;
+
+				padding: 4rem 1.5rem;
+
+				.form-header {
+					padding-left: 2rem;
+				}
+			}
+		}
+	}
+}

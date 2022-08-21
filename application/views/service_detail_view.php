@@ -76,6 +76,8 @@
 							?>
 
 							<div class="swiper-container" id="swiperRelated">
+								<div class="swiper-pagination"></div>
+								
 								<div class="swiper-button-next"></div>
 								<div class="swiper-button-prev"></div>
 								

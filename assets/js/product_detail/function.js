@@ -13,6 +13,9 @@ $(document).ready(function () {
         navigation: {
             nextEl: '#swiperRelated .swiper-button-next',
             prevEl: '#swiperRelated .swiper-button-prev'
+        },
+        pagination: {
+            el: '#swiperRelated .swiper-pagination'
         }
     });
 });
