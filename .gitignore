@@ -3,4 +3,5 @@ assets/upload
 source
 thumbs
 application/logs
-/application/config/development
+/application/config/development/config.php
+/application/config/development/database.php
