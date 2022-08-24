@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 12, 2022 at 05:41 PM
+-- Generation Time: Aug 24, 2022 at 07:14 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.0.33
 
@@ -63,6 +63,31 @@ CREATE TABLE `banner` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `brand`
+--
+
+CREATE TABLE `brand` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `is_active` tinyint(1) NOT NULL DEFAULT '0',
+  `is_deleted` tinyint(1) NOT NULL DEFAULT '0',
+  `created_at` int(10) NOT NULL,
+  `created_by` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `updated_at` int(10) NOT NULL,
+  `updated_by` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `brand`
+--
+
+INSERT INTO `brand` (`id`, `title`, `slug`, `is_active`, `is_deleted`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES
+(1, 'Lafomed', 'lafomed', 1, 0, 1661357574, 'administrator', 1661357590, 'administrator');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `ci_sessions`
 --
 
@@ -72,6 +97,28 @@ CREATE TABLE `ci_sessions` (
   `timestamp` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `data` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=COMPACT;
+
+--
+-- Dumping data for table `ci_sessions`
+--
+
+INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
+('8ndlhishhdv6811d4l3u04knrr65812p', '::1', 1661358900, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313335383930303b6c616e67416262726576696174696f6e7c733a323a227669223b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231363630333138353638223b6c6173745f636865636b7c693a313636313335343336373b),
+('91kd51t9hn6mjhdspuic1bbbn2m838es', '::1', 1661354367, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313335343336373b6c616e67416262726576696174696f6e7c733a323a227669223b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231363630333138353638223b6c6173745f636865636b7c693a313636313335343336373b),
+('c04r7bpu8i126g3lih5fv1bqpqjboi0o', '::1', 1661361236, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313336313233363b6c616e67416262726576696174696f6e7c733a323a227669223b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231363630333138353638223b6c6173745f636865636b7c693a313636313335343336373b),
+('eufgcs8j3rd3474ac56ehdqmmqip6tbt', '::1', 1660318995, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303331383935333b6c616e67416262726576696174696f6e7c733a323a227669223b),
+('hsam3vsjvokbvd996vvt6tab1rp2tfn7', '::1', 1661359905, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313335393930353b6c616e67416262726576696174696f6e7c733a323a227669223b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231363630333138353638223b6c6173745f636865636b7c693a313636313335343336373b),
+('lcg7hpnu80v0jjqh9430tb12oef7fl4r', '::1', 1661361239, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313336313233363b6c616e67416262726576696174696f6e7c733a323a227669223b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231363630333138353638223b6c6173745f636865636b7c693a313636313335343336373b),
+('nkcalpvu5fkenn5nso0c99j0obq32bi9', '::1', 1661357135, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313335373133353b6c616e67416262726576696174696f6e7c733a323a227669223b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231363630333138353638223b6c6173745f636865636b7c693a313636313335343336373b),
+('otklulove4q6j98naid6iijqbbkqahc4', '::1', 1661357971, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313335373937313b6c616e67416262726576696174696f6e7c733a323a227669223b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231363630333138353638223b6c6173745f636865636b7c693a313636313335343336373b),
+('r2h04nhn9ffec1kndlj3u8hgjea95uqu', '127.0.0.1', 1661354366, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313335343336363b6c616e67416262726576696174696f6e7c733a323a227669223b),
+('r4c1jc2okraomruknrtpl1702mn4ls64', '::1', 1661360242, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313336303234323b6c616e67416262726576696174696f6e7c733a323a227669223b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231363630333138353638223b6c6173745f636865636b7c693a313636313335343336373b),
+('r7ilq17i495po9bkmk86hcetlj3fj7sg', '::1', 1660750011, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303735303031313b6c616e67416262726576696174696f6e7c733a323a227669223b),
+('rf0uc6vsvuqh9uoa08bno03grv5lrqci', '::1', 1661359580, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313335393538303b6c616e67416262726576696174696f6e7c733a323a227669223b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231363630333138353638223b6c6173745f636865636b7c693a313636313335343336373b),
+('s1sg7i7ofe1bel00iq1kcb80v49prnkm', '::1', 1661356726, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313335363732363b6c616e67416262726576696174696f6e7c733a323a227669223b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231363630333138353638223b6c6173745f636865636b7c693a313636313335343336373b),
+('sp2bjsihcek82gs929it90v6nndmh834', '::1', 1661357513, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313335373531333b6c616e67416262726576696174696f6e7c733a323a227669223b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231363630333138353638223b6c6173745f636865636b7c693a313636313335343336373b6d6573736167655f737563636573737c733a31393a2253e1bbad61207468c3a06e682063c3b46e6721223b5f5f63695f766172737c613a313a7b733a31353a226d6573736167655f73756363657373223b733a333a226f6c64223b7d),
+('ukvss5cnbai4l3r2rsikt699ogu4hcis', '::1', 1661356293, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313335363239333b6c616e67416262726576696174696f6e7c733a323a227669223b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231363630333138353638223b6c6173745f636865636b7c693a313636313335343336373b),
+('unos226ikgdkf563siumdh8l1vhpn5h6', '::1', 1661358477, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313335383437373b6c616e67416262726576696174696f6e7c733a323a227669223b6964656e746974797c733a31353a2261646d696e4061646d696e2e636f6d223b656d61696c7c733a31353a2261646d696e4061646d696e2e636f6d223b757365725f69647c733a313a2231223b6f6c645f6c6173745f6c6f67696e7c733a31303a2231363630333138353638223b6c6173745f636865636b7c693a313636313335343336373b);
 
 -- --------------------------------------------------------
 
@@ -168,6 +215,31 @@ CREATE TABLE `news` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `origin`
+--
+
+CREATE TABLE `origin` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `is_active` tinyint(1) NOT NULL DEFAULT '0',
+  `is_deleted` tinyint(1) NOT NULL DEFAULT '0',
+  `created_at` int(10) NOT NULL,
+  `created_by` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `updated_at` int(10) NOT NULL,
+  `updated_by` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `origin`
+--
+
+INSERT INTO `origin` (`id`, `title`, `slug`, `is_active`, `is_deleted`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES
+(1, 'Mỹ', 'my', 1, 0, 1661356845, 'administrator', 1661357282, 'administrator');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `product`
 --
 
@@ -176,21 +248,30 @@ CREATE TABLE `product` (
   `category_id` int(11) NOT NULL,
   `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `slug` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `size` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `image` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
   `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
   `body` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-  `iframe` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
   `meta_keywords` varchar(1000) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `meta_description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+  `warranty` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `is_focus` tinyint(1) NOT NULL DEFAULT '0',
+  `is_sale` tinyint(1) NOT NULL DEFAULT '0',
+  `origin_id` int(11) NOT NULL,
+  `brand_id` int(11) NOT NULL,
   `is_active` tinyint(4) NOT NULL DEFAULT '0',
   `is_deleted` tinyint(4) NOT NULL DEFAULT '0',
   `created_at` int(10) NOT NULL,
   `created_by` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `updated_at` int(10) NOT NULL,
-  `updated_by` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `tag` text CHARACTER SET utf8 COLLATE utf8_unicode_ci
+  `updated_by` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id`, `category_id`, `title`, `slug`, `image`, `description`, `body`, `meta_keywords`, `meta_description`, `warranty`, `is_focus`, `is_sale`, `origin_id`, `brand_id`, `is_active`, `is_deleted`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES
+(1, 1, 'Tay lấy cao Woodpecker', 'tay-lay-cao-woodpecker', '25ff158dd1fca3f12c3f0b18f0c6f6c2.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '<strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br /><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', NULL, NULL, '12 tháng', 0, 1, 1, 1, 1, 0, 1661358900, 'administrator', 1661360026, 'administrator');
 
 -- --------------------------------------------------------
 
@@ -213,6 +294,13 @@ CREATE TABLE `product_category` (
   `updated_at` int(10) NOT NULL,
   `updated_by` varchar(50) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `product_category`
+--
+
+INSERT INTO `product_category` (`id`, `title`, `slug`, `image`, `description`, `meta_keywords`, `meta_description`, `is_active`, `is_deleted`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES
+(1, 'Tay khoan nha khoa', 'tay-khoan-nha-khoa', NULL, NULL, NULL, NULL, 1, 0, 1661357715, 'administrator', 1661357728, 'administrator');
 
 -- --------------------------------------------------------
 
@@ -299,7 +387,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`, `address`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, 'CyM4eFt4yCWJ89hmtn8gGe', 1268889823, 1660318568, 1, 'Admin', 'istrator', 'ADMIN', '0', NULL);
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, 'CyM4eFt4yCWJ89hmtn8gGe', 1268889823, 1661354367, 1, 'Admin', 'istrator', 'ADMIN', '0', NULL);
 
 -- --------------------------------------------------------
 
@@ -337,6 +425,12 @@ ALTER TABLE `banner`
   ADD PRIMARY KEY (`id`) USING BTREE;
 
 --
+-- Indexes for table `brand`
+--
+ALTER TABLE `brand`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `ci_sessions`
 --
 ALTER TABLE `ci_sessions`
@@ -371,6 +465,12 @@ ALTER TABLE `login_attempts`
 -- Indexes for table `news`
 --
 ALTER TABLE `news`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `origin`
+--
+ALTER TABLE `origin`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -429,6 +529,12 @@ ALTER TABLE `banner`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `brand`
+--
+ALTER TABLE `brand`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `config`
 --
 ALTER TABLE `config`
@@ -444,7 +550,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `groups`
 --
 ALTER TABLE `groups`
-  MODIFY `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `login_attempts`
@@ -459,16 +565,22 @@ ALTER TABLE `news`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `origin`
+--
+ALTER TABLE `origin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `product_category`
 --
 ALTER TABLE `product_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `service`
@@ -486,13 +598,13 @@ ALTER TABLE `service_category`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users_groups`
 --
 ALTER TABLE `users_groups`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
