@@ -1,0 +1,7 @@
+vendor
+.idea
+assets/upload
+source
+thumbs
+application/logs
+/application/config/development
