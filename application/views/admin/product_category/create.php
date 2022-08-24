@@ -52,30 +52,6 @@
                             </div>
                         </div>
 
-                        <!-- <div class="form-group col-md-12">
-                            <?php
-                            echo form_label('Meta Keywords', 'meta_keywords');
-                            echo form_error('meta_keywords');
-                            echo form_textarea('meta_keywords', set_value('meta_keywords'), 'class="form-control" id="meta_keywords"');
-                            ?>
-                        </div>
-
-                        <div class="form-group col-md-12">
-                            <?php
-                            echo form_label('Meta Description', 'meta_description');
-                            echo form_error('meta_description');
-                            echo form_textarea('meta_description', set_value('meta_description'), 'class="form-control" id="meta_description"');
-                            ?>
-                        </div> -->
-
-                        <div class="form-group col-md-12">
-                            <?php
-                            echo form_label('Giới thiệu', 'description');
-                            echo form_error('description');
-                            echo form_textarea('description', set_value('description'), 'class="form-control tinymce-area" id="description"');
-                            ?>
-                        </div>
-
                         <div class="form-group col-md-12">
                             <?php
                             echo form_label('Trạng thái', 'is_active');

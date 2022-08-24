@@ -54,7 +54,7 @@ if($this->ion_auth->logged_in()) {
                     </ul>
                 </li>
                 <!-- Show slide Academy -->
-                <li class="treeview <?php echo ($this->uri->segment(2) == 'product_category' || $this->uri->segment(2) == 'product' )? 'active' : '' ?>" style="border-bottom: none;">
+                <li class="treeview <?php echo ($this->uri->segment(2) == 'product_category' || $this->uri->segment(2) == 'product' || $this->uri->segment(2) == 'origin' || $this->uri->segment(2) == 'brand' ) ? 'active' : '' ?>" style="border-bottom: none;">
                     <a href="">
                         <i class="fa fa-bars"></i>
                         <span>Quản lý sản phẩm</span>
@@ -65,6 +65,12 @@ if($this->ion_auth->logged_in()) {
                     <ul class="treeview-menu">
                         <li class="<?php echo ( $this->uri->segment(2) == 'product_category' )? 'active' : '' ?>" >
                             <a href="<?php echo base_url('admin/product_category') ?>"><i class="fa fa-calendar-o" aria-hidden="true"></i> <span>Danh mục</span></a>
+                        </li>
+                        <li class="<?php echo ( $this->uri->segment(2) == 'origin' )? 'active' : '' ?>" >
+                            <a href="<?php echo base_url('admin/origin') ?>"><i class="fa fa-leanpub" aria-hidden="true"></i> <span>Xuất xứ</span></a>
+                        </li>
+                        <li class="<?php echo ( $this->uri->segment(2) == 'brand' )? 'active' : '' ?>" >
+                            <a href="<?php echo base_url('admin/brand') ?>"><i class="fa fa-leanpub" aria-hidden="true"></i> <span>Thương hiệu</span></a>
                         </li>
                         <li class="<?php echo ( $this->uri->segment(2) == 'product' )? 'active' : '' ?>" >
                             <a href="<?php echo base_url('admin/product') ?>"><i class="fa fa-leanpub" aria-hidden="true"></i> <span>Sản phẩm</span></a>

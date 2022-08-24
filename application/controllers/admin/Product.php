@@ -9,6 +9,8 @@ class Product extends Admin_Controller{
 		parent::__construct();
 		$this->load->model('product_model');
 		$this->load->model('product_category_model');
+		$this->load->model('origin_model');
+		$this->load->model('brand_model');
 		$this->load->helper('common_helper');
         $this->author_data = handle_author_common_data();
 	}
@@ -43,6 +45,8 @@ class Product extends Admin_Controller{
 	public function detail($id){
         $detail = $this->product_model->get_by_id($id);
         $detail['category'] = $this->product_category_model->get_by_id($detail['category_id'])['title'];
+        $detail['origin'] = $this->origin_model->get_by_id($detail['origin_id'])['title'];
+        $detail['brand'] = $this->brand_model->get_by_id($detail['brand_id'])['title'];
         $this->data['detail'] = $detail;
         $this->render('admin/product/detail');
     }
@@ -56,10 +60,16 @@ class Product extends Admin_Controller{
         $this->load->library('form_validation');
 
         $category = $this->product_category_model->get_all();
+        $origins = $this->origin_model->get_all();
+        $brands = $this->brand_model->get_all();
         $this->data['category'] = $category;
+        $this->data['origins'] = $origins;
+        $this->data['brands'] = $brands;
         
         $this->form_validation->set_rules('title', 'Tiêu đề product', 'required');
         $this->form_validation->set_rules('parent_id', 'Danh mục', 'required');
+        $this->form_validation->set_rules('origin_id', 'Xuất xứ', 'required');
+        $this->form_validation->set_rules('brand_id', 'Thương hiệu', 'required');
         $this->form_validation->set_rules('image', 'Hình ảnh', 'callback_check_file');
 
         if ($this->form_validation->run() == FALSE) {
@@ -82,8 +92,12 @@ class Product extends Admin_Controller{
                     'image' => $images,
                     'slug' => $unique_slug,
                     'title' => $this->input->post('title'),
-                    'size' => $this->input->post('size'),
+                    'warranty' => $this->input->post('warranty'),
                     'category_id' => $this->input->post('parent_id'),
+                    'origin_id' => $this->input->post('origin_id'),
+                    'brand_id' => $this->input->post('brand_id'),
+                    'is_focus' => $this->input->post('is_focus'),
+                    'is_sale' => $this->input->post('is_sale'),
                     'description' => $this->input->post('description'),
                     'body' => $this->input->post('body'),
                     'is_active' => $this->input->post('is_active'),
@@ -114,9 +128,16 @@ class Product extends Admin_Controller{
             $this->session->set_flashdata('message_error', MESSAGE_ISSET_ERROR);
             redirect('admin/product');
         }
-        $category = $this->product_category_model->get_all();
-        $this->data['category'] = $category;
+
         $this->data['detail'] = $detail;
+
+        $category = $this->product_category_model->get_all();
+        $origins = $this->origin_model->get_all();
+        $brands = $this->brand_model->get_all();
+        $this->data['category'] = $category;
+        $this->data['origins'] = $origins;
+        $this->data['brands'] = $brands;
+        
 
         $this->form_validation->set_rules('title', 'Tiêu đề product', 'required');
         $this->form_validation->set_rules('parent_id', 'Danh mục', 'required');
@@ -148,8 +169,12 @@ class Product extends Admin_Controller{
                 $data = array(
                     'slug' => $unique_slug,
                     'title' => $this->input->post('title'),
-                    'size' => $this->input->post('size'),
+                    'warranty' => $this->input->post('warranty'),
                     'category_id' => $this->input->post('parent_id'),
+                    'origin_id' => $this->input->post('origin_id'),
+                    'brand_id' => $this->input->post('brand_id'),
+                    'is_focus' => $this->input->post('is_focus'),
+                    'is_sale' => $this->input->post('is_sale'),
                     'description' => $this->input->post('description'),
                     'body' => $this->input->post('body'),
                     'is_active' => $this->input->post('is_active'),
@@ -157,6 +182,8 @@ class Product extends Admin_Controller{
                 if ( !empty($_FILES['image']['name']) ) {
                     $data['image'] = $images;
                 }
+                unset($this->author_data['created_at']);
+                unset($this->author_data['created_by']);
                 $update = $this->product_model->update($id,array_merge($data, $this->author_data));
                 if ($update) {
                     $this->session->set_flashdata('message_success', MESSAGE_EDIT_SUCCESS);
