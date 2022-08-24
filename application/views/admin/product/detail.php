@@ -11,7 +11,7 @@
         </h1>
         <ol class="breadcrumb">
             <li><a href="<?= base_url('admin') ?>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li><a href="<?= base_url('admin/academy') ?>"><i class="fa fa-dashboard"></i> Danh sách sản phẩm</a></li>
+            <li><a href="<?= base_url('admin/product') ?>"><i class="fa fa-dashboard"></i> Danh sách sản phẩm</a></li>
             <li class="active">Chi tiết sản phẩm</li>
         </ol>
     </section>
@@ -45,6 +45,18 @@
                                     <table class="table table-striped">
                                         <tbody>
                                             <tr>
+                                                <th>Nổi bật</th>
+                                                <td>
+                                                    <?= $detail['is_focus'] ? '<span style="font-weight:bold;color:green;">Có</span>' : '<span style="font-weight:bold;color:red;">Không</span>' ?>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Flash sale</th>
+                                                <td>
+                                                    <?= $detail['is_sale'] ? '<span style="font-weight:bold;color:green;">Có</span>' : '<span style="font-weight:bold;color:red;">Không</span>' ?>
+                                                </td>
+                                            </tr>
+                                            <tr>
                                                 <th>Slug</th>
                                                 <td><?= $detail['slug'] ?></td>
                                             </tr>
@@ -55,26 +67,38 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>Kích thước</th>
+                                                <th>Xuất xứ</th>
                                                 <td>
-                                                    <?php echo $detail['size']; ?>
+                                                    <?php echo $detail['origin']; ?>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>Tài khoản tạo bài viết</th>
+                                                <th>Thương hiệu</th>
+                                                <td>
+                                                    <?php echo $detail['brand']; ?>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Bảo hành</th>
+                                                <td>
+                                                    <?php echo $detail['warranty']; ?>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tài khoản tạo</th>
                                                 <td><?= $detail['created_by'] ?></td>
                                             </tr>
                                             <tr>
-                                                <th>Thời gian tạo bài viết</th>
-                                                <td><?= date('H:i:s / d-m-Y', strtotime($detail['created_at'])) ?></td>
+                                                <th>Thời gian tạo</th>
+                                                <td><?= date('Y-m-d H:i:s', $detail['created_at']) ?></td>
                                             </tr>
                                             <tr>
-                                                <th>Tài khoản cập nhật bài viết</th>
+                                                <th>Tài khoản cập nhật</th>
                                                 <td><?= $detail['updated_by'] ?></td>
                                             </tr>
                                             <tr>
-                                                <th>Thời gian cập nhật bài viết</th>
-                                                <td><?= date('H:i:s / d-m-Y', strtotime($detail['updated_at'])) ?></td>
+                                                <th>Thời gian cập nhật</th>
+                                                <td><?= date('Y-m-d H:i:s', $detail['updated_at']) ?></td>
                                             </tr>
                                         </tbody>
                                     </table>

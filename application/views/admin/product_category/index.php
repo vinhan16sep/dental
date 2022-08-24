@@ -7,7 +7,7 @@
         </h1>
         <ol class="breadcrumb">
             <li><a href="<?= base_url('admin') ?>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li><a href="<?= base_url('admin/product_category') ?>"><i class="fa fa-dashboard"></i> Danh sách danh mục cho academy</a></li>
+            <li><a href="<?= base_url('admin/product_category') ?>"><i class="fa fa-dashboard"></i> Danh sách danh mục</a></li>
         </ol>
     </section>
 

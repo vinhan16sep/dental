@@ -75,6 +75,36 @@
 
                         <div class="form-group col-xs-12" style="padding-right: 0px;">
                             <div class="form-group col-xs-12" style="padding-right: 0px;">
+                                <label for="origin_id">Xuất xứ</label>
+                                <?php echo form_error('origin_id', '<div class="error">', '</div>'); ?>
+                                <select name="origin_id" class="form-control" id="origin_id">
+                                    <option value="">Chọn xuất xứ</option>
+                                    <?php if ( $origins ): ?>
+                                        <?php foreach ($origins as $key => $value): ?>
+                                            <option value="<?php echo $value['id'] ?>" <?php echo ($value['id'] == $detail['origin_id'])? 'selected' : '' ?> ><?php echo $value['title'] ?></option>
+                                        <?php endforeach ?>
+                                    <?php endif ?>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-xs-12" style="padding-right: 0px;">
+                            <div class="form-group col-xs-12" style="padding-right: 0px;">
+                                <label for="brand_id">Thương hiệu</label>
+                                <?php echo form_error('brand_id', '<div class="error">', '</div>'); ?>
+                                <select name="brand_id" class="form-control" id="brand_id">
+                                    <option value="">Chọn thương hiệu</option>
+                                    <?php if ( $brands ): ?>
+                                        <?php foreach ($brands as $key => $value): ?>
+                                            <option value="<?php echo $value['id'] ?>" <?php echo ($value['id'] == $detail['brand_id'])? 'selected' : '' ?> ><?php echo $value['title'] ?></option>
+                                        <?php endforeach ?>
+                                    <?php endif ?>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-xs-12" style="padding-right: 0px;">
+                            <div class="form-group col-xs-12" style="padding-right: 0px;">
                                 <?php
                                 echo form_label('Tiêu đề', 'title');
                                 echo form_error('title', '<div class="error">', '</div>');
@@ -93,12 +123,32 @@
                             </div>
                         </div>
 
+                        <div class="form-group col-md-12">
+                            <div class="form-group col-xs-12" style="padding-right: 0px;">
+                                <?php
+                                    echo form_label('Nổi bật', 'is_focus');
+                                    echo form_error('is_focus', '<div class="error">', '</div>');
+                                    echo form_checkbox('is_focus', '1', $detail['is_focus'] ? TRUE : FALSE, 'id="is_focus"');
+                                ?>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-12">
+                            <div class="form-group col-xs-12" style="padding-right: 0px;">
+                                <?php
+                                    echo form_label('Flash sale', 'is_sale');
+                                    echo form_error('is_sale', '<div class="error">', '</div>');
+                                    echo form_checkbox('is_sale', '1', $detail['is_sale'] ? TRUE : FALSE, 'id="is_sale"');
+                                ?>
+                            </div>
+                        </div>
+
                         <div class="form-group col-xs-12" style="padding-right: 0px;">
                             <div class="form-group col-xs-12" style="padding-right: 0px;">
                                 <?php
-                                echo form_label('Kích thước', 'size');
-                                echo form_error('size', '<div class="error">', '</div>');
-                                echo form_input('size', set_value('size', $detail['size']), 'class="form-control" id="size"');
+                                echo form_label('Bảo hành', 'warranty');
+                                echo form_error('warranty', '<div class="error">', '</div>');
+                                echo form_input('warranty', set_value('warranty', $detail['warranty']), 'class="form-control" id="warranty"');
                                 ?>
                             </div>
                         </div>

@@ -2,12 +2,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Chi tiết danh mục cho sản phẩm
+            Chi tiết thương hiệu
         </h1>
         <ol class="breadcrumb">
             <li><a href="<?= base_url('admin') ?>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li><a href="<?= base_url('admin/product_category') ?>"><i class="fa fa-dashboard"></i> Danh sách danh mục cho sản phẩm</a></li>
-            <li class="active">Chi tiết danh mục cho sản phẩm</li>
+            <li><a href="<?= base_url('admin/brand') ?>"><i class="fa fa-dashboard"></i> Danh sách thương hiệu</a></li>
+            <li class="active">Chi tiết thương hiệu</li>
         </ol>
     </section>
     <!-- Main content -->
@@ -50,10 +50,11 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <a href="<?= base_url('admin/product_category/edit/' . $detail['id']) ?>" class="btn btn-warning" role="button">Chỉnh sửa</a>
+                                <a href="<?= base_url('admin/brand/edit/' . $detail['id']) ?>" class="btn btn-warning" role="button">Chỉnh sửa</a>
                                 <br>
                                 <br>
                             </div>
+                            <br>
                             <br>
                         </div>
                     </div>

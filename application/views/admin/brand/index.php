@@ -3,11 +3,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Danh sách sản phẩm
+            Thương hiệu
         </h1>
         <ol class="breadcrumb">
             <li><a href="<?= base_url('admin') ?>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li><a href="<?= base_url('admin/product') ?>"><i class="fa fa-dashboard"></i> Danh sách sản phẩm</a></li>
+            <li><a href="<?= base_url('admin/brand') ?>"><i class="fa fa-dashboard"></i> Danh sách thương hiệu</a></li>
         </ol>
     </section>
 
@@ -36,10 +36,10 @@
 
                     <div class="row" style="padding: 10px;">
                         <div class="col-md-6">
-                            <a href="<?php echo base_url('admin/product/create') ?>" class="btn btn-primary"  >Thêm mới</a>
+                            <a href="<?php echo base_url('admin/brand/create') ?>" class="btn btn-primary"  >Thêm mới</a>
                         </div>
                         <div class="col-md-6">
-                            <form action="<?php echo base_url('admin/product/index') ?>" method="get">
+                            <form action="<?php echo base_url('admin/brand/index') ?>" method="get">
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Tìm kiếm ..." name="search" value="<?php echo $keywords ?>">
                                     <span class="input-group-btn">
@@ -58,11 +58,7 @@
                                 <thead>
                                 <tr>
                                     <th>No.</th>
-                                    <th>Hình ảnh</th>
-                                    <th>Tiêu đề</th>
-                                    <th>Tên danh mục</th>
-                                    <th>Nổi bật</th>
-                                    <th>Flash sale</th>
+                                    <th>Thương hiệu</th>
                                     <th>Trạng thái</th>
                                     <th>Action</th>
                                 </tr>
@@ -73,21 +69,7 @@
                                         <?php foreach ($result as $key => $value): ?>
                                             <tr class="remove-<?= $value['id'] ?>">
                                                 <td><?= $serial ?></td>
-                                                <td>
-                                                    <div class="mask_sm">
-                                                        <img src="<?= base_url('assets/upload/product/' . $value['slug'] . '/' . $value['image']) ?>"  width=150px height=100px>
-                                                    </div>
-                                                </td>
                                                 <td><?= $value['title'] ?></td>
-                                                <td>
-                                                    <?php echo $value['category_title'] ?>
-                                                </td>
-                                                <td>
-                                                    <?= $value['is_focus'] ? '<span style="font-weight:bold;color:green;">Có</span>' : '<span style="font-weight:bold;color:red;">Không</span>' ?>
-                                                </td>
-                                                <td>
-                                                    <?= $value['is_sale'] ? '<span style="font-weight:bold;color:green;">Có</span>' : '<span style="font-weight:bold;color:red;">Không</span>' ?>
-                                                </td>
                                                 <td class="is-active-<?= $value['id'] ?>">
                                                     <?php
                                                         if ($value['is_active'] == 0) {
@@ -98,29 +80,29 @@
                                                     ?>
                                                 </td>
                                                 <td>
-                                                    <a href="<?= base_url('admin/product/detail/' . $value['id'] ) ?>" title="Xem chi tiết">
+                                                    <a href="<?= base_url('admin/brand/detail/' . $value['id'] ) ?>" title="Xem chi tiết">
                                                         <i class="fa fa-eye" aria-hidden="true"></i>
                                                     </a>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <a href="<?= base_url('admin/product/edit/' . $value['id'] ) ?>" style="color: #f0ad4e" title="Cập nhật">
+                                                    <a href="<?= base_url('admin/brand/edit/' . $value['id'] ) ?>" style="color: #f0ad4e" title="Cập nhật">
                                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                     </a>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <a href="javascript:void(0)" class="btn-remove" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/product/remove' ) ?>" data-name="danh mục"  style="color: #d9534f" title="Xóa">
-                                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                                    </a>
-                                                    <?php if ($value['is_active'] == 0): ?>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <a href="javascript:void(0)" class="btn-active" title="Sử dụng" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/product/active' ) ?>" style="color: #00a65a" >
-                                                        <i class="fa fa-check" aria-hidden="true"></i>
-                                                    </a>
-                                                    <?php endif; ?>
-                                                    <?php if ($value['is_active'] == 1): ?>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <a href="javascript:void(0)" class="btn-deactive" title="Tắt" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/product/deactive' ) ?>" style="color: #f0ad4e">
-                                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                                    </a>
-                                                    <?php endif; ?>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <a href="javascript:void(0)" class="btn-remove" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/brand/remove' ) ?>" data-name="danh mục"  style="color: #d9534f" title="Xóa">
+                                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                        </a>
+                                                        <?php if ($value['is_active'] == 0): ?>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <a href="javascript:void(0)" class="btn-active" title="Sử dụng" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/brand/active' ) ?>" style="color: #00a65a" >
+                                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                                        </a>
+                                                        <?php endif; ?>
+                                                        <?php if ($value['is_active'] == 1): ?>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <a href="javascript:void(0)" class="btn-deactive" title="Tắt" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/brand/deactive' ) ?>" style="color: #f0ad4e">
+                                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                                        </a>
+                                                        <?php endif; ?>
                                                 </td>
                                             </tr>
                                             <?php $serial++ ?>
@@ -128,13 +110,12 @@
                                     <?php else: ?>
                                         <tr>
                                             <td colspan="6">
-                                                Chưa có danh mục
+                                                Chưa có dữ liệu
                                             </td>
                                             
                                         </tr>
                                     <?php endif ?>
                                 </tbody>
-                                
                             </table>
                         </div>
                         <div class="col-md-6 col-md-offset-5 page">
