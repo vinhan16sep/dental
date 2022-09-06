@@ -19,6 +19,15 @@ class MY_Controller extends CI_Controller {
         $this->data['the_view_title'] = 'Minh Dental';
 		$this->data['the_view_css'] = [];
 		$this->data['the_view_js'] = [];
+
+        $this->data['master_rating'] = array(
+            0, 0.5,
+            1, 1.5,
+            2, 2.5,
+            3, 3.5,
+            4, 4.5,
+            5
+        );
     }
 
     protected function render($the_view = NULL, $template = 'master') {

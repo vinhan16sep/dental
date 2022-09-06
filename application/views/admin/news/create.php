@@ -51,7 +51,7 @@
                         <div class="form-group col-xs-12" style="padding-right: 0px;">
                             <div class="form-group col-xs-12" style="padding-right: 0px;">
                                 <?php
-                                echo form_label('Tiêu đề news', 'title');
+                                echo form_label('Tiêu đề', 'title');
                                 echo form_error('title', '<div class="error">', '</div>');
                                 echo form_input('title', set_value('title'), 'class="form-control" id="title"');
                                 ?>

@@ -82,6 +82,11 @@ if($this->ion_auth->logged_in()) {
                         <i class="fa fa-newspaper-o"></i> <span>Quản lý tin tức</span>
                     </a>
                 </li>
+                <li class="<?php echo ($this->uri->segment(2) == 'service')? 'active' : '' ?>">
+                    <a href="<?php echo base_url('admin/service') ?>">
+                        <i class="fa fa-newspaper-o"></i> <span>Quản lý dịch vụ</span>
+                    </a>
+                </li>
                 <li class="<?php echo ($this->uri->segment(2) == 'contact')? 'active' : '' ?>">
                     <a href="<?php echo base_url('admin/contact/detail') ?>">
                         <i class="fa fa-address-book" aria-hidden="true"></i> <span>Thông tin liên hệ</span>

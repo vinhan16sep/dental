@@ -69,29 +69,29 @@
 					<div class="swiper-button-prev"></div>
 					
 					<div class="swiper-wrapper">
-						<?php foreach($highlights as $key => $slide): ?>
+						<?php foreach($focus_products as $key => $value): ?>
 							<div class="swiper-slide">
-								<a href="<?php echo base_url('/' . $slide['url']) ?>">
+								<a href="<?php echo base_url('product/detail/' . $value['slug']) ?>">
 									<div class="card">
 										<div class="img-mask">
-											<img src="<?php echo $slide['image'] ?>" alt="Dental">
+											<img src="<?= base_url('assets/upload/product/' . $value['slug'] . '/' . $value['image']) ?>" alt="Dental">
 										</div>
 
 										<div class="card-body">
 											<p class="p-sm sale-code">
-												<?php echo $slide['code'] ?>
+												<?php echo $value['code'] ?>
 											</p>
 
 											<h5 class="sale-title">
-												<?php echo $slide['title'] ?>
+												<?php echo $value['title'] ?>
 											</h5>
 
 											<div class="star-rating">
 												<?php for($i = 1; $i < 6; $i++): ?>
-													<?php if($slide['rating'] >= $i): ?>
+													<?php if($value['rating'] >= $i): ?>
 														<i class="fas fa-star"></i>
 													<?php else: ?>
-														<?php if($slide['rating'] > ($i - 1)): ?>
+														<?php if($value['rating'] > ($i - 1)): ?>
 															<i class="fas fa-star-half-alt"></i>
 														<?php else: ?>
 															<i class="far fa-star"></i>
@@ -101,11 +101,11 @@
 											</div>
 
 											<p class="p-sm sale-made-in">
-												Xuất xứ: <?php echo $slide['made_in'] ?>
+												Xuất xứ: <?php echo $value['origin'] ?>
 											</p>
 
 											<p class="p-sm sale-standard">
-												Tiêu chuẩn: <?php echo $slide['standard'] ?>
+												Tiêu chuẩn: <?php echo $value['brand'] ?>
 											</p>
 										</div>
 									</div>
@@ -132,31 +132,13 @@
 
 							<div class="item-body">
 								<ul>
+									<?php foreach ($product_categories as $key => $value): ?>
 									<li>
 										<a href="#">
-											Ghế nha khoa - Máy nén
+											<?= $value['title'] ?>
 										</a>
 									</li>
-									<li>
-										<a href="#">
-											Tay khoan nha khoa
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											Thiết bị - Phụ tùng
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											Laboratory
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											Vật tư - Dụng cụ
-										</a>
-									</li>
+									<?php endforeach; ?>
 								</ul>
 							</div>
 						</div>
@@ -193,16 +175,13 @@
 
 							<div class="item-body">
 								<ul>
+									<?php foreach ($origins as $key => $value): ?>
 									<li>
 										<a href="#">
-											Trung Quốc
+											<?= $value['title'] ?>
 										</a>
 									</li>
-									<li>
-										<a href="#">
-											Mỹ
-										</a>
-									</li>
+									<?php endforeach; ?>
 								</ul>
 							</div>
 						</div>
@@ -216,16 +195,13 @@
 
 							<div class="item-body">
 								<ul>
+									<?php foreach ($brands as $key => $value): ?>
 									<li>
 										<a href="#">
-											Lafomed
+											<?= $value['title'] ?>
 										</a>
 									</li>
-									<li>
-										<a href="#">
-											Litex
-										</a>
-									</li>
+									<?php endforeach; ?>
 								</ul>
 							</div>
 						</div>
@@ -235,20 +211,20 @@
 				<div class="col-lg-9">
 					<div class="products-list">
 						<div class="row">
-							<?php for($i = 0; $i < 11; $i++): ?>
+							<?php foreach ($products as $key => $value): ?>
 								<div class="col-lg-4">
-									<a href="<?php echo '/product/detail' ?>">
+									<a href="<?php echo base_url('product/detail/' . $value['slug']) ?>">
 										<div class="card">
 											<div class="ratio-wrapper ratio-wrapper-16-9">
 												<div class="img-mask">
-													<img src="https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Dental">
+													<img src="<?= base_url('assets/upload/product/' . $value['slug'] . '/' . $value['image']) ?>" alt="Dental">
 												</div>
 											</div>
 
 											<div class="card-body">
 												<div>
 													<p class="p-sm code">
-														SP001
+														<?= $value['code'] ?>
 													</p>
 
 													<div class="star-rating">
@@ -259,7 +235,7 @@
 												</div>
 
 												<h5 class="sale-title">
-													Nồi hấp tiệt trùng A123
+													<?= $value['title'] ?>
 												</h5>
 
 												<p class="price">
@@ -269,7 +245,7 @@
 										</div>
 									</a>
 								</div>
-							<?php endfor; ?>
+							<?php endforeach; ?>
 						</div>
 					</div>
 				</div>

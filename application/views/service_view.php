@@ -18,40 +18,12 @@
 
 		<div class="service-list">
 			<div class="row">
-				<?php
-					$services = [
-						0 => [
-							'title' => 'Dịch vụ I',
-							'desc' => 'Quisque commodo efficitur tempus. Duis lobortis vehicula dui, ut posuere purus interdum eu. Etiam non ultricies leo. Proin mollis magna eros, vel tempus lorem pharetra sed. Vestibulum in ipsum leo. In ut quam non tortor consequat congue quis a est. Maecenas blandit gravida commodo. Fusce luctus egestas dolor. Duis vulputate diam a mi scelerisque faucibus.',
-							'image' => 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-							'url' => '/service/detail'
-						],
-						1 => [
-							'title' => 'Dịch vụ II',
-							'desc' => 'Quisque commodo efficitur tempus. Duis lobortis vehicula dui, ut posuere purus interdum eu. Etiam non ultricies leo. Proin mollis magna eros, vel tempus lorem pharetra sed. Vestibulum in ipsum leo. In ut quam non tortor consequat congue quis a est. Maecenas blandit gravida commodo. Fusce luctus egestas dolor. Duis vulputate diam a mi scelerisque faucibus.',
-							'image' => 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-							'url' => '/service/detail'
-						],
-						2 => [
-							'title' => 'Dịch vụ III',
-							'desc' => 'Quisque commodo efficitur tempus. Duis lobortis vehicula dui, ut posuere purus interdum eu. Etiam non ultricies leo. Proin mollis magna eros, vel tempus lorem pharetra sed. Vestibulum in ipsum leo. In ut quam non tortor consequat congue quis a est. Maecenas blandit gravida commodo. Fusce luctus egestas dolor. Duis vulputate diam a mi scelerisque faucibus.',
-							'image' => 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-							'url' => '/service/detail'
-						],
-						3 => [
-							'title' => 'Dịch vụ IV',
-							'desc' => 'Quisque commodo efficitur tempus. Duis lobortis vehicula dui, ut posuere purus interdum eu. Etiam non ultricies leo. Proin mollis magna eros, vel tempus lorem pharetra sed. Vestibulum in ipsum leo. In ut quam non tortor consequat congue quis a est. Maecenas blandit gravida commodo. Fusce luctus egestas dolor. Duis vulputate diam a mi scelerisque faucibus.',
-							'image' => 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-							'url' => '/service/detail'
-						],
-					];
-				?>
 
 				<?php foreach($services as $service): ?>
 					<div class="col-lg-6">
 						<div class="service-item">
 							<div class="item-header">
-								<a href="<?php echo $service['url'] ?>">
+								<a href="<?php echo base_url('service/detail/' . $service['slug']) ?>">
 									<h6>
 										<?php echo $service['title'] ?>
 									</h6>
@@ -60,13 +32,13 @@
 
 							<div class="item-body">
 								<p>
-									<?php echo $service['desc'] ?>
+									<?php echo $service['description'] ?>
 								</p>
 
-								<a href="<?php echo $service['url'] ?>">
+								<a href="<?php echo base_url('service/detail/' . $service['slug']) ?>">
 									<div class="ratio-wrapper ratio-wrapper-16-9">
 										<div class="img-mask">
-											<img src="<?php echo $service['image'] ?>" alt="Dental">
+											<img src="<?= base_url('assets/upload/service/' . $service['slug'] . '/' . $service['image']) ?>" alt="Dental">
 										</div>
 									</div>
 								</a>

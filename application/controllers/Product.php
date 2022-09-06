@@ -5,6 +5,11 @@ class Product extends Public_Controller {
 	public function __construct(){
 		parent::__construct();
 
+		$this->load->model('product_model');
+		$this->load->model('product_category_model');
+		$this->load->model('origin_model');
+		$this->load->model('brand_model');
+
         $this->load->library('session');
 	}
 
@@ -22,18 +27,16 @@ class Product extends Public_Controller {
 			'assets/js/product/function.min.js'
 		];
 
-		$this->data['product_categories'] = [
-			0 => 'Ghế nha khoa - Máy nén',
-			1 => 'Tay khoan nha khoa',
-			2 => 'Thiết bị - Phụ tùng',
-			3 => 'Laboratory',
-			4 => 'Vật tư - Dụng cụ',
-		];
+		$this->data['product_categories'] = $this->product_category_model->get_active();
+		$this->data['origins'] = $this->origin_model->get_active();
+		$this->data['brands'] = $this->brand_model->get_active();
+		$this->data['products'] = $this->product_model->fetch_all();
+		$this->data['focus_products'] = $this->product_model->fetch_all_focus();
 
         $this->render('product_view');
 	}
 
-	public function detail()
+	public function detail($slug)
 	{
 		$this->data['the_view_title'] = 'Product Detail';
 		$this->data['the_view_css'] = [
@@ -47,6 +50,13 @@ class Product extends Public_Controller {
 			'assets/js/product_detail/function.min.js'
 		];
 
-		$this->render('product_detail_view');
+    	$detail = $this->product_model->get_by_slug($slug);
+        if ( !empty($detail) ) {
+            $this->data['detail'] = $detail;
+			$this->render('product_detail_view');
+        } else {
+            redirect('/','refresh');
+        }
+
 	}
 }

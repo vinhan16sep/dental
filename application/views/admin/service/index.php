@@ -3,11 +3,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Danh sách tin tức
+            Danh sách dịch vụ
         </h1>
         <ol class="breadcrumb">
             <li><a href="<?= base_url('admin') ?>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li><a href="<?= base_url('admin/news') ?>"><i class="fa fa-dashboard"></i> Danh sách tin tức</a></li>
+            <li><a href="<?= base_url('admin/service') ?>"><i class="fa fa-dashboard"></i> Danh sách dịch vụ</a></li>
         </ol>
     </section>
 
@@ -36,10 +36,10 @@
 
                     <div class="row" style="padding: 10px;">
                         <div class="col-md-6">
-                            <a href="<?php echo base_url('admin/news/create') ?>" class="btn btn-primary"  >Thêm mới</a>
+                            <a href="<?php echo base_url('admin/service/create') ?>" class="btn btn-primary"  >Thêm mới</a>
                         </div>
                         <div class="col-md-6">
-                            <form action="<?php echo base_url('admin/news/index') ?>" method="get">
+                            <form action="<?php echo base_url('admin/service/index') ?>" method="get">
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Tìm kiếm ..." name="search" value="<?php echo $keywords ?>">
                                     <span class="input-group-btn">
@@ -72,7 +72,7 @@
                                                 <td><?= $serial ?></td>
                                                 <td>
                                                     <div class="mask_sm">
-                                                        <img src="<?= base_url('assets/upload/news/' . $value['slug'] . '/' . $value['image']) ?>"  width=150px height=100px>
+                                                        <img src="<?= base_url('assets/upload/service/' . $value['slug'] . '/' . $value['image']) ?>"  width=150px height=100px>
                                                     </div>
                                                 </td>
                                                 <td><?= $value['title'] ?></td>
@@ -86,26 +86,26 @@
                                                     ?>
                                                 </td>
                                                 <td>
-                                                    <a href="<?= base_url('admin/news/detail/' . $value['id'] ) ?>" title="Xem chi tiết">
+                                                    <a href="<?= base_url('admin/service/detail/' . $value['id'] ) ?>" title="Xem chi tiết">
                                                         <i class="fa fa-eye" aria-hidden="true"></i>
                                                     </a>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <a href="<?= base_url('admin/news/edit/' . $value['id'] ) ?>" style="color: #f0ad4e" title="Cập nhật">
+                                                    <a href="<?= base_url('admin/service/edit/' . $value['id'] ) ?>" style="color: #f0ad4e" title="Cập nhật">
                                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                     </a>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <a href="javascript:void(0)" class="btn-remove" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/news/remove' ) ?>" data-name="danh mục"  style="color: #d9534f" title="Xóa">
+                                                    <a href="javascript:void(0)" class="btn-remove" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/service/remove' ) ?>" data-name="danh mục"  style="color: #d9534f" title="Xóa">
                                                         <i class="fa fa-trash-o" aria-hidden="true"></i>
                                                     </a>
                                                     <?php if ($value['is_active'] == 0): ?>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <a href="javascript:void(0)" class="btn-active" title="Sử dụng" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/news/active' ) ?>" style="color: #00a65a" >
+                                                    <a href="javascript:void(0)" class="btn-active" title="Sử dụng" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/service/active' ) ?>" style="color: #00a65a" >
                                                         <i class="fa fa-check" aria-hidden="true"></i>
                                                     </a>
                                                     <?php endif; ?>
                                                     <?php if ($value['is_active'] == 1): ?>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <a href="javascript:void(0)" class="btn-deactive" title="Tắt" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/news/deactive' ) ?>" style="color: #f0ad4e">
+                                                    <a href="javascript:void(0)" class="btn-deactive" title="Tắt" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/service/deactive' ) ?>" style="color: #f0ad4e">
                                                         <i class="fa fa-times" aria-hidden="true"></i>
                                                     </a>
                                                     <?php endif; ?>

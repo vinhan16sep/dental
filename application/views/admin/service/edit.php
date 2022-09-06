@@ -7,12 +7,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Chỉnh sửa tin tức
+            Chỉnh sửa dịch vụ
         </h1>
         <ol class="breadcrumb">
             <li><a href="<?= base_url('admin') ?>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li><a href="<?= base_url('admin/news') ?>"><i class="fa fa-dashboard"></i> Danh sách tin tức</a></li>
-            <li class="active">Chỉnh sửa tin tức</li>
+            <li><a href="<?= base_url('admin/service') ?>"><i class="fa fa-dashboard"></i> Danh sách dịch vụ</a></li>
+            <li class="active">Chỉnh sửa dịch vụ</li>
         </ol>
     </section>
 
@@ -40,7 +40,7 @@
                             <div class="form-group col-xs-12">
                                 <label for="image">Hình ảnh đang sử dụng</label><br />
                                 <?php if ( $detail['image'] ): ?>
-                                    <img src="<?php echo base_url('assets/upload/news/' . $detail['slug'] . '/' . $detail['image']) ?>" width="150">
+                                    <img src="<?php echo base_url('assets/upload/service/' . $detail['slug'] . '/' . $detail['image']) ?>" width="150">
                                 <?php else: ?>
                                     Hiện chưa có hình ảnh
                                 <?php endif ?>

@@ -116,11 +116,29 @@
                         <div class="form-group col-xs-12" style="padding-right: 0px;">
                             <div class="form-group col-xs-12" style="padding-right: 0px;">
                                 <?php
+                                echo form_label('Mã sản phẩm', 'code');
+                                echo form_error('code', '<div class="error">', '</div>');
+                                echo form_input('code', set_value('code', $detail['code']), 'class="form-control" id="code"');
+                                ?>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-xs-12" style="padding-right: 0px;">
+                            <div class="form-group col-xs-12" style="padding-right: 0px;">
+                                <?php
                                 echo form_label('Slug', 'slug');
                                 echo form_error('slug', '<div class="error">', '</div>');
                                 echo form_input('slug', set_value('slug', $detail['slug']), 'class="form-control" id="slug" readonly');
                                 ?>
                             </div>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <?php
+                            echo form_label('Đánh giá', 'rating');
+                            echo form_error('rating', '<div class="error">', '</div>');
+                            echo form_dropdown('rating', $master_rating, $detail['rating'], 'class="form-control" id="rating"');
+                            ?>
                         </div>
 
                         <div class="form-group col-md-12">
