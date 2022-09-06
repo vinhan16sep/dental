@@ -56,3 +56,7 @@ $route['translate_uri_dashes'] = TRUE;
 if($this->uri->segment(1) == "admin"){
 	$route['admin'] = 'admin/user/login';
 }
+
+$route['product/detail/([a-zA-Z0-9-_]+)'] = 'product/detail/$1';
+$route['blogs/detail/([a-zA-Z0-9-_]+)'] = 'blogs/detail/$1';
+$route['service/detail/([a-zA-Z0-9-_]+)'] = 'service/detail/$1';

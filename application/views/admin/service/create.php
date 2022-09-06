@@ -7,12 +7,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Chỉnh sửa tin tức
+            Thêm mới dịch vụ
         </h1>
         <ol class="breadcrumb">
             <li><a href="<?= base_url('admin') ?>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li><a href="<?= base_url('admin/news') ?>"><i class="fa fa-dashboard"></i> Danh sách tin tức</a></li>
-            <li class="active">Chỉnh sửa tin tức</li>
+            <li><a href="<?= base_url('admin/service') ?>"><i class="fa fa-dashboard"></i> Danh sách dịch vụ</a></li>
+            <li class="active">Thêm mới dịch vụ</li>
         </ol>
     </section>
 
@@ -30,23 +30,11 @@
                             </div>
                         <?php endif ?>
                         <?php
-                        echo form_open_multipart('', array('class' => 'form-horizontal'));
+                        echo form_open_multipart('', array('class' => 'form-horizontal', 'id' => 'bootstrapTagsInputForm'));
                         ?>
                         <div class="row">
                             <span><?php echo $this->session->flashdata('message'); ?></span>
                         </div>
-
-                        <div class="form-group col-xs-12">
-                            <div class="form-group col-xs-12">
-                                <label for="image">Hình ảnh đang sử dụng</label><br />
-                                <?php if ( $detail['image'] ): ?>
-                                    <img src="<?php echo base_url('assets/upload/news/' . $detail['slug'] . '/' . $detail['image']) ?>" width="150">
-                                <?php else: ?>
-                                    Hiện chưa có hình ảnh
-                                <?php endif ?>
-                            </div>
-                        </div>
-
                         <div class="form-group col-xs-12" style="padding-right: 0px;">
                             <div class="form-group col-xs-12" style="padding-right: 0px;">
                                 <?php
@@ -59,12 +47,13 @@
                         </div>
 
 
+
                         <div class="form-group col-xs-12" style="padding-right: 0px;">
                             <div class="form-group col-xs-12" style="padding-right: 0px;">
                                 <?php
                                 echo form_label('Tiêu đề', 'title');
                                 echo form_error('title', '<div class="error">', '</div>');
-                                echo form_input('title', set_value('title', $detail['title']), 'class="form-control" id="title"');
+                                echo form_input('title', set_value('title'), 'class="form-control" id="title"');
                                 ?>
                             </div>
                         </div>
@@ -74,7 +63,7 @@
                                 <?php
                                 echo form_label('Slug', 'slug');
                                 echo form_error('slug', '<div class="error">', '</div>');
-                                echo form_input('slug', set_value('slug', $detail['slug']), 'class="form-control" id="slug" readonly');
+                                echo form_input('slug', set_value('slug'), 'class="form-control" id="slug" readonly');
                                 ?>
                             </div>
                         </div>
@@ -83,7 +72,7 @@
                             <?php
                             echo form_label('Giới thiệu', 'description');
                             echo form_error('description', '<div class="error">', '</div>');
-                            echo form_textarea('description', $detail['description'], 'class="form-control tinymce-area" id="description"');
+                            echo form_textarea('description', set_value('description'), 'class="form-control tinymce-area" id="description"');
                             ?>
                         </div>
 
@@ -91,20 +80,22 @@
                             <?php
                             echo form_label('Nội dung', 'body');
                             echo form_error('body', '<div class="error">', '</div>');
-                            echo form_textarea('body', $detail['body'], 'class="form-control tinymce-area" id="body"');
+                            echo form_textarea('body', set_value('body'), 'class="form-control tinymce-area" id="body"');
                             ?>
                         </div>
+
 
                         <div class="form-group col-md-12">
                             <?php
                             echo form_label('Trạng thái', 'is_active');
                             echo form_error('is_active', '<div class="error">', '</div>');
-                            echo form_dropdown('is_active', array('Chưa kích hoạt', 'Kích hoạt'), $detail['is_active'], 'class="form-control" id="is_active"');
+                            echo form_dropdown('is_active', array('Chưa kích hoạt', 'Kích hoạt'), 0, 'class="form-control" id="is_active"');
                             ?>
                         </div>
+
                         <div class="form-group col-xs-12">
                             <a href="javascript:history.back()" class="btn btn-default">Quay lại</a>
-                            <?php echo form_submit('submit', 'Cập nhật', 'class="btn btn-primary pull-right margin-right-xs" '); ?>
+                            <?php echo form_submit('submit', 'Thêm mới', 'class="btn btn-primary pull-right margin-right-xs" '); ?>
                         </div>
                         <?php echo form_close(); ?>
                     </div>

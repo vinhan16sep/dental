@@ -40,6 +40,24 @@ class Product_model extends Single_model{
 
         return $result = $this->db->get()->result_array();
     }
+    
+    public function fetch_all_focus() {
+        $this->db->select(
+            'product.*, 
+            product_category.title as category_title,
+            origin.title as origin,
+            brand.title as brand'
+        );
+        $this->db->from('product');
+        $this->db->join('product_category','product.category_id = product_category.id');
+        $this->db->join('origin','origin.id = product.origin_id');
+        $this->db->join('brand','brand.id = product.brand_id');
+        $this->db->where('product.is_deleted', 0);
+        $this->db->where('product.is_active', 1);
+        $this->db->where('product.is_focus', 1);
+
+        return $result = $this->db->get()->result_array();
+    }
 
     public function get_by_category_id($cate_id = ''){
         $this->db->from('product');

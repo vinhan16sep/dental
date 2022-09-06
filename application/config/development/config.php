@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 // $config['base_url'] = 'http://localhost:8070/dental/';
-$config['base_url'] = 'http://local.dental.com/';
+$config['base_url'] = 'http://localhost:8070/dental/';
 
 /*
 |--------------------------------------------------------------------------

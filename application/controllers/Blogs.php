@@ -5,6 +5,8 @@ class Blogs extends Public_Controller {
 	public function __construct(){
 		parent::__construct();
 
+		$this->load->model('news_model');
+
         $this->load->library('session');
 	}
 
@@ -20,18 +22,12 @@ class Blogs extends Public_Controller {
 			'assets/js/blog/function.min.js'
 		];
 
-		$this->data['product_categories'] = [
-			0 => 'Ghế nha khoa - Máy nén',
-			1 => 'Tay khoan nha khoa',
-			2 => 'Thiết bị - Phụ tùng',
-			3 => 'Laboratory',
-			4 => 'Vật tư - Dụng cụ',
-		];
+		$this->data['blogs'] = $this->news_model->get_all();
 
         $this->render('blog_view');
 	}
 
-	public function detail()
+	public function detail($slug)
 	{
 		$this->data['the_view_title'] = 'Blogs Detail';
 		$this->data['the_view_css'] = [
@@ -39,6 +35,13 @@ class Blogs extends Public_Controller {
 		];
 		$this->data['the_view_js'] = [];
 
-		$this->render('blog_detail_view');
+    	$detail = $this->news_model->get_by_slug($slug);
+        if ( !empty($detail) ) {
+            $this->data['detail'] = $detail;
+			$this->render('blog_detail_view');
+        } else {
+            redirect('/','refresh');
+        }
+
 	}
 }

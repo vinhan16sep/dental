@@ -5,6 +5,8 @@ class Service extends Public_Controller {
 	public function __construct(){
 		parent::__construct();
 
+		$this->load->model('service_model');
+
         $this->load->library('session');
 	}
 
@@ -15,19 +17,13 @@ class Service extends Public_Controller {
 			'assets/scss/pages/css/min/service.min.css'
 		];
 		$this->data['the_view_js'] = [];
-
-		$this->data['product_categories'] = [
-			0 => 'Ghế nha khoa - Máy nén',
-			1 => 'Tay khoan nha khoa',
-			2 => 'Thiết bị - Phụ tùng',
-			3 => 'Laboratory',
-			4 => 'Vật tư - Dụng cụ',
-		];
+		
+		$this->data['services'] = $this->service_model->get_all();
 
         $this->render('service_view');
 	}
 
-	public function detail()
+	public function detail($slug)
 	{
 		$this->data['the_view_title'] = 'Service Detail';
 		$this->data['the_view_css'] = [
@@ -39,6 +35,13 @@ class Service extends Public_Controller {
 			'assets/js/service_detail/function.min.js'
 		];
 
-		$this->render('service_detail_view');
+    	$detail = $this->service_model->get_by_slug($slug);
+        if ( !empty($detail) ) {
+            $this->data['detail'] = $detail;
+			$this->render('service_detail_view');
+        } else {
+            redirect('/','refresh');
+        }
+
 	}
 }
