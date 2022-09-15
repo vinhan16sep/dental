@@ -26,40 +26,10 @@
             <div class="menu-item-content">
                 <div class="container">
                     <div class="row">
-                        <?php 
-                            $categories = [
-                                0 => [
-                                    'title' => 'Ghế nha khoa - Máy nén',
-                                    'image' => 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-                                    'url' => '/product'
-                                ],
-                                1 => [
-                                    'title' => 'Tay khoan nha khoa',
-                                    'image' => 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-                                    'url' => '/product'
-                                ],
-                                2 => [
-                                    'title' => 'Thiết bị - Phụ tùng',
-                                    'image' => 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-                                    'url' => '/product'
-                                ],
-                                3 => [
-                                    'title' => 'Laboratory',
-                                    'image' => 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-                                    'url' => '/product'
-                                ],
-                                4 => [
-                                    'title' => 'Vật tư - Dụng cụ',
-                                    'image' => 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-                                    'url' => '/product'
-                                ],
-                            ];
-                        ?>
-
-                        <?php foreach($categories as $category): ?>
+                        <?php foreach($product_category as $category): ?>
                             <div class="col-lg-4">
                                 <h6>
-                                    <a href="<?php echo $category['url'] ?>">
+                                    <a href="<?php echo base_url('/product/' . $category['slug']) ?>">
                                         <?php echo $category['title'] ?>
                                     </a>
                                 </h6>

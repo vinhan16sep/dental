@@ -21,14 +21,6 @@ class Homepage extends Public_Controller {
 			'assets/js/homepage/function.min.js'
 		];
 
-		$this->data['product_categories'] = [
-			0 => 'Ghế nha khoa - Máy nén',
-			1 => 'Tay khoan nha khoa',
-			2 => 'Thiết bị - Phụ tùng',
-			3 => 'Laboratory',
-			4 => 'Vật tư - Dụng cụ',
-		];
-
         $this->render('homepage_view');
 	}
 
