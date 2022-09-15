@@ -26,18 +26,6 @@ $(document).ready(function () {
         }
     });
 
-    swiperCover.on('slideChange', (swiper) => {
-        let index = swiper.realIndex;
-
-        let $slide = $(`#swiperCover .swiper-slide[data-index="${index}"]`);
-
-        if ($slide) {
-            let title = $slide.data('title');
-
-            $('#swiperCover').parents('.section').find('.slide-title').text(title);
-        }
-    });
-
     // WOW
     new WOW().init();
 
