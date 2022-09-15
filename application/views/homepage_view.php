@@ -111,7 +111,7 @@
 		</div>
 	</div>
 
-	<div class="section section-flash-sale">
+	<div class="section section-flash-sale" style="display:none">
 		<div class="container">
 			<div class="section-header">
 				<h5>
@@ -240,10 +240,10 @@
 						</a>
 					</li>
 
-					<?php foreach($product_categories as $key => $category): ?>
+					<?php foreach($product_category as $category): ?>
 						<li>
-							<a href="#" class="get-highlight-by-category" data-type="<?php echo ($key + 1) ?>">
-								<?php echo $category ?>
+							<a href="#" class="get-highlight-by-category" data-type="<?php echo $category['id'] ?>">
+								<?php echo $category['title'] ?>
 							</a>
 						</li>
 					<?php endforeach; ?>
