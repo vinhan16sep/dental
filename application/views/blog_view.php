@@ -20,7 +20,7 @@
 							<?php echo $blog['description'] ?>
 						</p>
 	
-						<img src="<?= base_url('assets/upload/service/' . $blog['slug'] . '/' . $blog['image']) ?>" alt="Blog image">
+						<img src="<?= base_url('assets/upload/news/' . $blog['slug'] . '/' . $blog['image']) ?>" alt="Blog image">
 					</div>
 				</a>
 			<?php endforeach;?>

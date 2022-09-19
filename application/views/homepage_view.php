@@ -1,41 +1,12 @@
 <div class="view-homepage">
 	<div class="section section-cover">
-		<?php
-			$cover = [
-				0 => [
-					'title' => 'Product Sale 1',
-					'image' => 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-					'url' => '#'
-				],
-				1 => [
-					'title' => 'Product Sale 1',
-					'image' => 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-					'url' => '#'
-				],
-				2 => [
-					'title' => 'Product Sale 1',
-					'image' => 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-					'url' => '#'
-				],
-				3 => [
-					'title' => 'Product Sale 1',
-					'image' => 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-					'url' => '#'
-				],
-				4 => [
-					'title' => 'Product Sale 1',
-					'image' => 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-					'url' => '#'
-				],
-			];
-		?>
 
 		<div class="cover-content">
 			<h2 class="slide-title">
 				Flash sale
 			</h2>
 
-			<a href="<?php echo $cover[0]['url'] ?>" class="btn btn-lg btn-outline-primary" role="button">
+			<a href="javascript:void(0);" class="btn btn-lg btn-outline-primary" role="button">
 				Tìm hiểu thêm <i class="fas fa-arrow-right"></i>
 			</a>
 		</div>
@@ -44,12 +15,12 @@
 			<div class="swiper-pagination"></div>
 
 			<div class="swiper-wrapper">
-				<?php foreach($cover as $key => $slide): ?>
+				<?php foreach($flashSales as $key => $slide): ?>
 					<div class="swiper-slide" data-index="<?php echo $key ?>" data-title="<?php echo $slide['title'] ?>">
-						<a href="<?php echo base_url('/' . $slide['url']) ?>">
+						<a href="<?php echo base_url('product/detail/' . $slide['slug']) ?>">
 							<div class="ratio-wrapper ratio-wrapper-16-9">
 								<div class="img-mask">
-									<img src="<?php echo $slide['image'] ?>" alt="Dental">
+									<img src="<?= base_url('assets/upload/product/' . $slide['slug'] . '/' . $slide['image']) ?>" alt="Dental">
 								</div>
 							</div>
 						</a>
@@ -105,121 +76,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="section section-flash-sale" style="display:none">
-		<div class="container">
-			<div class="section-header">
-				<h5>
-					Flash sale
-				</h5>
-			</div>
-
-			<div class="section-body">
-				<?php
-					$flashSales = [
-						0 => [
-							'code' => 'SP394',
-							'title' => 'Nồi hấp tiệt trùng A123',
-							'rating' => 4.5,
-							'made_in' => 'Trung Quốc',
-							'standard' => 'Class B',
-							'url' => '#',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						],
-						1 => [
-							'code' => 'SP394',
-							'title' => 'Nồi hấp tiệt trùng A123',
-							'rating' => 4.5,
-							'made_in' => 'Trung Quốc',
-							'standard' => 'Class B',
-							'url' => '#',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						],
-						2 => [
-							'code' => 'SP394',
-							'title' => 'Nồi hấp tiệt trùng A123',
-							'rating' => 4.5,
-							'made_in' => 'Trung Quốc',
-							'standard' => 'Class B',
-							'url' => '#',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						],
-						3 => [
-							'code' => 'SP394',
-							'title' => 'Nồi hấp tiệt trùng A123',
-							'rating' => 4.5,
-							'made_in' => 'Trung Quốc',
-							'standard' => 'Class B',
-							'url' => '#',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						],
-						4 => [
-							'code' => 'SP394',
-							'title' => 'Nồi hấp tiệt trùng A123',
-							'rating' => 4.5,
-							'made_in' => 'Trung Quốc',
-							'standard' => 'Class B',
-							'url' => '#',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						]
-					];
-				?>
-
-				<div class="swiper-container" id="swiperFlashSale">
-					<div class="swiper-pagination"></div>
-
-					<div class="swiper-button-next"></div>
-					<div class="swiper-button-prev"></div>
-					
-					<div class="swiper-wrapper">
-						<?php foreach($flashSales as $key => $slide): ?>
-							<div class="swiper-slide">
-								<a href="<?php echo base_url('/' . $slide['url']) ?>">
-									<div class="ratio-wrapper ratio-wrapper-4-3">
-										<div class="img-mask">
-											<img src="<?php echo $slide['image'] ?>" alt="Dental">
-										</div>
-
-										<div class="overlay">
-											<p class="p-sm sale-code">
-												<?php echo $slide['code'] ?>
-											</p>
-
-											<h5 class="sale-title">
-												<?php echo $slide['title'] ?>
-											</h5>
-
-											<div class="star-rating">
-												<?php for($i = 1; $i < 6; $i++): ?>
-													<?php if($slide['rating'] >= $i): ?>
-														<i class="fas fa-star"></i>
-													<?php else: ?>
-														<?php if($slide['rating'] > ($i - 1)): ?>
-															<i class="fas fa-star-half-alt"></i>
-														<?php else: ?>
-															<i class="far fa-star"></i>
-														<?php endif; ?>
-													<?php endif; ?>
-												<?php endfor; ?>
-											</div>
-
-											<p class="p-sm sale-made-in">
-												Xuất xứ: <?php echo $slide['made_in'] ?>
-											</p>
-
-											<p class="p-sm sale-standard">
-												Tiêu chuẩn: <?php echo $slide['standard'] ?>
-											</p>
-										</div>
-									</div>
-								</a>
-							</div>
-						<?php endforeach; ?>
 					</div>
 				</div>
 			</div>
@@ -300,45 +156,6 @@
 			</div>
 
 			<div class="section-body">
-				<?php
-					$blogs = [
-						0 => [
-							'title' => 'Duis ut diam sit amet augue ornare',
-							'desc' => 'Vivamus dapibus molestie nulla eget dignissim. Suspendisse potenti. Ut vitae lectus eu ligula egestas consequat ut sed lorem. Aliquam erat volutpat. Maecenas efficitur faucibus tristique. Nullam mattis purus in arcu placerat',
-							'url' => '#',
-							'created_at' => '22/10/2022',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						],
-						1 => [
-							'title' => 'Pellentesque interdum lorem sit amet tellus auctor, eu laoreet arcu sagittis.',
-							'desc' => 'Vivamus dapibus molestie nulla eget dignissim. Suspendisse potenti. Ut vitae lectus eu ligula egestas consequat ut sed lorem. Aliquam erat volutpat. Maecenas efficitur faucibus tristique. Nullam mattis purus in arcu placerat',
-							'url' => '#',
-							'created_at' => '22/10/2022',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						],
-						2 => [
-							'title' => 'Pellentesque interdum lorem sit amet tellus auctor, eu laoreet arcu sagittis.',
-							'desc' => 'Vivamus dapibus molestie nulla eget dignissim. Suspendisse potenti. Ut vitae lectus eu ligula egestas consequat ut sed lorem. Aliquam erat volutpat. Maecenas efficitur faucibus tristique. Nullam mattis purus in arcu placerat...',
-							'url' => '#',
-							'created_at' => '22/10/2022',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						],
-						3 => [
-							'title' => 'Pellentesque interdum lorem sit amet tellus auctor, eu laoreet arcu sagittis.',
-							'desc' => 'Vivamus dapibus molestie nulla eget dignissim. Suspendisse potenti. Ut vitae lectus eu ligula egestas consequat ut sed lorem.',
-							'url' => '#',
-							'created_at' => '22/10/2022',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						],
-						4 => [
-							'title' => 'Duis ut diam sit amet augue ornare',
-							'desc' => 'Vivamus dapibus molestie nulla eget dignissim. Suspendisse potenti. Ut vitae lectus eu ligula egestas consequat ut sed lorem.',
-							'url' => '#',
-							'created_at' => '22/10/2022',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						]
-					];
-				?>
 
 				<div class="swiper-container" id="swiperBlogs">
 					<div class="swiper-pagination"></div>
@@ -349,11 +166,11 @@
 					<div class="swiper-wrapper">
 						<?php foreach($blogs as $key => $slide): ?>
 							<div class="swiper-slide">
-								<a href="<?php echo base_url('/' . $slide['url']) ?>">
+								<a href="<?php echo base_url('blogs/detail/' . $slide['slug']) ?>">
 									<div class="card">
 										<div class="card-body">
 											<p class="p-sm">
-												<?php echo $slide['created_at'] ?>
+												<?php echo date('d/m/Y', $slide['created_at']) ?>
 											</p>
 
 											<h5>
@@ -361,13 +178,13 @@
 											</h5>
 
 											<p class="p-sm">
-												<?php echo $slide['desc'] ?>
+												<?php echo $slide['description'] ?>
 											</p>
 										</div>
 
 										<div class="ratio-wrapper ratio-wrapper-16-9">
 											<div class="img-mask">
-												<img src="<?php echo $slide['image'] ?>" alt="Dental">
+												<img src="<?= base_url('assets/upload/news/' . $slide['slug'] . '/' . $slide['image']) ?>" alt="Blog image">
 											</div>
 										</div>
 									</div>

@@ -31,17 +31,21 @@ class Product_model extends Single_model{
         return $result = $this->db->get()->result_array();
     }
     
-    public function fetch_all() {
+    public function fetch_all($limit = false) {
         $this->db->select('product.*, product_category.title as category_title');
         $this->db->from('product');
         $this->db->join('product_category','product.category_id = product_category.id');
         $this->db->where('product.is_deleted', 0);
         $this->db->where('product.is_active', 1);
+        if ($limit !== false) {
+            $this->db->limit($limit, 0);
+        }
+        $this->db->order_by("product.id", "desc");
 
         return $result = $this->db->get()->result_array();
     }
     
-    public function fetch_all_focus() {
+    public function fetch_all_focus($limit = false) {
         $this->db->select(
             'product.*, 
             product_category.title as category_title,
@@ -56,6 +60,29 @@ class Product_model extends Single_model{
         $this->db->where('product.is_active', 1);
         $this->db->where('product.is_focus', 1);
 
+        if ($limit !== false) {
+            $this->db->limit($limit, 0);
+        }
+        $this->db->order_by("product.id", "desc");
+
+        return $result = $this->db->get()->result_array();
+    }
+    
+    public function fetch_all_sale() {
+        $this->db->select(
+            'product.*, 
+            product_category.title as category_title,
+            origin.title as origin,
+            brand.title as brand'
+        );
+        $this->db->from('product');
+        $this->db->join('product_category','product.category_id = product_category.id');
+        $this->db->join('origin','origin.id = product.origin_id');
+        $this->db->join('brand','brand.id = product.brand_id');
+        $this->db->where('product.is_deleted', 0);
+        $this->db->where('product.is_active', 1);
+        $this->db->where('product.is_sale', 1);
+
         return $result = $this->db->get()->result_array();
     }
 
@@ -63,6 +90,20 @@ class Product_model extends Single_model{
         $this->db->from('product');
         $this->db->where('is_deleted', 0);
         $this->db->where('category_id', $cate_id);
+        return $this->db->get()->result_array();
+    }
+
+    public function get_focus_by_category_id($cate_id = '', $limit = false){
+        $this->db->from('product');
+        $this->db->where('is_deleted', 0);
+        $this->db->where('category_id', $cate_id);
+        $this->db->where('is_focus', 1);
+
+        if ($limit !== false) {
+            $this->db->limit($limit, 0);
+        }
+        $this->db->order_by("product.id", "desc");
+
         return $this->db->get()->result_array();
     }
 

@@ -38,6 +38,8 @@ class Blogs extends Public_Controller {
     	$detail = $this->news_model->get_by_slug($slug);
         if ( !empty($detail) ) {
             $this->data['detail'] = $detail;
+			$this->data['blogs'] = $this->news_model->fetch_relate($detail['id'], 5);
+
 			$this->render('blog_detail_view');
         } else {
             redirect('/','refresh');

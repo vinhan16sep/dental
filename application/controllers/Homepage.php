@@ -6,6 +6,9 @@ class Homepage extends Public_Controller {
 		parent::__construct();
 
         $this->load->library('session');
+
+		$this->load->model('product_model');
+		$this->load->model('news_model');
 	}
 
     public function index(){
@@ -20,6 +23,9 @@ class Homepage extends Public_Controller {
 			'assets/plugins/wow/wow.min.js',
 			'assets/js/homepage/function.min.js'
 		];
+
+		$this->data['flashSales'] = $this->product_model->fetch_all_sale();
+		$this->data['blogs'] = $this->news_model->fetch_all(5);
 
         $this->render('homepage_view');
 	}
