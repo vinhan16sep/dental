@@ -38,6 +38,8 @@ class Service extends Public_Controller {
     	$detail = $this->service_model->get_by_slug($slug);
         if ( !empty($detail) ) {
             $this->data['detail'] = $detail;
+			$this->data['services'] = $this->service_model->fetch_relate($detail['id'], 5);
+
 			$this->render('service_detail_view');
         } else {
             redirect('/','refresh');

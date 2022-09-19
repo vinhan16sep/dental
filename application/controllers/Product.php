@@ -59,4 +59,16 @@ class Product extends Public_Controller {
         }
 
 	}
+
+	public function getProductByCategory()
+	{
+		$category = $this->input->get('category');
+
+		$products = $this->product_model->get_focus_by_category_id($category, 10);
+
+		return $this->output
+                ->set_content_type('application/json')
+                ->set_status_header(HTTP_SUCCESS)
+                ->set_output(json_encode(array(['products' => $products])));
+	}
 }
