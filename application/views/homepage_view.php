@@ -3,27 +3,27 @@
 		<?php
 			$cover = [
 				0 => [
-					'title' => 'Ghế nha khoa - Máy nén',
+					'title' => 'Product Sale 1',
 					'image' => 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
 					'url' => '#'
 				],
 				1 => [
-					'title' => 'Tay khoan nha khoa',
+					'title' => 'Product Sale 1',
 					'image' => 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
 					'url' => '#'
 				],
 				2 => [
-					'title' => 'Thiết bị - Phụ tùng',
+					'title' => 'Product Sale 1',
 					'image' => 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
 					'url' => '#'
 				],
 				3 => [
-					'title' => 'Laboratory',
+					'title' => 'Product Sale 1',
 					'image' => 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
 					'url' => '#'
 				],
 				4 => [
-					'title' => 'Vật tư - Dụng cụ',
+					'title' => 'Product Sale 1',
 					'image' => 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
 					'url' => '#'
 				],
@@ -32,7 +32,7 @@
 
 		<div class="cover-content">
 			<h2 class="slide-title">
-				<?php echo $cover[0]['title'] ?>
+				Flash sale
 			</h2>
 
 			<a href="<?php echo $cover[0]['url'] ?>" class="btn btn-lg btn-outline-primary" role="button">
