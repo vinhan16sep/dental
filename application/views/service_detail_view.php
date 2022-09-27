@@ -3,6 +3,24 @@
 		<div class="service-overview">
 			<div class="row">
 				<div class="col-lg-6">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item">
+								<a href="<?php echo base_url('/') ?>">
+									Trang chủ
+								</a>
+							</li>
+							<li class="breadcrumb-item">
+								<a href="<?php echo base_url('/service/') ?>">
+									Dịch vụ
+								</a>
+							</li>
+							<li class="breadcrumb-item active" aria-current="page">
+								<?php echo $detail['title'] ?>
+							</li>
+						</ol>
+					</nav>
+
 					<h5>
 						Dịch vụ
 					</h5>
@@ -26,7 +44,7 @@
 			</div>
 
 			<div class="row">
-				<div class="col-lg-9">
+				<div class="col-lg-12">
 					<div class="text">
 						<?php echo $detail['body'] ?>
 					</div>
@@ -39,7 +57,6 @@
 						</div>
 
 						<div class="related-body">
-
 							<div class="swiper-container" id="swiperRelated">
 								<div class="swiper-pagination"></div>
 								
@@ -70,14 +87,6 @@
 							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="col-lg-3">
-					<p>
-						<b>
-							Vestibulum molestie tortor sit amet faucibus elementum. Nullam dapibus eu ex sit amet euismod. Mauris ac urna malesuada, varius arcu non, semper purus. Duis vitae ante semper, sodales magna in, ornare elit. In sodales dolor id sollicitudin molestie. Mauris sed pellentesque nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-						</b>
-					</p>
 				</div>
 			</div>
 		</div>

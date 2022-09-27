@@ -83,7 +83,7 @@
                             <?php
                             echo form_label('Giới thiệu', 'description');
                             echo form_error('description', '<div class="error">', '</div>');
-                            echo form_textarea('description', $detail['description'], 'class="form-control tinymce-area" id="description"');
+                            echo form_textarea('description', $detail['description'], 'class="form-control" id="description"');
                             ?>
                         </div>
 

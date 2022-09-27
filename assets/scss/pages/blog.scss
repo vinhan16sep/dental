@@ -16,44 +16,137 @@
 			}
 		}
 
-		.list-items {
-			.item-sizer,
-			.item {
-				width: 33.33%;
-			}
+		.row {
+			> div {
+				.blog-filter {
+					@include positionSticky(top, 10rem);
+					
+					.filter-item {
+						&:not(:last-child){
+							margin-bottom: 2rem;
+						}
 
-			.item {
-				padding: 0 0.75rem;
-				margin-bottom: 4rem;
+						.item-header {
+							margin-bottom: 1rem;
 
-				h6 {
-					margin-bottom: 2rem;
+							h6 {
+								font-size: 1.25rem;
 
-					font-size: 1.25rem;
-					font-weight: 600;
+								@include d-flex(row, space-between, flex-end);
 
-					&:before {
-						content: '';
+								&:after {
+									content: '';
 
-						width: 48px;
-						height: 4px;
+									flex: 1 0 auto;
+									height: 2px;
 
-						background-color: var(--primary);
+									margin-left: 2rem;
 
-						margin-bottom: 0.75rem;
+									background-color: var(--border);
 
-						display: block;
+									@include translate(0, -4px);
+								}
+							}
+						}
+
+						.item-body {
+							ul {
+								padding-left: 0;
+
+								list-style: none;
+
+								li {
+									&:not(:last-child){
+										margin-bottom: 1.125rem;
+									}
+
+									a {
+										width: 100%;
+
+										padding-left: 1rem;
+
+										font-weight: 600;
+
+										color: #999;
+
+										display: block;
+
+										position: relative;
+										z-index: 1;
+
+										&:hover,
+										&.active {
+											color: var(--secondary);
+
+											&:before {
+												background-color: var(--primary);
+											}
+										}
+
+										&:before {
+											content: '';
+
+											width: 6px;
+											height: 6px;
+
+											background-color: transparent;
+
+											@include borderRadius(50%);
+
+											position: absolute;
+											top: 50%;
+											left: 0;
+											z-index: 1;
+
+											@include translate(0, -50%);
+										}
+									}
+								}
+							}
+						}
 					}
 				}
 
-				p {
-					margin-bottom: 2rem;
-				}
-
-				img {
-					width: 100%;
-
-					@include borderRadius();
+				.list-items {
+					.item-sizer,
+					.item {
+						width: 33.33%;
+					}
+		
+					.item {
+						padding: 0 0.75rem;
+						margin-bottom: 4rem;
+		
+						h6 {
+							margin-bottom: 2rem;
+		
+							font-size: 1.25rem;
+							font-weight: 600;
+		
+							&:before {
+								content: '';
+		
+								width: 48px;
+								height: 4px;
+		
+								background-color: var(--primary);
+		
+								margin-bottom: 0.75rem;
+		
+								display: block;
+							}
+						}
+		
+						p {
+							margin-bottom: 2rem;
+						}
+		
+						img {
+							width: 100%;
+		
+							@include borderRadius();
+						}
+					}
 				}
 			}
 		}

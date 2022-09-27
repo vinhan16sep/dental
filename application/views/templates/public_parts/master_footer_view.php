@@ -1,3 +1,4 @@
+<!--
 <div class="common-features">
     <div class="container">
         <div class="row">
@@ -61,11 +62,12 @@
         </div>
     </div>
 </div>
+-->
 
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <!-- <h6>
                     Về chúng tôi
                 </h6> -->
@@ -173,7 +175,7 @@
                 </ul>
             </div>
     
-            <div class="col-lg-5">
+            <div class="col-lg-4">
                 <h6>
                     Liên hệ với chúng tôi
                 </h6>

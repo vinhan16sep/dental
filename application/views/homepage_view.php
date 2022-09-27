@@ -1,6 +1,5 @@
 <div class="view-homepage">
 	<div class="section section-cover">
-
 		<div class="cover-content">
 			<h2 class="slide-title">
 				Flash sale
@@ -33,9 +32,9 @@
 	<div class="section section-about">
 		<div class="container">
 			<div class="section-header">
-				<h5>
+				<h3>
 					Về chúng tôi
-				</h5>
+				</h3>
 			</div>
 	
 			<div class="section-body">
@@ -43,7 +42,7 @@
 					<div class="row">
 						<div class="col-lg-9">
 							<h6>
-								Nam ornare metus et dictum condimentum. Suspendisse potenti. Curabitur vel libero augue. Nulla eu enim at sapien placerat pharetra sagittis vitae ipsum. Proin ut ante ac eros blandit tincidunt. Nulla vel convallis quam.
+							Lời đầu tiên MINH Dental kính chúc các Nha sĩ - Đại Lý – Các cửa hàng vật liệu nha khoa toàn quốc và các bạn đồng nghiệp nhiều sức khỏe và thành công.
 							</h6>
 						</div>
 					</div>
@@ -53,14 +52,14 @@
 					<div class="row">
 						<div class="col-lg-6">
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper metus in leo accumsan ullamcorper. Aenean rutrum, orci convallis sollicitudin imperdiet, sem augue imperdiet lorem, in vulputate arcu ex ac dui. Phasellus rutrum arcu ac ligula feugiat, vitae semper orci facilisis. Donec et luctus ligula. Donec placerat, nibh in ornare posuere, quam lacus vestibulum lacus, molestie rhoncus tortor elit eu massa. Duis eget risus tortor. Aliquam ultricies elementum tincidunt. In commodo turpis pharetra, placerat enim rutrum, ultricies magna. Vestibulum in fermentum tellus. Nullam nibh justo, tempor eu nisi nec, placerat accumsan justo.
+								MINH Dental đã có nhiều năm kinh nghiệm. Được thành lập và kinh doanh vật liệu thiết bị máy móc trong ngành Nha Khoa từ năm 1985 đến nay, đã từng được chọn là nhà phân phối sản phẩm máy móc vật liệu của các Hãng nha khoa nổi tiếng đã có mặt ở Việt Nam. Suốt 30 năm qua MINH Dental đã tạo dựng thương hiệu bằng “Uy Tín – Chất Lượng – Hiệu Quả” . Là hệ thống phân phối sản phẩm chất lượng cao trong ngành Nha Khoa với nhiều chính sách hỗ trợ từ phía các nhà cung cấp nước ngoài, các công ty cung cấp vật liệu nha khoa danh tiếng tại Việt Nam. Hiện MINH Dental rất vinh dự được chọn là Nhà Phân Phối Chính Thức của GC (công ty hàng đầu thế giới của Nhật Bản về ngành Nha Khoa). Tất cả các sản phẩm chúng tôi cung cấp đều được chứng nhận bởi các tổ chức FDA – ADA – CE và tiêu chuẩn chất lượng ISO 13458.
 							</p>
 
 							<p>
-								In ut lorem enim. Morbi suscipit nisi vel nisi sollicitudin, nec scelerisque urna congue. Aliquam lobortis turpis non magna pharetra ultrices. Integer ut iaculis nisl, vitae aliquet sapien. Sed aliquam dui dictum lacus porttitor fringilla. Fusce sodales est vitae sem aliquet gravida. Mauris ipsum velit, dignissim vel malesuada vitae, porttitor quis quam. Sed et urna massa. Nullam sodales, diam ut bibendum faucibus, ipsum lorem fringilla ipsum, eget malesuada nisi orci ut erat. Aliquam erat volutpat. Ut vitae turpis vitae sem blandit efficitur in id magna. Aliquam nec pellentesque dolor. Pellentesque interdum lorem sit amet tellus auctor, eu laoreet arcu sagittis.
+								Với bề dầy kinh nghiệm 30 năm trong ngành nha khoa chúng tôi luôn mong muốn mang đến quý Nha sĩ, các phòng khám, các đại lý, các bạn đồng nghiệp những sản phẩm nha khoa chất lượng nhất, hoàn hảo nhất.
 							</p>
 
-							<a href="#" class="btn btn-lg btn-outline-primary" role="button">
+							<a href="<?php echo base_url('/about') ?>" class="btn btn-lg btn-outline-primary" role="button">
 								Tìm hiểu thêm <i class="fas fa-arrow-right"></i>
 							</a>
 						</div>
@@ -85,11 +84,23 @@
 	<div class="section section-highlight">
 		<div class="container">
 			<div class="section-header">
-				<h5>
+				<h3>
 					Sản phẩm nổi bật
-				</h5>
+				</h3>
 
-				<ul class="list-unstyled">
+				<select class="form-select" id="filterHighlight">
+					<option value="all">
+						Tất cả
+					</option>
+
+					<?php foreach($product_category as $category): ?>
+						<option value="<?php echo $category['id'] ?>">
+							<?php echo $category['title'] ?>
+						</option>
+					<?php endforeach; ?>
+				</select>
+
+				<!-- <ul class="list-unstyled">
 					<li>
 						<a href="#" class="get-highlight-by-category" data-type="all">
 							Tất cả
@@ -103,7 +114,7 @@
 							</a>
 						</li>
 					<?php endforeach; ?>
-				</ul>
+				</ul> -->
 			</div>
 
 			<div class="section-body">
@@ -147,62 +158,12 @@
 		</div>
 	</div>
 
-	<div class="section section-blogs">
-		<div class="container">
-			<div class="section-header">
-				<h5>
-					Tin tức
-				</h5>
-			</div>
-
-			<div class="section-body">
-
-				<div class="swiper-container" id="swiperBlogs">
-					<div class="swiper-pagination"></div>
-
-					<div class="swiper-button-next"></div>
-					<div class="swiper-button-prev"></div>
-					
-					<div class="swiper-wrapper">
-						<?php foreach($blogs as $key => $slide): ?>
-							<div class="swiper-slide">
-								<a href="<?php echo base_url('blogs/detail/' . $slide['slug']) ?>">
-									<div class="card">
-										<div class="card-body">
-											<p class="p-sm">
-												<?php echo date('d/m/Y', $slide['created_at']) ?>
-											</p>
-
-											<h5>
-												<?php echo $slide['title'] ?>
-											</h5>
-
-											<p class="p-sm">
-												<?php echo $slide['description'] ?>
-											</p>
-										</div>
-
-										<div class="ratio-wrapper ratio-wrapper-16-9">
-											<div class="img-mask">
-												<img src="<?= base_url('assets/upload/news/' . $slide['slug'] . '/' . $slide['image']) ?>" alt="Blog image">
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-						<?php endforeach; ?>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<div class="section section-client">
 		<div class="container">
 			<div class="section-header">
-				<h5>
+				<h3>
 					Đối tác
-				</h5>
+				</h3>
 			</div>
 	
 			<div class="section-body">
@@ -228,15 +189,89 @@
 								<div class="swiper-wrapper">
 									<?php for($i = 0; $i < 10; $i++): ?>
 										<div class="swiper-slide">
-											<div class="img-mask img-mask-circle">
-												<img src="<?php echo base_url('assets/img/client/client_' . ($i + 1) . '.png') ?>" alt="Client">
-											</div>
+											<a href="#">
+												<div class="img-mask img-mask-circle">
+													<img src="<?php echo base_url('assets/img/client/client_' . ($i + 1) . '.png') ?>" alt="Client">
+												</div>
+											</a>
 										</div>
 									<?php endfor; ?>
 								</div>
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-blogs">
+		<div class="container">
+			<div class="section-header">
+				<h3>
+					Tin tức
+				</h3>
+			</div>
+
+			<div class="section-body">
+				<div class="row">
+					<?php foreach($blogs as $key => $slide): ?>
+						<div class="col-lg-4">
+							<a href="<?php echo base_url('blogs/detail/' . $slide['slug']) ?>">
+								<div class="card">
+									<div class="card-body">
+										<h5>
+											<?php echo $slide['title'] ?>
+										</h5>
+
+										<p class="p-sm">
+											<?php echo date('d/m/Y', $slide['created_at']) ?>
+										</p>
+
+										<p class="p-sm">
+											<?php echo $slide['description'] ?>
+										</p>
+									</div>
+
+									<div class="ratio-wrapper ratio-wrapper-16-9">
+										<div class="img-mask">
+											<img src="<?= base_url('assets/upload/news/' . $slide['slug'] . '/' . $slide['image']) ?>" alt="Blog image">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					<?php endforeach; ?>
+				</div>
+
+				<div class="swiper-container" id="swiperBlogs">
+					<div class="swiper-pagination"></div>
+
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+					
+					<div class="swiper-wrapper">
+						<?php foreach($blogs as $key => $slide): ?>
+							<div class="swiper-slide">
+								
+							</div>
+						<?php endforeach; ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalBanner">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="btn" data-bs-dismiss="modal" type="button">
+						<i class="fas fa-times"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<img src="<?php echo base_url('assets/img/banner.png') ?>" alt="Banner">
 				</div>
 			</div>
 		</div>

@@ -11,5 +11,25 @@ $(document).ready(function () {
 
             $('.header-menu').toggleClass('show');
             $(this).toggleClass('active');
+        })
+        .on('click', '#btnScrollTop', function (e) {
+            e.preventDefault();
+
+            $('body').scrollTop(0);
+        })
+        .on('click', '.btn-change-lang', function (e) {
+            e.preventDefault();
+
+            let lang = $(this).data('lang');
+
+            $(this).parents('.dropdown').find('.btn-lang').text(lang.toUpperCase());
         });
+
+    $('body').on('scroll', function () {
+        if ($('body').scrollTop() <= 70) {
+            $('#btnScrollTop').removeClass('show');
+        } else {
+            $('#btnScrollTop').addClass('show');
+        }
+    });
 });

@@ -2,6 +2,19 @@
 	<div class="overview">
 		<div class="container">
 			<div class="overview-header">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item">
+							<a href="<?php echo base_url('/') ?>">
+								Trang chủ
+							</a>
+						</li>
+						<li class="breadcrumb-item active" aria-current="page">
+							Sản phẩm
+						</li>
+					</ol>
+				</nav>
+
 				<h5>
 					Sản phẩm nổi bật
 				</h5>
@@ -12,56 +25,6 @@
 			</div>
 
 			<div class="overview-body">
-				<?php
-					$highlights = [
-						0 => [
-							'code' => 'SP394',
-							'title' => 'Nồi hấp tiệt trùng A123',
-							'rating' => 4.5,
-							'made_in' => 'Trung Quốc',
-							'standard' => 'Class B',
-							'url' => '/product/detail',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						],
-						1 => [
-							'code' => 'SP394',
-							'title' => 'Nồi hấp tiệt trùng A123',
-							'rating' => 4.5,
-							'made_in' => 'Trung Quốc',
-							'standard' => 'Class B',
-							'url' => '/product/detail',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						],
-						2 => [
-							'code' => 'SP394',
-							'title' => 'Nồi hấp tiệt trùng A123',
-							'rating' => 4.5,
-							'made_in' => 'Trung Quốc',
-							'standard' => 'Class B',
-							'url' => '/product/detail',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						],
-						3 => [
-							'code' => 'SP394',
-							'title' => 'Nồi hấp tiệt trùng A123',
-							'rating' => 4.5,
-							'made_in' => 'Trung Quốc',
-							'standard' => 'Class B',
-							'url' => '/product/detail',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						],
-						4 => [
-							'code' => 'SP394',
-							'title' => 'Nồi hấp tiệt trùng A123',
-							'rating' => 4.5,
-							'made_in' => 'Trung Quốc',
-							'standard' => 'Class B',
-							'url' => '/product/detail',
-							'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-						]
-					];
-				?>
-
 				<div class="swiper-container" id="swiperHighlight">
 					<div class="swiper-pagination"></div>
 					
@@ -85,20 +48,6 @@
 											<h5 class="sale-title">
 												<?php echo $value['title'] ?>
 											</h5>
-
-											<div class="star-rating">
-												<?php for($i = 1; $i < 6; $i++): ?>
-													<?php if($value['rating'] >= $i): ?>
-														<i class="fas fa-star"></i>
-													<?php else: ?>
-														<?php if($value['rating'] > ($i - 1)): ?>
-															<i class="fas fa-star-half-alt"></i>
-														<?php else: ?>
-															<i class="far fa-star"></i>
-														<?php endif; ?>
-													<?php endif; ?>
-												<?php endfor; ?>
-											</div>
 
 											<p class="p-sm sale-made-in">
 												Xuất xứ: <?php echo $value['origin'] ?>
@@ -210,40 +159,76 @@
 	
 				<div class="col-lg-9">
 					<div class="products-list">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a href="<?php echo base_url('/') ?>">
+										Trang chủ
+									</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="<?php echo base_url('/product/') ?>">
+										Sản phẩm
+									</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">
+									GHẾ NHA KHOA - MÁY NÉN
+								</li>
+							</ol>
+						</nav>
+						
 						<div class="row">
 							<?php foreach ($products as $key => $value): ?>
 								<div class="col-lg-4">
-									<a href="<?php echo base_url('product/detail/' . $value['slug']) ?>">
-										<div class="card">
-											<div class="ratio-wrapper ratio-wrapper-16-9">
-												<div class="img-mask">
+									<div class="card">
+										<div class="ratio-wrapper ratio-wrapper-16-9">
+											<div class="img-mask">
+												<a href="<?php echo base_url('product/detail/' . $value['slug']) ?>">
 													<img src="<?= base_url('assets/upload/product/' . $value['slug'] . '/' . $value['image']) ?>" alt="Dental">
-												</div>
+												</a>
 											</div>
 
-											<div class="card-body">
-												<div>
-													<p class="p-sm code">
-														<?= $value['code'] ?>
-													</p>
+											<div class="overlay">
+												<a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="Campagin">
+													<i class="fas fa-bookmark"></i>
+												</a>
 
-													<div class="star-rating">
-														<?php for($j = 1; $j < 6; $j++): ?>
-															<i class="fas fa-star"></i>
-														<?php endfor; ?>
-													</div>
-												</div>
+												<a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sản phẩm nổi bật">
+													<i class="fas fa-star"></i>
+												</a>
+											</div>
+										</div>
 
+										<div class="card-body">
+											<div>
+												<p class="p-sm code">
+													<?= $value['code'] && $value['code'] != '' ? $value['code'] : '000' ?>
+												</p>
+											</div>
+
+											<a href="<?php echo base_url('product/detail/' . $value['slug']) ?>">
 												<h5 class="sale-title">
 													<?= $value['title'] ?>
 												</h5>
+											</a>
 
-												<p class="price">
-													Liên hệ
-												</p>
-											</div>
+											<p class="p-sm sale-made-in">
+												Xuất xứ: America
+											</p>
+
+											<p class="p-sm sale-standard">
+												Tiêu chuẩn: Laformed
+											</p>
+
+											<p class="price">
+												Liên hệ
+
+												<a href="#" class="btn btn-sm btn-primary" role="button">
+													Thêm vào giỏ hàng
+												</a>
+											</p>
 										</div>
-									</a>
+									</div>
 								</div>
 							<?php endforeach; ?>
 						</div>

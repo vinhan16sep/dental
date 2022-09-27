@@ -31,8 +31,98 @@
             </div>
 
             <div class="page-body">
+                <div class="fixed-buttons fixed-center">
+                    <a href="tel:+84903424205" class="btn btn-primary" role="button">
+                        <i class="fas fa-headphones"></i>
+                    </a>
+                    <a href="tel:+84903424205" class="btn btn-primary" role="button">
+                        <i class="fas fa-phone-volume"></i>
+                    </a>
+                    <a href="tel:+84903424205" class="btn btn-primary" role="button">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalReceiveNotification" role="button">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+
+                <div class="fixed-buttons fixed-bottom">
+                    <a href="#" class="btn btn-primary" id="btnScrollTop" role="button">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
+                </div>
+
                 <div class="page-view">
                     <?php echo $the_view_content;?>
+                </div>
+
+                <div class="modal fade" id="modalReceiveNotification">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6>
+                                    Đăng ký để nhận thông báo
+                                </h6>
+
+                                <button class="btn" data-bs-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <form action="">
+                                    <div class="row">
+                                        <div class="form-group col-lg-12">
+                                            <input type="text" class="form-control" name="Name" placeholder="Họ tên">
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <input type="text" class="form-control" name="Email" placeholder="Email">
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <input type="text" class="form-control" name="PhoneNumber" placeholder="Số điện thoại">
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <input type="text" class="form-control" name="Position" placeholder="Vị trí">
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <input type="text" class="form-control" name="Company" placeholder="Đơn vị công tác">
+                                        </div>
+                                        <div class="form-group col-lg-12">
+                                            <input type="text" class="form-control" name="Title" placeholder="Tiêu đề">
+                                        </div>
+                                        <div class="form-group col-lg-12">
+                                            <select class="form-select" name="TitleType">
+                                                <option value="none">
+                                                    Chọn một
+                                                </option>
+                                                <option value="product">
+                                                    Sản phẩm
+                                                </option>
+                                                <option value="wantity">
+                                                    Bảo hành
+                                                </option>
+                                                <option value="service">
+                                                    Dịch vụ
+                                                </option>
+                                                <option value="other">
+                                                    Khác...
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-lg-12">
+                                            <textarea class="form-control" name="Message" rows="7" placeholder="Viết gì đó cho chúng tôi..."></textarea>
+                                        </div>
+
+                                        <div class="buttons">
+                                            <button class="btn btn-outline-primary" id="btnSubmit" type="button">
+                                                Gửi <i class="fas fa-arrow-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -42,7 +132,7 @@
         </div>
 
         <script src="<?php echo base_url('assets/plugins/jquery/jquery-3.6.0.min.js') ?>"></script>
-        <script src="<?php echo base_url('assets/plugins/bootstrap/js/bootstrap.min.js') ?>"></script>
+        <script src="<?php echo base_url('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
         <script src="<?php echo base_url('assets/js/common.min.js') ?>"></script>
 

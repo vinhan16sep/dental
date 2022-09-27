@@ -31,9 +31,13 @@ class Blogs extends Public_Controller {
 	{
 		$this->data['the_view_title'] = 'Blogs Detail';
 		$this->data['the_view_css'] = [
+			'assets/plugins/swiper/css/swiper-bundle.min.css',
 			'assets/scss/pages/css/min/blog_detail.min.css'
 		];
-		$this->data['the_view_js'] = [];
+		$this->data['the_view_js'] = [
+			'assets/plugins/swiper/js/swiper-bundle.min.js',
+			'assets/js/blog_detail/function.min.js'
+		];
 
     	$detail = $this->news_model->get_by_slug($slug);
         if ( !empty($detail) ) {

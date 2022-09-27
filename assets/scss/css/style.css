@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Work+Sans&display=swap");
 :root,
 .theme-default,
 .theme-light {
@@ -163,7 +163,7 @@
   --text-subtitle:                                #484848;
   --text-paragraph:                               #636363;
   --text-overline:                                #636363;
-  --web-font:                                     'EB Garamond', serif;
+  --web-font:                                     'Work Sans', sans-serif;
 }
 
 .theme-dark {
@@ -263,6 +263,8 @@ h4,
 h5,
 h6 {
   color: var(--text-title);
+  font-family: 'Lora', serif;
+  font-weight: 600;
 }
 
 p {
@@ -270,35 +272,29 @@ p {
 }
 
 h1 {
-  font-weight: 500;
   font-size: 6rem;
   letter-spacing: -0.09375rem;
 }
 
 h2 {
-  font-weight: 500;
   font-size: 3.75rem;
   letter-spacing: -0.03125rem;
 }
 
 h3 {
-  font-weight: 500;
   font-size: 3rem;
 }
 
 h4 {
-  font-weight: 500;
   font-size: 2.125rem;
   letter-spacing: 0.01562rem;
 }
 
 h5 {
-  font-weight: 500;
   font-size: 1.5rem;
 }
 
 h6 {
-  font-weight: 500;
   font-size: 1.125rem;
   letter-spacing: 0.00937rem;
 }
@@ -417,10 +413,7 @@ ul {
 }
 
 .breadcrumb .breadcrumb-item:before {
-  font-family: 'els';
-  font-size: 0.75rem;
-  font-weight: 900;
-  content: '\e9c3';
+  content: '/';
 }
 
 .breadcrumb .breadcrumb-item.breadcrumb-active a {
@@ -8853,7 +8846,7 @@ body .tooltip.tooltip-toolbar .tooltip-inner, html .tooltip.tooltip-toolbar .too
   --text-subtitle:                                #484848;
   --text-paragraph:                               #636363;
   --text-overline:                                #636363;
-  --web-font:                                     'EB Garamond', serif;
+  --web-font:                                     'Work Sans', sans-serif;
 }
 
 .theme-dark {
