@@ -17,17 +17,21 @@
   margin: 8rem 0;
 }
 
-.view-contact .container .address .row > div:last-child h6:before {
+.view-contact .container .address .row > div > div:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+.view-contact .container .address .row > div > div:last-child h6:before {
   background-color: transparent;
 }
 
-.view-contact .container .address .row > div h6 {
-  margin-bottom: 4rem;
+.view-contact .container .address .row > div > div h6 {
+  margin-bottom: 2rem;
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-.view-contact .container .address .row > div h6:before {
+.view-contact .container .address .row > div > div h6:before {
   content: '';
   width: 48px;
   height: 4px;
@@ -36,21 +40,21 @@
   display: block;
 }
 
-.view-contact .container .address .row > div ul li:not(:last-child) {
+.view-contact .container .address .row > div > div ul li:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
-.view-contact .container .address .row > div ul li p a {
+.view-contact .container .address .row > div > div ul li p a {
   color: var(--secondary);
 }
 
-.view-contact .container .map {
+.view-contact .container .address .row > div .map {
   height: 500px;
   background-color: var(--gray-1);
   border-radius: 0.5rem;
 }
 
-.view-contact .container .map iframe {
+.view-contact .container .address .row > div .map iframe {
   width: 100%;
   height: 100%;
 }

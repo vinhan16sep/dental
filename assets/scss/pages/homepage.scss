@@ -311,6 +311,10 @@
 
 			.container {
 				.section-header {
+					.form-select {
+						max-width: 200px;
+					}
+					
 					ul {
 						li {
 							display: inline-block;
@@ -460,81 +464,45 @@
 				@include borderRadius(1.5rem);
 
 				.section-body {
-					.swiper-container {
-						padding-bottom: 3rem;
+					padding: 0 calc(100% / 12 - 1.5rem);
 
-						&:hover {
-							.swiper-button-next,
-							.swiper-button-prev {
-								@include translate(0, 0);
-								@include transition();
-							}
-						}
+					.row {
+						> div {
+							a {
+								display: block;
 
-						.swiper-button-next,
-						.swiper-button-prev {
-							width: 42px;
-							height: 42px;
+								.card {
+									background-color: transparent;
+									box-shadow: none;
 
-							background-color: var(--white);
+									.card-body {
+										padding-left: 0;
+										padding-right: 0;
 
-							@include borderRadius(50%);
+										h5 {
+											margin-bottom: 0.5rem;
 
-							&:after {
-								font-size: 1.25rem;
+											font-weight: 600;
 
-								color: var(--secondary);
-							}
-						}
-
-						.swiper-button-prev {
-							@include translate(-150%, 0);
-
-							@include transition();
-						}
-
-						.swiper-button-next {
-							@include translate(150%, 0);
-
-							@include transition();
-						}
-
-						.swiper-wrapper{
-							.swiper-slide {
-								width: 30%;
-
-								a {
-									display: block;
-
-									.card {
-										background-color: transparent;
-										box-shadow: none;
-
-										.card-body {
-											padding-left: 0;
-											padding-right: 0;
-
-											h5 {
-												margin-bottom: 1.5rem;
-
-												font-weight: 600;
-
-												@include textWrapper(100%, 3.75rem, 2);
-											}
-
-											p {
-												&:not(.p-sm){
-													margin-bottom: 2rem;
-
-													@include textWrapper(100%, 4rem, 3);
-												}
-											}
+											@include textWrapper(100%, 3.75rem, 2);
 										}
 
-										.ratio-wrapper {
-											.img-mask {
-												@include borderRadius();
+										p {
+											&:not(.p-sm){
+												margin-bottom: 2rem;
+
+												@include textWrapper(100%, 4.5rem, 3);
 											}
+
+											&.p-sm {
+												@include textWrapper(100%, 4rem, 3);
+											}
+										}
+									}
+
+									.ratio-wrapper {
+										.img-mask {
+											@include borderRadius();
 										}
 									}
 								}
@@ -599,6 +567,15 @@
 
 								@include d-flex(column, center, center);
 
+								&:hover{
+									.img-mask {
+										img {
+											filter: grayscale(0);
+											@include transition();
+										}
+									}
+								}
+
 								.img-mask {
 									width: 180px;
 									height: 180px;
@@ -609,6 +586,9 @@
 
 									img {
 										object-fit: contain;
+
+										filter: grayscale(1);
+										@include transition();
 									}
 								}
 							}
@@ -625,9 +605,7 @@
 
 				@include d-flex(row, space-between, center);
 
-				h5 {
-					font-size: 1.75rem;
-
+				h3 {
 					position: relative;
 
 					&:before {
@@ -639,7 +617,7 @@
 						background-color: var(--primary);
 
 						position: absolute;
-						bottom: 8px;
+						bottom: 16px;
 						left: 0;
 						z-index: 1;
 
@@ -659,6 +637,37 @@
 							&.swiper-pagination-bullet-active {
 								background-color: var(--primary);
 							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.modal{
+		&#modalBanner {
+			.modal-dialog {
+				.modal-content {
+					background-color: transparent;
+
+					.modal-header {
+						@include d-flex(row, flex-end, center);
+
+						.btn {
+							color: var(--white);
+						}
+					}
+
+					.modal-body {
+						img {
+							width: auto;
+							max-width: 100%;
+							height: auto;
+							max-height: 70vh;
+
+							margin: 0 auto;
+
+							display: block;
 						}
 					}
 				}

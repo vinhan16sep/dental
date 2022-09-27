@@ -223,61 +223,90 @@
 							> div {
 								margin-bottom: 1.5rem;
 
-								a {
-									&:hover {
-										.card {
-											@include boxShadowLg();
-											@include transition();
+								.card {
+									@include boxShadowSm();
+									@include transition();
 
+									&:hover {										
+										@include boxShadowLg();
+										@include transition();
+	
+										.ratio-wrapper{
 											.img-mask {
 												img {
 													@include scale(1.1, 1.1);
-
+		
 													@include transition();
 												}
 											}
 										}
 									}
 
-									.card {
-										@include boxShadowSm();
-										@include transition();
-
+									.ratio-wrapper{
 										.img-mask {
 											@include borderRadiusCustom(top, left);
 											@include borderRadiusCustom(top, right);
-
+	
 											img {
 												@include transition();
 											}
 										}
 
-										.card-body {
-											> div {
-												margin-bottom: 0.5rem;
+										.overlay {
+											width: 100%;
+
+											padding: 0.25rem 0.75rem;
+
+											@include d-flex(row, space-between, center);
+
+											position: absolute;
+											top: 0;
+											left: 0;
+											z-index: 10;
+
+											a {
+												color: var(--white);
+
+												@include textShadowDf();
+
+												i {
+													&.fa-star {
+														color: gold;
+													}
+												}
+											}
+										}
+									}
+
+									.card-body {
+										> div {
+											margin-bottom: 0.5rem;
+
+											@include d-flex(row, space-between, center);
+										}
+
+										p {
+											&.code {
+												color: var(--gray-4);
+											}
+
+											&.price {
+												margin-top: 0.5rem;
+
+												font-weight: 600;
+
+												color: var(--primary);
 
 												@include d-flex(row, space-between, center);
 											}
+										}
 
-											p {
-												&.code {
-													color: var(--gray-4);
-												}
+										h5 {
+											margin-bottom: 0.5rem;
 
-												&.price {
-													font-weight: 600;
+											font-weight: 600;
 
-													color: var(--primary);
-												}
-											}
-	
-											h5 {
-												margin-bottom: 0.5rem;
-	
-												font-weight: 600;
-	
-												@include textWrapper(100%, 3.75rem, 2);
-											}
+											@include textWrapper(100%, 3.75rem, 2);
 										}
 									}
 								}

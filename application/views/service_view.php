@@ -3,6 +3,19 @@
 		<div class="service-overview">
 			<div class="row">
 				<div class="col-lg-6">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item">
+								<a href="<?php echo base_url('/') ?>">
+									Trang chủ
+								</a>
+							</li>
+							<li class="breadcrumb-item active" aria-current="page">
+								Dịch vụ
+							</li>
+						</ol>
+					</nav>
+
 					<h3>
 						Dịch vụ
 					</h3>
@@ -24,9 +37,9 @@
 						<div class="service-item">
 							<div class="item-header">
 								<a href="<?php echo base_url('service/detail/' . $service['slug']) ?>">
-									<h6>
+									<h3>
 										<?php echo $service['title'] ?>
-									</h6>
+									</h3>
 								</a>
 							</div>
 

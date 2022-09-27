@@ -187,28 +187,28 @@
   margin-bottom: 1.5rem;
 }
 
-.view-product .products .container > .row > div .products-list .row > div a:hover .card {
-  -webkit-box-shadow: 0 1rem 3rem var(--black-alpha-10);
-  box-shadow: 0 1rem 3rem var(--black-alpha-10);
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
-}
-
-.view-product .products .container > .row > div .products-list .row > div a:hover .card .img-mask img {
-  -webkit-transform: scale(1.1, 1.1);
-  transform: scale(1.1, 1.1);
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
-}
-
-.view-product .products .container > .row > div .products-list .row > div a .card {
+.view-product .products .container > .row > div .products-list .row > div .card {
   -webkit-box-shadow: 0 0.125rem 0.25rem var(--black-alpha-10);
   box-shadow: 0 0.125rem 0.25rem var(--black-alpha-10);
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
 }
 
-.view-product .products .container > .row > div .products-list .row > div a .card .img-mask {
+.view-product .products .container > .row > div .products-list .row > div .card:hover {
+  -webkit-box-shadow: 0 1rem 3rem var(--black-alpha-10);
+  box-shadow: 0 1rem 3rem var(--black-alpha-10);
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+.view-product .products .container > .row > div .products-list .row > div .card:hover .ratio-wrapper .img-mask img {
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+.view-product .products .container > .row > div .products-list .row > div .card .ratio-wrapper .img-mask {
   border-top-left-radius: 0.5rem;
   -webkit-border-top-left-radius: 0.5rem;
   -moz-border-top-left-radius: 0.5rem;
@@ -219,12 +219,43 @@
   -o-border-top-right-radius: 0.5rem;
 }
 
-.view-product .products .container > .row > div .products-list .row > div a .card .img-mask img {
+.view-product .products .container > .row > div .products-list .row > div .card .ratio-wrapper .img-mask img {
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
 }
 
-.view-product .products .container > .row > div .products-list .row > div a .card .card-body > div {
+.view-product .products .container > .row > div .products-list .row > div .card .ratio-wrapper .overlay {
+  width: 100%;
+  padding: 0.25rem 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.view-product .products .container > .row > div .products-list .row > div .card .ratio-wrapper .overlay a {
+  color: var(--white);
+  text-shadow: 0 0.5rem 1rem var(--black-alpha-10);
+}
+
+.view-product .products .container > .row > div .products-list .row > div .card .ratio-wrapper .overlay a i.fa-star {
+  color: gold;
+}
+
+.view-product .products .container > .row > div .products-list .row > div .card .card-body > div {
   margin-bottom: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -241,16 +272,30 @@
           align-items: center;
 }
 
-.view-product .products .container > .row > div .products-list .row > div a .card .card-body p.code {
+.view-product .products .container > .row > div .products-list .row > div .card .card-body p.code {
   color: var(--gray-4);
 }
 
-.view-product .products .container > .row > div .products-list .row > div a .card .card-body p.price {
+.view-product .products .container > .row > div .products-list .row > div .card .card-body p.price {
+  margin-top: 0.5rem;
   font-weight: 600;
   color: var(--primary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.view-product .products .container > .row > div .products-list .row > div a .card .card-body h5 {
+.view-product .products .container > .row > div .products-list .row > div .card .card-body h5 {
   margin-bottom: 0.5rem;
   font-weight: 600;
   overflow: hidden;

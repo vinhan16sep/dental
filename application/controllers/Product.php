@@ -36,6 +36,20 @@ class Product extends Public_Controller {
         $this->render('product_view');
 	}
 
+	public function category()
+	{
+		
+		$this->data['the_view_title'] = 'Product Categories';
+		$this->data['the_view_css'] = [
+			'assets/scss/pages/css/min/product_category.min.css'
+		];
+		$this->data['the_view_js'] = [
+			'assets/js/product/function.min.js'
+		];
+
+		$this->render('product_category_view');
+	}
+
 	public function detail($slug)
 	{
 		$this->data['the_view_title'] = 'Product Detail';
@@ -51,7 +65,8 @@ class Product extends Public_Controller {
 		];
 
     	$detail = $this->product_model->get_by_slug($slug);
-        if ( !empty($detail) ) {
+		
+        if (!empty($detail) ) {
             $this->data['detail'] = $detail;
 			$this->render('product_detail_view');
         } else {

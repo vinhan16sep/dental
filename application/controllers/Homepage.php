@@ -25,7 +25,7 @@ class Homepage extends Public_Controller {
 		];
 
 		$this->data['flashSales'] = $this->product_model->fetch_all_sale();
-		$this->data['blogs'] = $this->news_model->fetch_all(5);
+		$this->data['blogs'] = $this->news_model->fetch_all(3);
 
         $this->render('homepage_view');
 	}
@@ -33,6 +33,12 @@ class Homepage extends Public_Controller {
 	public function getHighlightByCategory()
 	{
 		$category = $this->input->get('category');
+
+		// if(!isset($category)){
+		// 	$category = '';
+		// }
+
+		// $highlights = $this->product_model->get_focus_by_category_id($category, 10);
 
 		$highlights = [
 			0 => [

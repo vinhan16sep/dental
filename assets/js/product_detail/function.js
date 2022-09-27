@@ -1,4 +1,19 @@
 $(document).ready(function () {
+    let swipeCover = new Swiper('#swipeCover', {
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+            delay: 5000
+        },
+        navigation: {
+            nextEl: '#swipeCover .swiper-button-next',
+            prevEl: '#swipeCover .swiper-button-prev'
+        },
+        pagination: {
+            el: '#swipeCover .swiper-pagination'
+        }
+    });
+
     let swiperRelated = new Swiper('#swiperRelated', {
         slidesPerView: 'auto',
         spaceBetween: 24,

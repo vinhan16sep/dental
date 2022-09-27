@@ -1,3 +1,17 @@
+<siv class="sub-header">
+    <div class="sub-header-left">
+        <p>
+            Hotline: <a href="tel:+84903424205">0903.424.205</a>
+        </p>
+    </div>
+
+    <div class="sub-header-right">
+        <p>
+            <i class="fas fa-map-marker"></i> Số 41 ngõ 38 Phương Mai - Đống Đa - Hà Nội
+        </p>
+    </div>
+</siv>
+
 <header>
     <div class="header-brand">
         <a href="<?php echo base_url('/') ?>">
@@ -13,59 +27,62 @@
         </div>
 
         <div class="menu-item">
-            <a href="<?php echo base_url('/about') ?>" class="<?php echo ($this->uri->segment(1) == 'about') ? 'active' : '' ?>">
+            <a href="<?php echo base_url('/about/') ?>" class="<?php echo ($this->uri->segment(1) == 'about') ? 'active' : '' ?>">
                 Giới thiệu
             </a>
         </div>
 
         <div class="menu-item">
-            <a href="<?php echo base_url('/product') ?>" class="<?php echo (($this->uri->segment(1)) == 'product') ? 'active' : ''?>">
+            <a href="<?php echo base_url('/product/category/') ?>" class="<?php echo (($this->uri->segment(1)) == 'product') ? 'active' : ''?>">
                 Sản phẩm
             </a>
-
-            <div class="menu-item-content">
-                <div class="container">
-                    <div class="row">
-                        <?php foreach($product_category as $category): ?>
-                            <div class="col-lg-4">
-                                <h6>
-                                    <a href="<?php echo base_url('/product/' . $category['slug']) ?>">
-                                        <?php echo $category['title'] ?>
-                                    </a>
-                                </h6>
-
-                                <div class="ratio-wrapper ratio-wrapper-16-9">
-                                    <div class="img-mask">
-                                        <img src="<?php echo $category['image'] ?>" alt="<?php echo $category['title'] ?>">
-                                    </div>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="menu-item">
-            <a href="<?php echo base_url('/service') ?>" class="<?php echo (($this->uri->segment(1)) == 'service') ? 'active' : ''?>">
+            <a href="<?php echo base_url('/service/') ?>" class="<?php echo (($this->uri->segment(1)) == 'service') ? 'active' : ''?>">
                 Dịch vụ
             </a>
         </div>
 
         <div class="menu-item">
-            <a href="<?php echo base_url('/blogs') ?>" class="<?php echo (($this->uri->segment(1)) == 'blogs') ? 'active' : ''?>">
+            <a href="<?php echo base_url('/partners/') ?>" class="<?php echo (($this->uri->segment(1)) == 'partners') ? 'active' : ''?>">
+                Đối tác
+            </a>
+        </div>
+
+        <div class="menu-item">
+            <a href="<?php echo base_url('/blogs/') ?>" class="<?php echo (($this->uri->segment(1)) == 'blogs') ? 'active' : ''?>">
                 Tin tức
             </a>
         </div>
 
         <div class="menu-item">
-            <a href="<?php echo base_url('/contact') ?>" class="<?php echo (($this->uri->segment(1)) == 'contact') ? 'active' : ''?>">
+            <a href="<?php echo base_url('/contact/') ?>" class="<?php echo (($this->uri->segment(1)) == 'contact') ? 'active' : ''?>">
                 Liên hệ
             </a>
         </div>
     </div>
 
     <div class="header-search">
+        <div class="dropdown">
+            <button class="btn btn-lang" data-bs-toggle="dropdown" type="button">
+                VI
+            </button>
+
+            <div class="dropdown-menu dropdown-menu-end">
+                <a href="#" class="dropdown-item btn-change-lang" data-lang="vi">
+                    <img src="<?php echo base_url('assets/img/vi.png') ?>" alt="en"> Tiếng Việt
+                </a>
+                <a href="#" class="dropdown-item btn-change-lang" data-lang="en">
+                    <img src="<?php echo base_url('assets/img/en.png') ?>" alt="en"> English
+                </a>
+            </div>
+        </div>
+
+        <button class="btn btn-cart" id="btnCart" type="button">
+            <i class="fas fa-shopping-cart"></i>
+        </button>
+
         <button class="btn btn-search" data-bs-toggle="collapse" data-bs-target="#searchCollapse" type="button">
             <i class="fas fa-search"></i>
         </button>

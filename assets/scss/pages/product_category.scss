@@ -1,0 +1,59 @@
+@import '../settings/mixin';
+
+.view-product-category {
+	.container {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+
+		.row {
+			> div {
+				a {
+					display: block;
+
+					.card {
+						margin-bottom: 1.5rem;
+
+						box-shadow: none;
+
+						@include transition();
+	
+						.img-mask {
+							width: 100%;
+							height: 230px;
+	
+							@include borderRadiusCustom(top, left);
+							@include borderRadiusCustom(top, right);
+
+							img {
+								@include scale(1, 1);
+								@include transition();
+							}
+						}
+	
+						.card-body {
+							@include d-flex(column, center, center);
+	
+							h6 {
+								color: var(--primary);
+							}
+						}
+					}
+
+					&:hover {
+						.card {
+							@include boxShadowDf();
+							@include transition();
+
+							.img-mask {
+								img {
+									@include scale(1.1, 1.1);
+									@include transition();
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
