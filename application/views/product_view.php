@@ -37,6 +37,12 @@
 								<a href="<?php echo base_url('product/detail/' . $value['slug']) ?>">
 									<div class="card">
 										<div class="img-mask">
+											<div class="overlay">
+												<h6>
+													Mua ngay
+												</h6>
+											</div>
+
 											<img src="<?= base_url('assets/upload/product/' . $value['slug'] . '/' . $value['image']) ?>" alt="Dental">
 										</div>
 
@@ -48,6 +54,16 @@
 											<h5 class="sale-title">
 												<?php echo $value['title'] ?>
 											</h5>
+
+											<div class="sale-campaigns">
+												<span class="badge badge-outline-primary">
+													Campaign 1
+												</span>
+
+												<span class="badge badge-outline-primary">
+													Campaign 2
+												</span>
+											</div>
 
 											<p class="p-sm sale-made-in">
 												Xuất xứ: <?php echo $value['origin'] ?>

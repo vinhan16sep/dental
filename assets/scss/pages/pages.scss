@@ -198,7 +198,7 @@ body {
 
 			&.fixed-center {
 				top: 50%;
-				right: 0.5rem;
+				right: 2rem;
 
 				@include translate(0, -50%);
 
@@ -206,8 +206,8 @@ body {
 			}
 
 			&.fixed-bottom {
-				bottom: 0.5rem;
-				right: 0.5rem;
+				bottom: 1.5rem;
+				right: 2rem;
 
 				@include d-flex(column, center, flex-end);
 
@@ -230,6 +230,26 @@ body {
 				}
 			}
 
+			&.fixed-left {
+				bottom: 1.5rem;
+				left: 2rem;
+
+				@include d-flex(column, center, flex-start);
+
+				.btn {
+					width: auto;
+
+					padding-left: 0.5rem;
+					padding-right: 0.5rem;
+
+					@include borderRadius(10px);
+
+					i {
+						margin-right: 0.5rem;
+					}
+				}
+			}
+
 			.btn {
 				width: 40px;
 				height: 40px;
@@ -238,7 +258,7 @@ body {
 
 				@include borderRadius(50%);
 
-				@include d-flex(column, center, center);
+				@include d-flex(row, center, center);
 
 				&:not(:last-child){
 					margin-bottom: 0.625rem;

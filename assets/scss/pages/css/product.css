@@ -1,5 +1,5 @@
 .view-product .overview {
-  height: calc(100vh - 90px);
+  min-height: calc(100vh - 90px);
   padding-top: 4rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(161, 43, 46, 0)), to(rgba(161, 43, 46, 0.1)));
   background-image: linear-gradient(to bottom, rgba(161, 43, 46, 0), rgba(161, 43, 46, 0.1));
@@ -70,9 +70,23 @@
   transition: all ease-in-out 300ms;
 }
 
+.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a:hover .card .img-mask .overlay {
+  opacity: 1;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a:hover .card .img-mask img {
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
 .view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .img-mask {
   width: 100%;
   height: 300px;
+  position: relative;
   border-top-left-radius: 0.5rem;
   -webkit-border-top-left-radius: 0.5rem;
   -moz-border-top-left-radius: 0.5rem;
@@ -81,6 +95,64 @@
   -webkit-border-top-right-radius: 0.5rem;
   -moz-border-top-right-radius: 0.5rem;
   -o-border-top-right-radius: 0.5rem;
+}
+
+.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .img-mask .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: var(--black-alpha-50);
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .img-mask .overlay h6 {
+  width: 70px;
+  height: 70px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 50%;
+  font-family: var(--web-font);
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .img-mask img {
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
 }
 
 .view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body p.sale-code {
@@ -94,6 +166,29 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body .sale-campaigns {
+  height: 20px;
+  margin-bottom: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body .sale-campaigns .badge {
+  margin-right: 0.5rem;
+  display: block;
 }
 
 .view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body .star-rating {

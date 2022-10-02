@@ -52,19 +52,29 @@
 					<div class="item-sizer"></div>
 
 					<?php foreach($blogs as $blog): ?>
-						<a href="<?php echo base_url('blogs/detail/' . $blog['slug']) ?>">
-							<div class="item">
-								<h6>
+						<div class="item">
+							<a href="<?php echo base_url('blogs/detail/' . $blog['slug']) ?>">
+								<h5>
 									<?php echo $blog['title'] ?>
-								</h6>
-			
-								<p>
-									<?php echo $blog['description'] ?>
-								</p>
-			
+								</h5>
+							</a>
+
+							<p class="p-sm">
+								<?php echo date('d/m/Y', $blog['created_at']) ?>
+							</p>
+		
+							<p>
+								<?php echo $blog['description'] ?>
+							</p>
+		
+							<a href="<?php echo base_url('blogs/detail/' . $blog['slug']) ?>">
 								<img src="<?= base_url('assets/upload/news/' . $blog['slug'] . '/' . $blog['image']) ?>" alt="Blog image">
-							</div>
-						</a>
+							</a>
+
+							<a href="<?php echo base_url('blogs/detail/' . $blog['slug']) ?>">
+								Xem thêm
+							</a>
+						</div>
 					<?php endforeach;?>
 				</div>	
 			</div>

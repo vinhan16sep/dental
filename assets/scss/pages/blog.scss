@@ -114,13 +114,12 @@
 					}
 		
 					.item {
-						padding: 0 0.75rem;
+						padding: 0 1rem;
 						margin-bottom: 4rem;
 		
-						h6 {
-							margin-bottom: 2rem;
+						h5 {
+							margin-bottom: 0.5rem;
 		
-							font-size: 1.25rem;
 							font-weight: 600;
 		
 							&:before {
@@ -138,13 +137,38 @@
 						}
 		
 						p {
-							margin-bottom: 2rem;
+							&.p-sm {
+								margin-bottom: 2rem;
+
+								color: var(--gray-5);
+							}
+
+							&:not(.p-sm){
+								max-height: 9rem;
+	
+								margin-bottom: 2rem;
+	
+								@include textWrapper(100%, auto, 6);
+							}
 						}
 		
 						img {
 							width: 100%;
+
+							margin-bottom: 1rem;
 		
 							@include borderRadius();
+						}
+
+						a {
+							&:last-child {
+								display: block;
+
+								font-size: 0.875rem;
+
+								text-align: center;
+								text-decoration: underline;
+							}
 						}
 					}
 				}

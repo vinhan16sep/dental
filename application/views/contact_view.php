@@ -80,7 +80,7 @@
 						</ul>
 					</div>
 
-					<div>
+					<!-- <div>
 						<h6>
 							&nbsp;
 						</h6>
@@ -107,7 +107,7 @@
 								</p>
 							</li>
 						</ul>
-					</div>
+					</div> -->
 				</div>
 
 				<div class="col-lg-6">
