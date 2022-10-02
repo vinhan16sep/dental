@@ -41,14 +41,17 @@
                     <a href="tel:+84903424205" class="btn btn-primary" role="button">
                         <i class="fas fa-file-pdf"></i>
                     </a>
-                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalReceiveNotification" role="button">
-                        <i class="fas fa-envelope"></i>
-                    </a>
                 </div>
 
                 <div class="fixed-buttons fixed-bottom">
                     <a href="#" class="btn btn-primary" id="btnScrollTop" role="button">
                         <i class="fas fa-arrow-up"></i>
+                    </a>
+                </div>
+
+                <div class="fixed-buttons fixed-left">
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalReceiveNotification" role="button">
+                        <i class="fas fa-envelope"></i> Nhận thông báo
                     </a>
                 </div>
 
@@ -87,32 +90,6 @@
                                         <div class="form-group col-lg-6">
                                             <input type="text" class="form-control" name="Company" placeholder="Đơn vị công tác">
                                         </div>
-                                        <div class="form-group col-lg-12">
-                                            <input type="text" class="form-control" name="Title" placeholder="Tiêu đề">
-                                        </div>
-                                        <div class="form-group col-lg-12">
-                                            <select class="form-select" name="TitleType">
-                                                <option value="none">
-                                                    Chọn một
-                                                </option>
-                                                <option value="product">
-                                                    Sản phẩm
-                                                </option>
-                                                <option value="wantity">
-                                                    Bảo hành
-                                                </option>
-                                                <option value="service">
-                                                    Dịch vụ
-                                                </option>
-                                                <option value="other">
-                                                    Khác...
-                                                </option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-lg-12">
-                                            <textarea class="form-control" name="Message" rows="7" placeholder="Viết gì đó cho chúng tôi..."></textarea>
-                                        </div>
-
                                         <div class="buttons">
                                             <button class="btn btn-outline-primary" id="btnSubmit" type="button">
                                                 Gửi <i class="fas fa-arrow-right"></i>
