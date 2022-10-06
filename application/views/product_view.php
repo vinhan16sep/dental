@@ -98,11 +98,11 @@
 							<div class="item-body">
 								<ul>
 									<?php foreach ($product_categories as $key => $value): ?>
-									<li>
-										<a href="#">
-											<?= $value['title'] ?>
-										</a>
-									</li>
+										<li>
+											<a href="#">
+												<?= $value['title'] ?>
+											</a>
+										</li>
 									<?php endforeach; ?>
 								</ul>
 							</div>

@@ -130,19 +130,138 @@
   padding-left: 4rem;
 }
 
-.view-about .detail .container .row > div .library .library-body .list-images .item-sizer,
-.view-about .detail .container .row > div .library .library-body .list-images .item {
-  width: 33.33%;
+.view-about .detail .container .row > div .library .library-body .row > div .library-filter .filter-item:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
-.view-about .detail .container .row > div .library .library-body .list-images .item {
-  padding: 0 0.75rem;
+.view-about .detail .container .row > div .library .library-body .row > div .library-filter .filter-item .item-header {
+  margin-bottom: 1rem;
+}
+
+.view-about .detail .container .row > div .library .library-body .row > div .library-filter .filter-item .item-header h6 {
+  font-size: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.view-about .detail .container .row > div .library .library-body .row > div .library-filter .filter-item .item-header h6:after {
+  content: '';
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  height: 2px;
+  margin-left: 2rem;
+  background-color: var(--border);
+  -webkit-transform: translate(0, -4px);
+  transform: translate(0, -4px);
+}
+
+.view-about .detail .container .row > div .library .library-body .row > div .library-filter .filter-item .item-body ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.view-about .detail .container .row > div .library .library-body .row > div .library-filter .filter-item .item-body ul li:not(:last-child) {
+  margin-bottom: 1.125rem;
+}
+
+.view-about .detail .container .row > div .library .library-body .row > div .library-filter .filter-item .item-body ul li a {
+  width: 100%;
+  padding-left: 1rem;
+  font-weight: 600;
+  color: #999;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.view-about .detail .container .row > div .library .library-body .row > div .library-filter .filter-item .item-body ul li a:hover, .view-about .detail .container .row > div .library .library-body .row > div .library-filter .filter-item .item-body ul li a.active {
+  color: var(--secondary);
+}
+
+.view-about .detail .container .row > div .library .library-body .row > div .library-filter .filter-item .item-body ul li a:hover:before, .view-about .detail .container .row > div .library .library-body .row > div .library-filter .filter-item .item-body ul li a.active:before {
+  background-color: var(--primary);
+}
+
+.view-about .detail .container .row > div .library .library-body .row > div .library-filter .filter-item .item-body ul li a:before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.view-about .detail .container .row > div .library .library-body .row > div .library-post .post-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.view-about .detail .container .row > div .library .library-body .row > div .library-post .post-item:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
-.view-about .detail .container .row > div .library .library-body .list-images .item img {
-  width: 100%;
+.view-about .detail .container .row > div .library .library-body .row > div .library-post .post-item .img-mask {
+  width: 160px;
+  height: 120px;
   border-radius: 0.5rem;
+  margin-right: 1.5rem;
+}
+
+.view-about .detail .container .row > div .library .library-body .row > div .library-post .post-item .text {
+  width: calc(100% - 160px - 1.5rem);
+}
+
+.view-about .detail .container .row > div .library .library-body .row > div .library-post .post-item .text h6 {
+  max-height: 4.25rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  width: 100%;
+  height: auto;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-break: break-word;
+}
+
+.view-about .detail .container .row > div .library .library-body .row > div .library-post .post-item .text p {
+  max-height: 6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  width: 100%;
+  height: auto;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  word-break: break-word;
 }
 
 .view-about .detail .container .row > div .client {
@@ -234,6 +353,16 @@
   transition: all ease-in-out 300ms;
 }
 
+.view-about .detail .container .row > div .client .client-body .swiper-container .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.view-about .detail .container .row > div .client .client-body .swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 30px;
+  background-color: var(--primary);
+  border-radius: 2rem;
+}
+
 .view-about .detail .container .row > div .client .client-body .swiper-container .swiper-wrapper .swiper-slide {
   width: 25%;
   display: -webkit-box;
@@ -254,6 +383,8 @@
 .view-about .detail .container .row > div .client .client-body .swiper-container .swiper-wrapper .swiper-slide:hover .img-mask img {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
 }
@@ -318,6 +449,16 @@
   padding-left: calc(100% / 12 - 1.5rem);
 }
 
+.view-about .detail .container .row > div .faq .faq-body a {
+  padding: 0.75rem 0;
+  display: block;
+}
+
+.view-about .detail .container .row > div .faq .faq-body a:not(:last-child) {
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
 .view-about .detail .container .row > div .faq .faq-body .row > div a {
   margin-bottom: 1.5rem;
   display: block;
@@ -345,6 +486,10 @@
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   word-break: break-word;
+}
+
+.view-about .modal#modalFaqDetail .modal-dialog .modal-content .modal-body h6 {
+  margin-bottom: 1.5rem;
 }
 
 @media screen and (max-width: 576.98px) {

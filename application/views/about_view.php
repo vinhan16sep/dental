@@ -86,18 +86,73 @@
 						</div>
 				
 						<div class="library-body">
-							<div class="list-images">
-								<div class="item-sizer"></div>
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="library-filter">
+										<div class="filter-item">
+											<div class="item-header">
+												<h6>
+													Danh mục
+												</h6>
+											</div>
 
-								<?php for($i = 0; $i < 7; $i++): ?>
-									<div class="item">
-										<img src="https://images.unsplash.com/photo-1606811856475-5e6fcdc6e509?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZGVudGFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Image library">
+											<div class="item-body">
+												<ul class="list-unstyled">
+													<li>
+														<a href="#">
+															Category 1 Child 1
+														</a>
+													</li>
+													<li>
+														<a href="#">
+															Category 1 Child 2
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-8">
+									<div class="library-post">
+										<?php for($i = 0; $i < 3; $i++): ?>
+											<div class="post-item">
+												<a href="#">
+													<div class="img-mask">
+														<img src="https://images.unsplash.com/photo-1606811856475-5e6fcdc6e509?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZGVudGFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Image library">
+													</div>
+												</a>
+
+												<div class="text">
+													<a href="#">
+														<h6>
+															Nulla vehicula rutrum ex a fermentum. In a vulputate sem, vel bibendum quam
+														</h6>
+													</a>
+
+													<p>
+														Duis vel eros non est dictum dictum. Duis congue malesuada orci id venenatis. Suspendisse iaculis mollis velit et vehicula. Donec pharetra diam id ornare egestas. Aliquam porttitor est et enim volutpat, nec malesuada libero fringilla. Phasellus sed felis et ante ornare porta in quis urna. Ut euismod, diam a molestie lacinia, mi tellus consequat augue, a condimentum lorem ante ut odio. Sed sagittis a enim id ornare. Duis vulputate condimentum viverra. Vivamus blandit nisi quis purus congue, in scelerisque turpis viverra.
+													</p>
+												</div>
+											</div>
+										<?php endfor; ?>
 									</div>
 
-									<div class="item">
-										<img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Image library">
+									<div class="pagination show">
+										<div class="pagination-list">
+											<a href="#" class="pagination-item btn active" role="button">
+												1
+											</a>
+											<a href="#" class="pagination-item btn" role="button">
+												2
+											</a>
+											<a href="#" class="pagination-item btn" role="button">
+												3
+											</a>
+										</div>
 									</div>
-								<?php endfor; ?>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -176,25 +231,13 @@
 								];
 							?>
 
-							<div class="row">
-								<?php foreach($faqs as $faq): ?>
-									<div class="col-lg-6">
-										<a href="#">
-											<div class="card">
-												<div class="card-body">
-													<h6>
-														<?php echo $faq['title'] ?>
-													</h6>
-	
-													<p>
-														<?php echo $faq['content'] ?>
-													</p>
-												</div>
-											</div>
-										</a>
-									</div>
-								<?php endforeach; ?>
-							</div>
+							<?php foreach($faqs as $faq): ?>
+								<a href="#" class="btn-get-faq-detail">
+									<h6>
+										<?php echo $faq['title'] ?>
+									</h6>
+								</a>
+							<?php endforeach; ?>
 						</div>
 					</div>
 				</div>
@@ -222,6 +265,29 @@
 							</a>
 						</li>
 					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalFaqDetail">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div></div>
+					
+					<button class="btn" data-bs-dismiss="modal" type="button">
+						<i class="fas fa-times"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<h6>
+						Vestibulum in ipsum leo. In ut quam non tortor consequat congue quis a est. Maecenas blandit gravida commodo. Fusce luctus egestas dolor. Duis vulputate diam a mi scelerisque faucibus.
+					</h6>
+
+					<p>
+						Aenean suscipit felis ut nunc maximus, ac tempus felis molestie. Fusce ac augue felis. Nullam ullamcorper diam ac arcu dignissim porta. Curabitur pulvinar ultrices sem, at malesuada velit euismod non. Vivamus placerat scelerisque velit. Duis non sollicitudin nibh. Proin maximus, magna ut scelerisque euismod, lacus tortor sagittis lorem, a venenatis ex magna vitae ipsum. Donec laoreet in purus quis laoreet. Nulla rutrum eros ac augue pretium condimentum. Suspendisse potenti. Quisque ut ultricies nulla. Ut odio felis, pretium eu turpis at, mattis malesuada nulla. Aliquam facilisis, quam vitae gravida cursus, quam diam maximus est, efficitur fringilla arcu nisl a magna. Suspendisse sollicitudin dolor id tristique ultricies.
+					</p>
 				</div>
 			</div>
 		</div>

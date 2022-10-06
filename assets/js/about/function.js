@@ -1,18 +1,4 @@
 $(document).ready(function () {
-    $('.list-images').isotope({
-        itemSelector: '.item',
-        percentPosition: true,
-        masonry: {
-            columnWidth: '.item-sizer'
-        }
-    });
-
-    $('.list-images')
-        .imagesLoaded()
-        .progress(function () {
-            $('.list-images').isotope('layout');
-        });
-
     let swiperClient = new Swiper('#swiperClient', {
         slidesPerView: 'auto',
         loop: true,
@@ -52,4 +38,14 @@ $(document).ready(function () {
             el: '#swiperFaq .swiper-pagination'
         }
     });
+
+    $('.btn-get-faq-detail')
+        .unbind()
+        .on('click', function (e) {
+            e.preventDefault();
+
+            const $modal = $('#modalFaqDetail');
+
+            $modal.modal('show');
+        });
 });

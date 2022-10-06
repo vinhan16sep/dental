@@ -1,82 +1,30 @@
 <div class="view-homepage">
 	<div class="section section-cover">
-		<div class="cover-content">
-			<h2 class="slide-title">
-				Flash sale
-			</h2>
-
-			<a href="javascript:void(0);" class="btn btn-lg btn-outline-primary" role="button">
-				Tìm hiểu thêm <i class="fas fa-arrow-right"></i>
-			</a>
-		</div>
-
 		<div class="swiper-container" id="swiperCover">
 			<div class="swiper-pagination"></div>
 
 			<div class="swiper-wrapper">
-				<?php foreach($flashSales as $key => $slide): ?>
+				<?php foreach($campaigns as $key => $slide): ?>
 					<div class="swiper-slide" data-index="<?php echo $key ?>" data-title="<?php echo $slide['title'] ?>">
-						<a href="<?php echo base_url('product/detail/' . $slide['slug']) ?>">
-							<div class="ratio-wrapper ratio-wrapper-16-9">
-								<div class="img-mask">
-									<img src="<?= base_url('assets/upload/product/' . $slide['slug'] . '/' . $slide['image']) ?>" alt="Dental">
+						<a href="#">
+							<div class="container-fluid">
+								<div class="text">
+									<h3>
+										<?php echo $slide['title'] ?>
+									</h3>
+
+									<h6>
+										Tìm hiểu thêm <i class="fas fa-arrow-right"></i>
+									</h6>
 								</div>
+							</div>
+
+							<div class="img-mask">
+								<img src="<?php echo $slide['image'] ?>" alt="Dental">
 							</div>
 						</a>
 					</div>
 				<?php endforeach; ?>
-			</div>
-		</div>
-	</div>
-
-	<div class="section section-about">
-		<div class="container">
-			<div class="section-header">
-				<h3>
-					Về chúng tôi
-				</h3>
-			</div>
-	
-			<div class="section-body">
-				<div class="about-heading">
-					<div class="row">
-						<div class="col-lg-9">
-							<h6>
-							Lời đầu tiên MINH Dental kính chúc các Nha sĩ - Đại Lý – Các cửa hàng vật liệu nha khoa toàn quốc và các bạn đồng nghiệp nhiều sức khỏe và thành công.
-							</h6>
-						</div>
-					</div>
-				</div>
-
-				<div class="about-content">
-					<div class="row">
-						<div class="col-lg-6">
-							<p>
-								MINH Dental đã có nhiều năm kinh nghiệm. Được thành lập và kinh doanh vật liệu thiết bị máy móc trong ngành Nha Khoa từ năm 1985 đến nay, đã từng được chọn là nhà phân phối sản phẩm máy móc vật liệu của các Hãng nha khoa nổi tiếng đã có mặt ở Việt Nam. Suốt 30 năm qua MINH Dental đã tạo dựng thương hiệu bằng “Uy Tín – Chất Lượng – Hiệu Quả” . Là hệ thống phân phối sản phẩm chất lượng cao trong ngành Nha Khoa với nhiều chính sách hỗ trợ từ phía các nhà cung cấp nước ngoài, các công ty cung cấp vật liệu nha khoa danh tiếng tại Việt Nam. Hiện MINH Dental rất vinh dự được chọn là Nhà Phân Phối Chính Thức của GC (công ty hàng đầu thế giới của Nhật Bản về ngành Nha Khoa). Tất cả các sản phẩm chúng tôi cung cấp đều được chứng nhận bởi các tổ chức FDA – ADA – CE và tiêu chuẩn chất lượng ISO 13458.
-							</p>
-
-							<p>
-								Với bề dầy kinh nghiệm 30 năm trong ngành nha khoa chúng tôi luôn mong muốn mang đến quý Nha sĩ, các phòng khám, các đại lý, các bạn đồng nghiệp những sản phẩm nha khoa chất lượng nhất, hoàn hảo nhất.
-							</p>
-
-							<a href="<?php echo base_url('/about') ?>" class="btn btn-lg btn-outline-primary" role="button">
-								Tìm hiểu thêm <i class="fas fa-arrow-right"></i>
-							</a>
-						</div>
-
-						<div class="col-lg-6">
-							<div class="img-wrapper">
-								<div>
-									<img src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Image about 1">
-								</div>
-
-								<div>
-									<img src="https://images.unsplash.com/photo-1588776813941-dcf9c55e84d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Image about 2">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -158,6 +106,36 @@
 		</div>
 	</div>
 
+	<div class="section section-categories">
+		<div class="container">
+			<div class="section-header">
+				<h3>
+					Về chúng tôi
+				</h3>
+			</div>
+			<div class="section-body">
+				<div class="row">
+					<?php foreach($product_category as $category): ?>
+						<div class="col-lg-4">
+							<a href="<?php echo base_url('/product/' . $category['slug']) ?>">		
+								<div class="card">
+									<div class="img-mask">
+										<img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVudGFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Cover of category">
+									</div>
+									<div class="card-body">
+										<h6>
+											<?php echo $category['title'] ?>
+										</h6>
+									</div>
+								</div>
+							</a>
+						</div>
+					<?php endforeach; ?>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="section section-client">
 		<div class="container">
 			<div class="section-header">
@@ -205,6 +183,78 @@
 		</div>
 	</div>
 
+	<div class="section section-about">
+		<div class="container">
+			<div class="section-header">
+				<h3>
+					Về chúng tôi
+				</h3>
+			</div>
+	
+			<div class="section-body">
+				<div class="about-heading">
+					<div class="row">
+						<div class="col-lg-9">
+							<h6>
+								Lời đầu tiên MINH Dental kính chúc các Nha sĩ - Đại Lý – Các cửa hàng vật liệu nha khoa toàn quốc và các bạn đồng nghiệp nhiều sức khỏe và thành công.
+							</h6>
+						</div>
+					</div>
+				</div>
+
+				<div class="about-content">
+					<div class="row">
+						<div class="col-lg-6">
+							<p>
+								MINH Dental đã có nhiều năm kinh nghiệm. Được thành lập và kinh doanh vật liệu thiết bị máy móc trong ngành Nha Khoa từ năm 1985 đến nay, đã từng được chọn là nhà phân phối sản phẩm máy móc vật liệu của các Hãng nha khoa nổi tiếng đã có mặt ở Việt Nam. Suốt 30 năm qua MINH Dental đã tạo dựng thương hiệu bằng “Uy Tín – Chất Lượng – Hiệu Quả” . Là hệ thống phân phối sản phẩm chất lượng cao trong ngành Nha Khoa với nhiều chính sách hỗ trợ từ phía các nhà cung cấp nước ngoài, các công ty cung cấp vật liệu nha khoa danh tiếng tại Việt Nam. Hiện MINH Dental rất vinh dự được chọn là Nhà Phân Phối Chính Thức của GC (công ty hàng đầu thế giới của Nhật Bản về ngành Nha Khoa). Tất cả các sản phẩm chúng tôi cung cấp đều được chứng nhận bởi các tổ chức FDA – ADA – CE và tiêu chuẩn chất lượng ISO 13458.
+							</p>
+
+							<p>
+								Với bề dầy kinh nghiệm 30 năm trong ngành nha khoa chúng tôi luôn mong muốn mang đến quý Nha sĩ, các phòng khám, các đại lý, các bạn đồng nghiệp những sản phẩm nha khoa chất lượng nhất, hoàn hảo nhất.
+							</p>
+
+							<a href="<?php echo base_url('/about') ?>" class="btn btn-lg btn-outline-primary" role="button">
+								Tìm hiểu thêm <i class="fas fa-arrow-right"></i>
+							</a>
+						</div>
+
+						<div class="col-lg-6">
+							<div class="img-wrapper">
+								<div>
+									<img src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Image about 1">
+								</div>
+
+								<div>
+									<img src="https://images.unsplash.com/photo-1588776813941-dcf9c55e84d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Image about 2">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-receive-notification">
+		<div class="img-mask">
+			<img src="https://images.unsplash.com/photo-1564420228450-d9a5bc8d6565?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1113&q=80" alt="Background notification">
+		</div>
+
+		<div class="overlay">
+			<h4>
+				đăng kí để nhận thông báo
+			</h4>
+
+			<p>
+				Morbi molestie tempus eleifend. Pellentesque ac dolor commodo, volutpat urna varius, ultrices nunc. Nam leo leo, mollis et faucibus at, sollicitudin in massa
+			</p>
+
+			<button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalReceiveNotification" type="button">
+				<i class="fas fa-envelope"></i> Nhận thông báo
+			</button>
+		</div>
+	</div>
+
 	<div class="section section-blogs">
 		<div class="container">
 			<div class="section-header">
@@ -217,29 +267,35 @@
 				<div class="row">
 					<?php foreach($blogs as $key => $slide): ?>
 						<div class="col-lg-4">
-							<a href="<?php echo base_url('blogs/detail/' . $slide['slug']) ?>">
-								<div class="card">
-									<div class="card-body">
+							<div class="card">
+								<div class="card-body">
+									<a href="<?php echo base_url('blogs/detail/' . $slide['slug']) ?>">
 										<h5>
 											<?php echo $slide['title'] ?>
 										</h5>
+									</a>
 
-										<p class="p-sm">
-											<?php echo date('d/m/Y', $slide['created_at']) ?>
-										</p>
+									<p class="p-sm date">
+										<?php echo date('d/m/Y', $slide['created_at']) ?>
+									</p>
 
-										<p class="p-sm">
-											<?php echo $slide['description'] ?>
-										</p>
-									</div>
+									<p class="p-sm">
+										<?php echo $slide['description'] ?>
+									</p>
 
+									<a href="<?php echo base_url('blogs/detail/' . $slide['slug']) ?>">
+										Xem chi tiết <i class="fas fa-chevron-right"></i>
+									</a>
+								</div>
+
+								<a href="<?php echo base_url('blogs/detail/' . $slide['slug']) ?>">
 									<div class="ratio-wrapper ratio-wrapper-16-9">
 										<div class="img-mask">
 											<img src="<?= base_url('assets/upload/news/' . $slide['slug'] . '/' . $slide['image']) ?>" alt="Blog image">
 										</div>
 									</div>
-								</div>
-							</a>
+								</a>
+							</div>
 						</div>
 					<?php endforeach; ?>
 				</div>
@@ -272,6 +328,61 @@
 				</div>
 				<div class="modal-body">
 					<img src="<?php echo base_url('assets/img/banner.png') ?>" alt="Banner">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalHighlightDetail">
+		<div class="modal-dialog modal-xl modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div></div>
+
+					<button class="btn" data-bs-dismiss="modal" type="button">
+						<i class="fas fa-times"></i>
+					</button>
+				</div>
+
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-5">
+							<div class="img-mask">
+								<img src="" alt="">
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="text">
+								<h3></h3>
+
+								<p class="description"></p>
+
+								<ul class="list-unstyled">
+									<li>
+										<h6>
+											Thương hiệu : <span class="product-brand"></span>
+										</h6>
+									</li>
+									<li>
+										<h6>
+											Nước sản xuất : <span class="product-made-in"></span>
+										</h6>
+									</li>
+									<li>
+										<h6>
+											Bảo hành : <span class="product-warranty"></span> tháng
+										</h6>
+									</li>
+								</ul>
+
+								<div class="append-content"></div>
+
+								<a href="#">
+									Xem chi tiết <i class="fas fa-chevron-right"></i>
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

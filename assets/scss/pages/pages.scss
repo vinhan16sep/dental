@@ -230,26 +230,6 @@ body {
 				}
 			}
 
-			&.fixed-left {
-				bottom: 1.5rem;
-				left: 2rem;
-
-				@include d-flex(column, center, flex-start);
-
-				.btn {
-					width: auto;
-
-					padding-left: 0.5rem;
-					padding-right: 0.5rem;
-
-					@include borderRadius(10px);
-
-					i {
-						margin-right: 0.5rem;
-					}
-				}
-			}
-
 			.btn {
 				width: 40px;
 				height: 40px;

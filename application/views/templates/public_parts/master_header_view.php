@@ -33,7 +33,7 @@
         </div>
 
         <div class="menu-item">
-            <a href="<?php echo base_url('/product/category/') ?>" class="<?php echo (($this->uri->segment(1)) == 'product') ? 'active' : ''?>">
+            <a href="<?php echo base_url('/product/') ?>" class="<?php echo (($this->uri->segment(1)) == 'product') ? 'active' : ''?>">
                 Sản phẩm
             </a>
         </div>
