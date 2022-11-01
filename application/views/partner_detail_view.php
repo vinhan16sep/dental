@@ -21,9 +21,9 @@
 
 			<div class="row">
 				<div class="col-lg-6">
-					<h5>
+					<!-- <h5>
 						Đối tác
-					</h5>
+					</h5> -->
 
 					<h3>
 						Đối tác detail

@@ -3,7 +3,7 @@
 html,
 body {
 	width: 100%;
-	height: 100vh;
+	// height: 100vh;
 
 	background-color: var(--bg-bw);
 
@@ -13,10 +13,16 @@ body {
 	scroll-behavior: smooth;
 }
 
+:root {
+	--text-title: #565656;
+}
+
 .page {
 	width: 100%;
 	
 	.page-header {
+		width: 100%;
+
 		@include positionSticky(top, 0, 1030);
 
 		.sub-header {
@@ -36,142 +42,215 @@ body {
 		}
 
 		header {
+			width: 100%;
 			height: 90px;
-
-			padding: 0 2rem;
 	
 			background-color: var(--bg-bw);
 
 			position: relative;
-	
-			@include d-flex(row, space-between, center);
-	
-			.header-brand {
-				a {
-					display: block;
-	
-					img {
-						height: 56px;
-					}
-				}
-			}
-	
-			.header-menu {
-				height: 100%;
 
-				@include d-flex(row, center, center);
+			@include transition();
 
-				.menu-item {
-					height: 100%;
+			&.fixed {
+				background-color: var(--primary);
 
-					@include d-flex(row, center, center);
+				position: fixed;
+				top: 0;
+				z-index: 1030;
 
-					&:hover {
-						.menu-item-content {
-							display: block;
+				@include transition();
+
+				.container {
+					.header-menu {
+						.menu-item {
+							> a {
+								color: var(--white);
+
+								&:before {
+									background-color: var(--white-alpha-50);
+								}
+							}
 						}
 					}
 
-					> a {
-						padding: 0 2rem;
-		
-						color: var(--secondary);
-		
-						font-size: 1rem;
-						font-weight: 600;
-		
-						text-transform: uppercase;
-		
+					.header-search {
+						.btn {
+							color: var(--white);
+						}
+					}
+				}
+			}
+
+			.container {
+				height: 100%;
+
+				position: relative;
+				
+				@include d-flex(row, space-between, center);
+
+				.header-brand {
+					a {
 						display: block;
 		
-						position: relative;
-						z-index: 1;
+						img {
+							height: 56px;
+						}
+					}
+				}
 		
+				.header-menu {
+					height: 100%;
+	
+					@include d-flex(row, center, center);
+	
+					.menu-item {
+						height: 100%;
+	
+						@include d-flex(row, center, center);
+	
 						&:hover {
+							.menu-wrapper {
+								display: block;
+							}
+						}
+	
+						> a {
+							padding: 0 2rem;
+			
+							color: var(--secondary);
+			
+							font-size: 1rem;
+							font-weight: 600;
+			
+							text-transform: uppercase;
+			
+							display: block;
+			
+							position: relative;
+							z-index: 1;
+			
+							&:hover {
+								&:before {
+									width: 60%;
+				
+									@include transition();
+								}
+							}
+			
+							&.active {
+								&:before {
+									width: 60%;
+								}
+							}
+			
 							&:before {
-								width: 60%;
+								content: '';
+			
+								width: 0;
+								height: 6px;
+			
+								background-color: var(--primary-alpha-20);
+								
+								position: absolute;
+								bottom: 4px;
+								left: 16px;
+								z-index: -1;
 			
 								@include transition();
 							}
 						}
-		
-						&.active {
-							&:before {
-								width: 60%;
-							}
-						}
-		
-						&:before {
-							content: '';
-		
-							width: 0;
-							height: 6px;
-		
-							background-color: var(--primary-alpha-20);
+
+						.menu-wrapper {
+							width: 100%;
 							
+							padding: 2rem;
+
+							background-color: var(--white);
+							@include boxShadowDf();
+
+							display: none;
+
 							position: absolute;
-							bottom: 4px;
-							left: 16px;
-							z-index: -1;
-		
-							@include transition();
-						}
-					}
-				}
-			}
-	
-			.header-search {
-				height: 100%;
+							top: 100%;
+							left: 0;
+							z-index: 1030;
 
-				@include d-flex(row, flex-end, center);
-				 
-				.btn {
-					color: var(--primary);
-	
-					&:hover {
-						border-color: transparent;
-					}
-				}
+							.row {
+								> div {
+									margin-bottom: 1.5rem;
 
-				.dropdown {
-					.dropdown-menu {
-						a {
-							img {
-								width: 16px;
+									a {
+										@include d-flex(row, flex-start, center);
+
+										.img-mask {
+											width: 64px;
+											height: 64px;
+
+											margin-right: 0.5rem;
+
+											@include borderRadius();
+										}
+									}
+								}
 							}
 						}
 					}
 				}
-
-				.header-search-menu {
-					width: 100%;
-
-					background-color: var(--white);
-
-					position: absolute;
-					top: 100%;
-					left: 50%;
-					z-index: 1;
-
-					@include translate(-50%, 0);
-
-					.search-collapse {
-						padding: 1.5rem 0;
-
-						.container {
-							.input-group {
-								.form-select {
-									flex-grow: 0.25;
+		
+				.header-search {
+					height: 100%;
+	
+					@include d-flex(row, flex-end, center);
+					 
+					.btn {
+						color: var(--primary);
+		
+						&:hover {
+							border-color: transparent;
+						}
+					}
+	
+					.dropdown {
+						.dropdown-menu {
+							a {
+								img {
+									width: 16px;
 								}
-							}		
+							}
+						}
+					}
+	
+					.header-search-menu {
+						width: 100%;
+	
+						background-color: var(--white);
+	
+						position: absolute;
+						top: 100%;
+						left: 50%;
+						z-index: 1;
+	
+						@include translate(-50%, 0);
+	
+						.search-collapse {
+							padding: 1.5rem 0;
+	
+							.container {
+								.input-group {
+									.form-select {
+										flex-grow: 0.25;
+									}
+								}		
+							}
 						}
 					}
 				}
+		
+				.header-expand {
+					display: none;
+				}
 			}
 	
-			.header-expand {
-				display: none;
-			}
 		}
 	}
 	
@@ -226,26 +305,6 @@ body {
 						&:hover{ 
 							opacity: 1;
 						}
-					}
-				}
-			}
-
-			&.fixed-left {
-				bottom: 1.5rem;
-				left: 2rem;
-
-				@include d-flex(column, center, flex-start);
-
-				.btn {
-					width: auto;
-
-					padding-left: 0.5rem;
-					padding-right: 0.5rem;
-
-					@include borderRadius(10px);
-
-					i {
-						margin-right: 0.5rem;
 					}
 				}
 			}
@@ -330,6 +389,13 @@ body {
 			.container {
 				.row {
 					> div {
+						padding-left: 0.5rem;
+						padding-right: 0.5rem;
+
+						&:first-child {
+							padding-top: 5rem;
+						}
+
 						h6 {
 							margin-bottom: 2rem;
 		
@@ -378,6 +444,20 @@ body {
 				p {
 					color: var(--white);
 				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.container {
+		max-width: 1160px;
+	}
+
+	.page {
+		.page-footer {
+			.container{
+				// max-width: 1320px;
 			}
 		}
 	}

@@ -1,86 +1,13 @@
-<!--
-<div class="common-features">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3">
-                <div class="info-item">
-                    <i class="fas fa-paper-plane"></i>
-
-                    <h6>
-                        FREE SHIPPING
-                    </h6>
-
-                    <h6 class="subtitle-sm">
-                        NỘI THÀNH HOẶC ĐƠN HÀNG > 500.000 Đ
-                    </h6>
-                </div>
-            </div>
-
-            <div class="col-lg-3">
-                <div class="info-item">
-                    <i class="fas fa-headphones"></i>
-
-                    <h6>
-                        HỖ TRỢ
-                    </h6>
-
-                    <h6 class="subtitle-sm">
-                        HỖ TRỢ 24/7
-                    </h6>
-                </div>
-            </div>
-
-            <div class="col-lg-3">
-                <div class="info-item">
-                    <i class="fas fa-share-alt"></i>
-
-                    <h6>
-                        KHUYẾN MÃI
-                    </h6>
-
-                    <h6 class="subtitle-sm">
-                        PHẦN MỀM QUẢN LÝ PHÒNG KHÁM
-                    </h6>
-                </div>
-            </div>
-
-            <div class="col-lg-3">
-                <div class="info-item">
-                    <i class="fas fa-phone-volume"></i>
-
-                    <h6>
-                        LIÊN HỆ
-                    </h6>
-
-                    <h6 class="subtitle-sm">
-                        <a href="tel: 0985230388">
-                            0985.230.388
-                        </a>
-                    </h6>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
--->
-
 <footer>
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <!-- <h6>
-                    Về chúng tôi
-                </h6> -->
-
                 <ul class="list-unstyled">
-                    <li>
-                        <img src="<?php echo base_url('/assets/img/logo.svg') ?>" alt="Logo Minh Dental">
-                    </li>
-
                     <li>
                         <p>
                             <b>
-                                CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ Y – NHA KHOA MINH PHƯƠNG
+                                MINH DENTAL
+                                <!-- CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ Y – NHA KHOA MINH PHƯƠNG -->
                             </b>
                         </p>
                     </li>
@@ -101,6 +28,10 @@
                         <p>
                             Tại sở Kế hoạch và đầu tư Hà Nội
                         </p>
+                    </li>
+
+                    <li>
+                        <img src="<?php echo base_url('/assets/img/logoSaleNoti.png') ?>" alt="">
                     </li>
                 </ul>
             </div>
@@ -183,7 +114,13 @@
                 <ul class="list-unstyled">
                     <li>
                         <p>
-                            Số 41 ngõ 38 Phương Mai - Đống Đa - Hà Nội
+                            Trụ sở: Số 41 ngõ 38 Phương Mai - <br>Đống Đa - Hà Nội
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            Showroom: 111 E1 Phương Mai - Đống Đa - Hà Nội
                         </p>
                     </li>
 
@@ -207,7 +144,7 @@
 
                     <li>
                         <p>
-                            08:00 AM - 18:00 PM
+                            Từ T2-T7: 8 a.m - 12 a.m,<br>1:30 p.m - 5:30 p.m
                         </p>
                     </li>
                 </ul>

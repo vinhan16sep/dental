@@ -6,7 +6,7 @@
 		padding-bottom: 8rem;
 
 		.overview {
-			margin-bottom: 8rem;
+			margin-bottom: 4rem;
 
 			h3 {
 				font-size: 3rem;
@@ -63,8 +63,6 @@
 									a {
 										width: 100%;
 
-										padding-left: 1rem;
-
 										font-weight: 600;
 
 										color: #999;
@@ -95,7 +93,7 @@
 
 											position: absolute;
 											top: 50%;
-											left: 0;
+											left: -12px;
 											z-index: 1;
 
 											@include translate(0, -50%);
@@ -129,7 +127,9 @@
 									}
 	
 									p {
-										@include textWrapper(100%, 5rem, 4);
+										text-align: justify;
+
+										@include textWrapper(100%, 4rem, 3);
 									}
 								}
 							}

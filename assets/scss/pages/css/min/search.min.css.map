@@ -1,10 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAEA,AACC,YADW,CACX,UAAU,AAAC,CACV,WAAW,CAAE,IAAI,CACjB,cAAc,CAAE,IAAI,CA4BpB,AA/BF,AAKE,YALU,CACX,UAAU,CAIT,SAAS,AAAC,CACT,aAAa,CAAE,IAAI,CAQnB,AAdH,AAQG,YARS,CACX,UAAU,CAIT,SAAS,CAGR,EAAE,AAAC,CACF,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,GAAG,CAEhB,cAAc,CAAE,SAAS,CACzB,AAbJ,AAqBO,YArBK,CACX,UAAU,CAeT,WAAW,CACV,gBAAgB,CACf,KAAK,CACJ,SAAS,CACN,GAAG,CACJ,SAAS,AAAC,CACT,MAAM,CAAE,KAAK,CCkDpB,qBAAqB,CADO,KAAM,CAElC,kBAAkB,CAFU,KAAM,CAGlC,aAAa,CAHe,KAAM,CD9C3B",
-    "sources": [
-        "../../search.scss",
-        "../../../settings/_mixin.scss"
-    ],
-    "names": [],
-    "file": "search.min.css"
-}
+{"version":3,"sources":["../../search.scss","../../../settings/_mixin.scss"],"names":[],"mappings":"AAGC,wBACC,gBAAA,CACA,mBAAA,CAEA,kCACC,kBAAA,CAEA,qCACC,cAAA,CACA,eAAA,CAEA,wBAAA,CASG,mFACC,YAAA,CCoDP,mBAH4B","file":"search.min.css"}

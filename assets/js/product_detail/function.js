@@ -15,14 +15,14 @@ $(document).ready(function () {
     });
 
     let swiperRelated = new Swiper('#swiperRelated', {
-        slidesPerView: 'auto',
+        slidesPerView: 3,
         spaceBetween: 24,
         breakpoints: {
             0: {
                 slidesPerView: 1
             },
             1024: {
-                slidesPerView: 'auto'
+                slidesPerView: 3
             }
         },
         navigation: {

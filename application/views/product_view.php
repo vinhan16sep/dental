@@ -9,8 +9,13 @@
 								Trang chủ
 							</a>
 						</li>
+						<li class="breadcrumb-item">
+							<a href="<?php echo base_url('/product/') ?>">
+								Sản phẩm
+							</a>
+						</li>
 						<li class="breadcrumb-item active" aria-current="page">
-							Sản phẩm
+							GHẾ NHA KHOA - MÁY NÉN
 						</li>
 					</ol>
 				</nav>
@@ -72,6 +77,14 @@
 											<p class="p-sm sale-standard">
 												Tiêu chuẩn: <?php echo $value['brand'] ?>
 											</p>
+
+											<div class="price">
+												Liên hệ
+
+												<div class="btn btn-sm btn-primary">
+													Thêm vào giỏ hàng
+												</div>
+											</div>
 										</div>
 									</div>
 								</a>
@@ -98,11 +111,11 @@
 							<div class="item-body">
 								<ul>
 									<?php foreach ($product_categories as $key => $value): ?>
-									<li>
-										<a href="#">
-											<?= $value['title'] ?>
-										</a>
-									</li>
+										<li>
+											<a href="#">
+												<?= $value['title'] ?>
+											</a>
+										</li>
 									<?php endforeach; ?>
 								</ul>
 							</div>
@@ -174,25 +187,7 @@
 				</div>
 	
 				<div class="col-lg-9">
-					<div class="products-list">
-						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item">
-									<a href="<?php echo base_url('/') ?>">
-										Trang chủ
-									</a>
-								</li>
-								<li class="breadcrumb-item">
-									<a href="<?php echo base_url('/product/') ?>">
-										Sản phẩm
-									</a>
-								</li>
-								<li class="breadcrumb-item active" aria-current="page">
-									GHẾ NHA KHOA - MÁY NÉN
-								</li>
-							</ol>
-						</nav>
-						
+					<div class="products-list">						
 						<div class="row">
 							<?php foreach ($products as $key => $value): ?>
 								<div class="col-lg-4">
@@ -227,6 +222,16 @@
 													<?= $value['title'] ?>
 												</h5>
 											</a>
+
+											<div class="sale-campaigns">
+												<span class="badge badge-outline-primary">
+													Campaign 1
+												</span>
+
+												<span class="badge badge-outline-primary">
+													Campaign 2
+												</span>
+											</div>
 
 											<p class="p-sm sale-made-in">
 												Xuất xứ: America

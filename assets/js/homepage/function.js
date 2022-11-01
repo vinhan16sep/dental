@@ -1,26 +1,16 @@
 $(document).ready(function () {
+    new WOW({
+        scrollContainer: 'body'
+    }).init();
+
     setTimeout(() => {
         $('#modalBanner').modal('show');
     }, 5000);
 
     let swiperCover = new Swiper('#swiperCover', {
-        slidesPerView: 'auto',
-        spaceBetween: 24,
+        slidesPerView: 1,
+        spaceBetween: 0,
         loop: true,
-        breakpoints: {
-            0: {
-                slidesPerView: 1
-            },
-            360: {
-                slidesPerView: 'auto'
-            },
-            800: {
-                slidesPerView: 'auto'
-            },
-            1024: {
-                slidesPerView: 'auto'
-            }
-        },
         navigation: {
             nextEl: '#swiperCover .swiper-button-next',
             prevEl: '#swiperCover .swiper-button-prev'
@@ -139,7 +129,6 @@ function getHighlightByCategory(category = false) {
         success: (res) => {
             if (res) {
                 let highlights = res[0].highlights;
-                console.log(highlights);
 
                 const $wrapper = $('#swiperHighlight');
                 $wrapper.find('.swiper-wrapper').empty();
@@ -159,19 +148,45 @@ function getHighlightByCategory(category = false) {
                         $slide.find('.made-in').text(highlight.made_in);
                         $slide.find('.standard').text(highlight.standard);
 
+                        $slide
+                            .find('a')
+                            .unbind()
+                            .on('click', function (e) {
+                                e.preventDefault();
+
+                                getHighlightDetail(highlight.id);
+                            });
+
                         $wrapper.find('.swiper-wrapper').append($slide);
                     }
 
+                    $wrapper.find('.swiper-wrapper').append(`
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="circle">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </div>
+
+                                        <h6 class="subtitle-md">
+                                            Xem tất cả sản phẩm
+                                        </h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    `);
+
                     let swiperHighlight = new Swiper('#swiperHighlight', {
-                        slidesPerView: 'auto',
+                        slidesPerView: 3,
                         spaceBetween: 24,
-                        loop: true,
                         breakpoints: {
                             0: {
                                 slidesPerView: 1
                             },
                             1024: {
-                                slidesPerView: 'auto'
+                                slidesPerView: 3
                             }
                         },
                         navigation: {
@@ -194,4 +209,38 @@ function getHighlightByCategory(category = false) {
 
     $('.section-highlight').find('ul').find('.get-highlight-by-category').removeClass('active');
     $('.section-highlight').find('ul').find(`.get-highlight-by-category[data-type="${category}"]`).addClass('active');
+}
+
+function getHighlightDetail(id) {
+    const $modal = $('#modalHighlightDetail');
+
+    let url = `/homepage/getHighlightDetail`;
+
+    url += `/${id}`;
+
+    $.ajax({
+        url: url,
+        type: 'GET',
+        dataType: 'json',
+        data: {
+            _token: $('meta[name="csrf_token"]').attr('content')
+        },
+        success: (res) => {
+            let detail = res[0].detail;
+
+            $modal.find('img').attr('alt', detail.title);
+            $modal.find('img').attr('src', detail.image);
+
+            $modal.find('h3').text(detail.title);
+            $modal.find('p.description').text(detail.description);
+            $modal.find('.product-brand').text(detail.brand);
+            $modal.find('.product-made-in').text(detail.made_in);
+            $modal.find('.product-warranty').text(detail.warranty);
+            $modal.find('.append-content').html(detail.content);
+
+            $modal.find('a').attr('href', detail.url);
+
+            $modal.modal('show');
+        }
+    });
 }

@@ -2,28 +2,27 @@
 	<div class="container">
 		<div class="service-overview">
 			<div class="row">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item">
+							<a href="<?php echo base_url('/') ?>">
+								Trang chủ
+							</a>
+						</li>
+						<li class="breadcrumb-item">
+							<a href="<?php echo base_url('/service/') ?>">
+								Dịch vụ
+							</a>
+						</li>
+						<li class="breadcrumb-item active" aria-current="page">
+							<?php echo $detail['title'] ?>
+						</li>
+					</ol>
+				</nav>
 				<div class="col-lg-6">
-					<nav aria-label="breadcrumb">
-						<ol class="breadcrumb">
-							<li class="breadcrumb-item">
-								<a href="<?php echo base_url('/') ?>">
-									Trang chủ
-								</a>
-							</li>
-							<li class="breadcrumb-item">
-								<a href="<?php echo base_url('/service/') ?>">
-									Dịch vụ
-								</a>
-							</li>
-							<li class="breadcrumb-item active" aria-current="page">
-								<?php echo $detail['title'] ?>
-							</li>
-						</ol>
-					</nav>
-
-					<h5>
+					<!-- <h5>
 						Dịch vụ
-					</h5>
+					</h5> -->
 
 					<h3>
 						<?php echo $detail['title'] ?>
@@ -72,6 +71,10 @@
 														<h5>
 															<?php echo $slide['title'] ?>
 														</h5>
+
+														<p>
+														Aliquam erat volutpat. Donec ac neque ex. Suspendisse potenti. Vivamus fermentum convallis urna, id pretium nulla tempor eget. Etiam faucibus velit et ante fringilla, vel semper lacus laoreet. Pellentesque tempus condimentum ipsum, at aliquet risus efficitur in.
+														</p>
 													</div>
 
 													<div class="ratio-wrapper ratio-wrapper-16-9">

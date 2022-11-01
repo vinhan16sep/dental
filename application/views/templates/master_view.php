@@ -49,12 +49,6 @@
                     </a>
                 </div>
 
-                <div class="fixed-buttons fixed-left">
-                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalReceiveNotification" role="button">
-                        <i class="fas fa-envelope"></i> Nhận thông báo
-                    </a>
-                </div>
-
                 <div class="page-view">
                     <?php echo $the_view_content;?>
                 </div>

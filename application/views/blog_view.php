@@ -54,9 +54,9 @@
 					<?php foreach($blogs as $blog): ?>
 						<div class="item">
 							<a href="<?php echo base_url('blogs/detail/' . $blog['slug']) ?>">
-								<h5>
+								<h6>
 									<?php echo $blog['title'] ?>
-								</h5>
+								</h6>
 							</a>
 
 							<p class="p-sm">
@@ -66,13 +66,13 @@
 							<p>
 								<?php echo $blog['description'] ?>
 							</p>
+
+							<a href="<?php echo base_url('blogs/detail/' . $blog['slug']) ?>">
+								Xem chi tiết <i class="fas fa-chevron-right"></i>
+							</a>
 		
 							<a href="<?php echo base_url('blogs/detail/' . $blog['slug']) ?>">
 								<img src="<?= base_url('assets/upload/news/' . $blog['slug'] . '/' . $blog['image']) ?>" alt="Blog image">
-							</a>
-
-							<a href="<?php echo base_url('blogs/detail/' . $blog['slug']) ?>">
-								Xem thêm
 							</a>
 						</div>
 					<?php endforeach;?>
