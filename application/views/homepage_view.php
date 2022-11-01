@@ -29,6 +29,62 @@
 		</div>
 	</div>
 
+	<div class="section section-about">
+		<div class="container">
+			<div class="section-header">
+				<h3>
+					Về chúng tôi
+				</h3>
+			</div>
+	
+			<div class="section-body">
+				<div class="about-heading">
+					<div class="row">
+						<div class="col-lg-9">
+							<h6>
+								Lời đầu tiên MINH Dental kính chúc các Nha sĩ - Đại Lý – Các cửa hàng vật liệu nha khoa toàn quốc và các bạn đồng nghiệp nhiều sức khỏe và thành công.
+							</h6>
+						</div>
+					</div>
+				</div>
+
+				<div class="about-content">
+					<div class="row">
+						<div class="col-lg-4 wow fadeInUp" data-wow-delay="0s">
+							<h3>
+								40
+							</h3>
+
+							<h5>
+								Năm kinh nghiệm trong ngành Y - Nha khoa
+							</h5>
+						</div>
+
+						<div class="col-lg-4 wow fadeInUp" data-wow-delay="1s">
+							<h3>
+								200+
+							</h3>
+
+							<h5>
+								Khách hàng trên khắp cả nước
+							</h5>
+						</div>
+
+						<div class="col-lg-4 wow fadeInUp" data-wow-delay="2s">
+							<h3>
+								20
+							</h3>
+
+							<h5>
+								Nunc vel ipsum vestibulum, suscipit nulla ut, vestibulum quam
+							</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="section section-highlight">
 		<div class="container">
 			<div class="section-header">
@@ -80,6 +136,12 @@
 				<a href="#">
 					<div class="card">
 						<div class="img-mask">
+							<div class="overlay">
+								<h6>
+									Mua ngay
+								</h6>
+							</div>
+
 							<img src="" alt="Dental">
 						</div>
 
@@ -88,8 +150,14 @@
 
 							<h5 class="title"></h5>
 
-							<div class="star-rating">
-								
+							<div class="campaigns">
+								<span class="badge badge-outline-primary">
+									Campaign 1
+								</span>
+
+								<span class="badge badge-outline-primary">
+									Campaign 2
+								</span>
 							</div>
 
 							<p class="p-sm">
@@ -99,6 +167,14 @@
 							<p class="p-sm standard">
 								Tiêu chuẩn: <span class="standard"></span>
 							</p>
+
+							<div class="price">
+								Liên hệ
+
+								<div class="btn btn-sm btn-primary">
+									Thêm vào giỏ hàng
+								</div>
+							</div>
 						</div>
 					</div>
 				</a>
@@ -110,15 +186,15 @@
 		<div class="container">
 			<div class="section-header">
 				<h3>
-					Về chúng tôi
+					Các dòng sản phẩm
 				</h3>
 			</div>
 			<div class="section-body">
 				<div class="row">
-					<?php foreach($product_category as $category): ?>
+					<?php foreach($product_category as $key => $category): ?>
 						<div class="col-lg-4">
 							<a href="<?php echo base_url('/product/' . $category['slug']) ?>">		
-								<div class="card">
+								<div class="card wow fadeIn" data-delay="<?php echo $key % 3 ?>">
 									<div class="img-mask">
 										<img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVudGFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Cover of category">
 									</div>
@@ -183,58 +259,6 @@
 		</div>
 	</div>
 
-	<div class="section section-about">
-		<div class="container">
-			<div class="section-header">
-				<h3>
-					Về chúng tôi
-				</h3>
-			</div>
-	
-			<div class="section-body">
-				<div class="about-heading">
-					<div class="row">
-						<div class="col-lg-9">
-							<h6>
-								Lời đầu tiên MINH Dental kính chúc các Nha sĩ - Đại Lý – Các cửa hàng vật liệu nha khoa toàn quốc và các bạn đồng nghiệp nhiều sức khỏe và thành công.
-							</h6>
-						</div>
-					</div>
-				</div>
-
-				<div class="about-content">
-					<div class="row">
-						<div class="col-lg-6">
-							<p>
-								MINH Dental đã có nhiều năm kinh nghiệm. Được thành lập và kinh doanh vật liệu thiết bị máy móc trong ngành Nha Khoa từ năm 1985 đến nay, đã từng được chọn là nhà phân phối sản phẩm máy móc vật liệu của các Hãng nha khoa nổi tiếng đã có mặt ở Việt Nam. Suốt 30 năm qua MINH Dental đã tạo dựng thương hiệu bằng “Uy Tín – Chất Lượng – Hiệu Quả” . Là hệ thống phân phối sản phẩm chất lượng cao trong ngành Nha Khoa với nhiều chính sách hỗ trợ từ phía các nhà cung cấp nước ngoài, các công ty cung cấp vật liệu nha khoa danh tiếng tại Việt Nam. Hiện MINH Dental rất vinh dự được chọn là Nhà Phân Phối Chính Thức của GC (công ty hàng đầu thế giới của Nhật Bản về ngành Nha Khoa). Tất cả các sản phẩm chúng tôi cung cấp đều được chứng nhận bởi các tổ chức FDA – ADA – CE và tiêu chuẩn chất lượng ISO 13458.
-							</p>
-
-							<p>
-								Với bề dầy kinh nghiệm 30 năm trong ngành nha khoa chúng tôi luôn mong muốn mang đến quý Nha sĩ, các phòng khám, các đại lý, các bạn đồng nghiệp những sản phẩm nha khoa chất lượng nhất, hoàn hảo nhất.
-							</p>
-
-							<a href="<?php echo base_url('/about') ?>" class="btn btn-lg btn-outline-primary" role="button">
-								Tìm hiểu thêm <i class="fas fa-arrow-right"></i>
-							</a>
-						</div>
-
-						<div class="col-lg-6">
-							<div class="img-wrapper">
-								<div>
-									<img src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Image about 1">
-								</div>
-
-								<div>
-									<img src="https://images.unsplash.com/photo-1588776813941-dcf9c55e84d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Image about 2">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<div class="section section-receive-notification">
 		<div class="img-mask">
 			<img src="https://images.unsplash.com/photo-1564420228450-d9a5bc8d6565?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1113&q=80" alt="Background notification">
@@ -252,6 +276,23 @@
 			<button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalReceiveNotification" type="button">
 				<i class="fas fa-envelope"></i> Nhận thông báo
 			</button>
+
+			<p>
+				hoặc theo dõi qua
+			</p>
+
+			<ul class="list-unstyled">
+				<li>
+					<a href="#" class="btn" target="_blank" role="button">
+						<i class="fab fa-facebook-f"></i> Facebook
+					</a>
+				</li>
+				<li>
+					<a href="#" class="btn" target="_blank" role="button">
+						<i class="fab fa-youtube"></i> Youtube
+					</a>
+				</li>
+			</ul>
 		</div>
 	</div>
 

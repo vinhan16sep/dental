@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    new WOW({
+        scrollContainer: 'body'
+    }).init();
+
     setTimeout(() => {
         $('#modalBanner').modal('show');
     }, 5000);
@@ -156,10 +160,27 @@ function getHighlightByCategory(category = false) {
                         $wrapper.find('.swiper-wrapper').append($slide);
                     }
 
+                    $wrapper.find('.swiper-wrapper').append(`
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="circle">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </div>
+
+                                        <h6 class="subtitle-md">
+                                            Xem tất cả sản phẩm
+                                        </h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    `);
+
                     let swiperHighlight = new Swiper('#swiperHighlight', {
                         slidesPerView: 3,
                         spaceBetween: 24,
-                        loop: true,
                         breakpoints: {
                             0: {
                                 slidesPerView: 1

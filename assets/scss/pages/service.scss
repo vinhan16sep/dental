@@ -21,6 +21,8 @@
 					}
 
 					p {
+						text-align: justify;
+
 						&:not(:last-child){
 							margin-bottom: 1.5rem;
 						}
@@ -40,6 +42,7 @@
 							margin-bottom: 1.5rem;
 
 							h3 {
+								font-size: 2rem;
 								font-weight: 600;
 								
 								position: relative;
@@ -66,8 +69,10 @@
 							p {
 								margin-bottom: 2rem;
 
-								@include textWrapper(100%, auto, 4);
-								max-height: 6rem;
+								text-align: justify;
+
+								@include textWrapper(100%, auto, 3);
+								max-height: 5rem;
 							}
 
 							.ratio-wrapper {

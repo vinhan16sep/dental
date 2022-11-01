@@ -1,28 +1,28 @@
 <div class="view-about">
 	<div class="overview">
 		<div class="container">
-			<div class="overview-header">
-				<nav aria-label="breadcrumb">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item">
-							<a href="<?php echo base_url('/') ?>">
-								Trang chủ
-							</a>
-						</li>
-						<li class="breadcrumb-item active" aria-current="page">
-							Về chúng tôi
-						</li>
-					</ol>
-				</nav>
-
-				<h3>
-					Về chúng tôi
-				</h3>
-			</div>
+			<div class="overview-header"></div>
 
 			<div class="overview-body">
 				<div class="row">
 					<div class="col-lg-6">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a href="<?php echo base_url('/') ?>">
+										Trang chủ
+									</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">
+									Về chúng tôi
+								</li>
+							</ol>
+						</nav>
+
+						<h3>
+							Về chúng tôi
+						</h3>
+
 						<h6>
 							Chào mừng bạn đến với MINH Dental
 						</h6>
@@ -30,8 +30,6 @@
 
 					<div class="col-lg-6">
 						<p>Lời đầu tiên MINH Dental kính chúc các Nha sĩ - Đại Lý – Các cửa hàng vật liệu nha khoa toàn quốc và các bạn đồng nghiệp nhiều sức khỏe và thành công.</p>
-
-						<p>MINH Dental đã có nhiều năm kinh nghiệm. Được thành lập và kinh doanh vật liệu thiết bị máy móc trong ngành Nha Khoa từ năm 1985 đến nay, đã từng được chọn là nhà phân phối sản phẩm máy móc vật liệu của các Hãng nha khoa nổi tiếng đã có mặt ở Việt Nam. Suốt 30 năm qua MINH Dental đã tạo dựng thương hiệu bằng “Uy Tín – Chất Lượng – Hiệu Quả” . Là hệ thống phân phối sản phẩm chất lượng cao trong ngành Nha Khoa với nhiều chính sách hỗ trợ từ phía các nhà cung cấp nước ngoài, các công ty cung cấp vật liệu nha khoa danh tiếng tại Việt Nam. Hiện MINH Dental rất vinh dự được chọn là Nhà Phân Phối Chính Thức của GC (công ty hàng đầu thế giới của Nhật Bản về ngành Nha Khoa). Tất cả các sản phẩm chúng tôi cung cấp đều được chứng nhận bởi các tổ chức FDA – ADA – CE và tiêu chuẩn chất lượng ISO 13458.</p>
 					</div>
 				</div>
 			</div>
@@ -41,6 +39,31 @@
 	<div class="detail" id="aboutDetail">
 		<div class="container">
 			<div class="row">
+				<div class="col-lg-3">
+					<ul class="list-unstyled">
+						<li>
+							<a href="#aboutDetail">
+								Giới thiệu về công ty
+							</a>
+						</li>
+						<li>
+							<a href="#aboutLibrary">
+								Tư liệu truyền thống
+							</a>
+						</li>
+						<li>
+							<a href="#aboutClient">
+								Đối tác
+							</a>
+						</li>
+						<li>
+							<a href="#aboutFaq">
+								FAQs
+							</a>
+						</li>
+					</ul>
+				</div>
+				
 				<div class="col-lg-9">
 					<div class="ratio-wrapper ratio-wrapper-16-9">
 						<div class="img-mask">
@@ -240,31 +263,6 @@
 							<?php endforeach; ?>
 						</div>
 					</div>
-				</div>
-
-				<div class="col-lg-3">
-					<ul class="list-unstyled">
-						<li>
-							<a href="#aboutDetail">
-								Giới thiệu về công ty
-							</a>
-						</li>
-						<li>
-							<a href="#aboutLibrary">
-								Tư liệu truyền thống
-							</a>
-						</li>
-						<li>
-							<a href="#aboutClient">
-								Đối tác
-							</a>
-						</li>
-						<li>
-							<a href="#aboutFaq">
-								FAQs
-							</a>
-						</li>
-					</ul>
 				</div>
 			</div>
 		</div>

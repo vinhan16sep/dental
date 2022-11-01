@@ -21,7 +21,7 @@
 
 		<div class="address">
 			<div class="row">
-				<div class="col-lg-6">
+				<div class="col-lg-5">
 					<div>
 						<h6>
 							Trụ sở
@@ -110,7 +110,7 @@
 					</div> -->
 				</div>
 
-				<div class="col-lg-6">
+				<div class="col-lg-7">
 					<div class="map">
 						<iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=500&amp;height=400&amp;hl=en&amp;q=%20Hanoi+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='http://www.single-boersen.net/'>Singleboersens Homepage</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=6755b69e2335d79ff9242086e390bef05ddd5056'></script>
 					</div>		

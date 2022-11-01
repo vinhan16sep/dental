@@ -21,10 +21,6 @@
 
 			<div class="row">
 				<div class="col-lg-6">
-					<h5>
-						Tin tức
-					</h5>
-
 					<h3>
 						<?php echo $detail['title'] ?>
 					</h3>
@@ -53,9 +49,9 @@
 
 					<div class="content-related">
 						<div class="related-header">
-							<h6 class="subtitle-md">
+							<h5>
 								Tin liên quan
-							</h6>
+							</h5>
 						</div>
 
 						<div class="related-body">
@@ -74,6 +70,10 @@
 														<h5>
 															<?php echo $blog['title'] ?>
 														</h5>
+
+														<p>
+															Aliquam erat volutpat. Donec ac neque ex. Suspendisse potenti. Vivamus fermentum convallis urna, id pretium nulla tempor eget. Etiam faucibus velit et ante fringilla, vel semper lacus laoreet. Pellentesque tempus condimentum ipsum, at aliquet risus efficitur in.
+														</p>
 													</div>
 
 													<div class="ratio-wrapper ratio-wrapper-16-9">

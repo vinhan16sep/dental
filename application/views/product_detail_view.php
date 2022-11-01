@@ -165,6 +165,53 @@
 										<div class="swiper-slide">
 											<a href="<?php echo base_url('/' . $slide['url']) ?>">
 												<div class="card">
+													<div class="img-mask">
+														<div class="overlay">
+															<h6>
+																Xem ngay
+															</h6>
+														</div>
+
+														<img src="<?php echo $slide['image'] ?>" alt="Dental">
+													</div>
+
+													<div class="card-body">
+														<p class="p-sm sale-code">
+															<?php echo $slide['code'] ?>
+														</p>
+
+														<h5 class="sale-title">
+															<?php echo $slide['title'] ?>
+														</h5>
+
+														<div class="sale-campaigns">
+															<span class="badge badge-outline-primary">
+																Campaign 1
+															</span>
+
+															<span class="badge badge-outline-primary">
+																Campaign 2
+															</span>
+														</div>
+
+														<p class="p-sm sale-made-in">
+															Xuất xứ: <?php echo $slide['made_in'] ?>
+														</p>
+
+														<p class="p-sm sale-standard">
+															Tiêu chuẩn: <?php echo $slide['standard'] ?>
+														</p>
+
+														<div class="price">
+															Liên hệ
+
+															<div class="btn btn-sm btn-primary">
+																Thêm vào giỏ hàng
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- <div class="card">
 													<div class="ratio-wrapper ratio-wrapper-16-9">
 														<div class="img-mask">
 															<img src="<?php echo $slide['image'] ?>" alt="Dental">
@@ -200,7 +247,7 @@
 															Liên hệ
 														</p>
 													</div>
-												</div>
+												</div> -->
 											</a>
 										</div>
 									<?php endforeach; ?>

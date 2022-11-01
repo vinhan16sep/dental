@@ -221,18 +221,106 @@
 
 						.swiper-wrapper{
 							.swiper-slide {
+								&:last-child {
+									a {
+										color: var(--primary);
+
+										.card {
+											.card-body {
+												min-height: 681px;
+
+												@include d-flex(column, center, center);
+
+												.circle {
+													width: 64px;
+													height: 64px;
+
+													margin-bottom: 1.5rem;
+
+													border: 2px solid var(--primary);
+													@include borderRadius(50%);
+
+													@include d-flex(column, center, center);
+												}
+
+												h6 {
+													color: var(--primary);
+												}
+											}
+										}
+									}
+								}
 								a {
 									display: block;
 
-									.card {
-										box-shadow: none;
+									&:hover {
+										.card {
+											.img-mask {
+												.overlay {
+													opacity: 1;
+	
+													@include transition();
+												}
+	
+												img {
+													@include scale(1.1, 1.1);
+													@include transition();
+												}
+											}
+										}
+									}
 
+									.card {
 										.img-mask {
 											width: 100%;
 											height: 480px;
 
+											position: relative;
+
 											@include borderRadiusCustom(top, left);
 											@include borderRadiusCustom(top, right);
+
+											.overlay {
+												width: 100%;
+												height: 100%;
+	
+												background-color: var(--black-alpha-50);
+	
+												opacity: 0;
+	
+												position: absolute;
+												top: 50%;
+												left: 50%;
+												z-index: 1;
+	
+												@include translate(-50%, -50%);
+	
+												@include d-flex(column, center, center);
+	
+												@include transition();
+	
+												h6 {
+													width: 70px;
+													height: 70px;
+	
+													background-color: var(--primary);
+													color: var(--white);
+	
+													@include borderRadius(50%);
+	
+													font-family: var(--web-font);
+													font-size: 1.125rem;
+	
+													text-transform: uppercase;
+													text-align: center;
+	
+													@include d-flex(column, center, center);
+												}
+											}
+
+											img {
+												@include transition();
+											}
 										}
 
 										.card-body {
@@ -250,6 +338,30 @@
 												font-weight: 600;
 
 												@include textOverflow();
+											}
+
+											.campaigns {
+												height: 20px;
+	
+												margin-bottom: 0.75rem;
+	
+												@include d-flex(row, flex-start, flex-start);
+	
+												.badge {
+													margin-right: 0.5rem;
+	
+													display: block;
+												}
+											}
+
+											.price {
+												margin-top: 0.5rem;
+	
+												font-weight: 600;
+	
+												color: var(--primary);
+	
+												@include d-flex(row, space-between, center);
 											}
 
 											.star-rating {
@@ -446,51 +558,21 @@
 					.about-content {
 						.row {
 							> div {
-								p {
-									&:not(:last-of-type){
-										margin-bottom: 1.5rem;
-									}
+								@include d-flex(column, flex-start, center);
 
-									&:last-of-type {
-										margin-bottom: 4.25rem;
-									}
+								h3 {
+									margin-bottom: 1.5rem;
+
+									font-size: 4rem;
+
+									text-align: center;
 								}
 
-								a {
-									&.btn {
-										width: 230px;
+								h5 {
+									font-size: 1.25rem;
+									font-weight: 500;
 
-										@include borderRadius(0);
-
-										@include d-flex(row, space-between, center);
-									}
-								}
-
-								.img-wrapper {
-									margin: 0 -0.75rem;
-									
-									flex-wrap: wrap;
-
-									@include d-flex(row, flex-start, flex-start);
-
-									> div {
-										max-width: 50%;
-										flex: 1 0 50%;
-
-										padding: 0 0.75rem;
-
-										&:first-child {
-											margin-top: 2rem;
-										}
-
-										img {
-											width: 100%;
-
-											@include borderRadius();
-
-											@include boxShadowDf();
-										}
-									}
+									text-align: center;
 								}
 							}
 						}
@@ -537,10 +619,32 @@
 					text-transform: uppercase;
 				}
 
+				.btn {
+					margin-bottom: 1.5rem;
+				}
+
 				p {
 					margin-bottom: 0.75rem;
 
 					text-align: center;
+				}
+
+				ul {
+					@include d-flex(row, center, center);
+
+					li {
+						&:not(:last-child){
+							margin-right: 0.75rem;
+						}
+
+						a {
+							color: var(--white);
+
+							i {
+								margin-right: 0.25rem;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -583,6 +687,8 @@
 										&:not(.date){
 											margin-bottom: 2rem;
 
+											text-align: justify;
+											
 											@include textWrapper(100%, 4rem, 3);
 										}
 									}
@@ -622,6 +728,7 @@
 				@include d-flex(row, space-between, center);
 
 				h3 {
+					font-size: 2rem;
 					position: relative;
 
 					&:before {

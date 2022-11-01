@@ -6,7 +6,7 @@
 		padding-bottom: 8rem;
 
 		.overview {
-			margin-bottom: 8rem;
+			margin-bottom: 4rem;
 
 			h3 {
 				font-size: 3rem;
@@ -17,8 +17,6 @@
 		}
 
 		.address {
-			margin: 8rem 0;
-
 			.row {
 				> div {
 					> div {
@@ -40,17 +38,22 @@
 							font-size: 1.25rem;
 							font-weight: 600;
 	
+							position: relative;
+	
 							&:before {
 								content: '';
-		
-								width: 48px;
+
+								width: 40px;
 								height: 4px;
-		
+
 								background-color: var(--primary);
-		
-								margin-bottom: 0.75rem;
-		
-								display: block;
+
+								position: absolute;
+								bottom: 6px;
+								left: 0;
+								z-index: 1;
+
+								@include translate(calc(-40px - 0.75rem), 0);
 							}
 						}
 	

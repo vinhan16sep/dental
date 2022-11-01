@@ -36,6 +36,10 @@
 						}
 	
 						.text-body {
+							p {
+								text-align: justify;
+							}
+
 							ul {
 								margin: 4rem 0;
 	
@@ -56,6 +60,8 @@
 						margin-bottom: 8rem;
 
 						p {
+							text-align: justify;
+
 							&:not(:last-child){
 								margin-bottom: 3.75rem;
 							}
@@ -127,7 +133,6 @@
 					.content-related {
 						.related-header {
 							margin-bottom: 3rem;
-							padding-left: 4rem;
 	
 							@include d-flex(row, space-between, center);
 	
@@ -155,8 +160,6 @@
 						}
 	
 						.related-body {
-							padding-left: 4rem;
-	
 							.swiper-container {
 								padding-bottom: 8rem;
 	
@@ -199,62 +202,117 @@
 								.swiper-wrapper{
 									.swiper-slide {
 										width: 33.33%;
-	
+
 										a {
 											&:hover {
 												.card {
-													@include boxShadowLg();
-													@include transition();
-		
 													.img-mask {
+														.overlay {
+															opacity: 1;
+			
+															@include transition();
+														}
+			
 														img {
 															@include scale(1.1, 1.1);
-		
 															@include transition();
 														}
 													}
 												}
 											}
-		
+			
 											.card {
-												@include boxShadowSm();
-												@include transition();
-		
 												.img-mask {
+													width: 100%;
+													height: 300px;
+			
+													position: relative;
+			
 													@include borderRadiusCustom(top, left);
 													@include borderRadiusCustom(top, right);
-		
+			
+													.overlay {
+														width: 100%;
+														height: 100%;
+			
+														background-color: var(--black-alpha-50);
+			
+														opacity: 0;
+			
+														position: absolute;
+														top: 50%;
+														left: 50%;
+														z-index: 1;
+			
+														@include translate(-50%, -50%);
+			
+														@include d-flex(column, center, center);
+			
+														@include transition();
+			
+														h6 {
+															width: 70px;
+															height: 70px;
+			
+															background-color: var(--primary);
+															color: var(--white);
+			
+															@include borderRadius(50%);
+			
+															font-family: var(--web-font);
+															font-size: 1.125rem;
+			
+															text-transform: uppercase;
+															text-align: center;
+			
+															@include d-flex(column, center, center);
+														}
+													}
+			
 													img {
 														@include transition();
 													}
 												}
-		
+			
 												.card-body {
-													> div {
-														margin-bottom: 0.5rem;
-		
-														@include d-flex(row, space-between, center);
-													}
-		
 													p {
-														&.code {
+														&.sale-code {
+															margin-bottom: 0.125rem;
+			
 															color: var(--gray-4);
-														}
-		
-														&.price {
-															font-weight: 600;
-		
-															color: var(--primary);
 														}
 													}
 			
 													h5 {
 														margin-bottom: 0.5rem;
 			
-														font-size: 1.25rem;
 														font-weight: 600;
 			
-														@include textWrapper(100%, 3.25rem, 2);
+														@include textOverflow();
+													}
+			
+													.sale-campaigns {
+														height: 20px;
+			
+														margin-bottom: 0.75rem;
+			
+														@include d-flex(row, flex-start, flex-start);
+			
+														.badge {
+															margin-right: 0.5rem;
+			
+															display: block;
+														}
+													}
+			
+													.price {
+														margin-top: 0.5rem;
+			
+														font-weight: 600;
+			
+														color: var(--primary);
+			
+														@include d-flex(row, space-between, center);
 													}
 												}
 											}

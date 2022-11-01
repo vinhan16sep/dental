@@ -2,19 +2,15 @@
   padding-top: 4rem;
   padding-bottom: 8rem;
 }
-
 .view-search .container .overview {
   margin-bottom: 8rem;
 }
-
 .view-search .container .overview h3 {
   font-size: 3rem;
   font-weight: 600;
   text-transform: uppercase;
 }
-
 .view-search .container .list-items .list-items-body .item .item-row > div .img-mask {
   height: 230px;
   border-radius: 0.5rem;
-}
-/*# sourceMappingURL=search.css.map */
+}/*# sourceMappingURL=search.css.map */

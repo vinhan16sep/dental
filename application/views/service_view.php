@@ -2,20 +2,20 @@
 	<div class="container">
 		<div class="service-overview">
 			<div class="row">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item">
+							<a href="<?php echo base_url('/') ?>">
+								Trang chủ
+							</a>
+						</li>
+						<li class="breadcrumb-item active" aria-current="page">
+							Dịch vụ
+						</li>
+					</ol>
+				</nav>
+				
 				<div class="col-lg-6">
-					<nav aria-label="breadcrumb">
-						<ol class="breadcrumb">
-							<li class="breadcrumb-item">
-								<a href="<?php echo base_url('/') ?>">
-									Trang chủ
-								</a>
-							</li>
-							<li class="breadcrumb-item active" aria-current="page">
-								Dịch vụ
-							</li>
-						</ol>
-					</nav>
-
 					<h3>
 						Dịch vụ
 					</h3>

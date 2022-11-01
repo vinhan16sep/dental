@@ -319,7 +319,7 @@
 
         background-color: var(--gray-5);
 
-        @include borderRadius($size / 2);
+        @include borderRadius(calc($size / 2));
         @include transition(300ms);
 
         &:hover {
