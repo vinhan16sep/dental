@@ -104,7 +104,11 @@
 		}
 
 		&.section-highlight {
+			padding-top: 5rem;
+			padding-bottom: 2rem;
 			margin-bottom: 5rem;
+
+			background-color: var(--primary-alpha-20);
 
 			.container {
 				.section-header {
@@ -227,7 +231,7 @@
 
 										.card {
 											.card-body {
-												min-height: 681px;
+												min-height: 520px;
 
 												@include d-flex(column, center, center);
 
@@ -273,7 +277,7 @@
 									.card {
 										.img-mask {
 											width: 100%;
-											height: 480px;
+											height: 320px;
 
 											position: relative;
 
@@ -445,14 +449,6 @@
 					
 					.swiper-container {
 						padding-bottom: 3rem;
-						
-						&:hover {
-							.swiper-button-next,
-							.swiper-button-prev {
-								@include translate(0, 0);
-								@include transition();
-							}
-						}
 
 						.swiper-button-next,
 						.swiper-button-prev {
@@ -462,6 +458,7 @@
 							background-color: var(--white);
 
 							@include borderRadius(50%);
+							@include translate(0, -22px);
 
 							&:after {
 								font-size: 1.25rem;
@@ -470,16 +467,12 @@
 							}
 						}
 
-						.swiper-button-prev {
-							@include translate(-150%, 0);
-
-							@include transition();
+						.swiper-button-next {
+							right: 0;
 						}
 
-						.swiper-button-next {
-							@include translate(150%, 0);
-
-							@include transition();
+						.swiper-button-prev {
+							left: 0;
 						}
 
 						.swiper-pagination {
@@ -499,9 +492,10 @@
 						}
 
 						.swiper-wrapper{
-							.swiper-slide {
-								width: 16%;
+							// padding-left: 42px;
+							padding-right: 42px;
 
+							.swiper-slide {
 								@include d-flex(column, center, center);
 
 								&:hover{
@@ -516,8 +510,8 @@
 								}
 
 								.img-mask {
-									width: 180px;
-									height: 180px;
+									width: 130px;
+									height: 130px;
 
 									padding: 1.5rem;
 
@@ -654,7 +648,7 @@
 				padding-top: 8rem;
 				padding-bottom: 5rem;
 
-				background-color: var(--secondary-alpha-10);
+				background-color: var(--primary-alpha-10);
 
 				@include borderRadius(1.5rem);
 

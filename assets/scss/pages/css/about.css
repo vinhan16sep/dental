@@ -264,36 +264,25 @@
 .view-about .detail .container .row > div .client .client-body .swiper-container {
   padding-bottom: 3rem;
 }
-.view-about .detail .container .row > div .client .client-body .swiper-container:hover .swiper-button-next,
-.view-about .detail .container .row > div .client .client-body .swiper-container:hover .swiper-button-prev {
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
-}
 .view-about .detail .container .row > div .client .client-body .swiper-container .swiper-button-next,
 .view-about .detail .container .row > div .client .client-body .swiper-container .swiper-button-prev {
   width: 42px;
   height: 42px;
   background-color: var(--white);
   border-radius: 50%;
+  -webkit-transform: translate(0, -22px);
+  transform: translate(0, -22px);
 }
 .view-about .detail .container .row > div .client .client-body .swiper-container .swiper-button-next:after,
 .view-about .detail .container .row > div .client .client-body .swiper-container .swiper-button-prev:after {
   font-size: 1.25rem;
   color: var(--secondary);
 }
-.view-about .detail .container .row > div .client .client-body .swiper-container .swiper-button-prev {
-  -webkit-transform: translate(-150%, 0);
-  transform: translate(-150%, 0);
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
-}
 .view-about .detail .container .row > div .client .client-body .swiper-container .swiper-button-next {
-  -webkit-transform: translate(150%, 0);
-  transform: translate(150%, 0);
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
+  right: 0;
+}
+.view-about .detail .container .row > div .client .client-body .swiper-container .swiper-button-prev {
+  left: 0;
 }
 .view-about .detail .container .row > div .client .client-body .swiper-container .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
   margin-right: 1rem;
@@ -303,8 +292,10 @@
   background-color: var(--primary);
   border-radius: 2rem;
 }
+.view-about .detail .container .row > div .client .client-body .swiper-container .swiper-wrapper {
+  padding-right: 42px;
+}
 .view-about .detail .container .row > div .client .client-body .swiper-container .swiper-wrapper .swiper-slide {
-  width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -328,8 +319,8 @@
   transition: all ease-in-out 300ms;
 }
 .view-about .detail .container .row > div .client .client-body .swiper-container .swiper-wrapper .swiper-slide .img-mask {
-  width: 180px;
-  height: 180px;
+  width: 130px;
+  height: 130px;
   padding: 1.5rem;
   background-color: var(--secondary-alpha-10);
 }

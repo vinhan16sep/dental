@@ -329,43 +329,32 @@
 				
 							.swiper-container {
 								padding-bottom: 3rem;
-				
-								&:hover {
-									.swiper-button-next,
-									.swiper-button-prev {
-										@include translate(0, 0);
-										@include transition();
-									}
-								}
-				
+		
 								.swiper-button-next,
 								.swiper-button-prev {
 									width: 42px;
 									height: 42px;
-				
+		
 									background-color: var(--white);
-				
+		
 									@include borderRadius(50%);
-				
+									@include translate(0, -22px);
+		
 									&:after {
 										font-size: 1.25rem;
-				
+		
 										color: var(--secondary);
 									}
 								}
-				
-								.swiper-button-prev {
-									@include translate(-150%, 0);
-				
-									@include transition();
-								}
-				
+		
 								.swiper-button-next {
-									@include translate(150%, 0);
-				
-									@include transition();
+									right: 0;
 								}
-
+		
+								.swiper-button-prev {
+									left: 0;
+								}
+		
 								.swiper-pagination {
 									.swiper-pagination-bullet {
 										&:not(:last-child){
@@ -381,35 +370,36 @@
 										}
 									}
 								}
-				
+		
 								.swiper-wrapper{
+									// padding-left: 42px;
+									padding-right: 42px;
+		
 									.swiper-slide {
-										width: 25%;
-				
 										@include d-flex(column, center, center);
-
+		
 										&:hover{
 											.img-mask {
 												img {
 													filter: grayscale(0);
-
+		
 													@include scale(1.1, 1.1);
 													@include transition();
 												}
 											}
 										}
-				
+		
 										.img-mask {
-											width: 180px;
-											height: 180px;
-				
+											width: 130px;
+											height: 130px;
+		
 											padding: 1.5rem;
-				
+		
 											background-color: var(--secondary-alpha-10);
-				
+		
 											img {
 												object-fit: contain;
-
+		
 												filter: grayscale(1);
 												@include transition();
 											}

@@ -1,13 +1,15 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <ul class="list-unstyled">
+                    <li>
+                        <img src="<?php echo base_url('/assets/img/logo_text.svg') ?>" class="logo" alt="Logo Minh Dental">
+                    </li>
                     <li>
                         <p>
                             <b>
-                                MINH DENTAL
-                                <!-- CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ Y – NHA KHOA MINH PHƯƠNG -->
+                                CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ Y – NHA KHOA<br>MINH PHƯƠNG
                             </b>
                         </p>
                     </li>
@@ -26,7 +28,7 @@
 
                     <li>
                         <p>
-                            Tại sở Kế hoạch và đầu tư Hà Nội
+                            Tại sở Kế hoạch và đầu tư <br> Hà Nội
                         </p>
                     </li>
 
@@ -36,7 +38,7 @@
                 </ul>
             </div>
     
-            <div class="col-lg-2">
+            <div class="col-lg-3">
                 <h6>
                     Hỗ trợ khách hàng
                 </h6>
@@ -114,13 +116,13 @@
                 <ul class="list-unstyled">
                     <li>
                         <p>
-                            Trụ sở: Số 41 ngõ 38 Phương Mai - <br>Đống Đa - Hà Nội
+                            Trụ sở: Số 41 ngõ 38 Phương Mai, <br>Đống Đa, Hà Nội
                         </p>
                     </li>
 
                     <li>
                         <p>
-                            Showroom: 111 E1 Phương Mai - Đống Đa - Hà Nội
+                            Showroom: 111 E1 Phương Mai, Đống Đa, Hà Nội
                         </p>
                     </li>
 
@@ -146,6 +148,15 @@
                         <p>
                             Từ T2-T7: 8 a.m - 12 a.m,<br>1:30 p.m - 5:30 p.m
                         </p>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
