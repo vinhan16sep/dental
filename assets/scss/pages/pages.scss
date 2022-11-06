@@ -393,7 +393,42 @@ body {
 						padding-right: 0.5rem;
 
 						&:first-child {
-							padding-top: 5rem;
+							ul {
+								li {
+									&:first-child {
+										img {
+											width: 100px;
+											height: 24px;
+	
+											margin-bottom: 2rem;
+										}
+									}
+								}
+							}
+						}
+
+						&:last-child {
+							ul {
+								li {
+									&:last-child {
+										@include d-flex(row, flex-start, center);
+
+										a {
+											width: 40px;
+											height: 40px;
+
+											border: 1px solid var(--secondary);
+											@include borderRadius(50%);
+
+											@include d-flex(column, center, center);
+
+											&:not(:last-child){
+												margin-right: 0.5rem;
+											}
+										}
+									}
+								}
+							}
 						}
 
 						h6 {

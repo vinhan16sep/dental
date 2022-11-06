@@ -1,13 +1,13 @@
 $(document).ready(function () {
     let swiperClient = new Swiper('#swiperClient', {
-        slidesPerView: 'auto',
+        slidesPerView: 4,
         loop: true,
         breakpoints: {
             0: {
                 slidesPerView: 2
             },
             1024: {
-                slidesPerView: 'auto'
+                slidesPerView: 4
             }
         },
         navigation: {
