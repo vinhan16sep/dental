@@ -80,14 +80,14 @@ $(document).ready(function () {
     });
 
     let swiperClient = new Swiper('#swiperClient', {
-        slidesPerView: 4,
+        slidesPerView: 5,
         loop: true,
         breakpoints: {
             0: {
                 slidesPerView: 2
             },
             1024: {
-                slidesPerView: 4
+                slidesPerView: 5
             }
         },
         navigation: {
