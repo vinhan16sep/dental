@@ -345,6 +345,14 @@
 		
 										color: var(--secondary);
 									}
+
+									&:hover {
+										background-color: var(--primary);
+										
+										&:after {
+											color: var(--white);
+										}
+									}
 								}
 		
 								.swiper-button-next {

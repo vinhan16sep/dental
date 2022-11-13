@@ -278,6 +278,14 @@
   font-size: 1.25rem;
   color: var(--secondary);
 }
+.view-about .detail .container .row > div .client .client-body .swiper-container .swiper-button-next:hover,
+.view-about .detail .container .row > div .client .client-body .swiper-container .swiper-button-prev:hover {
+  background-color: var(--primary);
+}
+.view-about .detail .container .row > div .client .client-body .swiper-container .swiper-button-next:hover:after,
+.view-about .detail .container .row > div .client .client-body .swiper-container .swiper-button-prev:hover:after {
+  color: var(--white);
+}
 .view-about .detail .container .row > div .client .client-body .swiper-container .swiper-button-next {
   right: 0;
 }

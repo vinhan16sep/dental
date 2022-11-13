@@ -180,7 +180,7 @@ function getHighlightByCategory(category = false) {
 
                     let swiperHighlight = new Swiper('#swiperHighlight', {
                         slidesPerView: 3,
-                        spaceBetween: 24,
+                        spaceBetween: 32,
                         breakpoints: {
                             0: {
                                 slidesPerView: 1

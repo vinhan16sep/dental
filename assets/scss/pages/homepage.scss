@@ -168,14 +168,19 @@
 				}
 
 				.section-body {
+					width: calc(100% + 2rem);
+					margin: 0 -2rem;
+
 					.swiper-container {
+						padding-left: 2rem;
+						padding-right: 2rem;
 						padding-bottom: 3rem;
 
 						&:hover {
 							.swiper-button-next,
 							.swiper-button-prev {
-								@include translate(0, 0);
-								@include transition();
+								// @include translate(0, 0);
+								// @include transition();
 							}
 						}
 
@@ -193,18 +198,26 @@
 
 								color: var(--secondary);
 							}
+
+							&:hover {
+								background-color: var(--primary);
+								
+								&:after {
+									color: var(--white);
+								}
+							}
 						}
 
 						.swiper-button-prev {
-							@include translate(-150%, 0);
+							// @include translate(-150%, 0);
 
-							@include transition();
+							// @include transition();
 						}
 
 						.swiper-button-next {
-							@include translate(150%, 0);
+							// @include translate(150%, 0);
 
-							@include transition();
+							// @include transition();
 						}
 
 						.swiper-pagination {
@@ -230,6 +243,8 @@
 										color: var(--primary);
 
 										.card {
+											box-shadow: none;
+
 											.card-body {
 												min-height: 520px;
 
@@ -254,6 +269,7 @@
 										}
 									}
 								}
+
 								a {
 									display: block;
 
@@ -275,6 +291,8 @@
 									}
 
 									.card {
+										box-shadow: none;
+
 										.img-mask {
 											width: 100%;
 											height: 320px;
@@ -391,7 +409,6 @@
 
 								&:hover {
 									.card {
-										@include boxShadowDf();
 										@include transition();
 			
 										.img-mask {
@@ -404,30 +421,29 @@
 								}
 			
 								.card {
-									margin-bottom: 1.5rem;
+									margin-bottom: 2rem;
 			
 									box-shadow: none;
 			
 									@include transition();
 				
-									.img-mask {
-										width: 100%;
-										height: 230px;
-				
-										@include borderRadiusCustom(top, left);
-										@include borderRadiusCustom(top, right);
-			
-										img {
-											@include scale(1, 1);
-											@include transition();
-										}
+									img {
+										height: 80px;
+
+										margin: 0 auto;
+
+										display: block;
 									}
 				
 									.card-body {
 										@include d-flex(column, center, center);
 				
 										h6 {
-											color: var(--text-title);
+											max-width: 75%;
+
+											text-align: center;
+
+											color: var(--primary);
 										}
 									}
 								}
@@ -464,6 +480,14 @@
 								font-size: 1.25rem;
 
 								color: var(--secondary);
+							}
+
+							&:hover {
+								background-color: var(--primary);
+								
+								&:after {
+									color: var(--white);
+								}
 							}
 						}
 
@@ -510,8 +534,8 @@
 								}
 
 								.img-mask {
-									width: 160px;
-									height: 160px;
+									width: 175px;
+									height: 175px;
 
 									padding: 1.5rem;
 

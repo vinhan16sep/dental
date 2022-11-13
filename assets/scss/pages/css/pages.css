@@ -413,9 +413,9 @@ body::-webkit-scrollbar-thumb:hover {
   padding-right: 0.5rem;
 }
 .page .page-footer footer .container .row > div:first-child ul li:first-child img {
-  width: 100px;
   height: 24px;
-  margin-bottom: 2rem;
+  margin-top: -6px;
+  margin-bottom: calc(2rem + 6px);
 }
 .page .page-footer footer .container .row > div:last-child ul li:last-child {
   display: -webkit-box;
@@ -433,8 +433,10 @@ body::-webkit-scrollbar-thumb:hover {
           align-items: center;
 }
 .page .page-footer footer .container .row > div:last-child ul li:last-child a {
-  width: 40px;
   height: 40px;
+}
+.page .page-footer footer .container .row > div:last-child ul li:last-child a:not(.btn) {
+  width: 40px;
   border: 1px solid var(--secondary);
   border-radius: 50%;
   display: -webkit-box;
@@ -451,8 +453,14 @@ body::-webkit-scrollbar-thumb:hover {
       -ms-flex-align: center;
           align-items: center;
 }
+.page .page-footer footer .container .row > div:last-child ul li:last-child a.btn:hover {
+  color: var(--white);
+}
 .page .page-footer footer .container .row > div:last-child ul li:last-child a:not(:last-child) {
   margin-right: 0.5rem;
+}
+.page .page-footer footer .container .row > div:last-child ul li:last-child a:last-child {
+  margin-left: auto;
 }
 .page .page-footer footer .container .row > div h6 {
   margin-bottom: 2rem;
