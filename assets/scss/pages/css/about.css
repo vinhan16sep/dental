@@ -278,6 +278,14 @@
   font-size: 1.25rem;
   color: var(--secondary);
 }
+.view-about .detail .container .row > div .client .client-body .swiper-container .swiper-button-next:hover,
+.view-about .detail .container .row > div .client .client-body .swiper-container .swiper-button-prev:hover {
+  background-color: var(--primary);
+}
+.view-about .detail .container .row > div .client .client-body .swiper-container .swiper-button-next:hover:after,
+.view-about .detail .container .row > div .client .client-body .swiper-container .swiper-button-prev:hover:after {
+  color: var(--white);
+}
 .view-about .detail .container .row > div .client .client-body .swiper-container .swiper-button-next {
   right: 0;
 }
@@ -319,8 +327,8 @@
   transition: all ease-in-out 300ms;
 }
 .view-about .detail .container .row > div .client .client-body .swiper-container .swiper-wrapper .swiper-slide .img-mask {
-  width: 130px;
-  height: 130px;
+  width: 160px;
+  height: 160px;
   padding: 1.5rem;
   background-color: var(--secondary-alpha-10);
 }

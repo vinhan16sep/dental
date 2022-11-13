@@ -9,7 +9,7 @@
                     <li>
                         <p>
                             <b>
-                                CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ Y – NHA KHOA<br>MINH PHƯƠNG
+                                Công ty TNHH thương mại<br>dịch vụ y - nha khoa<br>Minh Phương
                             </b>
                         </p>
                     </li>
@@ -156,6 +156,10 @@
                         </a>
                         <a href="#" target="_blank">
                             <i class="fab fa-youtube"></i>
+                        </a>
+
+                        <a href="#" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalReceiveNotification" role="button">
+                            Liên hệ
                         </a>
                     </li>
                 </ul>

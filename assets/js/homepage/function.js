@@ -80,14 +80,14 @@ $(document).ready(function () {
     });
 
     let swiperClient = new Swiper('#swiperClient', {
-        slidesPerView: 4,
+        slidesPerView: 5,
         loop: true,
         breakpoints: {
             0: {
                 slidesPerView: 2
             },
             1024: {
-                slidesPerView: 4
+                slidesPerView: 5
             }
         },
         navigation: {
@@ -180,7 +180,7 @@ function getHighlightByCategory(category = false) {
 
                     let swiperHighlight = new Swiper('#swiperHighlight', {
                         slidesPerView: 3,
-                        spaceBetween: 24,
+                        spaceBetween: 32,
                         breakpoints: {
                             0: {
                                 slidesPerView: 1

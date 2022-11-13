@@ -127,15 +127,14 @@
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
 }
-.view-homepage .section.section-highlight .container .section-body .swiper-container {
-  padding-bottom: 3rem;
+.view-homepage .section.section-highlight .container .section-body {
+  width: calc(100% + 2rem);
+  margin: 0 -2rem;
 }
-.view-homepage .section.section-highlight .container .section-body .swiper-container:hover .swiper-button-next,
-.view-homepage .section.section-highlight .container .section-body .swiper-container:hover .swiper-button-prev {
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
+.view-homepage .section.section-highlight .container .section-body .swiper-container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 3rem;
 }
 .view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-button-next,
 .view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-button-prev {
@@ -149,17 +148,13 @@
   font-size: 1.25rem;
   color: var(--secondary);
 }
-.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-button-prev {
-  -webkit-transform: translate(-150%, 0);
-  transform: translate(-150%, 0);
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
+.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-button-next:hover,
+.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-button-prev:hover {
+  background-color: var(--primary);
 }
-.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-button-next {
-  -webkit-transform: translate(150%, 0);
-  transform: translate(150%, 0);
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
+.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-button-next:hover:after,
+.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-button-prev:hover:after {
+  color: var(--white);
 }
 .view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
   margin-right: 1rem;
@@ -171,6 +166,10 @@
 }
 .view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide:last-child a {
   color: var(--primary);
+}
+.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide:last-child a .card {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide:last-child a .card .card-body {
   min-height: 520px;
@@ -224,6 +223,10 @@
   transform: scale(1.1, 1.1);
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
+}
+.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide a .card {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide a .card .img-mask {
   width: 100%;
@@ -350,8 +353,6 @@
   display: block;
 }
 .view-homepage .section.section-categories .container .section-body .row > div a:hover .card {
-  -webkit-box-shadow: 0 0.5rem 1rem var(--black-alpha-10);
-  box-shadow: 0 0.5rem 1rem var(--black-alpha-10);
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
 }
@@ -362,29 +363,16 @@
   transition: all ease-in-out 300ms;
 }
 .view-homepage .section.section-categories .container .section-body .row > div a .card {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
 }
-.view-homepage .section.section-categories .container .section-body .row > div a .card .img-mask {
-  width: 100%;
-  height: 230px;
-  border-top-left-radius: 0.5rem;
-  -webkit-border-top-left-radius: 0.5rem;
-  -moz-border-top-left-radius: 0.5rem;
-  -o-border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  -webkit-border-top-right-radius: 0.5rem;
-  -moz-border-top-right-radius: 0.5rem;
-  -o-border-top-right-radius: 0.5rem;
-}
-.view-homepage .section.section-categories .container .section-body .row > div a .card .img-mask img {
-  -webkit-transform: scale(1, 1);
-  transform: scale(1, 1);
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
+.view-homepage .section.section-categories .container .section-body .row > div a .card img {
+  height: 80px;
+  margin: 0 auto;
+  display: block;
 }
 .view-homepage .section.section-categories .container .section-body .row > div a .card .card-body {
   display: -webkit-box;
@@ -402,7 +390,9 @@
           align-items: center;
 }
 .view-homepage .section.section-categories .container .section-body .row > div a .card .card-body h6 {
-  color: var(--text-title);
+  max-width: 75%;
+  text-align: center;
+  color: var(--primary);
 }
 .view-homepage .section.section-client {
   margin-bottom: 5rem;
@@ -426,6 +416,14 @@
 .view-homepage .section.section-client .container .section-body .swiper-container .swiper-button-prev:after {
   font-size: 1.25rem;
   color: var(--secondary);
+}
+.view-homepage .section.section-client .container .section-body .swiper-container .swiper-button-next:hover,
+.view-homepage .section.section-client .container .section-body .swiper-container .swiper-button-prev:hover {
+  background-color: var(--primary);
+}
+.view-homepage .section.section-client .container .section-body .swiper-container .swiper-button-next:hover:after,
+.view-homepage .section.section-client .container .section-body .swiper-container .swiper-button-prev:hover:after {
+  color: var(--white);
 }
 .view-homepage .section.section-client .container .section-body .swiper-container .swiper-button-next {
   right: 0;
@@ -468,8 +466,8 @@
   transition: all ease-in-out 300ms;
 }
 .view-homepage .section.section-client .container .section-body .swiper-container .swiper-wrapper .swiper-slide .img-mask {
-  width: 130px;
-  height: 130px;
+  width: 175px;
+  height: 175px;
   padding: 1.5rem;
   background-color: var(--secondary-alpha-10);
 }
