@@ -195,9 +195,8 @@
 						<div class="col-lg-4">
 							<a href="<?php echo base_url('/product/' . $category['slug']) ?>">		
 								<div class="card wow fadeIn" data-delay="<?php echo $key % 3 ?>">
-									<img src="<?php echo base_url('assets/img/icons/clinic.png') ?>" alt="Cover of category">
-									
 									<div class="card-body">
+										<div class="img-placeholder"></div>
 										<h6>
 											<?php echo $category['title'] ?>
 										</h6>
