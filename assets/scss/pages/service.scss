@@ -87,3 +87,14 @@
 		}
 	}
 }
+
+@media screen and (max-width: 576.98px) {
+	.view-service {
+		.container {
+			.service-overview,
+			.service-list {
+				padding-left: 2rem;
+			}
+		}
+	}
+}

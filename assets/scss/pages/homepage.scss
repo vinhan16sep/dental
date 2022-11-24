@@ -115,56 +115,6 @@
 					.form-select {
 						max-width: 200px;
 					}
-					
-					ul {
-						li {
-							display: inline-block;
-
-							&:not(:last-child) {
-								margin-right: 0.75rem;
-							}
-
-							a {
-								font-size: 1rem;
-								font-weight: 600;
-
-								color: var(--secondary);
-
-								position: relative;
-								z-index: 1;
-
-								&:hover {
-									&:before {
-										width: 60%;
-					
-										@include transition();
-									}
-								}
-				
-								&.active {
-									&:before {
-										width: 60%;
-									}
-								}
-				
-								&:before {
-									content: '';
-				
-									width: 0;
-									height: 6px;
-				
-									background-color: var(--primary-alpha-20);
-									
-									position: absolute;
-									bottom: 0;
-									left: -8px;
-									z-index: -1;
-				
-									@include transition();
-								}
-							}
-						}
-					}
 				}
 
 				.section-body {
@@ -931,44 +881,21 @@
 	.view-homepage {
 		.section {
 			&.section-cover {
-				.cover-content {
-					top: 20%;
-					left: 5%;
-
-					h2 {
-						margin-bottom: 4rem;
-
-						font-size: 2.5rem;
-
-						&:after {
-							width: 130px;
-							height: 6px;
-						}
-					}
-
-					.btn {
-						font-size: 1.125rem;
-					}
-				}
-
 				.swiper-container {
 					width: 100%;
-
-					margin-top: 10rem;
-					margin-left: 1.5rem;
-
-					.swiper-pagination {
-						.swiper-pagination-bullet {
-							width: 30px;
-						}
-					}
 
 					.swiper-wrapper {
 						.swiper-slide {
 							a {
-								.ratio-wrapper {
-									&.ratio-wrapper-16-9 {
-										padding-top: 100%;
+								.container-fluid {
+									padding-left: 1rem;
+										padding-right: 1rem;
+
+									.text {
+										width: 100%;
+										
+										padding-left: 1.5rem;
+										padding-right: 1.5rem;
 									}
 								}
 							}
@@ -983,8 +910,12 @@
 						.about-content {
 							.row {
 								> div {
-									&:first-child {
+									&:not(:last-child) {
 										margin-bottom: 1.5rem;
+									}
+
+									h5 {
+										max-width: 60%;
 									}
 								}
 							}
@@ -996,8 +927,14 @@
 			&.section-highlight {
 				.container {
 					.section-header {
-						ul {
-							display: none;
+						@include d-flex(column, flex-start, flex-start);
+
+						h3 {
+							margin-bottom: 0.75rem;
+						}
+
+						.form-select {
+							max-width: unset;
 						}
 					}
 				}
@@ -1010,6 +947,20 @@
 							.swiper-wrapper{
 								.swiper-slide {
 									width: auto;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.section-blogs {
+				.container {
+					.section-body {
+						.row {
+							> div {
+								&:not(:last-child){
+									margin-bottom: 2rem;
 								}
 							}
 						}

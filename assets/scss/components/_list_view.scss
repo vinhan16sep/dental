@@ -174,14 +174,14 @@
                 @each $key in $rowIndex {
                     @if($key != 0){
                         .item-col-#{$key} {
-                            max-width: 100% / 12 * $key;
-                            flex: 0 0 100% / 12 * $key;
+                            max-width: calc(100% / 12 * $key);
+                            flex: 0 0 calc(100% / 12 * $key);
                         }
                     }
 
                     .item-col-#{$key}-half {
-                        max-width: 100% / 12 * ($key + 0.5);
-                        flex: 0 0 100% / 12 * ($key + 0.5);
+                        max-width: calc(100% / 12 * ($key + 0.5));
+                        flex: 0 0 calc(100% / 12 * ($key + 0.5));
                     }
                 }
 

@@ -499,11 +499,23 @@ body::-webkit-scrollbar-thumb:hover {
     max-width: 1160px;
   }
 }
-@media screen and (max-width: 576.98px) {
+@media screen and (min-width: 576.98px) and (max-width: 1200px) {
   .page .page-header header {
     padding: 0 1rem;
   }
-  .page .page-header header .header-menu {
+  .page .page-header header.fixed .container .header-menu .menu-item > a {
+    color: var(--text-title);
+  }
+  .page .page-header header.fixed .container .header-menu .menu-item > a:before {
+    background-color: var(--white-alpha-50);
+  }
+  .page .page-header header.fixed .container .header-expand .btn .line {
+    background-color: var(--white);
+  }
+  .page .page-header header.fixed .container .header-expand .btn .line:before, .page .page-header header.fixed .container .header-expand .btn .line:after {
+    background-color: var(--white);
+  }
+  .page .page-header header .container .header-menu {
     width: 80%;
     height: calc(100vh - 90px);
     padding: 2rem 1.5rem;
@@ -528,22 +540,22 @@ body::-webkit-scrollbar-thumb:hover {
     -webkit-transition: all ease-in-out 300ms;
     transition: all ease-in-out 300ms;
   }
-  .page .page-header header .header-menu.show {
+  .page .page-header header .container .header-menu.show {
     left: 0;
     -webkit-transition: all ease-in-out 300ms;
     transition: all ease-in-out 300ms;
   }
-  .page .page-header header .header-menu .menu-item {
+  .page .page-header header .container .header-menu .menu-item {
     height: auto;
     padding: 1.5rem 0;
   }
-  .page .page-header header .header-search {
+  .page .page-header header .container .header-search {
     margin-left: auto;
   }
-  .page .page-header header .header-expand {
+  .page .page-header header .container .header-expand {
     display: block;
   }
-  .page .page-header header .header-expand .btn {
+  .page .page-header header .container .header-expand .btn {
     width: 38px;
     height: 38px;
     padding: 0;
@@ -561,25 +573,25 @@ body::-webkit-scrollbar-thumb:hover {
         -ms-flex-align: center;
             align-items: center;
   }
-  .page .page-header header .header-expand .btn.active .line {
+  .page .page-header header .container .header-expand .btn.active .line {
     background-color: transparent;
     -webkit-transition: all ease-in-out 300ms;
     transition: all ease-in-out 300ms;
   }
-  .page .page-header header .header-expand .btn.active .line:before, .page .page-header header .header-expand .btn.active .line:after {
+  .page .page-header header .container .header-expand .btn.active .line:before, .page .page-header header .container .header-expand .btn.active .line:after {
     margin-top: -2px;
     -webkit-transition: all ease-in-out 300ms;
     transition: all ease-in-out 300ms;
   }
-  .page .page-header header .header-expand .btn.active .line:before {
+  .page .page-header header .container .header-expand .btn.active .line:before {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
-  .page .page-header header .header-expand .btn.active .line:after {
+  .page .page-header header .container .header-expand .btn.active .line:after {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-  .page .page-header header .header-expand .btn .line {
+  .page .page-header header .container .header-expand .btn .line {
     width: 30px;
     height: 4px;
     background-color: var(--text-overline);
@@ -588,7 +600,7 @@ body::-webkit-scrollbar-thumb:hover {
     -webkit-transition: all ease-in-out 300ms;
     transition: all ease-in-out 300ms;
   }
-  .page .page-header header .header-expand .btn .line:before, .page .page-header header .header-expand .btn .line:after {
+  .page .page-header header .container .header-expand .btn .line:before, .page .page-header header .container .header-expand .btn .line:after {
     content: "";
     width: 30px;
     height: 4px;
@@ -600,11 +612,134 @@ body::-webkit-scrollbar-thumb:hover {
     -webkit-transition: all ease-in-out 300ms;
     transition: all ease-in-out 300ms;
   }
-  .page .page-header header .header-expand .btn .line:before {
+  .page .page-header header .container .header-expand .btn .line:before {
     margin-top: -12px;
   }
-  .page .page-header header .header-expand .btn .line:after {
+  .page .page-header header .container .header-expand .btn .line:after {
     margin-top: 8px;
+  }
+}
+@media screen and (max-width: 576.98px) {
+  .page .page-header header {
+    padding: 0 1rem;
+  }
+  .page .page-header header.fixed .container .header-menu .menu-item > a {
+    color: var(--text-title);
+  }
+  .page .page-header header.fixed .container .header-menu .menu-item > a:before {
+    background-color: var(--white-alpha-50);
+  }
+  .page .page-header header.fixed .container .header-expand .btn .line {
+    background-color: var(--white);
+  }
+  .page .page-header header.fixed .container .header-expand .btn .line:before, .page .page-header header.fixed .container .header-expand .btn .line:after {
+    background-color: var(--white);
+  }
+  .page .page-header header .container .header-menu {
+    width: 80%;
+    height: calc(100vh - 90px);
+    padding: 2rem 1.5rem;
+    background-color: var(--bg-bw);
+    position: fixed;
+    bottom: 0;
+    left: -80%;
+    z-index: 1029;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms;
+  }
+  .page .page-header header .container .header-menu.show {
+    left: 0;
+    -webkit-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms;
+  }
+  .page .page-header header .container .header-menu .menu-item {
+    height: auto;
+    padding: 1.5rem 0;
+  }
+  .page .page-header header .container .header-search {
+    margin-left: auto;
+  }
+  .page .page-header header .container .header-expand {
+    display: block;
+  }
+  .page .page-header header .container .header-expand .btn {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .page .page-header header .container .header-expand .btn.active .line {
+    background-color: transparent;
+    -webkit-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms;
+  }
+  .page .page-header header .container .header-expand .btn.active .line:before, .page .page-header header .container .header-expand .btn.active .line:after {
+    margin-top: -2px;
+    -webkit-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms;
+  }
+  .page .page-header header .container .header-expand .btn.active .line:before {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .page .page-header header .container .header-expand .btn.active .line:after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .page .page-header header .container .header-expand .btn .line {
+    width: 30px;
+    height: 4px;
+    background-color: var(--text-overline);
+    position: relative;
+    display: block;
+    -webkit-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms;
+  }
+  .page .page-header header .container .header-expand .btn .line:before, .page .page-header header .container .header-expand .btn .line:after {
+    content: "";
+    width: 30px;
+    height: 4px;
+    background-color: var(--text-overline);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    -webkit-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms;
+  }
+  .page .page-header header .container .header-expand .btn .line:before {
+    margin-top: -12px;
+  }
+  .page .page-header header .container .header-expand .btn .line:after {
+    margin-top: 8px;
+  }
+  .page .page-body .fixed-buttons.fixed-center, .page .page-body .fixed-buttons.fixed-bottom {
+    right: 1rem;
   }
   .page .page-footer .common-features .container .row > div {
     position: relative;

@@ -418,17 +418,35 @@
 .view-about .overview .container .overview-body {
     padding-left: 0;
   }
-  .view-about .detail .container .detail-content {
-    padding-left: 0;
+  .view-about .detail .container .row > div:first-child {
+    margin-bottom: 1.5rem;
   }
-  .view-about .library .library-body .list-images .item-sizer,
-.view-about .library .library-body .list-images .item {
-    width: 50%;
+  .view-about .detail .container .row > div > .text {
+    padding-left: 2rem;
+    padding-right: calc(2rem + 40px);
   }
-  .view-about .client .container .client-header {
+  .view-about .detail .container .row > div .library .library-body .row > div .library-post .post-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .view-about .detail .container .row > div .library .library-body .row > div .library-post .post-item a {
+    width: 100%;
+    display: block;
+  }
+  .view-about .detail .container .row > div .library .library-body .row > div .library-post .post-item .img-mask {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1.5rem;
+  }
+  .view-about .detail .container .row > div .library .library-body .row > div .library-post .post-item .text {
+    width: 100%;
+  }
+  .view-about .detail .container .row > div .client .container .client-header {
     padding-left: 3rem;
   }
-  .view-about .faq .container .faq-header {
+  .view-about .detail .container .row > div .faq .container .faq-header {
     padding-left: 3rem;
   }
 }/*# sourceMappingURL=about.css.map */

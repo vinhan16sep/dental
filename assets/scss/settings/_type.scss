@@ -25,13 +25,13 @@ p{
 h1{
 	font-size: 6rem;
 	
-	letter-spacing: -1.5 / 16 + rem;
+	letter-spacing: calc(-1.5 / 16) + rem;
 }
 
 h2{
 	font-size: 3.75rem;
 	
-	letter-spacing: -0.5 / 16 + rem;
+	letter-spacing: calc(-0.5 / 16) + rem;
 }
 
 h3{
@@ -41,7 +41,7 @@ h3{
 h4{
 	font-size: 2.125rem;
 	
-	letter-spacing: 0.25 / 16 + rem;
+	letter-spacing: calc(0.25 / 16) + rem;
 }
 
 h5{
@@ -51,7 +51,7 @@ h5{
 h6{
 	font-size: 1.125rem;
 	
-	letter-spacing: 0.15 / 16 + rem;
+	letter-spacing: calc(0.15 / 16) + rem;
 	
 	&.subtitle-md{
 		font-size: 1rem;
@@ -60,45 +60,45 @@ h6{
 	&.subtitle-sm{
 		font-size: 0.875rem;
 		
-		letter-spacing: 0.1 / 16 + rem;
+		letter-spacing: calc(0.1 / 16) + rem;
 	}
 }
 
 p{
 	font-size: 1rem;
 	
-	letter-spacing: 0.5 / 16 + rem;
+	letter-spacing: calc(0.5 / 16) + rem;
 	
 	&.p-sm{
 		font-size: 0.875rem;
 		
-		letter-spacing: 0.25 / 16 + rem;
+		letter-spacing: calc(0.25 / 16) + rem;
 	}
 	
 	&.p-caption{
 		font-size: 0.75rem;
 		
-		letter-spacing: 0.4 / 16 + rem;
+		letter-spacing: calc(0.4 / 16) + rem;
 	}
 	
 	&.p-overline{
 		font-size: 0.625rem;
 		text-transform: uppercase;
 		
-		letter-spacing: 1.5 / 16 + rem;
+		letter-spacing: calc(1.5 / 16) + rem;
 	}
 }
 
 .p-sm{
 	font-size: 0.875rem;
 	
-	letter-spacing: 0.5 / 16 + rem;
+	letter-spacing: calc(0.5 / 16) + rem;
 }
 
 .p-cap{
 	font-size: 0.75rem;
 	
-	letter-spacing: 0.5 / 16 + rem;
+	letter-spacing: calc(0.5 / 16) + rem;
 }
 
 .p-overline{
@@ -108,5 +108,5 @@ p{
 	
 	text-transform: uppercase;
 	
-	letter-spacing: 1.5 / 16 + rem;
+	letter-spacing: calc(1.5 / 16) + rem;
 }

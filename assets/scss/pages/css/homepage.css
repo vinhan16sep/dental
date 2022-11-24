@@ -94,39 +94,6 @@
 .view-homepage .section.section-highlight .container .section-header .form-select {
   max-width: 200px;
 }
-.view-homepage .section.section-highlight .container .section-header ul li {
-  display: inline-block;
-}
-.view-homepage .section.section-highlight .container .section-header ul li:not(:last-child) {
-  margin-right: 0.75rem;
-}
-.view-homepage .section.section-highlight .container .section-header ul li a {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--secondary);
-  position: relative;
-  z-index: 1;
-}
-.view-homepage .section.section-highlight .container .section-header ul li a:hover:before {
-  width: 60%;
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
-}
-.view-homepage .section.section-highlight .container .section-header ul li a.active:before {
-  width: 60%;
-}
-.view-homepage .section.section-highlight .container .section-header ul li a:before {
-  content: "";
-  width: 0;
-  height: 6px;
-  background-color: var(--primary-alpha-20);
-  position: absolute;
-  bottom: 0;
-  left: -8px;
-  z-index: -1;
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
-}
 .view-homepage .section.section-highlight .container .section-body {
   width: calc(100% + 2rem);
   margin: 0 -2rem;
@@ -860,40 +827,50 @@
 }
 
 @media screen and (max-width: 576.98px) {
-  .view-homepage .section.section-cover .cover-content {
-    top: 20%;
-    left: 5%;
-  }
-  .view-homepage .section.section-cover .cover-content h2 {
-    margin-bottom: 4rem;
-    font-size: 2.5rem;
-  }
-  .view-homepage .section.section-cover .cover-content h2:after {
-    width: 130px;
-    height: 6px;
-  }
-  .view-homepage .section.section-cover .cover-content .btn {
-    font-size: 1.125rem;
-  }
   .view-homepage .section.section-cover .swiper-container {
     width: 100%;
-    margin-top: 10rem;
-    margin-left: 1.5rem;
   }
-  .view-homepage .section.section-cover .swiper-container .swiper-pagination .swiper-pagination-bullet {
-    width: 30px;
+  .view-homepage .section.section-cover .swiper-container .swiper-wrapper .swiper-slide a .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  .view-homepage .section.section-cover .swiper-container .swiper-wrapper .swiper-slide a .ratio-wrapper.ratio-wrapper-16-9 {
-    padding-top: 100%;
+  .view-homepage .section.section-cover .swiper-container .swiper-wrapper .swiper-slide a .container-fluid .text {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
-  .view-homepage .section.section-about .container .section-body .about-content .row > div:first-child {
+  .view-homepage .section.section-about .container .section-body .about-content .row > div:not(:last-child) {
     margin-bottom: 1.5rem;
   }
-  .view-homepage .section.section-highlight .container .section-header ul {
-    display: none;
+  .view-homepage .section.section-about .container .section-body .about-content .row > div h5 {
+    max-width: 60%;
+  }
+  .view-homepage .section.section-highlight .container .section-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .view-homepage .section.section-highlight .container .section-header h3 {
+    margin-bottom: 0.75rem;
+  }
+  .view-homepage .section.section-highlight .container .section-header .form-select {
+    max-width: unset;
   }
   .view-homepage .section.section-client .container .section-body .swiper-container .swiper-wrapper .swiper-slide {
     width: auto;
+  }
+  .view-homepage .section.section-blogs .container .section-body .row > div:not(:last-child) {
+    margin-bottom: 2rem;
   }
   .view-homepage .section .container .section-header {
     padding-left: 3rem;

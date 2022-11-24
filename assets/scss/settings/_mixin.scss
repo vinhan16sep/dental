@@ -292,7 +292,7 @@
 
 	    background-color: var(--gray-5);
 
-	    @include borderRadius($size / 2);
+	    @include borderRadius(calc($size / 2));
 	    @include transition(300ms);
 
 	    &:hover {
@@ -330,4 +330,29 @@
             @include transition(300ms);
         }
     }
+}
+
+// RESPONSIVE
+@mixin desktop {
+	@media (min-width: 1199.98px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: 576.98px) and (max-width: 1199.98px) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media (max-width: 576.98px) {
+		@content;
+	}
+}
+
+@mixin tabletAndMobile {
+	@media (max-width: 1199.98px) {
+		@content;
+	}
 }

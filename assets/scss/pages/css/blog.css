@@ -149,8 +149,11 @@
 }
 
 @media screen and (max-width: 576.98px) {
-  .view-blog .container .list-items .item-sizer,
-.view-blog .container .list-items .item {
+  .view-blog .container .row > div .blog-filter {
+    margin-bottom: 2rem;
+  }
+  .view-blog .container .row > div .list-items .item-sizer,
+.view-blog .container .row > div .list-items .item {
     width: 100%;
   }
 }/*# sourceMappingURL=blog.css.map */

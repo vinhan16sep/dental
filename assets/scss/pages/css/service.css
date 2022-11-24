@@ -58,4 +58,11 @@
 }
 .view-service .container .service-list .row > div .service-item .item-body .ratio-wrapper .img-mask {
   border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 576.98px) {
+  .view-service .container .service-overview,
+.view-service .container .service-list {
+    padding-left: 2rem;
+  }
 }/*# sourceMappingURL=service.css.map */
