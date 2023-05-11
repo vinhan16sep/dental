@@ -15,7 +15,7 @@ $(document).ready(function () {
         .on('click', '#btnScrollTop', function (e) {
             e.preventDefault();
 
-            $(window).scrollTop(0);
+            $('body').scrollTop(0);
         })
         .on('click', '.btn-change-lang', function (e) {
             e.preventDefault();
@@ -25,14 +25,14 @@ $(document).ready(function () {
             $(this).parents('.dropdown').find('.btn-lang').text(lang.toUpperCase());
         });
 
-    $(window).on('scroll', function () {
-        if ($(window).scrollTop() <= 70) {
+    $('body').on('scroll', function () {
+        if ($('body').scrollTop() <= 70) {
             $('#btnScrollTop').removeClass('show');
         } else {
             $('#btnScrollTop').addClass('show');
         }
 
-        if ($(window).scrollTop() <= 90) {
+        if ($('body').scrollTop() <= 90) {
             $('.page-header header').removeClass('fixed');
             $('.page-header header .logo').attr('src', '/assets/img/logo.svg');
         } else {

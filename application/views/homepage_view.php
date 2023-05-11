@@ -103,22 +103,6 @@
 						</option>
 					<?php endforeach; ?>
 				</select>
-
-				<!-- <ul class="list-unstyled">
-					<li>
-						<a href="#" class="get-highlight-by-category" data-type="all">
-							Tất cả
-						</a>
-					</li>
-
-					<?php foreach($product_category as $category): ?>
-						<li>
-							<a href="#" class="get-highlight-by-category" data-type="<?php echo $category['id'] ?>">
-								<?php echo $category['title'] ?>
-							</a>
-						</li>
-					<?php endforeach; ?>
-				</ul> -->
 			</div>
 
 			<div class="section-body">

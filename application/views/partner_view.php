@@ -73,7 +73,7 @@
 			<div class="col-lg-9">
 				<div class="row">
 					<?php for($i = 0; $i < 10; $i++): ?>
-						<div class="col-lg-4">
+						<div class="col-lg-4 col-md-6">
 							<a href="<?php echo base_url('partners/detail/') ?>">
 								<div class="card">
 									<div class="ratio-wrapper ratio-wrapper-1-1">

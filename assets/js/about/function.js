@@ -4,7 +4,7 @@ $(document).ready(function () {
         loop: true,
         breakpoints: {
             0: {
-                slidesPerView: 2
+                slidesPerView: 1
             },
             1024: {
                 slidesPerView: 4

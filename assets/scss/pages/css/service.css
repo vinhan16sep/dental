@@ -58,4 +58,29 @@
 }
 .view-service .container .service-list .row > div .service-item .item-body .ratio-wrapper .img-mask {
   border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 576.98px) and (max-width: 1200px) {
+  .view-service .container .service-overview,
+  .view-service .container .service-list {
+    padding-left: 1rem;
+  }
+  .view-service .container .service-list .row > div .service-item {
+    padding-right: 0;
+  }
+  .view-service .container .service-list .row > div .service-item .item-header h3:before {
+    display: none;
+  }
+}
+@media screen and (max-width: 576.98px) {
+  .view-service .container .service-overview,
+  .view-service .container .service-list {
+    padding-left: 0;
+  }
+  .view-service .container .service-list .row > div .service-item {
+    padding-right: 0;
+  }
+  .view-service .container .service-list .row > div .service-item .item-header h3:before {
+    display: none;
+  }
 }/*# sourceMappingURL=service.css.map */

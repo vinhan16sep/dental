@@ -6,10 +6,10 @@
   padding-bottom: 4rem;
 }
 .view-about .overview .container .overview-body .row > div:last-child {
-  padding-top: 4rem;
+  padding-top: 4.75rem;
 }
 .view-about .overview .container .overview-body .row > div h3 {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   font-size: 3rem;
   font-weight: 600;
 }
@@ -414,21 +414,45 @@
 }
 
 @media screen and (max-width: 576.98px) {
+  .view-about {
+    padding: 0 1.5rem;
+  }
   .view-about .overview .container .overview-header,
-.view-about .overview .container .overview-body {
+  .view-about .overview .container .overview-body {
     padding-left: 0;
   }
-  .view-about .detail .container .detail-content {
-    padding-left: 0;
+  .view-about .detail .container .row > div:first-child {
+    margin-bottom: 1.5rem;
   }
-  .view-about .library .library-body .list-images .item-sizer,
-.view-about .library .library-body .list-images .item {
-    width: 50%;
+  .view-about .detail .container .row > div > .ratio-wrapper {
+    margin-bottom: 2rem;
   }
-  .view-about .client .container .client-header {
+  .view-about .detail .container .row > div > .text {
+    padding-left: 1rem;
+    padding-right: calc(1rem + 24px);
+  }
+  .view-about .detail .container .row > div .library .library-body .row > div .library-post .post-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .view-about .detail .container .row > div .library .library-body .row > div .library-post .post-item a {
+    width: 100%;
+    display: block;
+  }
+  .view-about .detail .container .row > div .library .library-body .row > div .library-post .post-item .img-mask {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1.5rem;
+  }
+  .view-about .detail .container .row > div .library .library-body .row > div .library-post .post-item .text {
+    width: 100%;
+  }
+  .view-about .detail .container .row > div .client .container .client-header {
     padding-left: 3rem;
   }
-  .view-about .faq .container .faq-header {
+  .view-about .detail .container .row > div .faq .container .faq-header {
     padding-left: 3rem;
   }
 }/*# sourceMappingURL=about.css.map */

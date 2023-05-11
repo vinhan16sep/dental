@@ -69,6 +69,8 @@
 						padding: 0 calc(100% / 9);
 
 						p {
+							text-align: justify;
+							
 							&:not(:last-child){
 								margin-bottom: 3.75rem;
 							}
@@ -228,6 +230,11 @@
 @media screen and (max-width: 576.98px) {
 	.view-partner-detail {
 		.container {
+			.partner-overview,
+			.partner-content {
+				padding-left: 2rem;
+			}
+
 			.partner-overview {
 				.row{
 					> div {
@@ -235,6 +242,16 @@
 							margin-bottom: 4rem;
 							
 							font-size: 2rem;
+						}
+					}
+				}
+			}
+
+			.partner-content {
+				.row {
+					> div {
+						.text {
+							padding-left: 0;
 						}
 					}
 				}

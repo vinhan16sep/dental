@@ -33,7 +33,7 @@
 			<div class="row">
 
 				<?php foreach($services as $service): ?>
-					<div class="col-lg-6">
+					<div class="col-lg-6 col-md-6">
 						<div class="service-item">
 							<div class="item-header">
 								<a href="<?php echo base_url('service/detail/' . $service['slug']) ?>">

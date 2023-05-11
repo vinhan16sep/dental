@@ -87,3 +87,61 @@
 		}
 	}
 }
+
+@media screen and (min-width: 576.98px) and (max-width: 1200px) {
+	.view-service {
+		.container {
+			.service-overview,
+			.service-list {
+				padding-left: 1rem;
+			}
+
+			.service-list {
+				.row {
+					> div {
+						.service-item {
+							padding-right: 0;
+
+							.item-header {
+								h3 {
+									&:before {
+										display: none;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576.98px) {
+	.view-service {
+		.container {
+			.service-overview,
+			.service-list {
+				padding-left: 0;
+			}
+
+			.service-list {
+				.row {
+					> div {
+						.service-item {
+							padding-right: 0;
+
+							.item-header {
+								h3 {
+									&:before {
+										display: none;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

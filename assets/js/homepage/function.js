@@ -1,7 +1,14 @@
 $(document).ready(function () {
+    // new WOW({
+    //     scrollContainer: 'body'
+    // }).init();
+
+    // WOW
     new WOW({
         scrollContainer: 'body'
     }).init();
+
+    // new WOW().init();
 
     setTimeout(() => {
         $('#modalBanner').modal('show');
@@ -31,9 +38,6 @@ $(document).ready(function () {
             $('#swiperCover').parents('.section').find('.cover-content a.btn-lg').attr('href', href);
         }
     });
-
-    // WOW
-    new WOW().init();
 
     let swiperFlashSale = new Swiper('#swiperFlashSale', {
         slidesPerView: 2,
@@ -84,7 +88,7 @@ $(document).ready(function () {
         loop: true,
         breakpoints: {
             0: {
-                slidesPerView: 2
+                slidesPerView: 1
             },
             1024: {
                 slidesPerView: 5

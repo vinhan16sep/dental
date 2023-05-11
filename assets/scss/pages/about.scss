@@ -17,11 +17,11 @@
 				.row {
 					> div {
 						&:last-child {
-							padding-top: 4rem;
+							padding-top: 4.75rem;
 						}
 
 						h3 {
-							margin-bottom: 2.5rem;
+							margin-bottom: 1.5rem;
 
 							font-size: 3rem;
 							font-weight: 600;
@@ -511,6 +511,8 @@
 
 @media screen and (max-width: 576.98px) {
 	.view-about {
+		padding: 0 1.5rem;
+
 		.overview {
 			.container {
 				.overview-header,
@@ -522,35 +524,68 @@
 
 		.detail {
 			.container {
-				.detail-content {
-					padding-left: 0;
-				}
-			}
-		}
+				.row {
+					> div {
+						&:first-child {
+							margin-bottom: 1.5rem;
+						}
 
-		.library {
-			.library-body {
-				.list-images {
-					.item-sizer,
-					.item {
-						width: 50%;
+						> .ratio-wrapper {
+							margin-bottom: 2rem;
+						}
+
+						> .text {
+							padding-left: 1rem;
+							padding-right: calc(1rem + 24px);
+						}
+
+						.library {
+							.library-body {
+								.row {
+									> div {
+										.library-post {
+											.post-item {
+												flex-direction: column;
+
+												a {
+													width: 100%;
+
+													display: block;
+												}
+
+												.img-mask {
+													width: 100%;
+													height: 200px;
+
+													margin-bottom: 1.5rem;
+												}
+
+												.text {
+													width: 100%;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+				
+						.client {
+							.container {
+								.client-header {
+									padding-left: 3rem;
+								}
+							}
+						}
+				
+						.faq {
+							.container {
+								.faq-header {
+									padding-left: 3rem;
+								}
+							}
+						}
 					}
-				}
-			}
-		}
-
-		.client {
-			.container {
-				.client-header {
-					padding-left: 3rem;
-				}
-			}
-		}
-
-		.faq {
-			.container {
-				.faq-header {
-					padding-left: 3rem;
 				}
 			}
 		}
