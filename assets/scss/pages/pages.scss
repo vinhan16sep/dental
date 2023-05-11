@@ -3,7 +3,7 @@
 html,
 body {
 	width: 100%;
-	// height: 100vh;
+	height: 100vh;
 
 	background-color: var(--bg-bw);
 
@@ -19,6 +19,7 @@ body {
 
 .page {
 	width: 100%;
+	height: 100%;
 	
 	.page-header {
 		width: 100%;
@@ -64,7 +65,7 @@ body {
 					.header-menu {
 						.menu-item {
 							> a {
-								color: var(--white);
+								color: var(--white) !important;
 
 								&:before {
 									background-color: var(--white-alpha-50);
@@ -113,50 +114,71 @@ body {
 								display: block;
 							}
 						}
+
+						&:nth-last-child(2) {
+							i {
+								margin-right: 0.25rem;
+							}
+							
+							span {
+								font-size: 1rem;
+								font-weight: 600;
+
+								text-transform: uppercase;
+
+								display: none;
+							}
+						}
+
+						&:last-child {
+							display: none;
+						}
 	
 						> a {
-							padding: 0 2rem;
-			
-							color: var(--secondary);
-			
-							font-size: 1rem;
-							font-weight: 600;
-			
-							text-transform: uppercase;
-			
-							display: block;
-			
-							position: relative;
-							z-index: 1;
-			
-							&:hover {
+							&:not([role="button"]){
+								padding: 0 2rem;
+				
+								color: var(--secondary);
+				
+								font-size: 1rem;
+								font-weight: 600;
+				
+								text-transform: uppercase;
+				
+								display: block;
+				
+								position: relative;
+								z-index: 1;
+				
+								&:hover {
+									&:before {
+										width: 60%;
+					
+										@include transition();
+									}
+								}
+				
+								&.active {
+									&:before {
+										width: 60%;
+									}
+								}
+				
 								&:before {
-									width: 60%;
+									content: '';
+				
+									width: 0;
+									height: 6px;
+				
+									background-color: var(--primary-alpha-20);
+									
+									position: absolute;
+									bottom: 4px;
+									left: 16px;
+									z-index: -1;
 				
 									@include transition();
 								}
-							}
-			
-							&.active {
-								&:before {
-									width: 60%;
-								}
-							}
-			
-							&:before {
-								content: '';
-			
-								width: 0;
-								height: 6px;
-			
-								background-color: var(--primary-alpha-20);
-								
-								position: absolute;
-								bottom: 4px;
-								left: 16px;
-								z-index: -1;
-			
-								@include transition();
 							}
 						}
 
@@ -457,6 +479,10 @@ body {
 								&:not(:last-child){
 									margin-bottom: 1.25rem;
 								}
+
+								p {
+									line-height: 1.5rem;
+								}
 		
 								img {
 									height: 64px;
@@ -522,8 +548,22 @@ body {
 					.container {
 						.header-menu {
 							.menu-item {
+								&:nth-last-child(2) {
+									span {
+										display: inline;
+									}
+								}
+	
+								&:last-child {
+									display: block;
+								}
+	
+								.btn {
+									padding: 0 2rem;
+								}
+								
 								> a {
-									color: var(--text-title);
+									color: var(--text-title) !important;
 	
 									&:before {
 										background-color: var(--white-alpha-50);
@@ -681,7 +721,7 @@ body {
 						.header-menu {
 							.menu-item {
 								> a {
-									color: var(--text-title);
+									color: var(--text-title) !important;
 	
 									&:before {
 										background-color: var(--white-alpha-50);
@@ -741,6 +781,20 @@ body {
 							height: auto;
 	
 							padding: 1.5rem 0;
+
+							&:nth-last-child(2) {
+								span {
+									display: inline;
+								}
+							}
+
+							&:last-child {
+								display: block;
+							}
+
+							.btn {
+								padding: 0 2rem;
+							}
 						}
 					}
 	
@@ -832,6 +886,11 @@ body {
 				&.fixed-bottom {
 					right: 1rem;
 				}
+
+				&.fixed-center {
+					top: auto;
+					bottom: 3rem;
+				}
 			}
 		}
 
@@ -875,6 +934,8 @@ body {
 				.container {
 					.row {
 						> div {
+							padding: 0 2rem;
+
 							&:not(:last-child){
 								margin-bottom: 2rem;
 							}

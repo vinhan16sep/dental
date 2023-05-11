@@ -102,15 +102,40 @@
   color: var(--primary);
 }
 
+@media screen and (min-width: 576.98px) and (max-width: 1200px) {
+  .view-contact .container .address .row > div:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  .view-contact .container .address .row > div h6:before {
+    display: none;
+  }
+  .view-contact .container .message-form {
+    width: 100%;
+    padding: 2rem 1.5rem;
+  }
+  .view-contact .container .message-form .form-header {
+    padding-left: 0;
+  }
+  .view-contact .container .message-form .form-header h5:before {
+    display: none;
+  }
+}
 @media screen and (max-width: 576.98px) {
   .view-contact .container .address .row > div:not(:last-child) {
     margin-bottom: 2rem;
   }
+  .view-contact .container .address .row > div h6:before {
+    display: none;
+  }
   .view-contact .container .message-form {
     width: 100%;
-    padding: 4rem 1.5rem;
+    padding: 2rem 1.5rem;
+    margin-top: 4rem;
   }
   .view-contact .container .message-form .form-header {
-    padding-left: 2rem;
+    padding-left: 0;
+  }
+  .view-contact .container .message-form .form-header h5:before {
+    display: none;
   }
 }/*# sourceMappingURL=contact.css.map */

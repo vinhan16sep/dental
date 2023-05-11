@@ -172,6 +172,31 @@
 	}
 }
 
+@media screen and (min-width: 576.98px) and (max-width: 1200px) {
+	.view-blog {
+		.container {
+			.row {
+				> div {
+					.blog-filter {
+						margin-bottom: 2rem;
+					}
+
+					.list-items {
+						.item-sizer,
+						.item {
+							width: 50%;
+						}
+
+						.item {
+							padding-left: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 576.98px) {
 	.view-blog {
 		.container {

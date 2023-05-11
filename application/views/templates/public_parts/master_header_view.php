@@ -73,6 +73,18 @@
                     Liên hệ
                 </a>
             </div>
+
+            <div class="menu-item">
+                <a class="btn btn-search" data-bs-toggle="collapse" data-bs-target="#searchCollapse" role="button">
+                    <i class="fas fa-search"></i> <span>Tìm kiếm</span>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <a href="tel:+84903424205" class="btn">
+                    <i class="fas fa-phone"></i> Hotline
+                </a>
+            </div>
         </div>
     
         <div class="header-search">
@@ -91,17 +103,13 @@
                 </div>
             </div>
     
-            <a href="tel:+84903424205" class="btn">
-                <i class="fas fa-phone"></i>
-            </a>
+            
     
             <!-- <button class="btn btn-cart" id="btnCart" type="button">
                 <i class="fas fa-shopping-cart"></i>
             </button> -->
     
-            <button class="btn btn-search" data-bs-toggle="collapse" data-bs-target="#searchCollapse" type="button">
-                <i class="fas fa-search"></i>
-            </button>
+            
     
             <div class="header-search-menu">
                 <div class="search-collapse collapse" id="searchCollapse">

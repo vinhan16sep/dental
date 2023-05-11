@@ -839,11 +839,17 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+  .view-homepage .section.section-about .container .section-header {
+    margin-bottom: 1.5rem;
+  }
+  .view-homepage .section.section-about .container .section-heading {
+    margin-bottom: 2rem;
+  }
   .view-homepage .section.section-about .container .section-body .about-content .row > div:not(:last-child) {
     margin-bottom: 1.5rem;
   }
   .view-homepage .section.section-about .container .section-body .about-content .row > div h5 {
-    max-width: 60%;
+    max-width: 80%;
   }
   .view-homepage .section.section-highlight .container .section-header {
     display: -webkit-box;
@@ -864,13 +870,33 @@
     margin-bottom: 0.75rem;
   }
   .view-homepage .section.section-highlight .container .section-header .form-select {
-    max-width: unset;
+    max-width: 80%;
   }
   .view-homepage .section.section-client .container .section-body .swiper-container .swiper-wrapper .swiper-slide {
     width: auto;
   }
+  .view-homepage .section.section-receive-notification .overlay p {
+    padding: 0 1.5rem;
+  }
+  .view-homepage .section.section-blogs .container .section-header {
+    margin-bottom: 1.5rem;
+  }
   .view-homepage .section.section-blogs .container .section-body .row > div:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .view-homepage .section.section-blogs .container .section-body .row > div .card .card-body h5 {
+    max-height: 3.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    width: 100%;
+    height: auto;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
+  }
+  .view-homepage .section.section-blogs .container .section-body .row > div .card .card-body p:not(.date) {
+    margin-bottom: 1rem;
   }
   .view-homepage .section .container .section-header {
     padding-left: 3rem;

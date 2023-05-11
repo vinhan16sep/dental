@@ -184,7 +184,7 @@
 
 @media screen and (max-width: 576.98px) {
   .view-partner-detail .container .partner-overview,
-.view-partner-detail .container .partner-content {
+  .view-partner-detail .container .partner-content {
     padding-left: 2rem;
   }
   .view-partner-detail .container .partner-overview .row > div h3 {
