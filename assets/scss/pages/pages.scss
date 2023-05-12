@@ -707,6 +707,20 @@ body {
 
 			}
 		}
+
+		.page-body {
+			.fixed-buttons {
+				&.fixed-center,
+				&.fixed-bottom {
+					right: 1rem;
+				}
+
+				&.fixed-center {
+					top: auto;
+					bottom: 3rem;
+				}
+			}
+		}
 	}
 }
 

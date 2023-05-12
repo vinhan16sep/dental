@@ -644,6 +644,13 @@ body::-webkit-scrollbar-thumb:hover {
   .page .page-header header .container .header-expand .btn .line:after {
     margin-top: 8px;
   }
+  .page .page-body .fixed-buttons.fixed-center, .page .page-body .fixed-buttons.fixed-bottom {
+    right: 1rem;
+  }
+  .page .page-body .fixed-buttons.fixed-center {
+    top: auto;
+    bottom: 3rem;
+  }
 }
 @media screen and (max-width: 576.98px) {
   .page .page-header header {
