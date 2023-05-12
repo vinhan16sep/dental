@@ -106,6 +106,10 @@
 								<h6>
 									Danh mục
 								</h6>
+
+								<a href="#" class="btn-expand-item">
+									<i class="fas fa-minus"></i>
+								</a>
 							</div>
 
 							<div class="item-body">
@@ -126,6 +130,10 @@
 								<h6>
 									Sản phẩm nổi bật
 								</h6>
+
+								<a href="#" class="btn-expand-item">
+									<i class="fas fa-minus"></i>
+								</a>
 							</div>
 
 							<div class="item-body">
@@ -149,6 +157,10 @@
 								<h6>
 									Xuất xứ
 								</h6>
+
+								<a href="#" class="btn-expand-item">
+									<i class="fas fa-minus"></i>
+								</a>
 							</div>
 
 							<div class="item-body">
@@ -169,6 +181,10 @@
 								<h6>
 									Thương hiệu
 								</h6>
+
+								<a href="#" class="btn-expand-item">
+									<i class="fas fa-minus"></i>
+								</a>
 							</div>
 
 							<div class="item-body">

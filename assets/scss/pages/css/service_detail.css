@@ -183,4 +183,16 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   word-break: break-word;
+}
+
+@media screen and (max-width: 1200px) {
+  .view-service-detail .container .service-overview .row > div h3 {
+    margin-bottom: 2rem;
+  }
+  .view-service-detail .container .service-content .row > div .text {
+    padding: 0 1rem;
+  }
+  .view-service-detail .container .service-content .row > div .content-related .related-header h5:before {
+    display: none;
+  }
 }/*# sourceMappingURL=service_detail.css.map */

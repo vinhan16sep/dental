@@ -27,6 +27,10 @@
 							<h6>
 								Blog Filter
 							</h6>
+
+							<a href="#" class="btn-expand-item">
+								<i class="fas fa-minus"></i>
+							</a>
 						</div>
 
 						<div class="item-body">

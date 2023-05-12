@@ -29,10 +29,14 @@
 						.item-header {
 							margin-bottom: 1rem;
 
+							@include d-flex(row, flex-start, center);
+
 							h6 {
+								flex: 1 0 auto;
+
 								font-size: 1.25rem;
 
-								@include d-flex(row, space-between, flex-end);
+								@include d-flex(row, space-between, center);
 
 								&:after {
 									content: '';
@@ -40,12 +44,16 @@
 									flex: 1 0 auto;
 									height: 2px;
 
-									margin-left: 2rem;
+									margin: 0 1.5rem;
 
 									background-color: var(--border);
-
-									@include translate(0, -4px);
 								}
+							}
+
+							a {
+								color: var(--text-paragraph);
+
+								display: none;
 							}
 						}
 
@@ -179,6 +187,14 @@
 				> div {
 					.blog-filter {
 						margin-bottom: 2rem;
+
+						.filter-item {
+							.item-header {
+								a {
+									display: block;
+								}
+							}
+						}
 					}
 
 					.list-items {
@@ -204,6 +220,14 @@
 				> div {
 					.blog-filter {
 						margin-bottom: 2rem;
+
+						.filter-item {
+							.item-header {
+								a {
+									display: block;
+								}
+							}
+						}
 					}
 
 					.list-items {

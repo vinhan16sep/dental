@@ -96,6 +96,16 @@
 				padding-left: 1rem;
 			}
 
+			.service-overview {
+				.row {
+					> div {
+						h3 {
+							margin-bottom: 2rem;
+						}
+					}
+				}
+			}
+
 			.service-list {
 				.row {
 					> div {
@@ -123,6 +133,16 @@
 			.service-overview,
 			.service-list {
 				padding-left: 0;
+			}
+
+			.service-overview {
+				.row {
+					> div {
+						h3 {
+							margin-bottom: 2rem;
+						}
+					}
+				}
 			}
 
 			.service-list {
