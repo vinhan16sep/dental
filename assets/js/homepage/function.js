@@ -90,6 +90,9 @@ $(document).ready(function () {
             0: {
                 slidesPerView: 1
             },
+            576: {
+                slidesPerView: 3
+            },
             1024: {
                 slidesPerView: 5
             }

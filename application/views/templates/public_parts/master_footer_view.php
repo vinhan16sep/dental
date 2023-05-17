@@ -1,7 +1,7 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6">
                 <ul class="list-unstyled">
                     <li>
                         <img src="<?php echo base_url('/assets/img/logo_text.svg') ?>" class="logo" alt="Logo Minh Dental">
@@ -38,7 +38,7 @@
                 </ul>
             </div>
     
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6">
                 <h6>
                     Hỗ trợ khách hàng
                 </h6>
@@ -76,7 +76,7 @@
                 </ul>
             </div>
     
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-6">
                 <h6>
                     Tiện ích
                 </h6>
@@ -108,7 +108,7 @@
                 </ul>
             </div>
     
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6">
                 <h6>
                     Liên hệ với chúng tôi
                 </h6>

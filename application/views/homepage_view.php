@@ -176,7 +176,7 @@
 			<div class="section-body">
 				<div class="row">
 					<?php foreach($product_category as $key => $category): ?>
-						<div class="col-lg-4">
+						<div class="col-lg-4 col-md-6">
 							<a href="<?php echo base_url('/product/' . $category['slug']) ?>">		
 								<div class="card wow fadeIn" data-delay="<?php echo $key % 3 ?>">
 									<div class="card-body">

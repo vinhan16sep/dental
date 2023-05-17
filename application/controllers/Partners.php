@@ -14,7 +14,7 @@ class Partners extends Public_Controller {
 			'assets/scss/pages/css/min/partner.min.css'
 		];
 		$this->data['the_view_js'] = [
-			// 'assets/js/partner/function.min.js'
+			'assets/js/partner/function.min.js'
 		];
 
         $this->render('partner_view');
