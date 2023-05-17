@@ -21,8 +21,24 @@
 }
 .view-partner .container .row > div .partner-filter .filter-item .item-header {
   margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .view-partner .container .row > div .partner-filter .filter-item .item-header h6 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   font-size: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,9 +50,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .view-partner .container .row > div .partner-filter .filter-item .item-header h6:after {
   content: "";
@@ -44,10 +60,12 @@
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
   height: 2px;
-  margin-left: 2rem;
+  margin: 0 1.5rem;
   background-color: var(--border);
-  -webkit-transform: translate(0, -4px);
-  transform: translate(0, -4px);
+}
+.view-partner .container .row > div .partner-filter .filter-item .item-header a {
+  color: var(--text-paragraph);
+  display: none;
 }
 .view-partner .container .row > div .partner-filter .filter-item .item-body ul {
   padding-left: 0;
@@ -106,8 +124,22 @@
   word-break: break-word;
 }
 
+@media screen and (min-width: 576.98px) and (max-width: 1200px) {
+  .view-partner .container .row > div .partner-filter {
+    margin-bottom: 1.5rem;
+  }
+  .view-partner .container .row > div .partner-filter .filter-item .item-header a {
+    display: block;
+  }
+}
 @media screen and (max-width: 576.98px) {
   .view-partner {
     padding: 0 1.5rem;
+  }
+  .view-partner .container .row > div .partner-filter {
+    margin-bottom: 1.5rem;
+  }
+  .view-partner .container .row > div .partner-filter .filter-item .item-header a {
+    display: block;
   }
 }/*# sourceMappingURL=partner.css.map */

@@ -27,6 +27,10 @@
 							<h6>
 								Partner Filter 1
 							</h6>
+
+							<a href="#" class="btn-expand-item">
+								<i class="fas fa-minus"></i>
+							</a>
 						</div>
 
 						<div class="item-body">
@@ -50,6 +54,10 @@
 							<h6>
 								Partner Filter 2
 							</h6>
+
+							<a href="#" class="btn-expand-item">
+								<i class="fas fa-minus"></i>
+							</a>
 						</div>
 
 						<div class="item-body">

@@ -877,6 +877,49 @@
 	}
 }
 
+@media screen and (min-width: 576.98px) and (max-width: 1200px) {
+	.view-homepage {
+		.section {
+			&.section-blogs {
+				.container {
+					max-width: unset;
+
+					.section-header {
+						padding-left: 3rem;
+						margin-bottom: 1.5rem;
+					}
+
+					.section-body {
+						.row {
+							> div {
+								.card {
+									.card-body {
+										h5 {
+											max-height: 3.75rem;
+											
+											@include textWrapper(100%, auto, 2);
+										}
+
+										p {
+											&:not(.date){
+												margin-bottom: 1rem;
+											}
+										}
+
+										a {
+											margin-top: 0;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 576.98px) {
 	.view-homepage {
 		.section {

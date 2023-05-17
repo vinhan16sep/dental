@@ -509,6 +509,48 @@
 	}
 }
 
+@media screen and (min-width: 576.98px) and (max-width: 1200px) {
+	.view-about {
+		.overview {
+			margin-bottom: 2rem;
+		}
+
+		.detail {
+			.container {
+				.row {
+					> div {
+						&:first-child {
+							margin-bottom: 1.5rem;
+						}
+
+						.library {
+							.library-header {
+								padding-left: 3rem;
+							}
+
+							.library-body {
+								.row {
+									> div {
+										&:first-child {
+											margin-bottom: 1.5rem;
+										}
+									}
+								}
+							}
+						}
+
+						.client {
+							.client-header {
+								padding-left: 3rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 576.98px) {
 	.view-about {
 		padding: 0 1.5rem;

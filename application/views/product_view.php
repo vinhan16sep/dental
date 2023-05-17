@@ -206,7 +206,7 @@
 					<div class="products-list">						
 						<div class="row">
 							<?php foreach ($products as $key => $value): ?>
-								<div class="col-lg-4">
+								<div class="col-lg-4 col-md-6">
 									<div class="card">
 										<div class="ratio-wrapper ratio-wrapper-16-9">
 											<div class="img-mask">
