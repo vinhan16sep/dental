@@ -46,6 +46,9 @@
   margin: 1.5rem auto;
   display: block;
 }
+.view-product-detail .detail-content .container .row > div .content-image {
+  margin-bottom: 1.5rem;
+}
 .view-product-detail .detail-content .container .row > div .content-image .swiper-container {
   margin-top: 4rem;
 }
@@ -81,11 +84,38 @@
   transition: all ease-in-out 300ms;
 }
 .view-product-detail .detail-content .container .row > div .content-image .swiper-container .swiper-wrapper .swiper-slide .img-mask {
-  height: auto;
+  height: 100%;
 }
 .view-product-detail .detail-content .container .row > div .content-image .swiper-container .swiper-wrapper .swiper-slide .img-mask img {
   -o-object-fit: contain;
      object-fit: contain;
+}
+.view-product-detail .detail-content .container .row > div .content-price h4 {
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+.view-product-detail .detail-content .container .row > div .content-price .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.view-product-detail .detail-content .container .row > div .content-price .buttons .btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+.view-product-detail .detail-content .container .row > div .content-price .buttons .btn:not(:last-child) {
+  margin-right: 0.75rem;
 }
 .view-product-detail .detail-content .container .row > div .content-related .related-header {
   margin-bottom: 3rem;
