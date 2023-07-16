@@ -82,8 +82,26 @@
 							</div>
 						</div>
 					</div>
-				</div>
 
+					<div class="content-price">
+						<h4>
+							1.000.000 vnd
+						</h4>
+
+						<div class="buttons">
+							<button class="btn btn-primary btn-buy" type="button">
+								Mua ngay
+							</button>
+
+							<button class="btn btn-link btn-contact-us" type="button">
+								Tư vấn cho tôi
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
 				<div class="col-lg-12">
 					<div class="text">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis justo metus, in accumsan odio dictum et. Duis venenatis massa sed molestie laoreet. Mauris efficitur ac nibh vel imperdiet. Pellentesque nec libero est. Nulla in accumsan libero. Quisque elementum eget felis eget facilisis. Fusce luctus nisl felis, cursus ornare nibh condimentum et. Phasellus ut justo nisl. Suspendisse pharetra vulputate auctor. Fusce vehicula leo eu posuere vehicula. Nunc blandit, nisl sed dictum condimentum, nunc felis porta nulla, eu scelerisque augue dui vel ligula. Phasellus ac tristique mauris, eget suscipit sapien. Maecenas eget dignissim turpis, vel sagittis mauris. Ut vitae mattis odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi nunc, semper ac risus sed, aliquet vestibulum quam.</p>

@@ -78,6 +78,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '!@#$',
+	// 'password' => 'QuoChunG249@',
 	'database' => 'dental_db',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
