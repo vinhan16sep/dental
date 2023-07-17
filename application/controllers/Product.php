@@ -36,18 +36,40 @@ class Product extends Public_Controller {
         $this->render('product_view');
 	}
 
-	public function category()
+	public function category($slug = '')
 	{
-		
-		$this->data['the_view_title'] = 'Product Categories';
-		$this->data['the_view_css'] = [
-			'assets/scss/pages/css/min/product_category.min.css'
-		];
-		$this->data['the_view_js'] = [
-			'assets/js/product/function.min.js'
-		];
+		if($slug == ''){
+			$this->data['the_view_title'] = 'Product Categories';
+			$this->data['the_view_css'] = [
+				'assets/scss/pages/css/min/product_category.min.css'
+			];
+			$this->data['the_view_js'] = [
+				'assets/js/product/function.min.js'
+			];
+			$this->render('product_category_view');
+		} else {
+			$this->data['product_selected_category'] = $this->product_category_model->get_by_slug($slug);
 
-		$this->render('product_category_view');
+			$this->data['product_categories'] = $this->product_category_model->get_active();
+			$this->data['origins'] = $this->origin_model->get_active();
+			$this->data['brands'] = $this->brand_model->get_active();
+			$this->data['products'] = $this->product_model->fetch_all();
+			$this->data['focus_products'] = $this->product_model->fetch_all_focus();
+
+			$this->data['the_view_title'] = $this->data['product_selected_category']['title'];
+			$this->data['the_view_css'] = [
+				'assets/plugins/swiper/css/swiper-bundle.min.css',
+				'assets/plugins/animate/animate.css',
+				'assets/scss/pages/css/min/product.min.css'
+			];
+			$this->data['the_view_js'] = [
+				'assets/plugins/swiper/js/swiper-bundle.min.js',
+				'assets/plugins/wow/wow.min.js',
+				'assets/js/product/function.min.js'
+			];
+
+			$this->render('product_view');
+		}
 	}
 
 	public function detail($slug)
