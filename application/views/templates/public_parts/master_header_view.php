@@ -36,7 +36,7 @@
                     <div class="row">
                         <?php foreach($product_category as  $key => $category): ?>
                             <div class="col-lg-4">
-                                <a href="<?php echo base_url('/product/' . $category['slug']) ?>">		
+                                <a href="<?php echo base_url('/product/category/' . $category['slug']) ?>">		
                                     <div class="img-mask">
                                         <img src="<?php echo base_url('assets/img/icons/icon_prod_' . ($key + 1) . '.png') ?>" alt="Cover of category">
                                     </div>

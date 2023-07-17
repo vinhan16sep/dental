@@ -9,14 +9,20 @@
 								Trang chủ
 							</a>
 						</li>
-						<li class="breadcrumb-item">
-							<a href="<?php echo base_url('/product/') ?>">
+						<?php if(isset($product_selected_category)):?>
+							<li class="breadcrumb-item">
+								<a href="<?php echo base_url('/product/') ?>">
+									Sản phẩm
+								</a>
+							</li>
+							<li class="breadcrumb-item active" aria-current="page">
+								<?php echo $product_selected_category['title'] ?>
+							</li>
+						<?php else: ?>
+							<li class="breadcrumb-item active">
 								Sản phẩm
-							</a>
-						</li>
-						<li class="breadcrumb-item active" aria-current="page">
-							GHẾ NHA KHOA - MÁY NÉN
-						</li>
+							</li>
+						<?php endif; ?>
 					</ol>
 				</nav>
 
@@ -24,9 +30,11 @@
 					Sản phẩm nổi bật
 				</h5>
 
-				<h3>
-					GHẾ NHA KHOA - MÁY NÉN
-				</h3>
+				<?php if(isset($product_selected_category)):?>
+					<h3>
+						<?php echo $product_selected_category['title'] ?>	
+					</h3>
+				<?php endif; ?>
 			</div>
 
 			<div class="overview-body">
@@ -81,9 +89,9 @@
 											<div class="price">
 												Liên hệ
 
-												<div class="btn btn-sm btn-primary">
+												<!-- <button class="btn btn-sm btn-primary" type="button">
 													Thêm vào giỏ hàng
-												</div>
+												</button> -->
 											</div>
 										</div>
 									</div>
@@ -116,7 +124,7 @@
 								<ul>
 									<?php foreach ($product_categories as $key => $value): ?>
 										<li>
-											<a href="#">
+											<a href="<?php echo base_url('/product/category/' . $value['slug']) ?>" class="<?php echo isset($product_selected_category) && $product_selected_category['id'] == $value['id'] ? 'active' : '' ?>">
 												<?= $value['title'] ?>
 											</a>
 										</li>
@@ -260,9 +268,9 @@
 											<p class="price">
 												Liên hệ
 
-												<a href="#" class="btn btn-sm btn-primary" role="button">
+												<!-- <button class="btn btn-sm btn-primary" type="button">
 													Thêm vào giỏ hàng
-												</a>
+												</button> -->
 											</p>
 										</div>
 									</div>
