@@ -36,6 +36,10 @@
 						}
 	
 						.text-body {
+							h6 {
+								margin-bottom: 0.75rem;
+							}
+
 							p {
 								text-align: justify;
 							}
@@ -53,11 +57,26 @@
 									}
 								}
 							}
+
+							.blockquote {
+								padding: 0.75rem 1.25rem;
+
+								background-color: var(--primary-alpha-10);
+								border-left: 6px solid var(--primary);
+								
+								p {
+									color: var(--primary);
+								}
+							}
 						}
 					}
 
 					.text {
 						margin-bottom: 8rem;
+
+						h6 {
+							margin-bottom: 0.75rem;
+						}
 
 						p {
 							text-align: justify;

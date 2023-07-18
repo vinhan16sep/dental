@@ -38,10 +38,14 @@
 						</div>
 	
 						<div class="text-body">
+							<h6>
+								Tính năng nổi bật của sản phẩm
+							</h6>
+
 							<p class="description">
 								In ut lorem enim. Morbi suscipit nisi vel nisi sollicitudin, nec scelerisque urna congue. Aliquam lobortis turpis non magna pharetra ultrices. Integer ut iaculis nisl, vitae aliquet sapien. Sed aliquam dui dictum lacus porttitor fringilla. Fusce sodales est vitae sem aliquet gravida. Mauris ipsum velit, dignissim vel malesuada vitae, porttitor quis quam. Sed et urna massa. Nullam sodales, diam ut bibendum faucibus, ipsum lorem fringilla ipsum, eget malesuada nisi orci ut erat. 
 							</p>
-	
+
 							<ul class="list-unstyled">
 								<li>
 									<h6>
@@ -59,6 +63,16 @@
 									</h6>
 								</li>
 							</ul>
+	
+							<h6>
+								Thông tin khuyến mãi
+							</h6>
+
+							<blockquote class="blockquote">
+								<p class="description">
+									In ut lorem enim. Morbi suscipit nisi vel nisi sollicitudin, nec scelerisque urna congue.
+								</p>
+							</blockquote>
 						</div>
 					</div>
 				</div>
@@ -104,6 +118,9 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="text">
+						<h6>
+							Mô tả chi tiết sản phẩm
+						</h6>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis justo metus, in accumsan odio dictum et. Duis venenatis massa sed molestie laoreet. Mauris efficitur ac nibh vel imperdiet. Pellentesque nec libero est. Nulla in accumsan libero. Quisque elementum eget felis eget facilisis. Fusce luctus nisl felis, cursus ornare nibh condimentum et. Phasellus ut justo nisl. Suspendisse pharetra vulputate auctor. Fusce vehicula leo eu posuere vehicula. Nunc blandit, nisl sed dictum condimentum, nunc felis porta nulla, eu scelerisque augue dui vel ligula. Phasellus ac tristique mauris, eget suscipit sapien. Maecenas eget dignissim turpis, vel sagittis mauris. Ut vitae mattis odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi nunc, semper ac risus sed, aliquet vestibulum quam.</p>
 						<p>Vestibulum molestie tortor sit amet faucibus elementum. Nullam dapibus eu ex sit amet euismod. Mauris ac urna malesuada, varius arcu non, semper purus. Duis vitae ante semper, sodales magna in, ornare elit. In sodales dolor id sollicitudin molestie. Mauris sed pellentesque nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 						
