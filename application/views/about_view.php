@@ -24,12 +24,14 @@
 						</h3>
 
 						<h6>
-							Chào mừng bạn đến với MINH Dental
+							Lời đầu tiên, xin cảm ơn Quý khách hàng đã ghé thăm website của Minh Dental. Nếu Quý khách hàng đang cần tìm một đơn vị uy tín cung cấp các trang - thiết bị và vật tư về nha khoa thì vui lòng đừng bỏ qua các thông tin dưới đây.
 						</h6>
 					</div>
 
 					<div class="col-lg-6">
-						<p>Lời đầu tiên MINH Dental kính chúc các Nha sĩ - Đại Lý – Các cửa hàng vật liệu nha khoa toàn quốc và các bạn đồng nghiệp nhiều sức khỏe và thành công.</p>
+						<p>
+							Minh Dental là một trong những doanh nghiệp cung cấp thiết bị nha khoa khoa đầu tiên tại Việt Nam. Trải qua 40 năm xây dựng, phát triển và trưởng thành, Minh Dental gắn bó với nhiều đơn vị cung cấp thiết bị, bệnh viện, phòng khám nha khoa trên cả nước. Đi cùng với niềm tự hào là sự uy tín, trách nhiệm và nỗ lực để xứng đáng với niềm tin yêu của các đối tác, khách hàng. 
+						</p>
 					</div>
 				</div>
 			</div>
@@ -73,25 +75,23 @@
 
 					<div class="text">
 						<p>
-							Với bề dầy kinh nghiệm 30 năm trong ngành nha khoa chúng tôi luôn mong muốn mang đến quý Nha sĩ, các phòng khám, các đại lý, các bạn đồng nghiệp những sản phẩm nha khoa chất lượng nhất, hoàn hảo nhất.
+							Cho đến nay, Minh Dental vẫn nỗ lực đổi mới từng ngày, đón đầu xu thế, đem đến những sản phẩm chất lượng cao, công nghệ đột phá để các bác sĩ Nha khoa, các bệnh nhân sẽ cảm thấy an tâm, thoải mái khi khám, điều trị các vấn đề về nha khoa. 
 						</p>
+
 						<p>
-							Chúng tôi chuyên kinh doanh vật liệu, dụng cụ, máy và trang thiết bị nha khoa, nhà phân phối độc quyền vật liệu và dụng cụ nha khoa tại Việt Nam sản phẩm từ các hãng Nha khoa hàng đầu thế giới.
+							Minh Dental hiện cung cấp nhiều thiết bị nha khoa khác nhau từ các thương hiệu nổi tiếng thế giới. Trong đó, chủ lực là sản phẩm về ghế nha khoa. Chúng tôi là đơn vị phân phối độc quyền ghế nha khoa Cingol tại Việt Nam. Có thể khẳng định so với các sản phẩm cùng phân khúc thì Cingol là sản phẩm mang lại ấn tượng sâu sắc với khách hàng về chất lượng, tiện ích và đa dạng về mẫu mã.
 						</p>
+
 						<p>
-							Cửa hàng Minh Dental là đối tác tin cậy của nhiều công ty nha khoa trong và ngoài nước, nguồn khách hàng thân thiết đến từ các bệnh viện nha khoa, trung tâm nha khoa, viện thẩm mỹ và các nha sĩ có chuyên môn.
+							Bên cạnh đó, Minh Dental cũng cung cấp các thiết bị hỗ trợ vận hành ghế, các thiết bị hình ảnh, thiết bị phục hồi thẩm mỹ, thiết bị nội nha, hệ thống vô khuẩn, vật tư, vật liệu…
 						</p>
+
 						<p>
-							Hiện tại chúng tôi đã mở rộng thêm hệ thống kinh doanh để phục vụ các bác sĩ, nha sĩ, phòng khám và các đối tác trong ngành nha khoa.
+							Tính đến thời điểm này, Minh Dental đã xây dựng được 200 đại lý trên cả nước và là đơn vị cung cấp cho hơn 10.000 phòng khám nha khoa, bệnh viện…
 						</p>
+
 						<p>
-							Chúng tôi mở thêm DENTALMart.vn - Vật Liệu Nha Khoa Việt Trung để phục vụ các bác sĩ, nha sĩ và các phòng khám được tốt hơn. Hệ thống bán hàng trực tuyến luôn sẵn sàng phục vụ, nếu quý khách có nhu cầu mở Phòng khám, MINH Dental có đội ngũ nhân viên kỹ thuật giàu kinh nghiệm nhiệt tình tư vấn và thiết kế cho quý khách. Vui lòng truy cập website www.vatlieunhakhoaminh.com hoặc www.dentalmart.vn quý khách sẽ được Phục Vụ Tận Tình - Bảo Hành Chu Đáo.
-						</p>
-						<p>
-							Rất mong nhận được sự tin cậy và ủng hộ của quý Nha sĩ, Phòng khám Nha khoa và các đối tác dành cho MINH Dental.
-						</p>
-						<p>
-							Xin Trân Trọng,
+							Để hành trình phụng sự khách hàng phát triển mạnh mẽ hơn nữa, Minh Dental hy vọng sẽ có cơ hội hợp tác với nhiều đại lý, các phòng khám nha khoa, các bệnh viện có nhu cầu cung cấp về thiết bị nha khoa trên cả nước hơn nữa. Để lan tỏa những sản phẩm chất lượng cao và đem đến những giá trị thiết thực cho đội ngũ bác sĩ nha khoa và bệnh nhân.
 						</p>
 					</div>
 
@@ -101,7 +101,7 @@
 						</div>
 					</div>
 
-					<div class="library" id="aboutLibrary">
+					<div class="library" id="aboutLibrary" style="display: none;">
 						<div class="library-header">
 							<h5>
 								Tư liệu truyền thống

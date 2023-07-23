@@ -42,7 +42,15 @@
 					<div class="row">
 						<div class="col-lg-9">
 							<h6>
-								Lời đầu tiên MINH Dental kính chúc các Nha sĩ - Đại Lý – Các cửa hàng vật liệu nha khoa toàn quốc và các bạn đồng nghiệp nhiều sức khỏe và thành công.
+								Lời đầu tiên, xin cảm ơn Quý khách hàng đã ghé thăm website của Minh Dental. Nếu Quý khách hàng đang cần tìm một đơn vị uy tín cung cấp các trang - thiết bị và vật tư về nha khoa thì vui lòng đừng bỏ qua các thông tin dưới đây.
+							</h6>
+
+							<h6>
+								Với gần 40 năm xây dựng và phát triển, Minh Dental đã trở thành một cái tên quen thuộc đối với nhiều phòng khám Nha khoa và các đại lý phân phối thiết bị Nha khoa trên cả nước. 
+							</h6>
+
+							<h6>
+								Không chỉ là đơn vị phân phối độc quyền các trang thiết bị Nha khoa của các thương hiệu nổi tiếng trên thế giới, Minh Dental còn có dịch vụ chăm sóc sau bán hàng được các đối tác đánh giá tốt nhất hiện nay. 
 							</h6>
 						</div>
 					</div>
@@ -66,17 +74,17 @@
 							</h3>
 
 							<h5>
-								Khách hàng trên khắp cả nước
+								Đại lý trên khắp cả nước
 							</h5>
 						</div>
 
 						<div class="col-lg-4 wow fadeInUp" data-wow-delay="2s">
 							<h3>
-								20
+								10.000
 							</h3>
 
 							<h5>
-								Nunc vel ipsum vestibulum, suscipit nulla ut, vestibulum quam
+								Phòng khám Nha khoa tin dùng
 							</h5>
 						</div>
 					</div>
@@ -207,7 +215,7 @@
 					<div class="row">
 						<div class="col-lg-9">
 							<h6>
-								Nam ornare metus et dictum condimentum. Suspendisse potenti. Curabitur vel libero augue. 
+								Minh Dental hợp tác chặt chẽ với nhiều đơn vị cung cấp trang thiết bị Nha khoa đến từ các thương hiệu nổi tiếng và lâu năm trên thế giới như: Cingol, Jindel, Baolai…, nhằm đảm bảo mang đến cho khách hàng nguồn hàng uy tín và chất lượng cao.
 							</h6>
 						</div>
 					</div>
@@ -243,7 +251,7 @@
 
 	<div class="section section-receive-notification">
 		<div class="img-mask">
-			<img src="https://images.unsplash.com/photo-1564420228450-d9a5bc8d6565?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1113&q=80" alt="Background notification">
+			<img src="<?php echo base_url('assets/img/homepage_register.jpg') ?>" alt="Background notification">
 		</div>
 
 		<div class="overlay">
@@ -252,7 +260,7 @@
 			</h4>
 
 			<p>
-				Morbi molestie tempus eleifend. Pellentesque ac dolor commodo, volutpat urna varius, ultrices nunc. Nam leo leo, mollis et faucibus at, sollicitudin in massa
+				Hãy đăng ký ngay để nhận thông báo về các chương trình khuyến mại trong năm của Minh Dental.
 			</p>
 
 			<button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalReceiveNotification" type="button">
