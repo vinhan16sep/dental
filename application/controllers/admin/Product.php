@@ -93,6 +93,7 @@ class Product extends Admin_Controller{
                     'slug' => $unique_slug,
                     'title' => $this->input->post('title'),
                     'code' => $this->input->post('code'),
+                    'price' => $this->input->post('price'),
                     'warranty' => $this->input->post('warranty'),
                     'rating' => $this->input->post('rating'),
                     'category_id' => $this->input->post('parent_id'),
