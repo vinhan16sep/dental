@@ -8,15 +8,17 @@
 					<div class="swiper-slide" data-index="<?php echo $key ?>" data-title="<?php echo $slide['title'] ?>">
 						<a href="#">
 							<div class="container-fluid">
-								<div class="text">
-									<h3>
-										<?php echo $slide['title'] ?>
-									</h3>
+								<?php if($slide['title'] != '') : ?>
+									<div class="text">
+										<h3>
+											<?php echo $slide['title'] ?>
+										</h3>
 
-									<h6>
-										Tìm hiểu thêm <i class="fas fa-arrow-right"></i>
-									</h6>
-								</div>
+										<h6>
+											Tìm hiểu thêm <i class="fas fa-arrow-right"></i>
+										</h6>
+									</div>
+								<?php endif ?>
 							</div>
 
 							<div class="img-mask">
