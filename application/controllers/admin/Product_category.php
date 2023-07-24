@@ -52,8 +52,15 @@ class Product_category extends Admin_Controller{
                 }
                 $slug = $this->input->post('slug');
                 $unique_slug = $this->product_category_model->build_unique_slug($slug);
+                if(!file_exists('assets/upload/product-category/' . $unique_slug)){
+                    mkdir('assets/upload/product-category/' . $unique_slug, 0777);
+                }
+                if ( !empty($_FILES['image']['name']) ) {
+                    chmod('assets/upload/product-category/' . $unique_slug, 0777);
+                    $images = $this->upload_image('image', 'assets/upload/product-category/' . $unique_slug, $_FILES['image']['name']);
+                }
                 $data = array(
-                    'image' => null,
+                    'image' => $images,
                     'slug' => $unique_slug,
                     'title' => $this->input->post('title'),
                     'meta_keywords' => $this->input->post('meta_keywords'),
@@ -96,12 +103,27 @@ class Product_category extends Admin_Controller{
             $this->render('admin/product_category/edit');
         }else{
             if ($this->input->post()) {
+                if(!empty($_FILES['image']['name'])){
+                    $this->check_img($_FILES['image']['name'], $_FILES['image']['size']);
+                }
 
                 $slug = $this->input->post('slug');
                 $unique_slug = $detail['slug'];
                 if ($slug != $unique_slug) {
                     $unique_slug = $this->product_category_model->build_unique_slug($slug);
+                    if(file_exists('assets/upload/product-category/' . $detail['slug'])) {
+                        chmod('assets/upload/product-category/' . $detail['slug'], 0777);
+                        rename('assets/upload/product-category/' . $detail['slug'], 'assets/upload/product-category/' . $unique_slug);
+                    }
                 }
+                if(!file_exists('assets/upload/product-category/' . $unique_slug)){
+                    mkdir('assets/upload/product-category/' . $unique_slug, 0777);
+                }
+                if ( !empty($_FILES['image']['name']) ) {
+                    chmod('assets/upload/product-category/' . $unique_slug, 0777);
+                    $images = $this->upload_image('image', 'assets/upload/product-category/' . $unique_slug, $_FILES['image']['name']);
+                }
+
                 $number_product = $this->product_model->find_row_array(array('category_id' => $id,'is_deleted' => 0,'is_active' => 1));
                 if($number_product > 0 && $this->input->post('is_active') == 0){
                     $this->session->set_flashdata('message_error', MESSAGE_EDIT_ERROR_ACTIVE);
@@ -116,6 +138,9 @@ class Product_category extends Admin_Controller{
                     'description' => $this->input->post('description'),
                     'is_active' => $this->input->post('is_active'),
                 );
+                if ( !empty($_FILES['image']['name']) ) {
+                    $data['image'] = $images;
+                }
                 unset($this->author_data['created_at']);
                 unset($this->author_data['created_by']);
                 $update = $this->product_category_model->update($id,array_merge($data, $this->author_data));

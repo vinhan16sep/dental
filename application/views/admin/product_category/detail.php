@@ -22,6 +22,18 @@
                     <!-- /.box-header -->
                     <div class="box-body">
                         <div class="row">
+                            <div class="detail-image col-md-6">
+                                <label>Ảnh đại diện</label>
+                                <div class="row">
+                                    <div class="item col-md-6">
+                                        <div class="mask-lg">
+                                            <?php if ( $detail['image'] ): ?>
+                                                <img src="<?= base_url('assets/upload/product-category/' . $detail['slug'] . '/' . $detail['image'] ) ?>" alt="Image Detail" width=100%>    
+                                            <?php endif ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="detail-info col-md-6">
                                 <div class="table-responsive">
                                     <label>Thông tin</label>
