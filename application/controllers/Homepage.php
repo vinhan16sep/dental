@@ -26,12 +26,12 @@ class Homepage extends Public_Controller {
 
 		$this->data['campaigns'] = [
 			0 => [
-				'title' => 'Campaign 1',
-				'image' => 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVudGlzdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
+				'title' => '',
+				'image' => '/assets/img/banner/banner_1.jpg'
 			],
 			1 => [
-				'title' => 'Campaign 2',
-				'image' => 'https://images.unsplash.com/photo-1564420228450-d9a5bc8d6565?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1113&q=80'
+				'title' => '',
+				'image' => '/assets/img/banner/banner_2.jpg'
 			],
 		];
 		$this->data['blogs'] = $this->news_model->fetch_all(3);
