@@ -114,6 +114,16 @@
                         <div class="form-group col-xs-12" style="padding-right: 0px;">
                             <div class="form-group col-xs-12" style="padding-right: 0px;">
                                 <?php
+                                echo form_label('Giá sản phẩm', 'price');
+                                echo form_error('price', '<div class="error">', '</div>');
+                                echo form_input('price', set_value('price'), 'class="form-control" id="price"');
+                                ?>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-xs-12" style="padding-right: 0px;">
+                            <div class="form-group col-xs-12" style="padding-right: 0px;">
+                                <?php
                                 echo form_label('Slug', 'slug');
                                 echo form_error('slug', '<div class="error">', '</div>');
                                 echo form_input('slug', set_value('slug'), 'class="form-control" id="slug" readonly');
@@ -132,9 +142,10 @@
                         <div class="form-group col-md-12">
                             <div class="form-group col-xs-12" style="padding-right: 0px;">
                                 <?php
-                                    echo form_label('Nổi bật', 'is_focus');
+                                    echo form_hidden('is_focus', '0', TRUE);
                                     echo form_error('is_focus', '<div class="error">', '</div>');
-                                    echo form_checkbox('is_focus', '1', FALSE, 'id="is_focus"');
+                                    echo form_checkbox('is_focus', '1', FALSE, 'id="is_focus" style="margin-right: 4px;"');
+                                    echo form_label('Nổi bật', 'is_focus');
                                 ?>
                             </div>
                         </div>
@@ -142,9 +153,10 @@
                         <div class="form-group col-md-12">
                             <div class="form-group col-xs-12" style="padding-right: 0px;">
                                 <?php
-                                    echo form_label('Flash sale', 'is_sale');
+                                    echo form_hidden('is_sale', '0', TRUE);
                                     echo form_error('is_sale', '<div class="error">', '</div>');
-                                    echo form_checkbox('is_sale', '1', FALSE, 'id="is_sale"');
+                                    echo form_checkbox('is_sale', '1', FALSE, 'id="is_sale" style="margin-right: 4px;"');
+                                    echo form_label('Flash sale', 'is_sale');
                                 ?>
                             </div>
                         </div>

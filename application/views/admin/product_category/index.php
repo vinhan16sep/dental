@@ -58,6 +58,7 @@
                                 <thead>
                                 <tr>
                                     <th>No.</th>
+                                    <th>Hình ảnh</th>
                                     <th>Tên danh mục</th>
                                     <th>Trạng thái</th>
                                     <th>Action</th>
@@ -69,6 +70,11 @@
                                         <?php foreach ($result as $key => $value): ?>
                                             <tr class="remove-<?= $value['id'] ?>">
                                                 <td><?= $serial ?></td>
+                                                <td>
+                                                    <div class="mask_sm">
+                                                        <img src="<?= base_url('assets/upload/product-category/' . $value['slug'] . '/' . $value['image']) ?>"  width=150px height=100px>
+                                                    </div>
+                                                </td>
                                                 <td><?= $value['title'] ?></td>
                                                 <td class="is-active-<?= $value['id'] ?>">
                                                     <?php

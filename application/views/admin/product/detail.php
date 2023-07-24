@@ -65,6 +65,10 @@
                                                 <td><?= $detail['code'] ?></td>
                                             </tr>
                                             <tr>
+                                                <th>Giá sản phẩm</th>
+                                                <td><?= $detail['price'] ?></td>
+                                            </tr>
+                                            <tr>
                                                 <th>Danh mục</th>
                                                 <td>
                                                     <?php echo $detail['category']; ?>
