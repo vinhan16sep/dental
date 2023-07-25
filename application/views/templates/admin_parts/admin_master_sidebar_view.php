@@ -28,11 +28,11 @@ if($this->ion_auth->logged_in()) {
                         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                     </a>
                 </li>
-                <!-- <li class="<?php echo ($this->uri->segment(2) == 'banner')? 'active' : '' ?>">
+                <li class="<?php echo ($this->uri->segment(2) == 'banner')? 'active' : '' ?>">
                     <a href="<?php echo base_url('admin/banner') ?>">
                         <i class="fa fa-inbox"></i> <span>Quản lý banner</span>
                     </a>
-                </li> -->
+                </li>
                 <li class="treeview <?php echo ($this->uri->segment(2) == 'about' )? 'active' : '' ?>" style="border-bottom: none;">
                     <a href="">
                         <i class="fa fa-bars"></i>

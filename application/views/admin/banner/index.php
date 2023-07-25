@@ -32,11 +32,8 @@
             <div class="col-md-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">
-                            Banner
-                        </h3>
                     </div>
-                    <div class="row">
+                    <div class="row" style="padding: 10px;">
                         <div class="col-md-6">
                             <a href="<?php echo base_url('admin/'.$controller.'/create') ?>" class="btn btn-primary" role="button">Thêm mới</a>
                         </div>
@@ -84,9 +81,9 @@
                                             <td class="is-active-<?= $value['id'] ?>">
                                                 <?php
                                                     if ($value['is_active'] == 0) {
-                                                        echo '<span class="label label-warning">Chờ duyệt</span>';
+                                                        echo '<span class="label label-warning">Không sử dụng</span>';
                                                     }else{
-                                                        echo '<span class="label label-success">Đã duyệt</span>';
+                                                        echo '<span class="label label-success">Đang sử dụng</span>';
                                                     }
                                                 ?>
                                             </td>
@@ -98,20 +95,22 @@
                                                 <a href="<?= base_url('admin/banner/edit/' . $value['id'] ) ?>" style="color: #f0ad4e" title="Cập nhật">
                                                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                 </a>
-                                                    <?php //if (handle_common_permission_active_and_remove()): ?>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                     <a href="javascript:void(0)" class="btn-remove" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/banner/remove' ) ?>" data-name="danh mục"  style="color: #d9534f" title="Xóa">
                                                         <i class="fa fa-trash-o" aria-hidden="true"></i>
                                                     </a>
+                                                    <?php if ($value['is_active'] == 0): ?>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <a href="javascript:void(0)" class="btn-active" title="Duyệt bài" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/banner/active' ) ?>" style="color: #00a65a" >
+                                                    <a href="javascript:void(0)" class="btn-active" title="Sử dụng" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/banner/active' ) ?>" style="color: #00a65a" >
                                                         <i class="fa fa-check" aria-hidden="true"></i>
                                                     </a>
+                                                    <?php endif; ?>
+                                                    <?php if ($value['is_active'] == 1): ?>
                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <a href="javascript:void(0)" class="btn-deactive" title="Tắt danh mục" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/banner/deactive' ) ?>" style="color: #f0ad4e">
+                                                    <a href="javascript:void(0)" class="btn-deactive" title="Tắt" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/banner/deactive' ) ?>" style="color: #f0ad4e">
                                                         <i class="fa fa-times" aria-hidden="true"></i>
                                                     </a>
-                                                    <?php //endif ?>
+                                                    <?php endif; ?>
                                             </td>
                                         </tr>
                                 <?php endforeach ?>

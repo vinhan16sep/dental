@@ -73,7 +73,7 @@
                                                 <td class="is-active-<?= $value['id'] ?>">
                                                     <?php
                                                         if ($value['is_active'] == 0) {
-                                                            echo '<span class="label label-warning">Tắt</span>';
+                                                            echo '<span class="label label-warning">Không sử dụng</span>';
                                                         }else{
                                                             echo '<span class="label label-success">Đang sử dụng</span>';
                                                         }
