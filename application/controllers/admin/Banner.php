@@ -34,36 +34,40 @@ class Banner extends Admin_Controller{
 
 	public function create(){
 		$this->load->helper('form');
-        if($this->input->post()){
-            $this->load->library('form_validation');
-            $this->form_validation->set_rules('title', 'Tiêu đề', 'required');
-            if($this->form_validation->run() == TRUE){
-                if(empty($_FILES['image']['name'])){
-                    $this->session->set_flashdata('message_error', MESSAGE_EMPTY_IMAGE_ERROR);
-                    redirect('admin/'.$this->data['controller']);
-                }
+        $this->load->library('form_validation');
+
+        $this->form_validation->set_rules('title', 'Tiêu đề', 'required');
+
+        if ($this->form_validation->run() == FALSE) {
+        	$this->render('admin/banner/create');
+        } else {
+        	if ($this->input->post()) {
                 if(!empty($_FILES['image']['name'])){
                     $this->check_img($_FILES['image']['name'], $_FILES['image']['size']);
-                    $image = $this->upload_image('image', 'assets/upload/'.$this->data['controller'], $_FILES['image']['name']);
+                }
+                if(!file_exists('assets/upload/banner')){
+                    mkdir('assets/upload/banner' , 0777);
+                }
+                if ( !empty($_FILES['image']['name']) ) {
+                    chmod('assets/upload/banner', 0777);
+                    $images = $this->upload_image('image', 'assets/upload/banner', $_FILES['image']['name']);
                 }
                 $data = array(
-                    'image' => $image,
+                    'image' => $images,
                     'title' => $this->input->post('title'),
                     'url' => $this->input->post('url'),
-                    'description' => $this->input->post('description'),
                     'is_active' => $this->input->post('is_active'),
                 );
-                $insert = $this->banner_model->insert(array_merge($data,$this->author_data));
+                $insert = $this->banner_model->insert(array_merge($data, $this->author_data));
                 if ($insert) {
                     $this->session->set_flashdata('message_success', MESSAGE_CREATE_SUCCESS);
                     redirect('admin/banner', 'refresh');
                 }else{
                     $this->session->set_flashdata('message_error', MESSAGE_CREATE_ERROR);
-                    redirect('admin/banner/create');
+                    $this->render('admin/banner/create');
                 }
             }
         }
-        $this->render('admin/banner/create');
 	}
  
 
@@ -144,7 +148,7 @@ class Banner extends Admin_Controller{
                 if($this->form_validation->run() == TRUE){
                     if(!empty($_FILES['image']['name'])){
                         $this->check_img($_FILES['image']['name'], $_FILES['image']['size']);
-                        $image = $this->upload_image('image', 'assets/upload/'.$this->data['controller'], $_FILES['image']['name']);
+                        $image = $this->upload_image('image', 'assets/upload/banner', $_FILES['image']['name']);
                     }
 
                     $data = array(
