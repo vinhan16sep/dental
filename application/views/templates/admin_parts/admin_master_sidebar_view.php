@@ -77,6 +77,11 @@ if($this->ion_auth->logged_in()) {
                         </li>
                     </ul>
                 </li>
+                <li class="<?php echo ($this->uri->segment(2) == 'partner')? 'active' : '' ?>">
+                    <a href="<?php echo base_url('admin/partner') ?>">
+                        <i class="fa fa-newspaper-o"></i> <span>Quản lý đối tác</span>
+                    </a>
+                </li>
                 <li class="<?php echo ($this->uri->segment(2) == 'news')? 'active' : '' ?>">
                     <a href="<?php echo base_url('admin/news') ?>">
                         <i class="fa fa-newspaper-o"></i> <span>Quản lý tin tức</span>
