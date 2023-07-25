@@ -80,29 +80,29 @@
 
 			<div class="col-lg-9">
 				<div class="row">
-					<?php for($i = 0; $i < 10; $i++): ?>
+					<?php foreach($partners as $item): ?>
 						<div class="col-lg-4 col-md-6">
-							<a href="<?php echo base_url('partners/detail/') ?>">
+							<a href="<?php echo base_url('partners/detail/' . $item['slug']) ?>">
 								<div class="card">
 									<div class="ratio-wrapper ratio-wrapper-1-1">
 										<div class="img-mask">
-											<img src="<?php echo base_url('assets/img/client/client_' . ($i + 1) . '.png') ?>" alt="Client">
+											<img src="<?= base_url('assets/upload/partner/' . $item['slug'] . '/' . $item['image']) ?>" alt="Partner image">
 										</div>
 									</div>
 
 									<div class="card-body">
 										<h5>
-											Client
+											<?php echo $item['title'] ?>
 										</h5>
 
 										<p class="p-sm">
-											Nam ornare metus et dictum condimentum. Suspendisse potenti. Curabitur vel libero augue. Nam ornare metus et dictum condimentum. Suspendisse potenti. Curabitur vel libero augue. 
+											<?php echo $item['description'] ?>
 										</p>
 									</div>
 								</div>
 							</a>
 						</div>
-					<?php endfor; ?> 
+					<?php endforeach; ?> 
 				</div>
 			</div>
 		</div>
