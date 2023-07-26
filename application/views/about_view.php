@@ -192,7 +192,7 @@
 								<div class="row">
 									<div class="col-lg-9">
 										<h6>
-											Nam ornare metus et dictum condimentum. Suspendisse potenti. Curabitur vel libero augue. 
+										Minh Dental hợp tác chặt chẽ với nhiều đơn vị cung cấp trang thiết bị Nha khoa đến từ các thương hiệu nổi tiếng và lâu năm trên thế giới như: Cingol, Jindel, Baolai…, nhằm đảm bảo mang đến cho khách hàng nguồn hàng uy tín và chất lượng cao.
 										</h6>
 									</div>
 								</div>
@@ -208,15 +208,15 @@
 											<div class="swiper-button-prev"></div>
 											
 											<div class="swiper-wrapper">
-												<?php for($i = 0; $i < 10; $i++): ?>
+												<?php foreach($partners as $partner): ?>
 													<div class="swiper-slide">
 														<a href="#">
 															<div class="img-mask img-mask-circle">
-																<img src="<?php echo base_url('assets/img/client/client_' . ($i + 1) . '.png') ?>" alt="Client">
+																<img src="<?php echo base_url('assets/upload/partner/' . $partner['slug'] . '/' . $partner['image']) ?>" alt="Client">
 															</div>
 														</a>
 													</div>
-												<?php endfor; ?>
+												<?php endforeach; ?>
 											</div>
 										</div>
 									</div>

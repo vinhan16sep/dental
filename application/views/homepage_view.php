@@ -4,9 +4,9 @@
 			<div class="swiper-pagination"></div>
 
 			<div class="swiper-wrapper">
-				<?php foreach($campaigns as $key => $slide): ?>
+				<?php foreach($banner as $key => $slide): ?>
 					<div class="swiper-slide" data-index="<?php echo $key ?>" data-title="<?php echo $slide['title'] ?>">
-						<a href="#">
+						<a href="<?php echo $slide['url'] ?>">
 							<div class="container-fluid">
 								<?php if($slide['title'] != '') : ?>
 									<div class="text">
@@ -22,7 +22,7 @@
 							</div>
 
 							<div class="img-mask">
-								<img src="<?php echo $slide['image'] ?>" alt="Dental">
+								<img src="<?php echo base_url('/assets/upload/banner/' . $slide['image']) ?>" alt="Dental">
 							</div>
 						</a>
 					</div>
@@ -190,7 +190,9 @@
 							<a href="<?php echo base_url('/product/' . $category['slug']) ?>">		
 								<div class="card wow fadeIn" data-delay="<?php echo $key % 3 ?>">
 									<div class="card-body">
-										<div class="img-placeholder"></div>
+										<div class="img-mask">
+											<img src="<?php echo base_url('/assets/upload/product-category/' . $category['slug'] . '/' . $category['image']) ?>" alt="Dental">
+										</div>
 										<h6>
 											<?php echo $category['title'] ?>
 										</h6>
@@ -233,15 +235,15 @@
 								<div class="swiper-button-prev"></div>
 								
 								<div class="swiper-wrapper">
-									<?php for($i = 0; $i < 10; $i++): ?>
+									<?php foreach($partners as $partner): ?>
 										<div class="swiper-slide">
 											<a href="#">
 												<div class="img-mask img-mask-circle">
-													<img src="<?php echo base_url('assets/img/client/client_' . ($i + 1) . '.png') ?>" alt="Client">
+													<img src="<?php echo base_url('assets/upload/partner/' . $partner['slug'] . '/' . $partner['image']) ?>" alt="Client">
 												</div>
 											</a>
 										</div>
-									<?php endfor; ?>
+									<?php endforeach; ?>
 								</div>
 							</div>
 						</div>
