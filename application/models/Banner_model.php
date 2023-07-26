@@ -17,6 +17,19 @@ class Banner_model extends Single_model{
     function __construct(){
         parent::__construct();
     }
+
+    public function fetch_all($limit = false) {
+        $this->db->from('banner');
+        $this->db->where('is_deleted', 0);
+        $this->db->where('is_active', 1);
+
+        if ($limit !== false) {
+            $this->db->limit($limit, 0);
+        }
+        $this->db->order_by("id", "desc");
+
+        return $this->db->get()->result_array();
+	}
 	// public $table = 'banner';
 	// public function get_by_parent_id($parent_id, $order = 'desc',$lang = ''){
 	// 	$this->db->select($this->table .'.*, '. $this->table_lang .'.title');

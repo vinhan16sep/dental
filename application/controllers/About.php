@@ -6,6 +6,7 @@ class About extends Public_Controller {
 		parent::__construct();
 
         $this->load->library('session');
+		$this->load->model('partner_model');
 	}
 
     public function index()
@@ -29,6 +30,8 @@ class About extends Public_Controller {
 			3 => 'Laboratory',
 			4 => 'Vật tư - Dụng cụ',
 		];
+
+		$this->data['partners'] = $this->partner_model->fetch_all(10);
 
         $this->render('about_view');
 	}

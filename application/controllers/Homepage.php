@@ -9,6 +9,8 @@ class Homepage extends Public_Controller {
 
 		$this->load->model('product_model');
 		$this->load->model('news_model');
+		$this->load->model('banner_model');
+		$this->load->model('partner_model');
 	}
 
     public function index(){
@@ -24,17 +26,10 @@ class Homepage extends Public_Controller {
 			'assets/js/homepage/function.min.js'
 		];
 
-		$this->data['campaigns'] = [
-			0 => [
-				'title' => '',
-				'image' => '/assets/img/banner/banner_1.jpg'
-			],
-			1 => [
-				'title' => '',
-				'image' => '/assets/img/banner/banner_2.jpg'
-			],
-		];
+		$this->data['banner'] = $this->banner_model->fetch_all(3);
 		$this->data['blogs'] = $this->news_model->fetch_all(3);
+
+		$this->data['partners'] = $this->partner_model->fetch_all(10);
 
         $this->render('homepage_view');
 	}

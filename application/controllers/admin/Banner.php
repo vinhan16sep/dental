@@ -48,7 +48,7 @@ class Banner extends Admin_Controller{
                 if(!file_exists('assets/upload/banner')){
                     mkdir('assets/upload/banner' , 0777);
                 }
-                if ( !empty($_FILES['image']['name']) ) {
+                if (!empty($_FILES['image']['name']) ) {
                     chmod('assets/upload/banner', 0777);
                     $images = $this->upload_image('image', 'assets/upload/banner', $_FILES['image']['name']);
                 }

@@ -247,7 +247,7 @@
 												</h5>
 											</a>
 
-											<div class="sale-campaigns">
+											<!-- <div class="sale-campaigns">
 												<span class="badge badge-outline-primary">
 													Campaign 1
 												</span>
@@ -255,18 +255,18 @@
 												<span class="badge badge-outline-primary">
 													Campaign 2
 												</span>
-											</div>
+											</div> -->
 
 											<p class="p-sm sale-made-in">
-												Xuất xứ: America
+												Xuất xứ: <?= $value['brand_id'] ?>
 											</p>
 
 											<p class="p-sm sale-standard">
-												Tiêu chuẩn: Laformed
+												Tiêu chuẩn: <?= $value['origin_id'] ?>
 											</p>
 
 											<p class="price">
-												Liên hệ
+												<?= $value['price'] ?>
 
 												<!-- <button class="btn btn-sm btn-primary" type="button">
 													Thêm vào giỏ hàng
