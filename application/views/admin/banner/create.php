@@ -25,9 +25,6 @@
                         <?php
                         echo form_open_multipart('', array('class' => 'form-horizontal'));
                         ?>
-                        <div class="col-xs-12">
-                            <h4 class="box-title">Thông tin cơ bản</h4>
-                        </div>
                         <div class="row">
                             <span><?php echo $this->session->flashdata('message'); ?></span>
                         </div>
@@ -45,16 +42,6 @@
                                 echo form_label('Url', 'url');
                                 echo form_error('url', '<div class="error">', '</div>');
                                 echo form_input('url', set_value('url'), 'class="form-control" id="url"');
-                                ?>
-                            </div>
-                        </div>
-
-                        <div class="form-group col-xs-12" style="padding-right: 0px;">
-                            <div class="form-group col-xs-12" style="padding-right: 0px;">
-                                <?php
-                                echo form_label('Tiêu đề', 'title');
-                                echo form_error('title', '<div class="error">', '</div>');
-                                echo form_input('title', set_value('title'), 'class="form-control" id="title"');
                                 ?>
                             </div>
                         </div>
