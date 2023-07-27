@@ -5,10 +5,10 @@
 
 			<div class="swiper-wrapper">
 				<?php foreach($banner as $key => $slide): ?>
-					<div class="swiper-slide" data-index="<?php echo $key ?>" data-title="<?php echo $slide['title'] ?>">
+					<div class="swiper-slide" data-index="<?php echo $key ?>" data-title="">
 						<a href="<?php echo $slide['url'] ?>">
 							<div class="container-fluid">
-								<?php if($slide['title'] != '') : ?>
+								<!-- <?php if($slide['title'] != '') : ?>
 									<div class="text">
 										<h3>
 											<?php echo $slide['title'] ?>
@@ -18,7 +18,7 @@
 											Tìm hiểu thêm <i class="fas fa-arrow-right"></i>
 										</h6>
 									</div>
-								<?php endif ?>
+								<?php endif ?> -->
 							</div>
 
 							<div class="img-mask">

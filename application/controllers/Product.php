@@ -33,6 +33,13 @@ class Product extends Public_Controller {
 		$this->data['products'] = $this->product_model->fetch_all();
 		$this->data['focus_products'] = $this->product_model->fetch_all_focus();
 
+		$brandIds = [];
+		foreach ($this->data['brands'] as $item) {
+			$brandIds[$item['id']] = $item['title'];
+		}
+
+		$this->data['brandIds'] = $brandIds;
+
         $this->render('product_view');
 	}
 

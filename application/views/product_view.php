@@ -258,7 +258,7 @@
 											</div> -->
 
 											<p class="p-sm sale-made-in">
-												Xuất xứ: <?= $value['brand_id'] ?>
+												Xuất xứ: <?= $brandIds[$value['brand_id']] ?>
 											</p>
 
 											<p class="p-sm sale-standard">
