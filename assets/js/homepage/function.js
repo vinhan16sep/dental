@@ -106,10 +106,10 @@ $(document).ready(function () {
         }
     });
 
-    $('.get-highlight-by-category')
+    $('#filterHighlight')
         .unbind()
-        .on('click', function () {
-            let category = $(this).data('type');
+        .on('change', function () {
+            let category = $(this).val();
 
             if (category != 'all') {
                 getHighlightByCategory(category);
@@ -119,20 +119,18 @@ $(document).ready(function () {
         });
 });
 
-function getHighlightByCategory(category = false) {
+function getHighlightByCategory(category = '') {
     let url = `/homepage/getHighlightByCategory`;
 
-    if (category) {
-        url += `/${category}`;
-    }
+    let data = {
+        _token: $('[name="csrf_token"]').attr('value'),
+        category: category
+    };
 
     $.ajax({
         url: url,
         type: 'GET',
-        dataType: 'json',
-        data: {
-            _token: $('meta[name="csrf_token"]').attr('content')
-        },
+        data: data,
         success: (res) => {
             if (res) {
                 let highlights = res[0].highlights;
@@ -142,29 +140,23 @@ function getHighlightByCategory(category = false) {
 
                 if (highlights.length > 0) {
                     for (let i = 0; i < highlights.length; i++) {
-                        let highlight = highlights[i];
+                        let product = highlights[i];
 
-                        let $slide = $('.swiper-slide-highlight-prepare').clone().show();
-                        $slide.removeClass('swiper-slide-highlight-prepare');
+                        let $item = $('.swiper-slide-highlight-prepare').clone().show();
+                        $item.removeClass('swiper-slide-highlight-prepare');
 
-                        $slide.find('a').attr('href', highlight.url);
-                        $slide.find('img').attr('src', highlight.image);
-                        $slide.find('img').attr('alt', highlight.title);
-                        $slide.find('.code').text(highlight.code);
-                        $slide.find('.title').text(highlight.title);
-                        $slide.find('.made-in').text(highlight.made_in);
-                        $slide.find('.standard').text(highlight.standard);
+                        $item.find('a:not([data-bs-toggle])').attr('href', `/product/detail/${product['slug']}`);
+                        $item.find('img').attr('src', `/assets/upload/product/${product['slug']}/${product['image']}`);
 
-                        $slide
-                            .find('a')
-                            .unbind()
-                            .on('click', function (e) {
-                                e.preventDefault();
+                        $item.find('.code').text(product['code']);
+                        $item.find('.title').text(product['title']);
 
-                                getHighlightDetail(highlight.id);
-                            });
+                        $item.find('.brand span').text(product['brand']);
+                        $item.find('.origin span').text(product['origin']);
 
-                        $wrapper.find('.swiper-wrapper').append($slide);
+                        $item.find('.price span').text(product['price']);
+
+                        $wrapper.find('.swiper-wrapper').append($item);
                     }
 
                     $wrapper.find('.swiper-wrapper').append(`
@@ -204,6 +196,12 @@ function getHighlightByCategory(category = false) {
                             el: '#swiperHighlight .swiper-pagination'
                         }
                     });
+                } else {
+                    $wrapper.find('.swiper-wrapper').html(`
+                        <p class="p-overline no-data">
+                            Không có sản phẩm nào được tìm thấy!
+                        </p>
+                    `);
                 }
             }
         },

@@ -38,64 +38,7 @@ class Homepage extends Public_Controller {
 	{
 		$category = $this->input->get('category');
 
-		// if(!isset($category)){
-		// 	$category = '';
-		// }
-
-		// $highlights = $this->product_model->get_focus_by_category_id($category, 10);
-
-		$highlights = [
-			0 => [
-				'id' => 1,
-				'code' => 'SP394',
-				'title' => 'Nồi hấp tiệt trùng A123',
-				'rating' => 4.5,
-				'made_in' => 'Trung Quốc',
-				'standard' => 'Class B',
-				'url' => '#',
-				'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-			],
-			1 => [
-				'id' => 1,
-				'code' => 'SP394',
-				'title' => 'Nồi hấp tiệt trùng A123',
-				'rating' => 4.5,
-				'made_in' => 'Trung Quốc',
-				'standard' => 'Class B',
-				'url' => '#',
-				'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-			],
-			2 => [
-				'id' => 1,
-				'code' => 'SP394',
-				'title' => 'Nồi hấp tiệt trùng A123',
-				'rating' => 4.5,
-				'made_in' => 'Trung Quốc',
-				'standard' => 'Class B',
-				'url' => '#',
-				'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-			],
-			3 => [
-				'id' => 1,
-				'code' => 'SP394',
-				'title' => 'Nồi hấp tiệt trùng A123',
-				'rating' => 4.5,
-				'made_in' => 'Trung Quốc',
-				'standard' => 'Class B',
-				'url' => '#',
-				'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-			],
-			4 => [
-				'id' => 1,
-				'code' => 'SP394',
-				'title' => 'Nồi hấp tiệt trùng A123',
-				'rating' => 4.5,
-				'made_in' => 'Trung Quốc',
-				'standard' => 'Class B',
-				'url' => '#',
-				'image' => 'https://images.unsplash.com/photo-1495573020741-8a2f372bbec3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGRlbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-			]
-		];
+		$highlights = $this->product_model->get_focus_by_category_id($category);
 
 		return $this->output
                 ->set_content_type('application/json')

@@ -196,7 +196,7 @@
 											box-shadow: none;
 
 											.card-body {
-												min-height: 520px;
+												min-height: 465px;
 
 												@include d-flex(column, center, center);
 
@@ -221,8 +221,6 @@
 								}
 
 								a {
-									display: block;
-
 									&:hover {
 										.card {
 											.img-mask {
@@ -239,19 +237,18 @@
 											}
 										}
 									}
-
+	
 									.card {
-										box-shadow: none;
 
 										.img-mask {
 											width: 100%;
-											height: 320px;
-
+											height: 300px;
+	
 											position: relative;
-
+	
 											@include borderRadiusCustom(top, left);
 											@include borderRadiusCustom(top, right);
-
+	
 											.overlay {
 												width: 100%;
 												height: 100%;
@@ -289,30 +286,30 @@
 													@include d-flex(column, center, center);
 												}
 											}
-
+	
 											img {
 												@include transition();
 											}
 										}
-
+	
 										.card-body {
 											p {
-												&.code {
+												&.sale-code {
 													margin-bottom: 0.125rem;
-
+	
 													color: var(--gray-4);
 												}
 											}
-
+	
 											h5 {
 												margin-bottom: 0.5rem;
-
+	
 												font-weight: 600;
-
+	
 												@include textOverflow();
 											}
-
-											.campaigns {
+	
+											.sale-campaigns {
 												height: 20px;
 	
 												margin-bottom: 0.75rem;
@@ -325,7 +322,7 @@
 													display: block;
 												}
 											}
-
+	
 											.price {
 												margin-top: 0.5rem;
 	
@@ -334,10 +331,6 @@
 												color: var(--primary);
 	
 												@include d-flex(row, space-between, center);
-											}
-
-											.star-rating {
-												margin-bottom: 1rem;
 											}
 										}
 									}

@@ -139,7 +139,7 @@
           box-shadow: none;
 }
 .view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide:last-child a .card .card-body {
-  min-height: 520px;
+  min-height: 465px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,9 +177,6 @@
 .view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide:last-child a .card .card-body h6 {
   color: var(--primary);
 }
-.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide a {
-  display: block;
-}
 .view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide a:hover .card .img-mask .overlay {
   opacity: 1;
   -webkit-transition: all ease-in-out 300ms;
@@ -191,13 +188,9 @@
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
 }
-.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide a .card {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
 .view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide a .card .img-mask {
   width: 100%;
-  height: 320px;
+  height: 300px;
   position: relative;
   border-top-left-radius: 0.5rem;
   -webkit-border-top-left-radius: 0.5rem;
@@ -263,7 +256,7 @@
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
 }
-.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body p.code {
+.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body p.sale-code {
   margin-bottom: 0.125rem;
   color: var(--gray-4);
 }
@@ -274,7 +267,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body .campaigns {
+.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body .sale-campaigns {
   height: 20px;
   margin-bottom: 0.75rem;
   display: -webkit-box;
@@ -291,7 +284,7 @@
       -ms-flex-align: start;
           align-items: flex-start;
 }
-.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body .campaigns .badge {
+.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body .sale-campaigns .badge {
   margin-right: 0.5rem;
   display: block;
 }
@@ -312,9 +305,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.view-homepage .section.section-highlight .container .section-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body .star-rating {
-  margin-bottom: 1rem;
 }
 .view-homepage .section.section-categories .container .section-body .row > div a {
   display: block;

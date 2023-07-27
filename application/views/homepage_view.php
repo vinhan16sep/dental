@@ -130,21 +130,17 @@
 				<a href="#">
 					<div class="card">
 						<div class="img-mask">
-							<div class="overlay">
-								<h6>
-									Mua ngay
-								</h6>
-							</div>
-
 							<img src="" alt="Dental">
 						</div>
 
 						<div class="card-body">
-							<p class="p-sm code"></p>
+							<div>
+								<p class="p-sm code"></p>
+							</div>
 
 							<h5 class="title"></h5>
 
-							<div class="campaigns">
+							<!-- <div class="sale-campaigns">
 								<span class="badge badge-outline-primary">
 									Campaign 1
 								</span>
@@ -152,23 +148,23 @@
 								<span class="badge badge-outline-primary">
 									Campaign 2
 								</span>
-							</div>
+							</div> -->
 
-							<p class="p-sm">
-								Xuất xứ: <span class="made-in"></span>
+							<p class="p-sm origin">
+								Thương hiệu: <span></span>
 							</p>
 
-							<p class="p-sm standard">
-								Tiêu chuẩn: <span class="standard"></span>
+							<p class="p-sm brand">
+								Xuất xứ: <span></span>
 							</p>
 
-							<div class="price">
-								Liên hệ
+							<p class="price">
+								<span></span>
 
-								<div class="btn btn-sm btn-primary">
+								<!-- <button class="btn btn-sm btn-primary" type="button">
 									Thêm vào giỏ hàng
-								</div>
-							</div>
+								</button> -->
+							</p>
 						</div>
 					</div>
 				</a>

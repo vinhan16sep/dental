@@ -86,7 +86,7 @@ body::-webkit-scrollbar-thumb:hover {
   color: var(--white) !important;
 }
 .page .page-header header.fixed .container .header-menu .menu-item > a:before {
-  background-color: var(--white-alpha-50);
+  background-color: var(--white-alpha-50) !important;
 }
 .page .page-header header.fixed .container .header-search .btn {
   color: var(--white);

@@ -380,12 +380,13 @@
 }
 .view-product .products .container > .row > div .products-list .row > div .card .card-body h5 {
   margin-bottom: 0.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   width: 100%;
-  height: 3.75rem;
+  height: 3rem;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   word-break: break-word;
