@@ -200,31 +200,22 @@
 .view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide {
   width: 33.33%;
 }
-.view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide a:hover .card .img-mask .overlay {
-  opacity: 1;
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
-}
-.view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide a:hover .card .img-mask img {
+.view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide a:hover .card .ratio-wrapper .img-mask img {
   -webkit-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
 }
-.view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide a .card .img-mask {
-  width: 100%;
-  height: 300px;
-  position: relative;
-  border-top-left-radius: 0.5rem;
-  -webkit-border-top-left-radius: 0.5rem;
-  -moz-border-top-left-radius: 0.5rem;
-  -o-border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  -webkit-border-top-right-radius: 0.5rem;
-  -moz-border-top-right-radius: 0.5rem;
-  -o-border-top-right-radius: 0.5rem;
+.view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide a:hover .card .ratio-wrapper .overlay {
+  opacity: 1;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
 }
-.view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide a .card .img-mask .overlay {
+.view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide a .card .ratio-wrapper .img-mask img {
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+.view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide a .card .ratio-wrapper .img-mask .overlay {
   width: 100%;
   height: 100%;
   background-color: var(--black-alpha-50);
@@ -251,7 +242,7 @@
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
 }
-.view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide a .card .img-mask .overlay h6 {
+.view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide a .card .ratio-wrapper .img-mask .overlay h6 {
   width: 70px;
   height: 70px;
   background-color: var(--primary);
@@ -275,56 +266,47 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide a .card .img-mask img {
+.view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide a .card .ratio-wrapper .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: var(--black-alpha-50);
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
 }
-.view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body p.sale-code {
-  margin-bottom: 0.125rem;
-  color: var(--gray-4);
-}
-.view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body h5 {
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body .sale-campaigns {
-  height: 20px;
-  margin-bottom: 0.75rem;
+.view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide a .card .ratio-wrapper .overlay h6 {
+  width: 70px;
+  height: 70px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 50%;
+  font-family: var(--web-font);
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-.view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body .sale-campaigns .badge {
-  margin-right: 0.5rem;
-  display: block;
-}
-.view-product-detail .detail-content .container .row > div .content-related .related-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body .price {
-  margin-top: 0.5rem;
-  font-weight: 600;
-  color: var(--primary);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

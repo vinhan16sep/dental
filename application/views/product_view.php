@@ -37,7 +37,7 @@
 				<?php endif; ?>
 			</div>
 
-			<div class="overview-body">
+			<div class="overview-body <?php count($focus_products)>0 ? 'has-highlight' : '' ?>">
 				<?php if(count($focus_products)>0): ?>
 					<div class="swiper-container" id="swiperHighlight">
 						<div class="swiper-pagination"></div>
@@ -49,47 +49,49 @@
 							<?php foreach($focus_products as $key => $value): ?>
 								<div class="swiper-slide">
 									<a href="<?php echo base_url('product/detail/' . $value['slug']) ?>">
-										<div class="card">
-											<div class="img-mask">
+										<div class="card card-product">
+											<div class="ratio-wrapper ratio-wrapper-1-1">
+												<div class="img-mask">
+													<img src="<?= base_url('assets/upload/product/' . $value['slug'] . '/' . $value['image']) ?>" alt="Dental">
+												</div>
+	
 												<div class="overlay">
 													<h6>
 														Mua ngay
 													</h6>
 												</div>
-
-												<img src="<?= base_url('assets/upload/product/' . $value['slug'] . '/' . $value['image']) ?>" alt="Dental">
 											</div>
-
+	
 											<div class="card-body">
 												<p class="p-sm sale-code">
 													<?php echo $value['code'] ?>
 												</p>
-
+	
 												<h5 class="title">
 													<?php echo $value['title'] ?>
 												</h5>
-
+	
 												<!-- <div class="sale-campaigns">
 													<span class="badge badge-outline-primary">
 														Campaign 1
 													</span>
-
+	
 													<span class="badge badge-outline-primary">
 														Campaign 2
 													</span>
 												</div> -->
-
+	
 												<p class="p-sm brand">
 													Thương hiệu: <?= $brandIds[$value['brand_id']] ?>
 												</p>
-
+	
 												<p class="p-sm origin">
 													Xuất xứ: <?= $brandOrigins[$value['origin_id']] ?>
 												</p>
-
+	
 												<div class="price">
 													<?= $value['price'] ?>
-
+	
 													<!-- <button class="btn btn-sm btn-primary" type="button">
 														Thêm vào giỏ hàng
 													</button> -->
@@ -101,10 +103,6 @@
 							<?php endforeach; ?>
 						</div>
 					</div>
-				<?php else: ?>
-					<p class="p-overline no-data">
-						Không có sản phẩm nào được tìm thấy!
-					</p>
 				<?php endif; ?>
 			</div>
 		</div>
@@ -112,15 +110,12 @@
 
 	<div class="products">
 		<div class="col-lg-4 col-md-6 item-product-prepare" style="display: none">
-			<div class="card">
-				<div class="ratio-wrapper ratio-wrapper-16-9">
+			<div class="card card-product">
+				<div class="ratio-wrapper ratio-wrapper-1-1">
 					<div class="img-mask">
 						<a href="#">
 							<img src="" alt="Dental">
 						</a>
-					</div>
-
-					<div class="overlay">
 					</div>
 				</div>
 
@@ -272,8 +267,8 @@
 							<?php if(count($products)>0): ?>
 								<?php foreach ($products as $key => $value): ?>
 									<div class="col-lg-4 col-md-6">
-										<div class="card">
-											<div class="ratio-wrapper ratio-wrapper-16-9">
+										<div class="card card-product">
+											<div class="ratio-wrapper ratio-wrapper-1-1">
 												<div class="img-mask">
 													<a href="<?php echo base_url('product/detail/' . $value['slug']) ?>">
 														<img src="<?= base_url('assets/upload/product/' . $value['slug'] . '/' . $value['image']) ?>" alt="Dental">

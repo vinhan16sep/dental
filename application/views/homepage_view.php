@@ -128,9 +128,11 @@
 
 			<div class="swiper-slide swiper-slide-highlight-prepare" style="display: none;">
 				<a href="#">
-					<div class="card">
-						<div class="img-mask">
-							<img src="" alt="Dental">
+					<div class="card card-product">
+						<div class="ratio-wrapper ratio-wrapper-1-1">
+							<div class="img-mask">
+								<img src="" alt="Dental">
+							</div>
 						</div>
 
 						<div class="card-body">
@@ -140,7 +142,7 @@
 
 							<h5 class="title"></h5>
 
-							<!-- <div class="sale-campaigns">
+							<!-- <div class="campaigns">
 								<span class="badge badge-outline-primary">
 									Campaign 1
 								</span>

@@ -151,6 +151,7 @@ function getHighlightByCategory(category = '') {
                         $item.find('.code').text(product['code']);
                         $item.find('.title').text(product['title']);
 
+                        console.log(product['brand']);
                         $item.find('.brand span').text(product['brand']);
                         $item.find('.origin span').text(product['origin']);
 

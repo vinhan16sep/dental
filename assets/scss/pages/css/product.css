@@ -1,8 +1,11 @@
 .view-product .overview {
-  min-height: calc(100vh - 90px);
   padding-top: 4rem;
+  padding-bottom: 4rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(161, 43, 46, 0)), to(rgba(161, 43, 46, 0.1)));
   background-image: linear-gradient(to bottom, rgba(161, 43, 46, 0), rgba(161, 43, 46, 0.1));
+}
+.view-product .overview.has-highlight {
+  min-height: calc(100vh - 90px);
 }
 .view-product .overview .container .overview-header h5 {
   margin-bottom: 1rem;
@@ -60,31 +63,22 @@
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
 }
-.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a:hover .card .img-mask .overlay {
-  opacity: 1;
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
-}
-.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a:hover .card .img-mask img {
+.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a:hover .card .ratio-wrapper .img-mask img {
   -webkit-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
 }
-.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .img-mask {
-  width: 100%;
-  height: 300px;
-  position: relative;
-  border-top-left-radius: 0.5rem;
-  -webkit-border-top-left-radius: 0.5rem;
-  -moz-border-top-left-radius: 0.5rem;
-  -o-border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  -webkit-border-top-right-radius: 0.5rem;
-  -moz-border-top-right-radius: 0.5rem;
-  -o-border-top-right-radius: 0.5rem;
+.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a:hover .card .ratio-wrapper .overlay {
+  opacity: 1;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
 }
-.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .img-mask .overlay {
+.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .ratio-wrapper .img-mask img {
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .ratio-wrapper .overlay {
   width: 100%;
   height: 100%;
   background-color: var(--black-alpha-50);
@@ -111,7 +105,7 @@
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
 }
-.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .img-mask .overlay h6 {
+.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .ratio-wrapper .overlay h6 {
   width: 70px;
   height: 70px;
   background-color: var(--primary);
@@ -131,60 +125,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .img-mask img {
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
-}
-.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body p.sale-code {
-  margin-bottom: 0.125rem;
-  color: var(--gray-4);
-}
-.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body h5 {
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body .sale-campaigns {
-  height: 20px;
-  margin-bottom: 0.75rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body .sale-campaigns .badge {
-  margin-right: 0.5rem;
-  display: block;
-}
-.view-product .overview .container .overview-body .swiper-container .swiper-wrapper .swiper-slide a .card .card-body .price {
-  margin-top: 0.5rem;
-  font-weight: 600;
-  color: var(--primary);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -299,20 +239,6 @@
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
 }
-.view-product .products .container > .row > div .products-list .row > div .card .ratio-wrapper .img-mask {
-  border-top-left-radius: 0.5rem;
-  -webkit-border-top-left-radius: 0.5rem;
-  -moz-border-top-left-radius: 0.5rem;
-  -o-border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  -webkit-border-top-right-radius: 0.5rem;
-  -moz-border-top-right-radius: 0.5rem;
-  -o-border-top-right-radius: 0.5rem;
-}
-.view-product .products .container > .row > div .products-list .row > div .card .ratio-wrapper .img-mask img {
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
-}
 .view-product .products .container > .row > div .products-list .row > div .card .ratio-wrapper .overlay {
   width: 100%;
   padding: 0.25rem 0.75rem;
@@ -333,6 +259,8 @@
   top: 0;
   left: 0;
   z-index: 10;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 .view-product .products .container > .row > div .products-list .row > div .card .ratio-wrapper .overlay a {
   color: var(--white);
@@ -340,77 +268,6 @@
 }
 .view-product .products .container > .row > div .products-list .row > div .card .ratio-wrapper .overlay a i.fa-star {
   color: gold;
-}
-.view-product .products .container > .row > div .products-list .row > div .card .card-body > div {
-  margin-bottom: 0.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.view-product .products .container > .row > div .products-list .row > div .card .card-body p.code {
-  color: var(--gray-4);
-}
-.view-product .products .container > .row > div .products-list .row > div .card .card-body p.price {
-  margin-top: 0.5rem;
-  font-weight: 600;
-  color: var(--primary);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.view-product .products .container > .row > div .products-list .row > div .card .card-body h5 {
-  margin-bottom: 0.5rem;
-  font-size: 1.25rem;
-  font-weight: 600;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  width: 100%;
-  height: 3rem;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  word-break: break-word;
-}
-.view-product .products .container > .row > div .products-list .row > div .card .card-body .sale-campaigns {
-  height: 20px;
-  margin-bottom: 0.75rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-.view-product .products .container > .row > div .products-list .row > div .card .card-body .sale-campaigns .badge {
-  margin-right: 0.5rem;
-  display: block;
 }
 
 @media screen and (min-width: 576.98px) and (max-width: 1200px) {

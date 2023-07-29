@@ -57,11 +57,11 @@
 										Nước sản xuất : <?= $brandOrigins[$detail['origin_id']] ?>
 									</h6>
 								</li>
-								<!-- <li>
+								<li>
 									<h6>
-										Bảo hành : 12 tháng
+										Bảo hành : <?= $detail['warranty'] ?>
 									</h6>
-								</li> -->
+								</li>
 							</ul>
 	
 							<!-- <h6>
@@ -146,27 +146,29 @@
 										<?php foreach($related_products as $key => $slide): ?>
 											<div class="swiper-slide">
 												<a href="<?php echo base_url('product/detail/' . $slide['slug']) ?>">
-													<div class="card">
-														<div class="img-mask">
+													<div class="card card-product">
+														<div class="ratio-wrapper ratio-wrapper-1-1">
+															<div class="img-mask">
+																<img src="<?= base_url('assets/upload/product/' . $slide['slug'] . '/' . $slide['image']) ?>" alt="Dental">
+															</div>
+
 															<div class="overlay">
 																<h6>
 																	Xem ngay
 																</h6>
 															</div>
-
-															<img src="<?= base_url('assets/upload/product/' . $slide['slug'] . '/' . $slide['image']) ?>" alt="Dental">
 														</div>
 
 														<div class="card-body">
-															<p class="p-sm sale-code">
+															<p class="p-sm code">
 																<?php echo $slide['code'] ?>
 															</p>
 
-															<h5 class="sale-title">
+															<h5 class="title">
 																<?php echo $slide['title'] ?>
 															</h5>
 
-															<!-- <div class="sale-campaigns">
+															<!-- <div class="campaigns">
 																<span class="badge badge-outline-primary">
 																	Campaign 1
 																</span>
@@ -176,11 +178,11 @@
 																</span>
 															</div> -->
 
-															<p class=<p class="p-sm sale-made-in">
+															<p class=<p class="p-sm brand">
 																Thương hiệu: <?= $brandIds[$slide['brand_id']] ?>
 															</p>
 
-															<p class="p-sm sale-standard">
+															<p class="p-sm origin">
 																Xuất xứ: <?= $brandOrigins[$slide['origin_id']] ?>
 															</p>
 

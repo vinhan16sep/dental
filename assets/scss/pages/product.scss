@@ -2,11 +2,14 @@
 
 .view-product {
 	.overview {
-		min-height: calc(100vh - 90px);
-
 		padding-top: 4rem;
+		padding-bottom: 4rem;
 
 		@include gradientLinearBackground(to bottom, rgba(161, 43, 46, 0), rgba(161, 43, 46, 0.1));
+
+		&.has-highlight {
+			min-height: calc(100vh - 90px);
+		}
 
 		.container {
 			.overview-header {
@@ -87,15 +90,17 @@
 							a {
 								&:hover {
 									.card {
-										.img-mask {
+										.ratio-wrapper {
+											.img-mask {
+												img {
+													@include scale(1.1, 1.1);
+													@include transition();
+												}
+											}
+
 											.overlay {
 												opacity: 1;
 
-												@include transition();
-											}
-
-											img {
-												@include scale(1.1, 1.1);
 												@include transition();
 											}
 										}
@@ -103,14 +108,12 @@
 								}
 
 								.card {
-									.img-mask {
-										width: 100%;
-										height: 300px;
-
-										position: relative;
-
-										@include borderRadiusCustom(top, left);
-										@include borderRadiusCustom(top, right);
+									.ratio-wrapper {
+										.img-mask {
+											img {
+												@include transition();
+											}
+										}
 
 										.overlay {
 											width: 100%;
@@ -148,52 +151,6 @@
 
 												@include d-flex(column, center, center);
 											}
-										}
-
-										img {
-											@include transition();
-										}
-									}
-
-									.card-body {
-										p {
-											&.sale-code {
-												margin-bottom: 0.125rem;
-
-												color: var(--gray-4);
-											}
-										}
-
-										h5 {
-											margin-bottom: 0.5rem;
-
-											font-weight: 600;
-
-											@include textOverflow();
-										}
-
-										.sale-campaigns {
-											height: 20px;
-
-											margin-bottom: 0.75rem;
-
-											@include d-flex(row, flex-start, flex-start);
-
-											.badge {
-												margin-right: 0.5rem;
-
-												display: block;
-											}
-										}
-
-										.price {
-											margin-top: 0.5rem;
-
-											font-weight: 600;
-
-											color: var(--primary);
-
-											@include d-flex(row, space-between, center);
 										}
 									}
 								}
@@ -330,15 +287,6 @@
 									}
 
 									.ratio-wrapper{
-										.img-mask {
-											@include borderRadiusCustom(top, left);
-											@include borderRadiusCustom(top, right);
-	
-											img {
-												@include transition();
-											}
-										}
-
 										.overlay {
 											width: 100%;
 
@@ -351,6 +299,8 @@
 											left: 0;
 											z-index: 10;
 
+											@include translate(0, 0);
+
 											a {
 												color: var(--white);
 
@@ -361,53 +311,6 @@
 														color: gold;
 													}
 												}
-											}
-										}
-									}
-
-									.card-body {
-										> div {
-											margin-bottom: 0.5rem;
-
-											@include d-flex(row, space-between, center);
-										}
-
-										p {
-											&.code {
-												color: var(--gray-4);
-											}
-
-											&.price {
-												margin-top: 0.5rem;
-
-												font-weight: 600;
-
-												color: var(--primary);
-
-												@include d-flex(row, space-between, center);
-											}
-										}
-
-										h5 {
-											margin-bottom: 0.5rem;
-
-											font-size: 1.25rem;
-											font-weight: 600;
-
-											@include textWrapper(100%, 3rem, 2);
-										}
-
-										.sale-campaigns {
-											height: 20px;
-
-											margin-bottom: 0.75rem;
-
-											@include d-flex(row, flex-start, flex-start);
-
-											.badge {
-												margin-right: 0.5rem;
-
-												display: block;
 											}
 										}
 									}

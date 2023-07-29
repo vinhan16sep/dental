@@ -139,12 +139,21 @@ class Product_model extends Single_model{
     }
 
     public function get_focus_by_category_id($cate_id = '', $limit = false){
+        $this->db->select(
+            'product.*, 
+            product_category.title as category_title,
+            origin.title as origin,
+            brand.title as brand'
+        );
         $this->db->from('product');
-        $this->db->where('is_deleted', 0);
+        $this->db->join('product_category','product.category_id = product_category.id');
+        $this->db->join('origin','origin.id = product.origin_id');
+        $this->db->join('brand','brand.id = product.brand_id');
+        $this->db->where('product.is_deleted', 0);
         if($cate_id != ''){
-            $this->db->where('category_id', $cate_id);
+            $this->db->where('product.category_id', $cate_id);
         }
-        $this->db->where('is_focus', 1);
+        $this->db->where('product.is_focus', 1);
 
         if ($limit !== false) {
             $this->db->limit($limit, 0);
