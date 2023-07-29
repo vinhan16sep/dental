@@ -247,15 +247,17 @@
 										a {
 											&:hover {
 												.card {
-													.img-mask {
+													.ratio-wrapper {
+														.img-mask {
+															img {
+																@include scale(1.1, 1.1);
+																@include transition();
+															}
+														}
+
 														.overlay {
 															opacity: 1;
 			
-															@include transition();
-														}
-			
-														img {
-															@include scale(1.1, 1.1);
 															@include transition();
 														}
 													}
@@ -263,15 +265,51 @@
 											}
 			
 											.card {
-												.img-mask {
-													width: 100%;
-													height: 300px;
-			
-													position: relative;
-			
-													@include borderRadiusCustom(top, left);
-													@include borderRadiusCustom(top, right);
-			
+												.ratio-wrapper {
+													.img-mask {
+														img {
+															@include transition();
+														}
+	
+														.overlay {
+															width: 100%;
+															height: 100%;
+				
+															background-color: var(--black-alpha-50);
+				
+															opacity: 0;
+				
+															position: absolute;
+															top: 50%;
+															left: 50%;
+															z-index: 1;
+				
+															@include translate(-50%, -50%);
+				
+															@include d-flex(column, center, center);
+				
+															@include transition();
+				
+															h6 {
+																width: 70px;
+																height: 70px;
+				
+																background-color: var(--primary);
+																color: var(--white);
+				
+																@include borderRadius(50%);
+				
+																font-family: var(--web-font);
+																font-size: 1.125rem;
+				
+																text-transform: uppercase;
+																text-align: center;
+				
+																@include d-flex(column, center, center);
+															}
+														}
+													}
+
 													.overlay {
 														width: 100%;
 														height: 100%;
@@ -279,13 +317,6 @@
 														background-color: var(--black-alpha-50);
 			
 														opacity: 0;
-			
-														position: absolute;
-														top: 50%;
-														left: 50%;
-														z-index: 1;
-			
-														@include translate(-50%, -50%);
 			
 														@include d-flex(column, center, center);
 			
@@ -308,52 +339,6 @@
 			
 															@include d-flex(column, center, center);
 														}
-													}
-			
-													img {
-														@include transition();
-													}
-												}
-			
-												.card-body {
-													p {
-														&.sale-code {
-															margin-bottom: 0.125rem;
-			
-															color: var(--gray-4);
-														}
-													}
-			
-													h5 {
-														margin-bottom: 0.5rem;
-			
-														font-weight: 600;
-			
-														@include textOverflow();
-													}
-			
-													.sale-campaigns {
-														height: 20px;
-			
-														margin-bottom: 0.75rem;
-			
-														@include d-flex(row, flex-start, flex-start);
-			
-														.badge {
-															margin-right: 0.5rem;
-			
-															display: block;
-														}
-													}
-			
-													.price {
-														margin-top: 0.5rem;
-			
-														font-weight: 600;
-			
-														color: var(--primary);
-			
-														@include d-flex(row, space-between, center);
 													}
 												}
 											}

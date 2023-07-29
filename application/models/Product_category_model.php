@@ -32,6 +32,6 @@ class Product_category_model extends Single_model{
         $this->db->from('product_category');
         $this->db->where('id', $id);
 
-		return $result = $this->db->first();
+		return $result = $this->db->get()->result_array();
 	}
 }
