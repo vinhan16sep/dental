@@ -43,4 +43,20 @@ class News_model extends Single_model{
 
         return $this->db->get()->result_array();
 	}
+
+    public function get_by_category_id($category_id='', $limit=false)
+    {
+        $this->db->select(
+            'news.*'
+        );
+
+        $this->db->from('news');
+        $this->db->where('news.is_deleted', 0);
+        $this->db->where('news.is_active', 1);
+        $this->db->where('news.category_id', $category_id);
+        if ($limit !== false) {
+            $this->db->limit($limit, 0);
+        }
+        return $this->db->get()->result_array();
+    }
 }

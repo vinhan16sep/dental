@@ -25,7 +25,7 @@
 					<div class="filter-item">
 						<div class="item-header">
 							<h6>
-								Partner Filter 1
+								Quốc gia
 							</h6>
 
 							<a href="#" class="btn-expand-item">
@@ -35,21 +35,18 @@
 
 						<div class="item-body">
 							<ul>
-								<li>
-									<a href="#">
-										Category #1
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										Category #2
-									</a>
-								</li>
+								<?php foreach($origins as $origin): ?>
+									<li>
+										<a href="#" class="btn-select-partner-by-origin" data-id="<?php echo $origin['id'] ?>">
+											<?php echo $origin['title'] ?>
+										</a>
+									</li>
+								<?php endforeach; ?>
 							</ul>
 						</div>
 					</div>
 
-					<div class="filter-item">
+					<!-- <div class="filter-item">
 						<div class="item-header">
 							<h6>
 								Partner Filter 2
@@ -74,11 +71,11 @@
 								</li>
 							</ul>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 
-			<div class="col-lg-9">
+			<div class="col-lg-9 partners-list">
 				<div class="row">
 					<?php foreach($partners as $item): ?>
 						<div class="col-lg-4 col-md-6">
@@ -91,11 +88,11 @@
 									</div>
 
 									<div class="card-body">
-										<h5>
+										<h5 class="partner-title">
 											<?php echo $item['title'] ?>
 										</h5>
 
-										<p class="p-sm">
+										<p class="p-sm partner-desc">
 											<?php echo $item['description'] ?>
 										</p>
 									</div>
@@ -103,6 +100,24 @@
 							</a>
 						</div>
 					<?php endforeach; ?> 
+				</div>
+
+				<div class="col-lg-4 col-md-6 item-partner-prepare" style="display: none;">
+					<a href="#">
+						<div class="card">
+							<div class="ratio-wrapper ratio-wrapper-1-1">
+								<div class="img-mask">
+									<img src="" alt="Partner image">
+								</div>
+							</div>
+
+							<div class="card-body">
+								<h5 class="partner-title"></h5>
+
+								<p class="p-sm partner-desc"></p>
+							</div>
+						</div>
+					</a>
 				</div>
 			</div>
 		</div>

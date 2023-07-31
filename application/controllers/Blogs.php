@@ -6,7 +6,7 @@ class Blogs extends Public_Controller {
 		parent::__construct();
 
 		$this->load->model('news_model');
-
+		$this->load->model('news_category_model');
         $this->load->library('session');
 	}
 
@@ -22,6 +22,7 @@ class Blogs extends Public_Controller {
 			'assets/js/blog/function.min.js'
 		];
 
+		$this->data['blogs_categories'] = $this->news_category_model->get_active();
 		$this->data['blogs'] = $this->news_model->get_all();
 
         $this->render('blog_view');
@@ -49,5 +50,15 @@ class Blogs extends Public_Controller {
             redirect('/','refresh');
         }
 
+	}
+
+	public function getBlogsByCategory($id)
+	{
+		$news = $this->news_model->get_by_category_id($id);
+
+		return $this->output
+                ->set_content_type('application/json')
+                ->set_status_header(HTTP_SUCCESS)
+                ->set_output(json_encode(array(['news' => $news])));
 	}
 }

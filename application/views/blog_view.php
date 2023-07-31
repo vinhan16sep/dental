@@ -25,7 +25,7 @@
 					<div class="filter-item">
 						<div class="item-header">
 							<h6>
-								Blog Filter
+								Danh mục tin tức
 							</h6>
 
 							<a href="#" class="btn-expand-item">
@@ -35,16 +35,13 @@
 
 						<div class="item-body">
 							<ul>
-								<li>
-									<a href="#">
-										Category #1
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										Category #2
-									</a>
-								</li>
+								<?php foreach ($blogs_categories as $key => $value): ?>
+									<li>
+										<a href="#" class="btn-select-news-by-category" data-id="<?php echo $value['id'] ?>">
+											<?= $value['title'] ?>
+										</a>
+									</li>
+								<?php endforeach; ?>
 							</ul>
 						</div>
 					</div>
@@ -80,7 +77,25 @@
 							</a>
 						</div>
 					<?php endforeach;?>
-				</div>	
+				</div>
+				
+				<div class="item item-news-prepare" style="display: none">
+					<a href="#">
+						<h6 class="news-title"></h6>
+					</a>
+
+					<p class="p-sm news-date"></p>
+
+					<p class="news-desc"></p>
+
+					<a href="#">
+						Xem chi tiết <i class="fas fa-chevron-right"></i>
+					</a>
+
+					<a href="#">
+						<img src="" alt="Blog image">
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>

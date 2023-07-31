@@ -43,4 +43,20 @@ class Partner_model extends Single_model{
 
         return $this->db->get()->result_array();
 	}
+
+    public function get_by_origin_id($origin_id='', $limit=false)
+    {
+        $this->db->select(
+            'partner.*'
+        );
+
+        $this->db->from('partner');
+        $this->db->where('partner.is_deleted', 0);
+        $this->db->where('partner.is_active', 1);
+        $this->db->where('partner.origin_id', $origin_id);
+        if ($limit !== false) {
+            $this->db->limit($limit, 0);
+        }
+        return $this->db->get()->result_array();
+    }
 }
