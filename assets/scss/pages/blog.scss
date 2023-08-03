@@ -113,6 +113,63 @@
 					}
 				}
 
+				.list-blogs {
+					.row {
+						> div {
+							h6 {
+								margin-bottom: 0.5rem;
+			
+								font-weight: 600;
+			
+								@include textWrapper(100%, 4.125rem, 3);
+							}
+			
+							p {
+								&.p-sm {
+									margin-bottom: 2rem;
+	
+									color: var(--gray-5);
+								}
+	
+								&:not(.p-sm){
+									max-height: 9rem;
+		
+									margin-bottom: 2rem;
+	
+									text-align: justify;
+		
+									@include textWrapper(100%, 4.5rem, 3);
+								}
+							}
+			
+							img {
+								width: 100%;
+	
+								margin-bottom: 1rem;
+			
+								@include borderRadius();
+							}
+	
+							a {
+								&:nth-last-child(2) {
+									margin-top: 0.5rem;
+									margin-bottom: 0.75rem;
+		
+									font-size: 0.75rem;
+	
+									color: var(--text-overline);
+									
+									@include d-flex(row, flex-end, center);
+	
+									i {
+										margin-left: 0.25rem;
+									}
+								}
+							}
+						}
+					}
+				}
+
 				.list-items {
 					.item-sizer,
 					.item {
@@ -123,56 +180,7 @@
 						padding: 0 1rem;
 						margin-bottom: 4rem;
 		
-						h6 {
-							margin-bottom: 0.5rem;
-		
-							font-weight: 600;
-		
-							@include textWrapper(100%, 4.125rem, 3);
-						}
-		
-						p {
-							&.p-sm {
-								margin-bottom: 2rem;
-
-								color: var(--gray-5);
-							}
-
-							&:not(.p-sm){
-								max-height: 9rem;
-	
-								margin-bottom: 2rem;
-
-								text-align: justify;
-	
-								@include textWrapper(100%, 4.5rem, 3);
-							}
-						}
-		
-						img {
-							width: 100%;
-
-							margin-bottom: 1rem;
-		
-							@include borderRadius();
-						}
-
-						a {
-							&:nth-last-child(2) {
-								margin-top: 0.5rem;
-								margin-bottom: 0.75rem;
-	
-								font-size: 0.75rem;
-
-								color: var(--text-overline);
-								
-								@include d-flex(row, flex-end, center);
-
-								i {
-									margin-left: 0.25rem;
-								}
-							}
-						}
+						
 					}
 				}
 			}

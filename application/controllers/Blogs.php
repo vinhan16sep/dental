@@ -61,4 +61,20 @@ class Blogs extends Public_Controller {
                 ->set_status_header(HTTP_SUCCESS)
                 ->set_output(json_encode(array(['news' => $news])));
 	}
+
+	public function getBlogs()
+	{
+		$limit = $this->input->get('limit');
+		$start = $this->input->get('start');
+		$keyword = $this->input->get('keyword');
+		$categoryId = $this->input->get('categoryId');
+
+		$news = $this->news_model->get_all_with_pagination_search_edit('', 'desc', $limit, $start, $keyword, $categoryId);
+		$total  = $this->news_model->count_search('', 'desc', $limit, $start, $keyword, $categoryId);
+
+		return $this->output
+                ->set_content_type('application/json')
+                ->set_status_header(HTTP_SUCCESS)
+                ->set_output(json_encode(array(['news' => $news, 'total' => $total])));
+	}
 }

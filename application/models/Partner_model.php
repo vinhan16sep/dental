@@ -59,4 +59,42 @@ class Partner_model extends Single_model{
         }
         return $this->db->get()->result_array();
     }
+
+    public function get_all_with_pagination_search_edit($is_active = '',$order = 'desc', $limit = NULL, $start = NULL, $keywords = '', $originId = NULL) {
+        $this->db->select($this->table.'.*, partner_origin.title as partner_origin_title');
+        $this->db->from($this->table);
+        $this->db->join('partner_origin','partner.origin_id = partner_origin.id');
+        $this->db->like($this->table.'.title', $keywords);
+        $this->db->where($this->table.'.is_deleted', 0);
+
+        if ($originId !== NULL) {
+            $this->db->where($this->table.'.origin_id', $originId);
+        }
+
+        if ( !empty($is_active) ) {
+            $this->db->where($this->table.'.is_active', $is_active);
+        }
+        $this->db->limit($limit, $start);
+        $this->db->order_by($this->table.'.id', $order);
+
+        return $result = $this->db->get()->result_array();
+    }
+
+    public function count_search($is_active = '',$order = 'desc', $limit = NULL, $start = NULL, $keywords = '', $originId = NULL){
+        $this->db->select($this->table.'.*, partner_origin.title as partner_origin_title');
+        $this->db->from($this->table);
+        $this->db->join('partner_origin','partner.origin_id = partner_origin.id');
+        $this->db->like($this->table.'.title', $keywords);
+        $this->db->where($this->table.'.is_deleted', 0);
+
+        if ($originId !== NULL) {
+            $this->db->where($this->table.'.origin_id', $originId);
+        }
+        
+        if ( !empty($is_active) ) {
+            $this->db->where($this->table.'.is_active', $is_active);
+        }
+
+        return $result = $this->db->get()->num_rows();
+    }
 }
