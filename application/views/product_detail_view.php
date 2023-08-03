@@ -122,7 +122,7 @@
 							Mô tả chi tiết sản phẩm
 						</h6>
 
-						<?php echo $detail['description'] ?>
+						<?php echo $detail['body'] ?>
 					</div>
 				</div>
 	

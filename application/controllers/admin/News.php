@@ -8,6 +8,7 @@ class News extends Admin_Controller{
 	function __construct(){
 		parent::__construct();
 		$this->load->model('news_model');
+        $this->load->model('news_category_model');
 		$this->load->helper('common_helper');
         $this->author_data = handle_author_common_data();
 	}
@@ -53,6 +54,9 @@ class News extends Admin_Controller{
 		$this->load->helper('form');
         $this->load->library('form_validation');
         
+        $categories = $this->news_category_model->get_all();
+        $this->data['categories'] = $categories;
+
         $this->form_validation->set_rules('title', 'Tiêu đề news', 'required');
         $this->form_validation->set_rules('image', 'Hình ảnh', 'callback_check_file');
 
@@ -107,6 +111,9 @@ class News extends Admin_Controller{
             redirect('admin/news');
         }
         $this->data['detail'] = $detail;
+
+        $categories = $this->news_category_model->get_all();
+        $this->data['categories'] = $categories;
 
         $this->form_validation->set_rules('title', 'Tiêu đề news', 'required');
 

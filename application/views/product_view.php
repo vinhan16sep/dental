@@ -64,7 +64,7 @@
 	
 											<div class="card-body">
 												<p class="p-sm sale-code">
-													<?php echo $value['code'] ?>
+													<?php echo $value['code'] != '' ? $value['code'] : '&nbsp' ?>
 												</p>
 	
 												<h5 class="title">
@@ -90,7 +90,7 @@
 												</p>
 	
 												<div class="price">
-													<?= $value['price'] ?>
+													<?php echo $value['price'] != '' ? $value['price'] : 'Liên hệ' ?>
 	
 													<!-- <button class="btn btn-sm btn-primary" type="button">
 														Thêm vào giỏ hàng
@@ -116,6 +116,7 @@
 						<a href="#">
 							<img src="" alt="Dental">
 						</a>
+						<div class="overlay"></div>
 					</div>
 				</div>
 
@@ -173,9 +174,14 @@
 
 							<div class="item-body">
 								<ul>
+									<li>
+										<a href="#" class="btn-filter-product <?php echo !isset($product_selected_category) ? 'active' : '' ?>" data-filter="category">
+											Tất cả
+										</a>
+									</li>
 									<?php foreach ($product_categories as $key => $value): ?>
 										<li>
-											<a href="<?php echo base_url('/product/category/' . $value['slug']) ?>" class="<?php echo isset($product_selected_category) && $product_selected_category['id'] == $value['id'] ? 'active' : '' ?>">
+											<a href="#" class="btn-filter-product <?php echo isset($product_selected_category) && $product_selected_category['id'] == $value['id'] ? 'active' : '' ?>" data-filter="category" data-id="<?php echo $value['id'] ?>">
 												<?= $value['title'] ?>
 											</a>
 										</li>
@@ -263,85 +269,9 @@
 	
 				<div class="col-lg-9">
 					<div class="products-list">						
-						<div class="row">
-							<?php if(count($products)>0): ?>
-								<?php foreach ($products as $key => $value): ?>
-									<div class="col-lg-4 col-md-6">
-										<div class="card card-product">
-											<div class="ratio-wrapper ratio-wrapper-1-1">
-												<div class="img-mask">
-													<a href="<?php echo base_url('product/detail/' . $value['slug']) ?>">
-														<img src="<?= base_url('assets/upload/product/' . $value['slug'] . '/' . $value['image']) ?>" alt="Dental">
-													</a>
-												</div>
+						<div class="row" id="appendProducts"></div>
 
-												<div class="overlay">
-													<?php if($value['is_sale']): ?>
-														<a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="Campagin">
-															<i class="fas fa-bookmark"></i>
-														</a>
-													<?php else: ?>
-														<div></div>
-													<?php endif; ?>
-
-													<?php if($value['is_focus']): ?>
-														<a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sản phẩm nổi bật">
-															<i class="fas fa-star"></i>
-														</a>
-													<?php else: ?>
-														<div></div>
-													<?php endif; ?>
-												</div>
-											</div>
-
-											<div class="card-body">
-												<div>
-													<p class="p-sm code">
-														<?= $value['code'] && $value['code'] != '' ? $value['code'] : '000' ?>
-													</p>
-												</div>
-
-												<a href="<?php echo base_url('product/detail/' . $value['slug']) ?>">
-													<h5 class="title">
-														<?= $value['title'] ?>
-													</h5>
-												</a>
-
-												<!-- <div class="sale-campaigns">
-													<span class="badge badge-outline-primary">
-														Campaign 1
-													</span>
-
-													<span class="badge badge-outline-primary">
-														Campaign 2
-													</span>
-												</div> -->
-
-												<p class="p-sm origin">
-													Thương hiệu: <?= $brandIds[$value['brand_id']] ?>
-												</p>
-
-												<p class="p-sm brand">
-													Xuất xứ: <?= $brandOrigins[$value['origin_id']] ?>
-												</p>
-
-												<p class="price">
-													<?= $value['price'] ?>
-
-													<!-- <button class="btn btn-sm btn-primary" type="button">
-														Thêm vào giỏ hàng
-													</button> -->
-												</p>
-											</div>
-										</div>
-									</div>
-								<?php endforeach; ?>
-							<?php else: ?>
-								<p class="p-overline no-data">
-									Không có sản phẩm nào được tìm thấy!
-								</p>
-							<?php endif; ?>
-						</div>
+						<div class="pagination"></div>
 					</div>
 				</div>
 			</div>

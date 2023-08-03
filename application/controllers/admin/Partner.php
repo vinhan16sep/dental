@@ -7,6 +7,7 @@ class Partner extends Admin_Controller{
 	
 	function __construct(){
 		parent::__construct();
+        $this->load->model('partner_origin_model');
 		$this->load->model('partner_model');
 		$this->load->helper('common_helper');
         $this->author_data = handle_author_common_data();
@@ -52,6 +53,9 @@ class Partner extends Admin_Controller{
 	public function create(){
 		$this->load->helper('form');
         $this->load->library('form_validation');
+
+        $origins = $this->partner_origin_model->get_all();
+        $this->data['origins'] = $origins;
         
         $this->form_validation->set_rules('title', 'Tiêu đề partner', 'required');
         $this->form_validation->set_rules('image', 'Hình ảnh', 'callback_check_file');
@@ -107,6 +111,9 @@ class Partner extends Admin_Controller{
             redirect('admin/partner');
         }
         $this->data['detail'] = $detail;
+
+        $origins = $this->partner_origin_model->get_all();
+        $this->data['origins'] = $origins;
 
         $this->form_validation->set_rules('title', 'Tiêu đề partner', 'required');
 

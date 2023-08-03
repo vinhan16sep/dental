@@ -71,6 +71,21 @@
 
                         <div class="form-group col-xs-12" style="padding-right: 0px;">
                             <div class="form-group col-xs-12" style="padding-right: 0px;">
+                                <label for="parent_id">Danh mục</label>
+                                <?php echo form_error('parent_id', '<div class="error">', '</div>'); ?>
+                                <select name="parent_id" class="form-control" id="parent_id">
+                                    <option value="">Chọn danh mục</option>
+                                    <?php if ( $categories ): ?>
+                                        <?php foreach ($categories as $key => $value): ?>
+                                            <option value="<?php echo $value['id'] ?>" ><?php echo $value['title'] ?></option>
+                                        <?php endforeach ?>
+                                    <?php endif ?>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-xs-12" style="padding-right: 0px;">
+                            <div class="form-group col-xs-12" style="padding-right: 0px;">
                                 <?php
                                 echo form_label('Slug', 'slug');
                                 echo form_error('slug', '<div class="error">', '</div>');
