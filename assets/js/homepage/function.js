@@ -10,9 +10,9 @@ $(document).ready(function () {
 
     // new WOW().init();
 
-    setTimeout(() => {
-        $('#modalBanner').modal('show');
-    }, 5000);
+    // setTimeout(() => {
+    //     $('#modalBanner').modal('show');
+    // }, 5000);
 
     let swiperCover = new Swiper('#swiperCover', {
         slidesPerView: 1,
