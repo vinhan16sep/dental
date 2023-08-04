@@ -109,23 +109,22 @@ $(document).ready(function () {
     $('#filterHighlight')
         .unbind()
         .on('change', function () {
-            let category = $(this).val();
-
-            if (category != 'all') {
-                getHighlightByCategory(category);
-            } else {
-                getHighlightByCategory();
-            }
+            getHighlightByCategory();
         });
 });
 
-function getHighlightByCategory(category = '') {
+function getHighlightByCategory() {
+    let category = $('#filterHighlight').val();
+
     let url = `/homepage/getHighlightByCategory`;
 
     let data = {
-        _token: $('[name="csrf_token"]').attr('value'),
-        category: category
+        _token: $('[name="csrf_token"]').attr('value')
     };
+
+    if (category != '') {
+        data.category = category;
+    }
 
     $.ajax({
         url: url,
@@ -148,21 +147,22 @@ function getHighlightByCategory(category = '') {
                         $item.find('a:not([data-bs-toggle])').attr('href', `/product/detail/${product['slug']}`);
                         $item.find('img').attr('src', `/assets/upload/product/${product['slug']}/${product['image']}`);
 
-                        $item.find('.code').text(product['code']);
+                        $item.find('.code').text(product['code'] != '' ? product['code'] : 'MSP');
                         $item.find('.title').text(product['title']);
 
-                        console.log(product['brand']);
                         $item.find('.brand span').text(product['brand']);
                         $item.find('.origin span').text(product['origin']);
 
                         $item.find('.price span').text(product['price']);
+
+                        $item.find('.price span').text(product['price'] != '' ? product['price'] : 'Liên hệ');
 
                         $wrapper.find('.swiper-wrapper').append($item);
                     }
 
                     $wrapper.find('.swiper-wrapper').append(`
                         <div class="swiper-slide">
-                            <a href="#">
+                            <a href="/product">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="circle">
@@ -179,7 +179,7 @@ function getHighlightByCategory(category = '') {
                     `);
 
                     let swiperHighlight = new Swiper('#swiperHighlight', {
-                        slidesPerView: 3,
+                        slidesPerView: highlights.length > 3 ? highlights.length : 3,
                         spaceBetween: 32,
                         breakpoints: {
                             0: {

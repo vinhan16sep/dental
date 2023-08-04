@@ -103,7 +103,7 @@
 				</h3>
 
 				<select class="form-select" id="filterHighlight">
-					<option value="all">
+					<option value="">
 						Tất cả
 					</option>
 

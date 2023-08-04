@@ -31,7 +31,7 @@ class Product extends Public_Controller {
 		$this->data['origins'] = $this->origin_model->get_active();
 		$this->data['brands'] = $this->brand_model->get_active();
 		$this->data['products'] = $this->product_model->fetch_all();
-		$this->data['focus_products'] = $this->product_model->fetch_all_focus();
+		$this->data['focus_products'] = $this->product_model->fetch_all_focus(10);
 
 		$brandIds = [];
 		foreach ($this->data['brands'] as $item) {

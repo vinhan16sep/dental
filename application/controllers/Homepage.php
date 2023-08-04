@@ -38,7 +38,7 @@ class Homepage extends Public_Controller {
 	{
 		$category = $this->input->get('category');
 
-		$highlights = $this->product_model->get_focus_by_category_id($category);
+		$highlights = $this->product_model->get_focus_by_category_id($category, 10);
 
 		return $this->output
                 ->set_content_type('application/json')
