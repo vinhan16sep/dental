@@ -7,7 +7,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Thêm mới
+            Cập nhật
             <small>
                 banner
             </small>
@@ -15,7 +15,7 @@
         <ol class="breadcrumb">
             <li><a href="<?= base_url('admin') ?>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
             <li><a href="<?= base_url('admin/banner') ?>"><i class="fa fa-dashboard"></i> Danh sách banner</a></li>
-            <li class="active">Thêm mới banner</li>
+            <li class="active">Cập nhật banner</li>
         </ol>
     </section>
 
@@ -35,9 +35,6 @@
                         <?php
                         echo form_open_multipart('', array('class' => 'form-horizontal'));
                         ?>
-                        <div class="col-xs-12" style="padding: 0px;">
-                            <h4 class="box-title">Thông tin cơ bản</h4>
-                        </div>
                         <div class="row">
                             <span><?php echo $this->session->flashdata('message'); ?></span>
                         </div>
@@ -62,17 +59,6 @@
                                 ?>
                             </div>
                             <br>
-                        </div>
-
-
-                        <div class="form-group col-xs-12" style="padding-right: 0px;">
-                            <div class="form-group col-xs-12" style="padding-right: 0px;">
-                                <?php
-                                echo form_label('Tiêu đề', 'title');
-                                echo form_error('title', '<div class="error">', '</div>');
-                                echo form_input('title', set_value('title', $detail['title']), 'class="form-control" id="title"');
-                                ?>
-                            </div>
                         </div>
 
                         <div class="form-group col-xs-12" style="padding-right: 0px;">

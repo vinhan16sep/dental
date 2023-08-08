@@ -6,7 +6,7 @@ class Partners extends Public_Controller {
 		parent::__construct();
 
 		$this->load->model('partner_model');
-
+		$this->load->model('partner_origin_model');
         $this->load->library('session');
 	}
 
@@ -19,6 +19,7 @@ class Partners extends Public_Controller {
 			'assets/js/partner/function.min.js'
 		];
 
+        $this->data['origins'] = $this->partner_origin_model->get_all();
 		$this->data['partners'] = $this->partner_model->get_all();
 
         $this->render('partner_view');
@@ -43,6 +44,31 @@ class Partners extends Public_Controller {
         } else {
             redirect('/','refresh');
         }
+	}
 
+	public function getPartnerByOriginId($id)
+	{
+		$partners = $this->partner_model->get_by_origin_id($id);
+
+		return $this->output
+                ->set_content_type('application/json')
+                ->set_status_header(HTTP_SUCCESS)
+                ->set_output(json_encode(array(['partners' => $partners])));
+	}
+
+	public function getPartners()
+	{
+		$limit = $this->input->get('limit');
+		$start = $this->input->get('start');
+		$keyword = $this->input->get('keyword');
+		$originId = $this->input->get('originId');
+
+		$partners = $this->partner_model->get_all_with_pagination_search_edit('', 'desc', $limit, $start, $keyword, $originId);
+		$total  = $this->partner_model->count_search('', 'desc', $limit, $start, $keyword, $originId);
+
+		return $this->output
+                ->set_content_type('application/json')
+                ->set_status_header(HTTP_SUCCESS)
+                ->set_output(json_encode(array(['partners' => $partners, 'total' => $total])));
 	}
 }

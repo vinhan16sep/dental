@@ -196,7 +196,7 @@
 											box-shadow: none;
 
 											.card-body {
-												min-height: 520px;
+												min-height: 515px;
 
 												@include d-flex(column, center, center);
 
@@ -220,128 +220,121 @@
 									}
 								}
 
-								a {
-									display: block;
+								// a {
+								// 	&:hover {
+								// 		.card {
+								// 			.img-mask {
+								// 				.overlay {
+								// 					opacity: 1;
+	
+								// 					@include transition();
+								// 				}
+	
+								// 				img {
+								// 					@include scale(1.1, 1.1);
+								// 					@include transition();
+								// 				}
+								// 			}
+								// 		}
+								// 	}
+	
+								// 	.card {
 
-									&:hover {
-										.card {
-											.img-mask {
-												.overlay {
-													opacity: 1;
+								// 		.img-mask {
+								// 			width: 100%;
+								// 			height: 300px;
 	
-													@include transition();
-												}
+								// 			position: relative;
 	
-												img {
-													@include scale(1.1, 1.1);
-													@include transition();
-												}
-											}
-										}
-									}
-
-									.card {
-										box-shadow: none;
-
-										.img-mask {
-											width: 100%;
-											height: 320px;
-
-											position: relative;
-
-											@include borderRadiusCustom(top, left);
-											@include borderRadiusCustom(top, right);
-
-											.overlay {
-												width: 100%;
-												height: 100%;
+								// 			@include borderRadiusCustom(top, left);
+								// 			@include borderRadiusCustom(top, right);
 	
-												background-color: var(--black-alpha-50);
+								// 			.overlay {
+								// 				width: 100%;
+								// 				height: 100%;
 	
-												opacity: 0;
+								// 				background-color: var(--black-alpha-50);
 	
-												position: absolute;
-												top: 50%;
-												left: 50%;
-												z-index: 1;
+								// 				opacity: 0;
 	
-												@include translate(-50%, -50%);
+								// 				position: absolute;
+								// 				top: 50%;
+								// 				left: 50%;
+								// 				z-index: 1;
 	
-												@include d-flex(column, center, center);
+								// 				@include translate(-50%, -50%);
 	
-												@include transition();
+								// 				@include d-flex(column, center, center);
 	
-												h6 {
-													width: 70px;
-													height: 70px;
+								// 				@include transition();
 	
-													background-color: var(--primary);
-													color: var(--white);
+								// 				h6 {
+								// 					width: 70px;
+								// 					height: 70px;
 	
-													@include borderRadius(50%);
+								// 					background-color: var(--primary);
+								// 					color: var(--white);
 	
-													font-family: var(--web-font);
-													font-size: 1.125rem;
+								// 					@include borderRadius(50%);
 	
-													text-transform: uppercase;
-													text-align: center;
+								// 					font-family: var(--web-font);
+								// 					font-size: 1.125rem;
 	
-													@include d-flex(column, center, center);
-												}
-											}
-
-											img {
-												@include transition();
-											}
-										}
-
-										.card-body {
-											p {
-												&.code {
-													margin-bottom: 0.125rem;
-
-													color: var(--gray-4);
-												}
-											}
-
-											h5 {
-												margin-bottom: 0.5rem;
-
-												font-weight: 600;
-
-												@include textOverflow();
-											}
-
-											.campaigns {
-												height: 20px;
+								// 					text-transform: uppercase;
+								// 					text-align: center;
 	
-												margin-bottom: 0.75rem;
+								// 					@include d-flex(column, center, center);
+								// 				}
+								// 			}
 	
-												@include d-flex(row, flex-start, flex-start);
+								// 			img {
+								// 				@include transition();
+								// 			}
+								// 		}
 	
-												.badge {
-													margin-right: 0.5rem;
+								// 		.card-body {
+								// 			p {
+								// 				&.sale-code {
+								// 					margin-bottom: 0.125rem;
 	
-													display: block;
-												}
-											}
-
-											.price {
-												margin-top: 0.5rem;
+								// 					color: var(--gray-4);
+								// 				}
+								// 			}
 	
-												font-weight: 600;
+								// 			h5 {
+								// 				margin-bottom: 0.5rem;
 	
-												color: var(--primary);
+								// 				font-weight: 600;
 	
-												@include d-flex(row, space-between, center);
-											}
-
-											.star-rating {
-												margin-bottom: 1rem;
-											}
-										}
-									}
-								}
+								// 				@include textOverflow();
+								// 			}
+	
+								// 			.sale-campaigns {
+								// 				height: 20px;
+	
+								// 				margin-bottom: 0.75rem;
+	
+								// 				@include d-flex(row, flex-start, flex-start);
+	
+								// 				.badge {
+								// 					margin-right: 0.5rem;
+	
+								// 					display: block;
+								// 				}
+								// 			}
+	
+								// 			.price {
+								// 				margin-top: 0.5rem;
+	
+								// 				font-weight: 600;
+	
+								// 				color: var(--primary);
+	
+								// 				@include d-flex(row, space-between, center);
+								// 			}
+								// 		}
+								// 	}
+								// }
 							}
 						}
 					}
@@ -353,49 +346,9 @@
 			.container {
 				.section-body {
 					.row {
-						@for $index from 1 through 9 {
-							> div {
-								&:nth-child(#{$index}){
-									a {
-										&:hover {
-											.card {
-												.card-body {
-													.img-placeholder {
-														background-image: url('/assets/img/icons/icon_prod_w_#{$index}.png');
-													}
-												}
-											}
-										}
-
-										.card {
-											.card-body {
-												.img-placeholder {
-													background-image: url('/assets/img/icons/icon_prod_#{$index}.png');
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-
 						> div {
 							a {
 								display: block;
-
-								&:hover {
-									.card {
-										background-color: var(--primary);
-
-										@include transition();
-
-										.card-body {
-											h6 {
-												color: var(--white);
-											}
-										}
-									}
-								}
 			
 								.card {
 									margin-bottom: 2rem;
@@ -404,13 +357,16 @@
 				
 									.card-body {
 										@include d-flex(column, center, center);
-										@include transition();
 
-										.img-placeholder {
+										.img-mask {
 											width: 80px;
 											height: 80px;
 
 											margin-bottom: 1.5rem;
+
+											.img-mask {
+												object-fit: contain;
+											}
 										}
 				
 										h6 {

@@ -38,7 +38,7 @@
                             <div class="col-lg-4">
                                 <a href="<?php echo base_url('/product/category/' . $category['slug']) ?>">		
                                     <div class="img-mask">
-                                        <img src="<?php echo base_url('assets/img/icons/icon_prod_' . ($key + 1) . '.png') ?>" alt="Cover of category">
+                                        <img src="<?php echo base_url('/assets/upload/product-category/' . $category['slug'] . '/' . $category['image']) ?>" alt="Dental">
                                     </div>
                                     <h6>
                                         <?php echo $category['title'] ?>

@@ -4,11 +4,11 @@
 			<div class="swiper-pagination"></div>
 
 			<div class="swiper-wrapper">
-				<?php foreach($campaigns as $key => $slide): ?>
-					<div class="swiper-slide" data-index="<?php echo $key ?>" data-title="<?php echo $slide['title'] ?>">
-						<a href="#">
+				<?php foreach($banner as $key => $slide): ?>
+					<div class="swiper-slide" data-index="<?php echo $key ?>" data-title="">
+						<a href="<?php echo $slide['url'] ?>">
 							<div class="container-fluid">
-								<?php if($slide['title'] != '') : ?>
+								<!-- <?php if($slide['title'] != '') : ?>
 									<div class="text">
 										<h3>
 											<?php echo $slide['title'] ?>
@@ -18,11 +18,11 @@
 											Tìm hiểu thêm <i class="fas fa-arrow-right"></i>
 										</h6>
 									</div>
-								<?php endif ?>
+								<?php endif ?> -->
 							</div>
 
 							<div class="img-mask">
-								<img src="<?php echo $slide['image'] ?>" alt="Dental">
+								<img src="<?php echo base_url('/assets/upload/banner/' . $slide['image']) ?>" alt="Dental">
 							</div>
 						</a>
 					</div>
@@ -128,23 +128,21 @@
 
 			<div class="swiper-slide swiper-slide-highlight-prepare" style="display: none;">
 				<a href="#">
-					<div class="card">
-						<div class="img-mask">
-							<div class="overlay">
-								<h6>
-									Mua ngay
-								</h6>
+					<div class="card card-product">
+						<div class="ratio-wrapper ratio-wrapper-1-1">
+							<div class="img-mask">
+								<img src="" alt="Dental">
 							</div>
-
-							<img src="" alt="Dental">
 						</div>
 
 						<div class="card-body">
-							<p class="p-sm code"></p>
+							<div>
+								<p class="p-sm code"></p>
+							</div>
 
 							<h5 class="title"></h5>
 
-							<div class="campaigns">
+							<!-- <div class="campaigns">
 								<span class="badge badge-outline-primary">
 									Campaign 1
 								</span>
@@ -152,23 +150,23 @@
 								<span class="badge badge-outline-primary">
 									Campaign 2
 								</span>
-							</div>
+							</div> -->
 
-							<p class="p-sm">
-								Xuất xứ: <span class="made-in"></span>
+							<p class="p-sm origin">
+								Thương hiệu: <span></span>
 							</p>
 
-							<p class="p-sm standard">
-								Tiêu chuẩn: <span class="standard"></span>
+							<p class="p-sm brand">
+								Xuất xứ: <span></span>
 							</p>
 
-							<div class="price">
-								Liên hệ
+							<p class="price">
+								<span></span>
 
-								<div class="btn btn-sm btn-primary">
+								<!-- <button class="btn btn-sm btn-primary" type="button">
 									Thêm vào giỏ hàng
-								</div>
-							</div>
+								</button> -->
+							</p>
 						</div>
 					</div>
 				</a>
@@ -190,7 +188,9 @@
 							<a href="<?php echo base_url('/product/' . $category['slug']) ?>">		
 								<div class="card wow fadeIn" data-delay="<?php echo $key % 3 ?>">
 									<div class="card-body">
-										<div class="img-placeholder"></div>
+										<div class="img-mask">
+											<img src="<?php echo base_url('/assets/upload/product-category/' . $category['slug'] . '/' . $category['image']) ?>" alt="Dental">
+										</div>
 										<h6>
 											<?php echo $category['title'] ?>
 										</h6>
@@ -233,15 +233,15 @@
 								<div class="swiper-button-prev"></div>
 								
 								<div class="swiper-wrapper">
-									<?php for($i = 0; $i < 10; $i++): ?>
+									<?php foreach($partners as $partner): ?>
 										<div class="swiper-slide">
 											<a href="#">
 												<div class="img-mask img-mask-circle">
-													<img src="<?php echo base_url('assets/img/client/client_' . ($i + 1) . '.png') ?>" alt="Client">
+													<img src="<?php echo base_url('assets/upload/partner/' . $partner['slug'] . '/' . $partner['image']) ?>" alt="Client">
 												</div>
 											</a>
 										</div>
-									<?php endfor; ?>
+									<?php endforeach; ?>
 								</div>
 							</div>
 						</div>

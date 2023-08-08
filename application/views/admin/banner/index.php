@@ -57,7 +57,6 @@
                                     <tr>
                                         <th>No.</th>
                                         <th>Hình ảnh</th>
-                                        <th>Tiêu đề</th>
                                         <th>Url</th>
                                         <th>Trạng thái</th>
                                         <th>Action</th>
@@ -74,7 +73,6 @@
                                                     <img src="<?= base_url('assets/upload/banner/' . $value['image']) ?>"  width=150px height=100px>
                                                 </div>
                                             </td>
-                                            <td><?= $value['title'] ?></td>
                                             <td>
                                                 <?php echo $value['url'] ?>
                                             </td>

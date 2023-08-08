@@ -17,18 +17,15 @@ class Banner extends Admin_Controller{
 	}
 
     public function index(){
-        $this->data['keyword'] = '';
-        if($this->input->get('search')){
-            $this->data['keyword'] = $this->input->get('search');
-        }
         $this->load->library('pagination');
         $per_page = 10;
-        $total_rows  = $this->banner_model->count_search('',$this->data['keyword']);
+        $total_rows  = $this->banner_model->count_search('', '');
         $config = $this->pagination_config(base_url('admin/'.$this->data['controller'].'/index'), $total_rows, $per_page, 4);
         $this->data['page'] = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
         $this->pagination->initialize($config);
         $this->data['page_links'] = $this->pagination->create_links();
-        $this->data['result'] = $this->banner_model->get_all_with_pagination_search('','desc', $per_page, $this->data['page'], $this->data['keyword']);
+        $this->data['result'] = $this->banner_model->get_all_with_pagination_search('', 'desc', $per_page, $this->data['page'], '');
+        
         $this->render('admin/banner/index');
     }
 
@@ -36,7 +33,7 @@ class Banner extends Admin_Controller{
 		$this->load->helper('form');
         $this->load->library('form_validation');
 
-        $this->form_validation->set_rules('title', 'Tiêu đề', 'required');
+        $this->form_validation->set_rules('url', 'Url', 'required');
 
         if ($this->form_validation->run() == FALSE) {
         	$this->render('admin/banner/create');
@@ -48,13 +45,12 @@ class Banner extends Admin_Controller{
                 if(!file_exists('assets/upload/banner')){
                     mkdir('assets/upload/banner' , 0777);
                 }
-                if ( !empty($_FILES['image']['name']) ) {
+                if (!empty($_FILES['image']['name']) ) {
                     chmod('assets/upload/banner', 0777);
                     $images = $this->upload_image('image', 'assets/upload/banner', $_FILES['image']['name']);
                 }
                 $data = array(
                     'image' => $images,
-                    'title' => $this->input->post('title'),
                     'url' => $this->input->post('url'),
                     'is_active' => $this->input->post('is_active'),
                 );
@@ -144,7 +140,7 @@ class Banner extends Admin_Controller{
             $this->data['detail'] = $detail;
             if($this->input->post()){
                 $this->load->library('form_validation');
-                $this->form_validation->set_rules('title', 'Title', 'required');
+                $this->form_validation->set_rules('url', 'Url', 'required');
                 if($this->form_validation->run() == TRUE){
                     if(!empty($_FILES['image']['name'])){
                         $this->check_img($_FILES['image']['name'], $_FILES['image']['size']);
@@ -152,7 +148,6 @@ class Banner extends Admin_Controller{
                     }
 
                     $data = array(
-                        'title' => $this->input->post('title'),
                         'url' => $this->input->post('url'),
                         'description' => $this->input->post('description'),
                         'is_active' => $this->input->post('is_active'),
@@ -251,9 +246,9 @@ class Banner extends Admin_Controller{
         }
         if ($cate_child){
             foreach ($cate_child as $key => $value){
-            $select = ($value['id'] == $id)? 'selected' : '';
-            $result.='<option value="'.$value['id'].'"'.$select.'>'.$char.$value['title'].'</option>';
-            $this->build_new_category($categorie, $value['id'],$result, $id, $char.'---|');
+                $select = ($value['id'] == $id)? 'selected' : '';
+                $result.='<option value="'.$value['id'].'"'.$select.'>'.$char.$value['title'].'</option>';
+                $this->build_new_category($categorie, $value['id'],$result, $id, $char.'---|');
             }
         }
     }

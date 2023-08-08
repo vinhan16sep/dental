@@ -25,7 +25,7 @@
 					<div class="filter-item">
 						<div class="item-header">
 							<h6>
-								Blog Filter
+								Danh mục tin tức
 							</h6>
 
 							<a href="#" class="btn-expand-item">
@@ -35,16 +35,13 @@
 
 						<div class="item-body">
 							<ul>
-								<li>
-									<a href="#">
-										Category #1
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										Category #2
-									</a>
-								</li>
+								<?php foreach ($blogs_categories as $key => $value): ?>
+									<li>
+										<a href="#" class="btn-select-news-by-category" data-id="<?php echo $value['id'] ?>">
+											<?= $value['title'] ?>
+										</a>
+									</li>
+								<?php endforeach; ?>
 							</ul>
 						</div>
 					</div>
@@ -52,35 +49,33 @@
 			</div>
 
 			<div class="col-lg-9">
-				<div class="list-items list-blogs">
-					<div class="item-sizer"></div>
-
-					<?php foreach($blogs as $blog): ?>
-						<div class="item">
-							<a href="<?php echo base_url('blogs/detail/' . $blog['slug']) ?>">
-								<h6>
-									<?php echo $blog['title'] ?>
-								</h6>
-							</a>
-
-							<p class="p-sm">
-								<?php echo date('d/m/Y', $blog['created_at']) ?>
-							</p>
-		
-							<p>
-								<?php echo $blog['description'] ?>
-							</p>
-
-							<a href="<?php echo base_url('blogs/detail/' . $blog['slug']) ?>">
-								Xem chi tiết <i class="fas fa-chevron-right"></i>
-							</a>
-		
-							<a href="<?php echo base_url('blogs/detail/' . $blog['slug']) ?>">
-								<img src="<?= base_url('assets/upload/news/' . $blog['slug'] . '/' . $blog['image']) ?>" alt="Blog image">
-							</a>
-						</div>
-					<?php endforeach;?>
-				</div>	
+				<div class="list-blogs">
+					<div class="row"></div>
+				</div>
+				
+				<div class="col-lg-4 col-md-6 item-news-prepare" style="display: none">
+					<div class="item">
+						<a href="#">
+							<h6 class="news-title"></h6>
+						</a>
+	
+						<p class="p-sm news-date"></p>
+	
+						<p class="news-desc"></p>
+	
+						<a href="#">
+							Xem chi tiết <i class="fas fa-chevron-right"></i>
+						</a>
+	
+						<a href="#">
+							<div class="ratio-wrapper ratio-wrapper-16-9">
+								<div class="img-mask">
+									<img src="" alt="Blog image">
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

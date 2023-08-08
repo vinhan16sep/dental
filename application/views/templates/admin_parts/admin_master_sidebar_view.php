@@ -77,15 +77,39 @@ if($this->ion_auth->logged_in()) {
                         </li>
                     </ul>
                 </li>
-                <li class="<?php echo ($this->uri->segment(2) == 'partner')? 'active' : '' ?>">
-                    <a href="<?php echo base_url('admin/partner') ?>">
-                        <i class="fa fa-newspaper-o"></i> <span>Quản lý đối tác</span>
+                <li class="treeview <?php echo ($this->uri->segment(2) == 'partner' || $this->uri->segment(2) == 'partner_origin' ) ? 'active' : '' ?>" style="border-bottom: none;">
+                    <a href="">
+                        <i class="fa fa-bars"></i>
+                        <span>Quản lý đối tác</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
                     </a>
+                    <ul class="treeview-menu">
+                        <li class="<?php echo ( $this->uri->segment(2) == 'partner_origin' )? 'active' : '' ?>" >
+                            <a href="<?php echo base_url('admin/partner_origin') ?>"><i class="fa fa-leanpub" aria-hidden="true"></i> <span>Xuất xứ</span></a>
+                        </li>
+                        <li class="<?php echo ( $this->uri->segment(2) == 'partner' )? 'active' : '' ?>" >
+                            <a href="<?php echo base_url('admin/partner') ?>"><i class="fa fa-newspaper-o"></i> <span>Đối tác</span></a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="<?php echo ($this->uri->segment(2) == 'news')? 'active' : '' ?>">
-                    <a href="<?php echo base_url('admin/news') ?>">
-                        <i class="fa fa-newspaper-o"></i> <span>Quản lý tin tức</span>
+                <li class="treeview <?php echo ($this->uri->segment(2) == 'news' || $this->uri->segment(2) == 'news_category' ) ? 'active' : '' ?>" style="border-bottom: none;">
+                    <a href="">
+                        <i class="fa fa-bars"></i>
+                        <span>Quản lý tin tức</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
                     </a>
+                    <ul class="treeview-menu">
+                        <li class="<?php echo ( $this->uri->segment(2) == 'news_category' )? 'active' : '' ?>" >
+                            <a href="<?php echo base_url('admin/news_category') ?>"><i class="fa fa-leanpub" aria-hidden="true"></i> <span>Danh mục</span></a>
+                        </li>
+                        <li class="<?php echo ( $this->uri->segment(2) == 'news' )? 'active' : '' ?>" >
+                            <a href="<?php echo base_url('admin/news') ?>"><i class="fa fa-newspaper-o"></i> <span>Tin tức</span></a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="<?php echo ($this->uri->segment(2) == 'service')? 'active' : '' ?>">
                     <a href="<?php echo base_url('admin/service') ?>">

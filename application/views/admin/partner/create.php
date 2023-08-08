@@ -46,8 +46,6 @@
                             <br>
                         </div>
 
-
-
                         <div class="form-group col-xs-12" style="padding-right: 0px;">
                             <div class="form-group col-xs-12" style="padding-right: 0px;">
                                 <?php
@@ -55,6 +53,21 @@
                                 echo form_error('title', '<div class="error">', '</div>');
                                 echo form_input('title', set_value('title'), 'class="form-control" id="title"');
                                 ?>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-xs-12" style="padding-right: 0px;">
+                            <div class="form-group col-xs-12" style="padding-right: 0px;">
+                                <label for="parent_id">Xuất xứ</label>
+                                <?php echo form_error('parent_id', '<div class="error">', '</div>'); ?>
+                                <select name="parent_id" class="form-control" id="parent_id">
+                                    <option value="">Chọn xuất xứ</option>
+                                    <?php if ( $origins ): ?>
+                                        <?php foreach ($origins as $key => $value): ?>
+                                            <option value="<?php echo $value['id'] ?>" ><?php echo $value['title'] ?></option>
+                                        <?php endforeach ?>
+                                    <?php endif ?>
+                                </select>
                             </div>
                         </div>
 
