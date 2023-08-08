@@ -66,7 +66,7 @@ $config = array(
 	|
 	*/
 //	'base_url' => ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http"). "://". @$_SERVER['HTTP_HOST'],
-	'base_url' => 'http://localhost:8070/dental',
+	'base_url' => 'http://localhost:8071/dental',
 	/*
 	|--------------------------------------------------------------------------
 	| path from base_url to base of upload folder

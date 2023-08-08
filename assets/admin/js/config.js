@@ -3,5 +3,5 @@ switch(window.location.origin){
         var HOSTNAME = 'http://dental.vn/';
         break;
     default:
-        var HOSTNAME = 'http://localhost:8070/dental/';
+        var HOSTNAME = 'http://localhost:8071/dental/';
 }

@@ -7,3 +7,6 @@ assets/upload/product/348009f191039c83fee06d34cff1fe98.jpeg
 assets/upload/product/tay-lay-cao-woodpecker/4c4c1dc3e542cec9cd4fd57f26a02c94.jpeg
 application/config/development/config.php
 application/config/development/database.php
+assets/admin/js/admin/config.js
+assets/admin/js/config.js
+filemanager/config/config.php
