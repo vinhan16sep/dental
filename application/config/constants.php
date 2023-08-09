@@ -236,3 +236,12 @@ defined('MESSAGE_EDIT_ERROR_ACTIVE') OR define('MESSAGE_EDIT_ERROR_ACTIVE', 'Báº
 defined('MESSAGE_CHANGE_LANGUAGE_SUCCESS') OR define('MESSAGE_CHANGE_LANGUAGE_SUCCESS', 'changed');
 defined('MESSAGE_CHANGE_LANGUAGE_FAIL') OR define('MESSAGE_CHANGE_LANGUAGE_FAIL', 'keep');
 
+/**
+ * Fixed content type
+ */
+defined('FIXED_CONTENT') OR define('FIXED_CONTENT', array(
+    'PARTNER' => 'PARTNER',
+    'ABOUT' => 'ABOUT',
+    'NEWS' => 'NEWS',
+    'PRODUCT' => 'PRODUCT',
+));
