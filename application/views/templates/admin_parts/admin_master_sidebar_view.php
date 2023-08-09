@@ -121,6 +121,11 @@ if($this->ion_auth->logged_in()) {
                         <i class="fa fa-question"></i> <span>Quản lý hỏi đáp</span>
                     </a>
                 </li>
+                <li class="<?php echo ($this->uri->segment(2) == 'content')? 'active' : '' ?>">
+                    <a href="<?php echo base_url('admin/content') ?>">
+                        <i class="fa fa-file"></i> <span>Quản lý nội dung tĩnh</span>
+                    </a>
+                </li>
                 <li class="<?php echo ($this->uri->segment(2) == 'contact')? 'active' : '' ?>">
                     <a href="<?php echo base_url('admin/contact/detail') ?>">
                         <i class="fa fa-address-book" aria-hidden="true"></i> <span>Thông tin liên hệ</span>
