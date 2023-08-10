@@ -126,55 +126,75 @@
 			</div>
 
 			<div class="form-body">
-				<div class="row">
-					<div class="form-group col-lg-12">
-						<input type="text" class="form-control form-control-lg" name="Name" placeholder="Họ tên">
-					</div>
-					<div class="form-group col-lg-6">
-						<input type="text" class="form-control form-control-lg" name="Email" placeholder="Email">
-					</div>
-					<div class="form-group col-lg-6">
-						<input type="text" class="form-control form-control-lg" name="PhoneNumber" placeholder="Số điện thoại">
-					</div>
-					<div class="form-group col-lg-6">
-						<input type="text" class="form-control form-control-lg" name="Position" placeholder="Vị trí">
-					</div>
-					<div class="form-group col-lg-6">
-						<input type="text" class="form-control form-control-lg" name="Company" placeholder="Đơn vị công tác">
-					</div>
-					<div class="form-group col-lg-12">
-						<input type="text" class="form-control form-control-lg" name="Title" placeholder="Tiêu đề">
-					</div>
-					<div class="form-group col-lg-12">
-						<select class="form-select form-select-lg" name="TitleType">
-							<option value="none">
-								Chọn một
-							</option>
-							<option value="product">
-								Sản phẩm
-							</option>
-							<option value="wantity">
-								Bảo hành
-							</option>
-							<option value="service">
-								Dịch vụ
-							</option>
-							<option value="other">
-								Khác...
-							</option>
-						</select>
-					</div>
-					<div class="form-group col-lg-12">
-						<textarea class="form-control form-control-lg" name="Message" rows="7" placeholder="Viết gì đó cho chúng tôi..."></textarea>
-					</div>
+				<?php
+					echo form_open_multipart('/contact/sendMessage', array('class' => 'form-horizontal'));
+					?>
+					<div class="row">
+						<div class="form-group col-lg-12">
+							<?php
+                                echo form_error('Name');
+                                echo form_input('Name', set_value('Name'), 'class="form-control form-control-lg" id="Name" placeholder="Họ tên"');
+                                ?>
+						</div>
+						<div class="form-group col-lg-6">
+							<?php
+                                echo form_error('Email');
+                                echo form_input('Email', set_value('Email'), 'class="form-control form-control-lg" id="Email" placeholder="Email"');
+                                ?>
+						</div>
+						<div class="form-group col-lg-6">
+							<?php
+                                echo form_error('PhoneNumber');
+                                echo form_input('PhoneNumber', set_value('PhoneNumber'), 'class="form-control form-control-lg" id="PhoneNumber" placeholder="Số điện thoại"');
+                                ?>
+						</div>
+						<div class="form-group col-lg-6">
+							<?php
+                                echo form_error('Position');
+                                echo form_input('Position', set_value('Position'), 'class="form-control form-control-lg" id="Position" placeholder="Vị trí"');
+                                ?>
+						</div>
+						<div class="form-group col-lg-6">
+							<?php
+                                echo form_error('Company');
+                                echo form_input('Company', set_value('Company'), 'class="form-control form-control-lg" id="Company" placeholder="Đơn vị công tác"');
+                                ?>
+						</div>
+						<div class="form-group col-lg-12">
+							<select class="form-select form-select-lg" name="TitleType">
+								<?php foreach($product_category as $category): ?>
+									<option value="<?php echo $category['id'] ?>">
+										<?php echo $category['title'] ?>
+									</option>
+								<?php endforeach; ?>
+								<option value="other">
+									Khác...
+								</option>
+							</select>
+						</div>
+						<div class="form-group col-lg-12">
+							<?php
+                                echo form_error('Title');
+                                echo form_input('Title', set_value('Title'), 'class="form-control form-control-lg" id="Title" placeholder="Tiêu đề"');
+                                ?>
+						</div>
+						<div class="form-group col-lg-12">
+							<?php
+                                echo form_error('Message');
+                                echo form_textarea('Message', set_value('Message'), 'class="form-control form-control-lg" id="Message" placeholder="Viết gì đó cho chúng tôi..."');
+                                ?>
+						</div>
 
-					<div class="buttons">
-						<button class="btn btn-outline-primary" id="btnSubmit" type="button">
-							Gửi <i class="fas fa-arrow-right"></i>
-						</button>
+						<div class="buttons">
+							<?php echo form_submit('submit', 'Gửi', 'class="btn btn-outline-primary" '); ?>
+						</div>
 					</div>
-				</div>
+				<?php echo form_close(); ?>
 			</div>
 		</div>
 	</div>
 </div>
+
+<script>
+	let responseSendMessage = parseInt('<?php echo ($this->session->flashdata('message_success')) ?>')
+</script>

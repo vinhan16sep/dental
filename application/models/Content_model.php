@@ -30,6 +30,12 @@ class Content_model extends Single_model{
         return $this->db->get()->row_array();
     }
 
+    public function get_content_by_type($type = ''){
+        $this->db->from($this->table);
+        $this->db->where('type', $type);
+        return $this->db->get()->row_array();
+    }
+
     public function get_exist_type(){
         $this->db->select('type');
         $this->db->from($this->table);

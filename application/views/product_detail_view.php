@@ -104,11 +104,11 @@
 
 						<div class="buttons">
 							<button class="btn btn-primary btn-buy" type="button">
-								Mua ngay
+								<i class="fas fa-shopping-basket"></i> Mua ngay
 							</button>
 
-							<button class="btn btn-link btn-contact-us" type="button">
-								Tư vấn cho tôi
+							<button class="btn btn-default btn-contact-us" type="button">
+								<i class="fas fa-comments"></i> Tư vấn cho tôi
 							</button>
 						</div>
 					</div>
@@ -207,6 +207,127 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-order-product" id="modalOrderProduct">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h6>
+						Đặt hàng
+					</h6>
+
+					<button class="btn" data-bs-dismiss="modal" type="button">
+						<i class="fas fa-times"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<?php
+						echo form_open_multipart('/product/sendOrder', array('class' => 'form-horizontal'));
+						?>
+						<?php
+							echo form_input('Slug', $detail['slug'], 'style="display: none;"');
+						?>
+						<div class="form-group">
+							<?php
+								echo form_label('Họ và tên', 'Name');
+								echo form_error('Name');
+								echo form_input('Name', set_value('Name'), 'class="form-control"');
+							?>
+						</div>
+						<div class="form-group">
+							<?php
+								echo form_label('Số điện thoại', 'PhoneNumber');
+								echo form_error('PhoneNumber');
+								echo form_input('PhoneNumber', set_value('PhoneNumber'), 'class="form-control"');
+							?>
+						</div>
+						<div class="form-group">
+							<?php
+								echo form_label('Sản phẩm muốn mua', 'Product');
+								echo form_error('Product');
+								echo form_input('Product', $detail['title'], 'class="form-control" readonly');
+							?>
+						</div>
+						<div class="form-group">
+							<?php
+								echo form_label('Số lượng', 'Amount');
+								echo form_error('Amount');
+								echo form_input_number('Amount', 1, 'class="form-control" value="1" min="1" type="number"');
+							?>
+						</div>
+
+						<?php echo form_submit('submit', 'Đặt hàng', 'class="btn btn-outline-primary" '); ?>
+					<?php echo form_close(); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-advise-product" id="modalAdviseProduct">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h6>
+						Yêu cầu tư vấn sản phẩm
+					</h6>
+
+					<button class="btn" data-bs-dismiss="modal" type="button">
+						<i class="fas fa-times"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				<?php
+						echo form_open_multipart('/product/sendOrder', array('class' => 'form-horizontal'));
+						?>
+						<?php
+							echo form_input('Slug', $detail['slug'], 'style="display: none;"');
+						?>
+						<?php
+							echo form_input_number('Amount', '', 'class="form-control" style="display: none;"');
+						?>
+						<div class="form-group">
+							<?php
+								echo form_label('Họ và tên', 'Name');
+								echo form_error('Name');
+								echo form_input('Name', set_value('Name'), 'class="form-control"');
+							?>
+						</div>
+						<div class="form-group">
+							<?php
+								echo form_label('Số điện thoại', 'PhoneNumber');
+								echo form_error('PhoneNumber');
+								echo form_input('PhoneNumber', set_value('PhoneNumber'), 'class="form-control"');
+							?>
+						</div>
+						<div class="form-group">
+							<?php
+								echo form_label('Sản phẩm muốn mua', 'Product');
+								echo form_error('Product');
+								echo form_input('Product', $detail['title'], 'class="form-control" readonly');
+							?>
+						</div>
+
+						<?php echo form_submit('submit', 'Đặt hàng', 'class="btn btn-outline-primary" '); ?>
+					<?php echo form_close(); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-message" id="modalMessage">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<p></p>
+				</div>
+				<div class="modal-footer">
+					<button class="btn" data-bs-dismiss="modal" type="button">
+						OK
+					</button>
 				</div>
 			</div>
 		</div>

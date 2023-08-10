@@ -47,8 +47,25 @@ $(document).ready(function () {
         .on('click', function (e) {
             e.preventDefault();
 
-            const $modal = $('#modalFaqDetail');
+            let id = $(this).data('id');
 
-            $modal.modal('show');
+            $.ajax({
+                url: `/about/getFaqById/${id}`,
+                method: 'GET',
+                dataType: 'json',
+                data: {
+                    _token: $('meta[name="csrf_token"]').attr('content')
+                },
+                success: (res) => {
+                    const $modal = $('#modalFaqDetail');
+
+                    if (res && res.length > 0) {
+                        $modal.find('.faq-question').text(res[0].faq[0].question);
+                        $modal.find('.faq-answer').text(res[0].faq[0].answer);
+
+                        $modal.modal('show');
+                    }
+                }
+            });
         });
 });

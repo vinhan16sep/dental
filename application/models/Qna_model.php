@@ -52,4 +52,12 @@ class Qna_model extends Single_model{
 
         return $result = $this->db->get()->result_array();
     }
+
+    public function get_qna_by_id($id) {
+        $this->db->select('*');
+        $this->db->from('qna');
+        $this->db->where('id', $id);
+
+        return $result = $this->db->get()->result_array();
+    }
 }

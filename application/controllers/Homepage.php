@@ -11,6 +11,7 @@ class Homepage extends Public_Controller {
 		$this->load->model('news_model');
 		$this->load->model('banner_model');
 		$this->load->model('partner_model');
+		$this->load->model('content_model');
 	}
 
     public function index(){
@@ -26,6 +27,19 @@ class Homepage extends Public_Controller {
 			'assets/js/homepage/function.min.js'
 		];
 
+		$this->data['HOMEPAGE_ABOUT'] = $this->content_model->get_content_by_type('HOMEPAGE_ABOUT')['content'];
+
+		$this->data['HOMEPAGE_ABOUT_1_TITLE'] = $this->content_model->get_content_by_type('HOMEPAGE_ABOUT_1_TITLE')['content'];
+		$this->data['HOMEPAGE_ABOUT_1_DESC'] = $this->content_model->get_content_by_type('HOMEPAGE_ABOUT_1_DESC')['content'];
+		$this->data['HOMEPAGE_ABOUT_2_TITLE'] = $this->content_model->get_content_by_type('HOMEPAGE_ABOUT_2_TITLE')['content'];
+		$this->data['HOMEPAGE_ABOUT_2_DESC'] = $this->content_model->get_content_by_type('HOMEPAGE_ABOUT_2_DESC')['content'];
+		$this->data['HOMEPAGE_ABOUT_3_TITLE'] = $this->content_model->get_content_by_type('HOMEPAGE_ABOUT_3_TITLE')['content'];
+		$this->data['HOMEPAGE_ABOUT_3_DESC'] = $this->content_model->get_content_by_type('HOMEPAGE_ABOUT_3_DESC')['content'];
+
+		$this->data['HOMEPAGE_NOTI_TITLE'] = $this->content_model->get_content_by_type('HOMEPAGE_NOTI_TITLE')['content'];
+		$this->data['HOMEPAGE_NOTI_DESC'] = $this->content_model->get_content_by_type('HOMEPAGE_NOTI_DESC')['content'];
+		
+
 		$this->data['banner'] = $this->banner_model->fetch_all(3);
 		$this->data['blogs'] = $this->news_model->fetch_all(3);
 
@@ -38,7 +52,7 @@ class Homepage extends Public_Controller {
 	{
 		$category = $this->input->get('category');
 
-		$highlights = $this->product_model->get_focus_by_category_id($category);
+		$highlights = $this->product_model->get_focus_by_category_id($category, 10);
 
 		return $this->output
                 ->set_content_type('application/json')

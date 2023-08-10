@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="csrf_token" value="<?php echo $this->security->get_csrf_token_name(); ?>">
+        <meta name="csrf_token" content="<?php echo $this->security->get_csrf_token_name(); ?>">
 
         <title><?php echo $the_view_title;?></title>
 

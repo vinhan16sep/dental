@@ -10,9 +10,9 @@ $(document).ready(function () {
 
     // new WOW().init();
 
-    setTimeout(() => {
-        $('#modalBanner').modal('show');
-    }, 5000);
+    // setTimeout(() => {
+    //     $('#modalBanner').modal('show');
+    // }, 5000);
 
     let swiperCover = new Swiper('#swiperCover', {
         slidesPerView: 1,
@@ -148,14 +148,13 @@ function getHighlightByCategory(category = '') {
                         $item.find('a:not([data-bs-toggle])').attr('href', `/product/detail/${product['slug']}`);
                         $item.find('img').attr('src', `/assets/upload/product/${product['slug']}/${product['image']}`);
 
-                        $item.find('.code').text(product['code']);
+                        $item.find('.code').text(product['code'] != '' ? product['code'] : 'MSP');
                         $item.find('.title').text(product['title']);
 
-                        console.log(product['brand']);
                         $item.find('.brand span').text(product['brand']);
                         $item.find('.origin span').text(product['origin']);
 
-                        $item.find('.price span').text(product['price']);
+                        $item.find('.price span').text(product['price'] != '' ? product['price'] : 'Liên hệ');
 
                         $wrapper.find('.swiper-wrapper').append($item);
                     }
