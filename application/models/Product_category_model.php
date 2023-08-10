@@ -22,7 +22,7 @@ class Product_category_model extends Single_model{
         $this->db->from('product_category');
         $this->db->where('is_deleted', 0);
         $this->db->where('is_active', 1);
-        $this->db->order_by('id', 'asc');
+        $this->db->order_by('index', 'asc');
 
         return $result = $this->db->get()->result_array();
     }

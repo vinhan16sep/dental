@@ -96,7 +96,7 @@ class Multiple_model extends MY_Model {
         $this->db->select($this->table .'.*, '. $this->table_lang .'.title');
         $this->db->from($this->table);
         $this->db->join($this->table_lang, $this->table_lang .'.'. $this->table .'_id = '. $this->table .'.id');
-        if ($this->table != 'banner') {
+        if ($this->table != 'banner' && $this->table != 'order') {
             $this->db->like($this->table_lang .'.title', $keywords);
         }
         $this->db->where($this->table .'.is_deleted', 0);
@@ -221,7 +221,7 @@ class Multiple_model extends MY_Model {
         $this->db->select('*');
         $this->db->from($this->table);
         $this->db->join($this->table_lang, $this->table_lang .'.'. $this->table .'_id = '. $this->table .'.id');
-        if ($this->table != 'banner') {
+        if ($this->table != 'banner' && $this->table != 'order') {
             $this->db->like($this->table_lang .'.title', $keyword);
         }
         if($lang != ''){
@@ -446,7 +446,7 @@ class Single_model extends MY_Model {
     public function get_all_with_pagination_search($is_active = '', $order = 'desc', $limit = NULL, $start = NULL, $keywords = '') {
         $this->db->select('*');
         $this->db->from($this->table);
-        if ($this->table != 'banner') {
+        if ($this->table != 'banner' && $this->table != 'order') {
             $this->db->like('title', $keywords);
         }
         $this->db->where('is_deleted', 0);
@@ -503,7 +503,7 @@ class Single_model extends MY_Model {
         $this->db->select('*');
         $this->db->from($this->table);
 
-        if ($this->table != 'banner') {
+        if ($this->table != 'banner' && $this->table != 'order') {
             $this->db->like('title', $keyword);
         }
         $this->db->where('is_deleted', 0);

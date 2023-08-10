@@ -9,6 +9,10 @@ class Product extends Public_Controller {
 		$this->load->model('product_category_model');
 		$this->load->model('origin_model');
 		$this->load->model('brand_model');
+		$this->load->model('order_model');
+
+		$this->load->helper('common_helper');
+        $this->author_data = handle_author_common_data();
 
         $this->load->library('session');
 	}
@@ -31,7 +35,7 @@ class Product extends Public_Controller {
 		$this->data['origins'] = $this->origin_model->get_active();
 		$this->data['brands'] = $this->brand_model->get_active();
 		$this->data['products'] = $this->product_model->fetch_all();
-		$this->data['focus_products'] = $this->product_model->fetch_all_focus();
+		$this->data['focus_products'] = $this->product_model->fetch_all_focus(10);
 
 		$brandIds = [];
 		foreach ($this->data['brands'] as $item) {
@@ -67,7 +71,7 @@ class Product extends Public_Controller {
 			$this->data['origins'] = $this->origin_model->get_active();
 			$this->data['brands'] = $this->brand_model->get_active();
 			$this->data['products'] = $this->product_model->get_by_category_id($this->data['product_selected_category']['id']);
-			$this->data['focus_products'] = $this->product_model->get_focus_by_category_id($this->data['product_selected_category']['id']);
+			$this->data['focus_products'] = $this->product_model->get_focus_by_category_id($this->data['product_selected_category']['id'], 10);
 
 			$brandIds = [];
 			foreach ($this->data['brands'] as $item) {
@@ -215,5 +219,42 @@ class Product extends Public_Controller {
                 ->set_content_type('application/json')
                 ->set_status_header(HTTP_SUCCESS)
                 ->set_output(json_encode(array(['products' => $products, 'total' => $total])));
+	}
+
+	public function sendOrder()
+	{
+		$this->load->helper('form');
+        $this->load->library('form_validation');
+
+        $this->form_validation->set_rules('Name', 'Họ và tên', 'required');
+
+        if ($this->form_validation->run() == FALSE) {
+        	$this->render('product_detail_view');
+        } else {
+        	if ($this->input->post()) {
+                $name = $this->input->post('Name');
+				$phone = $this->input->post('PhoneNumber');
+				$product = $this->input->post('Product');
+				$amount = $this->input->post('Amount');
+				$slug = $this->input->post('Slug');
+
+                $data = array(
+                    'name' => $name,
+					'phone' => $phone,
+					'product' => $product,
+					'amount' => $amount,
+                );
+                
+				$insert = $this->order_model->insert(array_merge($data, $this->author_data));
+
+                if ($insert) {
+					$this->session->set_flashdata('message_success', MESSAGE_CREATE_SUCCESS);
+					redirect('/product/detail/' . $slug, 'refresh');
+                }else{
+                    $this->session->set_flashdata('message_error', MESSAGE_CREATE_ERROR);
+					redirect('/product/detail/' . $slug, 'refresh');
+                }
+            }
+        }
 	}
 }

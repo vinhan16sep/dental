@@ -33,7 +33,7 @@ if($this->ion_auth->logged_in()) {
                         <i class="fa fa-inbox"></i> <span>Quản lý banner</span>
                     </a>
                 </li>
-                <li class="treeview <?php echo ($this->uri->segment(2) == 'about' )? 'active' : '' ?>" style="border-bottom: none;">
+                <!-- <li class="treeview <?php echo ($this->uri->segment(2) == 'about' )? 'active' : '' ?>" style="border-bottom: none;">
                     <a href="">
                         <i class="fa fa-bars"></i>
                         <span>Quản lý giới thiệu</span>
@@ -52,7 +52,7 @@ if($this->ion_auth->logged_in()) {
                             <a href="<?php echo base_url('admin/about/value') ?>"><i class="fa fa-leanpub" aria-hidden="true"></i> <span>Giá trị cốt lõi</span></a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
                 <!-- Show slide Academy -->
                 <li class="treeview <?php echo ($this->uri->segment(2) == 'product_category' || $this->uri->segment(2) == 'product' || $this->uri->segment(2) == 'origin' || $this->uri->segment(2) == 'brand' ) ? 'active' : '' ?>" style="border-bottom: none;">
                     <a href="">
@@ -134,6 +134,11 @@ if($this->ion_auth->logged_in()) {
                 <li class="<?php echo ($this->uri->segment(2) == 'message')? 'active' : '' ?>">
                     <a href="<?php echo base_url('admin/message') ?>">
                         <i class="fa fa-envelope" aria-hidden="true"></i> <span>Tin nhắn</span>
+                    </a>
+                </li>
+                <li class="<?php echo ($this->uri->segment(2) == 'order')? 'active' : '' ?>">
+                    <a href="<?php echo base_url('admin/order') ?>">
+                        <i class="fa fa-envelope" aria-hidden="true"></i> <span>Đơn đặt hàng</span>
                     </a>
                 </li>
                 <li class="header">HỆ THỐNG</li>

@@ -54,13 +54,15 @@
                             <table id="table" class="table table_product">
                                 <thead>
                                     <tr>
-                                        <th style="width: 3%">No.</th>
-                                        <th style="width: 15%">Tên</th>
-                                        <th style="width: 10%">Số điện thoại</th>
-                                        <th style="width: 20%">Email</th>
-                                        <th style="width: 33%">Nội dung</th>
-                                        <th style="width: 15%">Thời gian đăng ký</th>
-                                        <th style="width: 4%">Action</th>
+                                        <th>No.</th>
+                                        <th>Tên</th>
+                                        <th>Số điện thoại</th>
+                                        <th>Email</th>
+                                        <th>Chủ đề</th>
+                                        <th>Tiêu đề</th>
+                                        <th>Nội dung</th>
+                                        <th>Thời gian đăng ký</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -70,10 +72,12 @@
                                     <tr class="remove-<?= $value['id'] ?>">
                                             <td><?php echo $key+1 ?></td>
                                             <td>
-                                                <?= $value['title'] ?>
+                                                <?= $value['name'] ?>
                                             </td>
                                             <td><?= $value['phone'] ?></td>
                                             <td><?= $value['email'] ?></td>
+                                            <td><?= $messageTypes[$value['type']] ?></td>
+                                            <td><?= $value['title'] ?></td>
                                             <td><?= $value['content'] ?></td>
                                             <td><?= date('d-m-Y H:i', $value['created_at']) ?></td>
                                             <td>
@@ -89,6 +93,8 @@
                                         <th>Tên</th>
                                         <th>Số điện thoại</th>
                                         <th>Email</th>
+                                        <th>Chủ đề</th>
+                                        <th>Tiêu đề</th>
                                         <th>Nội dung</th>
                                         <th>Thời gian đăng ký</th>
                                         <th>Action</th>

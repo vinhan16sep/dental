@@ -4,10 +4,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Danh sách
-            <small>
-                Banner
-            </small>
+            Danh sách đơn hàng
         </h1>
     </section>
 
@@ -32,10 +29,12 @@
             <div class="col-md-12">
                 <div class="box">
                     <div class="box-header">
+                        <h3 class="box-title">
+                        </h3>
                     </div>
-                    <div class="row" style="padding: 10px;">
+                    <div class="row">
                         <div class="col-md-6">
-                            <a href="<?php echo base_url('admin/'.$controller.'/create') ?>" class="btn btn-primary" role="button">Thêm mới</a>
+                            
                         </div>
                         <div class="col-md-6">
                             <form action="<?php echo base_url('admin/'.$controller.'/index') ?>" method="get">
@@ -56,72 +55,44 @@
                                 <thead>
                                     <tr>
                                         <th>No.</th>
-                                        <th>Hình ảnh</th>
-                                        <th>Url</th>
-                                        <th>Trạng thái</th>
+                                        <th>Tên</th>
+                                        <th>Số điện thoại</th>
+                                        <th>Sản phẩm</th>
+                                        <th>Số lượng</th>
+                                        <th>Thời gian đăng ký</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 <?php if(!empty($result)): ?>
                                 <?php foreach ($result as $key => $value): ?>
-
                                     <tr class="remove-<?= $value['id'] ?>">
                                             <td><?php echo $key+1 ?></td>
+                                            <td><?= $value['name'] ?></td>
+                                            <td><?= $value['phone'] ?></td>
+                                            <td><?= $value['product'] ?></td>
+                                            <td><?= $value['amount'] ?></td>
+                                            <td><?= date('d-m-Y H:i', $value['created_at']) ?></td>
                                             <td>
-                                                <div class="mask_sm">
-                                                    <img src="<?= base_url('assets/upload/banner/' . $value['image']) ?>"  width=150px height=100px>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <?php echo $value['url'] ?>
-                                            </td>
-                                            <td class="is-active-<?= $value['id'] ?>">
-                                                <?php
-                                                    if ($value['is_active'] == 0) {
-                                                        echo '<span class="label label-warning">Không sử dụng</span>';
-                                                    }else{
-                                                        echo '<span class="label label-success">Đang sử dụng</span>';
-                                                    }
-                                                ?>
-                                            </td>
-                                            <td>
-                                                <a href="<?= base_url('admin/banner/detail/' . $value['id'] ) ?>" title="Xem chi tiết">
-                                                    <i class="fa fa-eye" aria-hidden="true"></i>
-                                                </a>
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                <a href="<?= base_url('admin/banner/edit/' . $value['id'] ) ?>" style="color: #f0ad4e" title="Cập nhật">
-                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                <a href="javascript:void(0)" class="btn-remove" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/message/remove' ) ?>" data-name="tin nhắn"  style="color: #d9534f" title="Xóa">
+                                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
                                                 </a>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <a href="javascript:void(0)" class="btn-remove" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/banner/remove' ) ?>" data-name="danh mục"  style="color: #d9534f" title="Xóa">
-                                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                                    </a>
-                                                    <?php if ($value['is_active'] == 0): ?>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <a href="javascript:void(0)" class="btn-active" title="Sử dụng" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/banner/active' ) ?>" style="color: #00a65a" >
-                                                        <i class="fa fa-check" aria-hidden="true"></i>
-                                                    </a>
-                                                    <?php endif; ?>
-                                                    <?php if ($value['is_active'] == 1): ?>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <a href="javascript:void(0)" class="btn-deactive" title="Tắt" data-id="<?= $value['id'] ?>" data-url="<?= base_url('admin/banner/deactive' ) ?>" style="color: #f0ad4e">
-                                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                                    </a>
-                                                    <?php endif; ?>
                                             </td>
                                         </tr>
                                 <?php endforeach ?>
                                     <tr>
                                         <th>No.</th>
-                                        <th>Hình ảnh</th>
-                                        <th>Url</th>
-                                        <th>Trạng thái</th>
+                                        <th>Tên</th>
+                                        <th>Số điện thoại</th>
+                                        <th>Sản phẩm</th>
+                                        <th>Số lượng</th>
+                                        <th>Thời gian đăng ký</th>
                                         <th>Action</th>
                                     </tr>
                                 <?php else: ?>
                                     <tr>
-                                        Chưa có Banner
+                                        Chưa có message
                                     </tr>
                                 <?php endif; ?>
 

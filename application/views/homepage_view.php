@@ -44,15 +44,7 @@
 					<div class="row">
 						<div class="col-lg-9">
 							<h6>
-								Lời đầu tiên, xin cảm ơn Quý khách hàng đã ghé thăm website của Minh Dental. Nếu Quý khách hàng đang cần tìm một đơn vị uy tín cung cấp các trang - thiết bị và vật tư về nha khoa thì vui lòng đừng bỏ qua các thông tin dưới đây.
-							</h6>
-
-							<h6>
-								Với gần 40 năm xây dựng và phát triển, Minh Dental đã trở thành một cái tên quen thuộc đối với nhiều phòng khám Nha khoa và các đại lý phân phối thiết bị Nha khoa trên cả nước. 
-							</h6>
-
-							<h6>
-								Không chỉ là đơn vị phân phối độc quyền các trang thiết bị Nha khoa của các thương hiệu nổi tiếng trên thế giới, Minh Dental còn có dịch vụ chăm sóc sau bán hàng được các đối tác đánh giá tốt nhất hiện nay. 
+								<?php echo $HOMEPAGE_ABOUT ?>
 							</h6>
 						</div>
 					</div>
@@ -62,31 +54,31 @@
 					<div class="row">
 						<div class="col-lg-4 wow fadeInUp" data-wow-delay="0s">
 							<h3>
-								40
+								<?php echo $HOMEPAGE_ABOUT_1_TITLE ?>
 							</h3>
 
 							<h5>
-								Năm kinh nghiệm trong ngành Y - Nha khoa
+								<?php echo $HOMEPAGE_ABOUT_1_DESC ?>
 							</h5>
 						</div>
 
 						<div class="col-lg-4 wow fadeInUp" data-wow-delay="1s">
 							<h3>
-								200+
+								<?php echo $HOMEPAGE_ABOUT_2_TITLE ?>
 							</h3>
 
 							<h5>
-								Đại lý trên khắp cả nước
+								<?php echo $HOMEPAGE_ABOUT_2_DESC ?>
 							</h5>
 						</div>
 
 						<div class="col-lg-4 wow fadeInUp" data-wow-delay="2s">
 							<h3>
-								10.000
+								<?php echo $HOMEPAGE_ABOUT_3_TITLE ?>
 							</h3>
 
 							<h5>
-								Phòng khám Nha khoa tin dùng
+								<?php echo $HOMEPAGE_ABOUT_3_DESC ?>
 							</h5>
 						</div>
 					</div>
@@ -258,11 +250,11 @@
 
 		<div class="overlay">
 			<h4>
-				đăng kí để nhận thông báo
+				<?php echo $HOMEPAGE_NOTI_TITLE ?>
 			</h4>
 
 			<p>
-				Hãy đăng ký ngay để nhận thông báo về các chương trình khuyến mại trong năm của Minh Dental.
+				<?php echo $HOMEPAGE_NOTI_DESC ?>
 			</p>
 
 			<button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalReceiveNotification" type="button">

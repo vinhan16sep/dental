@@ -24,13 +24,13 @@
 						</h3>
 
 						<h6>
-							Lời đầu tiên, xin cảm ơn Quý khách hàng đã ghé thăm website của Minh Dental. Nếu Quý khách hàng đang cần tìm một đơn vị uy tín cung cấp các trang - thiết bị và vật tư về nha khoa thì vui lòng đừng bỏ qua các thông tin dưới đây.
+							<?php echo $ABOUT_DESC_1 ?>
 						</h6>
 					</div>
 
 					<div class="col-lg-6">
 						<p>
-							Minh Dental là một trong những doanh nghiệp cung cấp thiết bị nha khoa khoa đầu tiên tại Việt Nam. Trải qua 40 năm xây dựng, phát triển và trưởng thành, Minh Dental gắn bó với nhiều đơn vị cung cấp thiết bị, bệnh viện, phòng khám nha khoa trên cả nước. Đi cùng với niềm tự hào là sự uy tín, trách nhiệm và nỗ lực để xứng đáng với niềm tin yêu của các đối tác, khách hàng. 
+							<?php echo $ABOUT_DESC_2 ?>
 						</p>
 					</div>
 				</div>
@@ -48,7 +48,7 @@
 								Giới thiệu về công ty
 							</a>
 						</li>
-						<li>
+						<li style="display: none">
 							<a href="#aboutLibrary">
 								Tư liệu truyền thống
 							</a>
@@ -75,31 +75,17 @@
 
 					<div class="text">
 						<p>
-							Cho đến nay, Minh Dental vẫn nỗ lực đổi mới từng ngày, đón đầu xu thế, đem đến những sản phẩm chất lượng cao, công nghệ đột phá để các bác sĩ Nha khoa, các bệnh nhân sẽ cảm thấy an tâm, thoải mái khi khám, điều trị các vấn đề về nha khoa. 
-						</p>
-
-						<p>
-							Minh Dental hiện cung cấp nhiều thiết bị nha khoa khác nhau từ các thương hiệu nổi tiếng thế giới. Trong đó, chủ lực là sản phẩm về ghế nha khoa. Chúng tôi là đơn vị phân phối độc quyền ghế nha khoa Cingol tại Việt Nam. Có thể khẳng định so với các sản phẩm cùng phân khúc thì Cingol là sản phẩm mang lại ấn tượng sâu sắc với khách hàng về chất lượng, tiện ích và đa dạng về mẫu mã.
-						</p>
-
-						<p>
-							Bên cạnh đó, Minh Dental cũng cung cấp các thiết bị hỗ trợ vận hành ghế, các thiết bị hình ảnh, thiết bị phục hồi thẩm mỹ, thiết bị nội nha, hệ thống vô khuẩn, vật tư, vật liệu…
-						</p>
-
-						<p>
-							Tính đến thời điểm này, Minh Dental đã xây dựng được 200 đại lý trên cả nước và là đơn vị cung cấp cho hơn 10.000 phòng khám nha khoa, bệnh viện…
-						</p>
-
-						<p>
-							Để hành trình phụng sự khách hàng phát triển mạnh mẽ hơn nữa, Minh Dental hy vọng sẽ có cơ hội hợp tác với nhiều đại lý, các phòng khám nha khoa, các bệnh viện có nhu cầu cung cấp về thiết bị nha khoa trên cả nước hơn nữa. Để lan tỏa những sản phẩm chất lượng cao và đem đến những giá trị thiết thực cho đội ngũ bác sĩ nha khoa và bệnh nhân.
-						</p>
+							<?php echo $ABOUT_DESC_3 ?>
+						</p>	
 					</div>
 
-					<div class="video-break">
-						<div class="ratio ratio-16x9">
-							<iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
+					<?php if($ABOUT_DESC_3 != ''): ?>
+						<div class="video-break">
+							<div class="ratio ratio-16x9">
+								<iframe src="https://www.youtube.com/embed/<?php echo $ABOUT_DESC_3 ?>" title="YouTube video" allowfullscreen></iframe>
+							</div>
 						</div>
-					</div>
+					<?php endif ?>
 
 					<div class="library" id="aboutLibrary" style="display: none;">
 						<div class="library-header">
@@ -192,7 +178,7 @@
 								<div class="row">
 									<div class="col-lg-9">
 										<h6>
-										Minh Dental hợp tác chặt chẽ với nhiều đơn vị cung cấp trang thiết bị Nha khoa đến từ các thương hiệu nổi tiếng và lâu năm trên thế giới như: Cingol, Jindel, Baolai…, nhằm đảm bảo mang đến cho khách hàng nguồn hàng uy tín và chất lượng cao.
+											<?php echo $PARTNER ?>
 										</h6>
 									</div>
 								</div>
@@ -233,31 +219,10 @@
 						</div>
 				
 						<div class="faq-body">
-							<?php 
-								$faqs = [
-									0 => [
-										'title' => 'Vestibulum in ipsum leo. In ut quam non tortor consequat congue quis a est. Maecenas blandit gravida commodo. Fusce luctus egestas dolor. Duis vulputate diam a mi scelerisque faucibus.',
-										'content' => 'Aenean suscipit felis ut nunc maximus, ac tempus felis molestie. Fusce ac augue felis. Nullam ullamcorper diam ac arcu dignissim porta. Curabitur pulvinar ultrices sem, at malesuada velit euismod non. Vivamus placerat scelerisque velit. Duis non sollicitudin nibh. Proin maximus, magna ut scelerisque euismod, lacus tortor sagittis lorem, a venenatis ex magna vitae ipsum. Donec laoreet in purus quis laoreet. Nulla rutrum eros ac augue pretium condimentum. Suspendisse potenti. Quisque ut ultricies nulla. Ut odio felis, pretium eu turpis at, mattis malesuada nulla. Aliquam facilisis, quam vitae gravida cursus, quam diam maximus est, efficitur fringilla arcu nisl a magna. Suspendisse sollicitudin dolor id tristique ultricies.'
-									],
-									1 => [
-										'title' => 'Sed varius felis eu ultricies porta. , fermentum consectetur orci. In sit amet libero pellentesque.',
-										'content' => 'Aenean suscipit felis ut nunc maximus, ac tempus felis molestie. Fusce ac augue felis. Nullam ullamcorper diam ac arcu dignissim porta. Curabitur pulvinar ultrices sem, at malesuada velit euismod non. Vivamus placerat scelerisque velit. Duis non sollicitudin nibh. Proin maximus, magna ut scelerisque euismod, lacus tortor sagittis lorem, a venenatis ex magna vitae ipsum. Donec laoreet in purus quis laoreet. '
-									],
-									2 => [
-										'title' => 'Vestibulum in ipsum leo. In ut quam non tortor consequat congue quis a est. Maecenas blandit gravida commodo. Fusce luctus egestas dolor. Duis vulputate diam a mi scelerisque faucibus.',
-										'content' => 'Aenean suscipit felis ut nunc maximus, ac tempus felis molestie. Fusce ac augue felis. Nullam ullamcorper diam ac arcu dignissim porta. Curabitur pulvinar ultrices sem, at malesuada velit euismod non. Vivamus placerat scelerisque velit. Duis non sollicitudin nibh. Proin maximus, magna ut scelerisque euismod, lacus tortor sagittis lorem, a venenatis ex magna vitae ipsum. Donec laoreet in purus quis laoreet. Nulla rutrum eros ac augue pretium condimentum. Suspendisse potenti. Quisque ut ultricies nulla. Ut odio felis, pretium eu turpis at, mattis malesuada nulla. Aliquam facilisis, quam vitae gravida cursus, quam diam maximus est, efficitur fringilla arcu nisl a magna. Suspendisse sollicitudin dolor id tristique ultricies.'
-									],
-									3 => [
-										'title' => 'Sed varius felis eu ultricies porta. , fermentum consectetur orci. In sit amet libero pellentesque.',
-										'content' => 'Aenean suscipit felis ut nunc maximus, ac tempus felis molestie. Fusce ac augue felis. Nullam ullamcorper diam ac arcu dignissim porta. Curabitur pulvinar ultrices sem, at malesuada velit euismod non. Vivamus placerat scelerisque velit. Duis non sollicitudin nibh. Proin maximus, magna ut scelerisque euismod, lacus tortor sagittis lorem, a venenatis ex magna vitae ipsum. Donec laoreet in purus quis laoreet. '
-									],
-								];
-							?>
-
 							<?php foreach($faqs as $faq): ?>
-								<a href="#" class="btn-get-faq-detail">
+								<a href="#" class="btn-get-faq-detail" data-id="<?php echo $faq['id'] ?>">
 									<h6>
-										<?php echo $faq['title'] ?>
+										<?php echo $faq['question'] ?>
 									</h6>
 								</a>
 							<?php endforeach; ?>
@@ -279,13 +244,9 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<h6>
-						Vestibulum in ipsum leo. In ut quam non tortor consequat congue quis a est. Maecenas blandit gravida commodo. Fusce luctus egestas dolor. Duis vulputate diam a mi scelerisque faucibus.
-					</h6>
+					<h6 class="faq-question"></h6>
 
-					<p>
-						Aenean suscipit felis ut nunc maximus, ac tempus felis molestie. Fusce ac augue felis. Nullam ullamcorper diam ac arcu dignissim porta. Curabitur pulvinar ultrices sem, at malesuada velit euismod non. Vivamus placerat scelerisque velit. Duis non sollicitudin nibh. Proin maximus, magna ut scelerisque euismod, lacus tortor sagittis lorem, a venenatis ex magna vitae ipsum. Donec laoreet in purus quis laoreet. Nulla rutrum eros ac augue pretium condimentum. Suspendisse potenti. Quisque ut ultricies nulla. Ut odio felis, pretium eu turpis at, mattis malesuada nulla. Aliquam facilisis, quam vitae gravida cursus, quam diam maximus est, efficitur fringilla arcu nisl a magna. Suspendisse sollicitudin dolor id tristique ultricies.
-					</p>
+					<p class="faq-answer"></p>
 				</div>
 			</div>
 		</div>

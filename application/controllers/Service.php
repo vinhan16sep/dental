@@ -6,6 +6,7 @@ class Service extends Public_Controller {
 		parent::__construct();
 
 		$this->load->model('service_model');
+		$this->load->model('content_model');
 
         $this->load->library('session');
 	}
@@ -18,6 +19,8 @@ class Service extends Public_Controller {
 		];
 		$this->data['the_view_js'] = [];
 		
+		$this->data['SERVICE_DESC'] = $this->content_model->get_content_by_type('SERVICE_DESC')['content'];
+
 		$this->data['services'] = $this->service_model->get_all();
 
         $this->render('service_view');
