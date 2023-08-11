@@ -12,7 +12,7 @@ class Product extends Public_Controller {
 		$this->load->model('order_model');
 
 		$this->load->helper('common_helper');
-        $this->author_data = handle_author_common_data();
+        $this->author_data = handle_author_guest_common_data();
 
         $this->load->library('session');
 	}

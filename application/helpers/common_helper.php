@@ -48,6 +48,22 @@ if (!function_exists('handle_common_author_data')) {
             'updated_by' => $CI->ion_auth->user()->row()->username
         );
     }
+
+    function handle_author_guest_common_data() {
+        $CI =& get_instance();
+        $CI->load->library('ion_auth');
+
+        date_default_timezone_set('Asia/Ho_Chi_Minh');
+
+        return array(
+            // 'created_at' => date('Y-m-d H:i:s', now()),
+            'created_at' => now(),
+            'created_by' => 'guest',
+            // 'updated_at' => date('Y-m-d H:i:s', now()),
+            'updated_at' => now(),
+            'updated_by' => 'guest'
+        );
+    }
 }
 
 //build array for dropdown form template

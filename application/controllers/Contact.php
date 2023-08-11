@@ -11,7 +11,7 @@ class Contact extends Public_Controller {
         $this->load->library('session');
 
 		$this->load->helper('common_helper');
-        $this->author_data = handle_author_common_data();
+        $this->author_data = handle_author_guest_common_data();
 	}
 
     public function index()
