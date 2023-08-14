@@ -4,15 +4,39 @@
 	.section {
 		margin-bottom: 8rem;
 
+		@include tablet(){
+			margin-bottom: 4rem;
+		}
+
+		@include mobile(){
+			margin-bottom: 2rem;
+		}
+
 		&:not(:first-child){
 			margin-top: 8rem;
+
+			@include tablet(){
+				margin-top: 4rem;
+			}
+	
+			@include mobile(){
+				margin-top: 2rem;
+			}
 		}
 
 		&.section-cover {
 			height: calc(100vh - 122px);
 
+			@include tabletAndMobile(){
+				height: calc(100% / 3 * 4);
+			}
+
 			.swiper-container {
 				height: 100%;
+
+				@include tabletAndMobile() {
+					width: 100%;
+				}
 
 				.swiper-pagination {
 					bottom: 1.5rem;
@@ -63,11 +87,23 @@
 
 								@include d-flex(column, flex-end, flex-start);
 
+								@include mobile() {
+									padding-left: 1rem;
+									padding-right: 1rem;
+								}
+
 								.text {
 									padding: 1.5rem 3rem;
 									margin-bottom: 4rem;
 
 									background-color: var(--white);
+
+									@include mobile() {
+										width: 100%;
+										
+										padding-left: 1.5rem;
+										padding-right: 1.5rem;
+									}
 
 									&:hover {
 										h6 {
@@ -110,10 +146,28 @@
 
 			background-color: var(--primary-alpha-20);
 
+			@include mobile() {
+				padding-top: 2rem;
+			}
+
 			.container {
 				.section-header {
+					@include mobile() {
+						@include d-flex(column, flex-start, flex-start);
+					}
+
+					h3 {
+						@include mobile() {
+							margin-bottom: 0.75rem;
+						}
+					}
+
 					.form-select {
 						max-width: 200px;
+
+						@include mobile() {
+							max-width: 80%;
+						}
 					}
 				}
 
@@ -345,6 +399,10 @@
 		&.section-categories {
 			.container {
 				.section-body {
+					@include tabletAndMobile() {
+						padding-left: 0;
+					}
+
 					.row {
 						> div {
 							a {
@@ -453,6 +511,10 @@
 							.swiper-slide {
 								@include d-flex(column, center, center);
 
+								@include mobile() {
+									width: auto;
+								}
+
 								&:hover{
 									.img-mask {
 										img {
@@ -488,12 +550,36 @@
 
 		&.section-about {
 			.container {
+				.section-header {
+					@include mobile() {
+						margin-bottom: 1.5rem;
+					}
+				}
+
 				.section-body {
 					.about-heading {
 						margin-bottom: 5rem;
 
+						@include tablet(){
+							margin-bottom: 3rem;
+						}
+				
+						@include mobile(){
+							margin-bottom: 2rem;
+						}
+
 						.row {
 							> div {
+								&:not(:last-child) {
+									margin-bottom: 1.5rem;
+								}
+
+								h5 {
+									@include mobile() {
+										max-width: 80%;
+									}
+								}
+
 								h6 {
 									font-size: 1.25rem;
 									font-weight: 500;
@@ -508,6 +594,10 @@
 						.row {
 							> div {
 								@include d-flex(column, flex-start, center);
+
+								@include mobile() {
+									margin-bottom: 1.5rem;
+								}
 
 								h3 {
 									margin-bottom: 1.5rem;
@@ -576,6 +666,10 @@
 					margin-bottom: 0.75rem;
 
 					text-align: center;
+
+					@include mobile() {
+						padding: 0 1.5rem;
+					}
 				}
 
 				ul {
@@ -607,11 +701,37 @@
 
 				@include borderRadius(1.5rem);
 
+				@include tablet() {
+					max-width: unset;
+
+					padding-top: 4rem;
+				}
+
+				@include mobile() {
+					padding-top: 2rem;
+				}
+
+				.section-header {
+					@include tablet() {
+						padding-left: 3rem;
+						margin-bottom: 1.5rem;
+					}
+
+					@include mobile() {
+						margin-bottom: 1.5rem;
+					}
+				}
+
 				.section-body {
 					padding: 0 calc(100% / 12 - 1.5rem);
 
 					.row {
 						> div {
+							&:not(:last-child){
+								@include mobile() {
+									margin-bottom: 1.5rem;
+								}
+							}
 							.card {
 								background-color: transparent;
 								box-shadow: none;
@@ -626,6 +746,12 @@
 										font-weight: 600;
 
 										@include textWrapper(100%, 3.75rem, 2);
+
+										@include tabletAndMobile() {
+											max-height: 3.75rem;
+											
+											@include textWrapper(100%, auto, 2);
+										}
 									}
 
 									p {
@@ -639,6 +765,10 @@
 											text-align: justify;
 											
 											@include textWrapper(100%, 4rem, 3);
+
+											@include tabletAndMobile() {
+												margin-bottom: 1rem;
+											}
 										}
 									}
 
@@ -650,6 +780,10 @@
 										color: var(--text-overline);
 										
 										@include d-flex(row, flex-end, center);
+
+										@include tablet() {
+											margin-top: 0;
+										}
 	
 										i {
 											margin-left: 0.25rem;
@@ -675,6 +809,10 @@
 				padding-left: calc(100% / 12 - 1.5rem);
 
 				@include d-flex(row, space-between, center);
+
+				@include mobile() {
+					padding-left: 3rem;
+				}
 
 				h3 {
 					font-size: 2rem;
@@ -827,185 +965,6 @@
 							}
 						}
 					}
-				}
-			}
-		}
-	}
-}
-
-@media screen and (min-width: 576.98px) and (max-width: 1200px) {
-	.view-homepage {
-		.section {
-			&.section-blogs {
-				.container {
-					max-width: unset;
-
-					.section-header {
-						padding-left: 3rem;
-						margin-bottom: 1.5rem;
-					}
-
-					.section-body {
-						.row {
-							> div {
-								.card {
-									.card-body {
-										h5 {
-											max-height: 3.75rem;
-											
-											@include textWrapper(100%, auto, 2);
-										}
-
-										p {
-											&:not(.date){
-												margin-bottom: 1rem;
-											}
-										}
-
-										a {
-											margin-top: 0;
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 576.98px) {
-	.view-homepage {
-		.section {
-			&.section-cover {
-				.swiper-container {
-					width: 100%;
-
-					.swiper-wrapper {
-						.swiper-slide {
-							a {
-								.container-fluid {
-									padding-left: 1rem;
-										padding-right: 1rem;
-
-									.text {
-										width: 100%;
-										
-										padding-left: 1.5rem;
-										padding-right: 1.5rem;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-
-			&.section-about {
-				.container {
-					.section-header {
-						margin-bottom: 1.5rem;
-					}
-
-					.section-heading {
-						margin-bottom: 2rem;
-					}
-
-					.section-body {
-						.about-content {
-							.row {
-								> div {
-									&:not(:last-child) {
-										margin-bottom: 1.5rem;
-									}
-
-									h5 {
-										max-width: 80%;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-
-			&.section-highlight {
-				.container {
-					.section-header {
-						@include d-flex(column, flex-start, flex-start);
-
-						h3 {
-							margin-bottom: 0.75rem;
-						}
-
-						.form-select {
-							max-width: 80%;
-						}
-					}
-				}
-			}
-
-			&.section-client {
-				.container {
-					.section-body {
-						.swiper-container {
-							.swiper-wrapper{
-								.swiper-slide {
-									width: auto;
-								}
-							}
-						}
-					}
-				}
-			}
-
-			&.section-receive-notification {
-				.overlay {
-					p {
-						padding: 0 1.5rem;
-					}
-				}
-			}
-
-			&.section-blogs {
-				.container {
-					.section-header {
-						margin-bottom: 1.5rem;
-					}
-
-					.section-body {
-						.row {
-							> div {
-								&:not(:last-child){
-									margin-bottom: 1.5rem;
-								}
-
-								.card {
-									.card-body {
-										h5 {
-											max-height: 3.75rem;
-
-											@include textWrapper(100%, auto, 2);
-										}
-
-										p {
-											&:not(.date) {
-												margin-bottom: 1rem;
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-
-			.container {
-				.section-header {
-					padding-left: 3rem;
 				}
 			}
 		}

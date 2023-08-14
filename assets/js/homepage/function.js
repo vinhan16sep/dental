@@ -47,7 +47,7 @@ $(document).ready(function () {
             0: {
                 slidesPerView: 1
             },
-            800: {
+            768: {
                 slidesPerView: 2
             }
         },
@@ -183,6 +183,9 @@ function getHighlightByCategory(category = '') {
                         breakpoints: {
                             0: {
                                 slidesPerView: 1
+                            },
+                            768: {
+                                slidesPerView: 2
                             },
                             1024: {
                                 slidesPerView: 3

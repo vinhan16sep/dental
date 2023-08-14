@@ -187,7 +187,7 @@
 															</p>
 
 															<div class="price">
-																<?= $slide['price'] ?>
+																<?php echo $slide['price'] != '' ? $slide['price'] : 'Liên hệ' ?>
 
 																<!-- <div class="btn btn-sm btn-primary">
 																	Thêm vào giỏ hàng
@@ -311,7 +311,7 @@
 							?>
 						</div>
 
-						<?php echo form_submit('submit', 'Đặt hàng', 'class="btn btn-outline-primary" '); ?>
+						<?php echo form_submit('submit', 'Gửi thông tin', 'class="btn btn-outline-primary" '); ?>
 					<?php echo form_close(); ?>
 				</div>
 			</div>
