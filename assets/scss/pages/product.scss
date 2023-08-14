@@ -1,11 +1,19 @@
 @import '../settings/mixin';
 
 .view-product {
+	@include mobile() {
+		padding: 0 1.5rem;
+	}
+
 	.overview {
 		padding-top: 4rem;
 		padding-bottom: 4rem;
 
 		@include gradientLinearBackground(to bottom, rgba(161, 43, 46, 0), rgba(161, 43, 46, 0.1));
+
+		@include mobile() {
+			height: auto;
+		}
 
 		&.has-highlight {
 			min-height: calc(100vh - 90px);
@@ -42,6 +50,10 @@
 
 					font-size: 3rem;
 					font-weight: 600;
+
+					@include mobile() {
+						font-size: 2.5rem;
+					}
 				}
 			}
 
@@ -166,10 +178,60 @@
 		padding-top: 8rem;
 		padding-bottom: 8rem;
 
+		position: relative;
+
+		@include tablet() {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		@include mobile() {
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+		}
+
 		.container {
 			> .row {
 				> div {
+					&:first-child {
+						background-color: var(--bg-bw);
+
+						@include tabletAndMobile() {
+							width: 70vw;
+
+							position: absolute;
+							top: 0;
+							left: -70vw;
+							z-index: 100;
+
+							@include transition();
+
+							&.show {
+								left: 0;
+
+								@include transition();
+							}
+						}
+					}
+
 					.products-filter {
+						position: relative;
+
+						.btn{
+							&.btn-toggle-filter {
+								position: absolute;
+								top: 0;
+								left: calc(100% + 2rem);
+								z-index: 1;
+
+								display: none;
+
+								@include tabletAndMobile() {
+									display: block;
+								}
+							}
+						}
+
 						.filter-item {
 							&:not(:last-child){
 								margin-bottom: 2rem;
@@ -179,6 +241,10 @@
 								margin-bottom: 1rem;
 
 								@include d-flex(row, flex-start, center);
+
+								a {
+									display: block;
+								}
 
 								h6 {
 									flex: 1 0 auto;
@@ -313,91 +379,6 @@
 												}
 											}
 										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-@media screen and (min-width: 576.98px) and (max-width: 1200px) {
-	.view-product {
-		.products {
-			.container {
-				> .row {
-					> div {
-						&:first-child {
-							margin-bottom: 2rem;
-						}
-
-						.products-filter {
-							.filter-item {
-								.item-header {
-									a {
-										display: block;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 576.98px) {
-	.view-product {
-		padding: 0 1.5rem;
-		
-		.overview {
-			height: auto;
-
-			.container {
-				.overview-header {
-					h3 {
-						font-size: 2.5rem;
-					}
-				}
-	
-				.overview-body {
-					.swiper-container {
-						.swiper-wrapper{
-							.swiper-slide {
-								a {
-									.card {
-										.img-mask {
-											height: 200px;
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-
-		.products {
-			padding-top: 6rem;
-			padding-bottom: 6rem;
-
-			.container {
-				> .row {
-					> div {
-						&:first-child {
-							margin-bottom: 2rem;
-						}
-
-						.products-filter {
-							.filter-item {
-								.item-header {
-									a {
-										display: block;
 									}
 								}
 							}

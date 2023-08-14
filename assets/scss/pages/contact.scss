@@ -5,6 +5,16 @@
 		padding-top: 4rem;
 		padding-bottom: 8rem;
 
+		@include tablet() {
+			padding-top: 2rem;
+			padding-bottom: 4rem;
+		}
+
+		@include mobile() {
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+		}
+
 		.overview {
 			margin-bottom: 4rem;
 
@@ -22,6 +32,10 @@
 					> div {
 						&:not(:last-child){
 							margin-bottom: 4rem;
+
+							@include tabletAndMobile() {
+								margin-bottom: 2rem;
+							}
 						}
 
 						&:last-child {
@@ -54,6 +68,10 @@
 								z-index: 1;
 
 								@include translate(calc(-40px - 0.75rem), 0);
+
+								@include tabletAndMobile() {
+									display: none;
+								}
 							}
 						}
 	
@@ -96,8 +114,19 @@
 			background-color: var(--primary-alpha-20);
 			@include borderRadius(1.5rem);
 
+			@include tabletAndMobile() {
+				width: 100%;
+
+				padding: 2rem 1.5rem;
+				margin-top: 4rem;
+			}
+
 			.form-header {
 				margin-bottom: 4rem;
+
+				@include tabletAndMobile() {
+					padding-left: 0;
+				}
 
 				h5 {
 					font-size: 1.75rem;
@@ -118,6 +147,10 @@
 						z-index: 1;
 	
 						@include translate(calc(-40px - 0.75rem), 0);
+
+						@include tabletAndMobile() {
+							display: none;
+						}
 					}
 				}
 			}
@@ -143,83 +176,6 @@
 							&:hover {
 								color: var(--primary);
 							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-@media screen and (min-width: 576.98px) and (max-width: 1200px) {
-	.view-contact {
-		.container {
-			.address {
-				.row {
-					> div {
-						&:not(:last-child) {
-							margin-bottom: 2rem;
-						}
-
-						h6 {
-							&:before {
-								display: none;
-							}
-						}
-					}
-				}
-			}
-
-			.message-form {
-				width: 100%;
-
-				padding: 2rem 1.5rem;
-
-				.form-header {
-					padding-left: 0;
-
-					h5 {
-						&:before {
-							display: none;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 576.98px) {
-	.view-contact {
-		.container {
-			.address {
-				.row {
-					> div {
-						&:not(:last-child) {
-							margin-bottom: 2rem;
-						}
-
-						h6 {
-							&:before {
-								display: none;
-							}
-						}
-					}
-				}
-			}
-
-			.message-form {
-				width: 100%;
-
-				padding: 2rem 1.5rem;
-				margin-top: 4rem;
-
-				.form-header {
-					padding-left: 0;
-
-					h5 {
-						&:before {
-							display: none;
 						}
 					}
 				}

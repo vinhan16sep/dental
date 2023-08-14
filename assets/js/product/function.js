@@ -1,4 +1,17 @@
 $(document).ready(function () {
+    $(document)
+        .on('click', function (e) {
+            if ($(e.target).parents('.products-filter').length == 0 || !$(e.target).hasClass('products-filter')) {
+                $('.products-filter').parent().removeClass('show');
+            }
+        })
+        .on('click', '.btn-toggle-filter', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            $('.products-filter').parent().toggleClass('show');
+        });
+
     let swiperHighlight = new Swiper('#swiperHighlight', {
         slidesPerView: 3,
         spaceBetween: 32,
@@ -6,6 +19,9 @@ $(document).ready(function () {
         breakpoints: {
             0: {
                 slidesPerView: 1
+            },
+            768: {
+                slidesPerView: 2
             },
             1024: {
                 slidesPerView: 3

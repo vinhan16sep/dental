@@ -161,6 +161,10 @@
 			<div class="row">
 				<div class="col-lg-3">
 					<div class="products-filter">
+						<button class="btn btn-light btn-toggle-filter" type="button">
+							<i class="fas fa-bars"></i>
+						</button>
+
 						<div class="filter-item">
 							<div class="item-header">
 								<h6>

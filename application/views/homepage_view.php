@@ -52,7 +52,7 @@
 
 				<div class="about-content">
 					<div class="row">
-						<div class="col-lg-4 wow fadeInUp" data-wow-delay="0s">
+						<div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0s">
 							<h3>
 								<?php echo $HOMEPAGE_ABOUT_1_TITLE ?>
 							</h3>
@@ -62,7 +62,7 @@
 							</h5>
 						</div>
 
-						<div class="col-lg-4 wow fadeInUp" data-wow-delay="1s">
+						<div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="1s">
 							<h3>
 								<?php echo $HOMEPAGE_ABOUT_2_TITLE ?>
 							</h3>
@@ -72,7 +72,7 @@
 							</h5>
 						</div>
 
-						<div class="col-lg-4 wow fadeInUp" data-wow-delay="2s">
+						<div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="2s">
 							<h3>
 								<?php echo $HOMEPAGE_ABOUT_3_TITLE ?>
 							</h3>
@@ -176,8 +176,8 @@
 			<div class="section-body">
 				<div class="row">
 					<?php foreach($product_category as $key => $category): ?>
-						<div class="col-lg-4 col-md-6">
-							<a href="<?php echo base_url('/product/' . $category['slug']) ?>">		
+						<div class="col-lg-4 col-md-4">
+							<a href="<?php echo base_url('/product/category/' . $category['slug']) ?>">		
 								<div class="card wow fadeIn" data-delay="<?php echo $key % 3 ?>">
 									<div class="card-body">
 										<div class="img-mask">
@@ -291,7 +291,7 @@
 			<div class="section-body">
 				<div class="row">
 					<?php foreach($blogs as $key => $slide): ?>
-						<div class="col-lg-4">
+						<div class="col-lg-4 col-md-6">
 							<div class="card">
 								<div class="card-body">
 									<a href="<?php echo base_url('blogs/detail/' . $slide['slug']) ?>">
