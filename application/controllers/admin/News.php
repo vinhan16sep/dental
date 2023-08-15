@@ -82,6 +82,7 @@ class News extends Admin_Controller{
                     'title' => $this->input->post('title'),
                     'description' => $this->input->post('description'),
                     'body' => $this->input->post('body'),
+                    'category_id' => $this->input->post('parent_id'),
                     'is_active' => $this->input->post('is_active'),
                 );
                 $insert = $this->news_model->insert(array_merge($data, $this->author_data));
@@ -154,6 +155,7 @@ class News extends Admin_Controller{
                     'title' => $this->input->post('title'),
                     'description' => $this->input->post('description'),
                     'body' => $this->input->post('body'),
+                    'category_id' => $this->input->post('parent_id'),
                     'is_active' => $this->input->post('is_active'),
                 );
                 if ( !empty($_FILES['image']['name']) ) {

@@ -73,6 +73,7 @@ function getBlogs(page = currentPage) {
 
                     $item.find('.news-title').text(blog['title']);
                     $item.find('.news-desc').text(blog['description']);
+                    $item.find('.news-date').remove();
 
                     $wrapper.append($item);
                 }
