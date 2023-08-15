@@ -116,12 +116,14 @@
 				.list-blogs {
 					.row {
 						> div {
+							margin-bottom: 1.5rem;
+
 							h6 {
 								margin-bottom: 0.5rem;
 			
 								font-weight: 600;
 			
-								@include textWrapper(100%, 4.125rem, 3);
+								@include textWrapper(100%, 3rem, 2);
 							}
 			
 							p {
