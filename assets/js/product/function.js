@@ -1,17 +1,4 @@
 $(document).ready(function () {
-    $(document)
-        .on('click', function (e) {
-            if ($(e.target).parents('.products-filter').length == 0 || !$(e.target).hasClass('products-filter')) {
-                $('.products-filter').parent().removeClass('show');
-            }
-        })
-        .on('click', '.btn-toggle-filter', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            $('.products-filter').parent().toggleClass('show');
-        });
-
     let swiperHighlight = new Swiper('#swiperHighlight', {
         slidesPerView: 3,
         spaceBetween: 32,
@@ -38,6 +25,19 @@ $(document).ready(function () {
             el: '#swiperHighlight .swiper-pagination'
         }
     });
+
+    $(document)
+        .on('click', function (e) {
+            if ($(e.target).parents('.products-filter').length == 0 || !$(e.target).hasClass('products-filter')) {
+                $('.products-filter').parent().removeClass('show');
+            }
+        })
+        .on('click', '.btn-toggle-filter', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            $('.products-filter').parent().toggleClass('show');
+        });
 
     $('[data-bs-toggle="tooltip"]').tooltip();
 
@@ -93,7 +93,7 @@ function getProducts(page = currentPage) {
         _token: $('[name="csrf_token"]').attr('value'),
         limit: 15,
         start: (currentPage - 1) * 20,
-        keyword: ''
+        keyword: $('[name="searchKey"]').val()
     };
 
     let categoryId = false;

@@ -45,31 +45,31 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#">
+                        <a href="https://demo.minhdental.com/blogs/detail/quy-dinh-bao-mat-thong-tin">
                             Quy định bảo mật
                         </a>
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="https://demo.minhdental.com/blogs/detail/che-do-bao-hanh-san-pham">
                             Chế độ bảo hành
                         </a>
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="https://demo.minhdental.com/blogs/detail/giao-nhan-hang">
                             Quy định giao - nhận hàng
                         </a>
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="https://demo.minhdental.com/blogs/detail/quy-dinh-doi---tra-hang">
                             Quy định đổi - trả hàng
                         </a>
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="https://demo.minhdental.com/blogs/detail/hoi-dap">
                             Hỏi đáp
                         </a>
                     </li>
@@ -83,19 +83,13 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#">
-                            Quy định bảo mật
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
+                        <a href="https://demo.minhdental.com/blogs/detail/cam-ket-chat-luong">
                             Cam kết chất lượng
                         </a>
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="https://demo.minhdental.com/blogs/detail/cam-ket-gia">
                             Cam kết giá
                         </a>
                     </li>

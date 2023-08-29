@@ -96,8 +96,7 @@
   border-radius: 0.5rem;
 }
 .view-about .detail .container .row > div > .text {
-  margin-bottom: 6rem;
-  padding: 0 11.1111111111%;
+  margin-bottom: 2rem;
 }
 @media (max-width: 1199.98px) {
   .view-about .detail .container .row > div > .text {
@@ -154,16 +153,16 @@
   transition: all ease-in-out 300ms;
 }
 .view-about .detail .container .row > div .video-break {
-  margin: 8rem 0;
+  margin: 2rem 0;
 }
 @media (min-width: 576.98px) and (max-width: 1199.98px) {
   .view-about .detail .container .row > div .video-break {
-    margin: 3rem 0;
+    margin: 1.5rem 0;
   }
 }
 @media (max-width: 576.98px) {
   .view-about .detail .container .row > div .video-break {
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
 }
 .view-about .detail .container .row > div .library .library-header {
@@ -339,13 +338,13 @@
   word-break: break-word;
 }
 .view-about .detail .container .row > div .client {
-  padding-top: 8rem;
-  padding-bottom: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 @media (max-width: 1199.98px) {
   .view-about .detail .container .row > div .client {
-    padding-top: 0;
-    padding-bottom: 2rem;
+    padding-top: 1.5;
+    padding-bottom: 1.5rem;
   }
 }
 .view-about .detail .container .row > div .client .client-header {
@@ -384,6 +383,9 @@
   z-index: 1;
   -webkit-transform: translate(calc(-40px - 0.75rem), 0);
   transform: translate(calc(-40px - 0.75rem), 0);
+}
+.view-about .detail .container .row > div .client .client-body .client-heading h6 {
+  text-align: justify;
 }
 .view-about .detail .container .row > div .client .client-body .client-content {
   padding-top: 3rem;

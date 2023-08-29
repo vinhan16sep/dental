@@ -3,6 +3,10 @@
 .view-product-detail {
 	.detail-content {
 		.container {
+			[aria-label="breadcrumb"] {
+				margin-bottom: 0.75rem;
+			}
+
 			.row {
 				> div {
 					.content-text,
@@ -11,15 +15,17 @@
 					}
 	
 					.content-text {
-						padding-top: 2.5rem;
-						padding-bottom: 2rem;
-	
-						.text-header {
-							margin-bottom: 4rem;
+						height: 100%;
 
-							@include mobile() {
-								margin-bottom: 2rem;
-							}
+						padding-top: 0.5rem;
+						padding-bottom: 1rem;
+
+						position: relative;
+
+						.text-header {
+							width: 100%;
+
+							margin-bottom: 1.5rem;
 	
 							h5 {
 								margin-bottom: 1rem;
@@ -30,7 +36,7 @@
 							}
 			
 							h3 {
-								margin-bottom: 5.375rem;
+								margin-bottom: 1rem;
 			
 								font-size: 3rem;
 								font-weight: 600;
@@ -44,6 +50,8 @@
 						}
 	
 						.text-body {
+							width: 100%;
+
 							h6 {
 								margin-bottom: 0.75rem;
 							}
@@ -53,9 +61,16 @@
 							}
 
 							ul {
-								margin: 4rem 0;
+								margin: 1.5rem 0;
+
+								position: absolute;
+								bottom: 1rem;
+								left: 0;
+								z-index: 1;
 
 								@include mobile() {
+									position: static;
+
 									margin: 1rem 0;
 								}
 	
@@ -112,14 +127,12 @@
 					}
 	
 					.content-image {
+						padding-top: 0.5rem;
+						
 						margin-bottom: 1.5rem;
 
 						.swiper-container {
-							margin-top: 4rem;
-
-							@include mobile() {
-								margin-top: 0;
-							}
+							margin-top: 3rem;
 
 							&:hover {
 								.swiper-button-next,
@@ -230,10 +243,12 @@
 	
 						.related-body {
 							.swiper-container {
-								padding-bottom: 8rem;
+								padding: 0 4rem 8rem;
+								margin: 0 -4rem;
 
 								@include mobile() {
-									padding-bottom: 2.5rem;
+									padding: 0 0 2.5rem;
+									margin: 0;
 								}
 	
 								&:hover {

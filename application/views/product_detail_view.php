@@ -108,7 +108,7 @@
 							</button>
 
 							<button class="btn btn-default btn-contact-us" type="button">
-								<i class="fas fa-comments"></i> Gửi thông tin
+								<i class="fas fa-comments"></i> Tư vấn cho tôi
 							</button>
 						</div>
 					</div>
