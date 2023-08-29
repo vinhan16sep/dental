@@ -40,6 +40,14 @@ $(document).ready(function () {
             $('.page-header header .logo').attr('src', '/assets/img/logo_w.svg');
         }
     });
+
+    $('[name="searchKey"]')
+        .unbind()
+        .on('search', function () {
+            value = $(this).val();
+
+            window.location.href = `/product?s=${value}`;
+        });
 });
 
 // GENERATE PAGINATION

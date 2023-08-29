@@ -117,6 +117,9 @@
 					.row {
 						> div {
 							margin-bottom: 1.5rem;
+							padding-bottom: 1.5rem;
+
+							border-bottom: 1px solid var(--border);
 
 							h6 {
 								margin-bottom: 0.5rem;
@@ -136,7 +139,7 @@
 								&:not(.p-sm){
 									max-height: 9rem;
 		
-									margin-bottom: 2rem;
+									margin-bottom: 1rem;
 	
 									text-align: justify;
 		

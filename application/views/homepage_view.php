@@ -41,13 +41,9 @@
 	
 			<div class="section-body">
 				<div class="about-heading">
-					<div class="row">
-						<div class="col-lg-9">
-							<h6>
-								<?php echo $HOMEPAGE_ABOUT ?>
-							</h6>
-						</div>
-					</div>
+					<h6>
+						<?php echo $HOMEPAGE_ABOUT ?>
+					</h6>
 				</div>
 
 				<div class="about-content">
@@ -206,13 +202,9 @@
 	
 			<div class="section-body">
 				<div class="client-heading">
-					<div class="row">
-						<div class="col-lg-9">
-							<h6>
-								Minh Dental hợp tác chặt chẽ với nhiều đơn vị cung cấp trang thiết bị Nha khoa đến từ các thương hiệu nổi tiếng và lâu năm trên thế giới như: Cingol, Jindel, Baolai…, nhằm đảm bảo mang đến cho khách hàng nguồn hàng uy tín và chất lượng cao.
-							</h6>
-						</div>
-					</div>
+					<h6>
+						Minh Dental hợp tác chặt chẽ với nhiều đơn vị cung cấp trang thiết bị Nha khoa đến từ các thương hiệu nổi tiếng và lâu năm trên thế giới như: Cingol, Jindel, Baolai…, nhằm đảm bảo mang đến cho khách hàng nguồn hàng uy tín và chất lượng cao.
+					</h6>
 				</div>
 
 				<div class="client-content">
@@ -267,12 +259,12 @@
 
 			<ul class="list-unstyled">
 				<li>
-					<a href="#" class="btn" target="_blank" role="button">
+					<a href="https://www.facebook.com/nhakhoaminhphuong.net/" class="btn" target="_blank" role="button">
 						<i class="fab fa-facebook-f"></i> Facebook
 					</a>
 				</li>
 				<li>
-					<a href="#" class="btn" target="_blank" role="button">
+					<a href="https://www.youtube.com/@minhdental8516/channels" class="btn" target="_blank" role="button">
 						<i class="fab fa-youtube"></i> Youtube
 					</a>
 				</li>

@@ -72,7 +72,7 @@
 														</h5>
 
 														<p>
-															Aliquam erat volutpat. Donec ac neque ex. Suspendisse potenti. Vivamus fermentum convallis urna, id pretium nulla tempor eget. Etiam faucibus velit et ante fringilla, vel semper lacus laoreet. Pellentesque tempus condimentum ipsum, at aliquet risus efficitur in.
+															<?php echo $blog['description'] ?>
 														</p>
 													</div>
 

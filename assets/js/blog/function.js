@@ -73,7 +73,7 @@ function getBlogs(page = currentPage) {
 
                     $item.find('.news-title').text(blog['title']);
                     $item.find('.news-desc').text(blog['description']);
-                    $item.find('.news-date').remove();
+                    $item.find('.news-date').text(moment(blog['created_at'] * 1000).format('D/MM/Y'));
 
                     $wrapper.append($item);
                 }

@@ -592,11 +592,8 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 1.25rem;
   font-weight: 600;
 }
-.page .page-footer footer .container .row > div ul li:not(:last-child) {
-  margin-bottom: 1.25rem;
-}
 .page .page-footer footer .container .row > div ul li p {
-  line-height: 1.5rem;
+  line-height: 2.5rem;
 }
 .page .page-footer footer .container .row > div ul li img {
   height: 64px;
@@ -605,6 +602,7 @@ body::-webkit-scrollbar-thumb:hover {
 .page .page-footer footer .container .row > div ul li a {
   font-size: 1rem;
   font-weight: 400;
+  line-height: 2.5rem;
   color: #999;
   display: block;
 }

@@ -41,7 +41,7 @@ class Homepage extends Public_Controller {
 		
 
 		$this->data['banner'] = $this->banner_model->fetch_all(3);
-		$this->data['blogs'] = $this->news_model->fetch_all(3);
+		$this->data['blogs'] = $this->news_model->fetch_all(6);
 
 		$this->data['partners'] = $this->partner_model->fetch_all(10);
 

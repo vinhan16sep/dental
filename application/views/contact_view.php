@@ -186,7 +186,7 @@
 						</div>
 
 						<div class="buttons">
-							<?php echo form_submit('submit', 'Gửi', 'class="btn btn-outline-primary" '); ?>
+							<?php echo form_submit('submit', 'Gửi', 'class="btn btn-primary" '); ?>
 						</div>
 					</div>
 				<?php echo form_close(); ?>

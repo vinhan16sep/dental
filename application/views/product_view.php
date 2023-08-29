@@ -57,7 +57,7 @@
 	
 												<div class="overlay">
 													<h6>
-														Mua ngay
+														Xem ngay
 													</h6>
 												</div>
 											</div>

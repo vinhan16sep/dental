@@ -86,7 +86,7 @@
   }
 }
 .view-contact .container .message-form .form-header {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 @media (max-width: 1199.98px) {
   .view-contact .container .message-form .form-header {
@@ -133,9 +133,7 @@
           align-items: center;
 }
 .view-contact .container .message-form .form-body .row .buttons .btn {
-  width: 100px;
-  background-color: var(--white);
-  border-radius: 0;
+  width: 150px;
 }
 .view-contact .container .message-form .form-body .row .buttons .btn:hover {
   color: var(--primary);

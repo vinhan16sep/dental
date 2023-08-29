@@ -12,6 +12,7 @@ class Product extends Public_Controller {
 		$this->load->model('order_model');
 
 		$this->load->helper('common_helper');
+		$this->load->library('email');
         $this->author_data = handle_author_guest_common_data();
 
         $this->load->library('session');
@@ -46,6 +47,8 @@ class Product extends Public_Controller {
 		foreach ($this->data['origins'] as $item) {
 			$brandOrigins[$item['id']] = $item['title'];
 		}
+
+		$this->data['s'] = $this->input->get('s', true);
 
 		$this->data['brandIds'] = $brandIds;
 		$this->data['brandOrigins'] = $brandOrigins;
@@ -246,8 +249,9 @@ class Product extends Public_Controller {
                 );
                 
 				$insert = $this->order_model->insert(array_merge($data, $this->author_data));
+				$sendMail = $this->send_mail($data);
 
-                if ($insert) {
+                if ($insert && $sendMail) {
 					$this->session->set_flashdata('message_success', MESSAGE_CREATE_SUCCESS);
 					redirect('/product/detail/' . $slug, 'refresh');
                 }else{
@@ -257,4 +261,30 @@ class Product extends Public_Controller {
             }
         }
 	}
+
+	public function send_mail($data) {
+		$this->email->from('hotro.minhdental@gmail.com', 'Mail');
+		$this->email->to('contact@minhdental.com');
+		$this->email->subject('Message from web');
+		$this->email->message($this->email_template($data));
+
+		if ($this->email->send()) {
+			return true;
+		} else {
+			return false;
+		}
+    }
+
+    public function email_template($data){
+        $message = '<html><body>';
+        $message .= '<p>Chào Admin, bạn có 1 liện hệ mới từ người dùng trên website</p>';
+        $message .= '<p>Thông tin như sau:</p>';
+        $message .= '<p>Họ tên: ' . $data['name'] . '</p>';
+        $message .= '<p>Số điện thoại: ' . $data['phone'] . '</p>';
+		$message .= '<p>Sản phẩm quan: ' . $data['product'] . '</p>';
+        $message .= '<p>Số lượng: ' . $data['amount'] . '</p>';
+        $message .= "</body></html>";
+
+        return $message;
+    }
 }

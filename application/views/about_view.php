@@ -175,13 +175,9 @@
 				
 						<div class="client-body">
 							<div class="client-heading">
-								<div class="row">
-									<div class="col-lg-9">
-										<h6>
-											<?php echo $PARTNER ?>
-										</h6>
-									</div>
-								</div>
+								<h6>
+									<?php echo $PARTNER ?>
+								</h6>
 							</div>
 
 							<div class="client-content">
@@ -211,7 +207,7 @@
 						</div>
 					</div>
 
-					<div class="faq" id="aboutFaq">
+					<div class="faq" id="aboutFaq" style="display: none;">
 						<div class="faq-header">
 							<h5>
 								FAQs

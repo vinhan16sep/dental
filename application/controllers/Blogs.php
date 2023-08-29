@@ -19,6 +19,7 @@ class Blogs extends Public_Controller {
 		$this->data['the_view_js'] = [
 			'assets/plugins/isotope/imagesloaded.pkgd.min.js',
 			'assets/plugins/isotope/isotope.pkgd.min.js',
+			'assets/plugins/moment/moment.js',
 			'assets/js/blog/function.min.js'
 		];
 

@@ -81,6 +81,10 @@
 						margin-bottom: 6rem;
 						padding: 0 calc(100% / 9);
 
+						> * {
+							text-align: justify;
+						}
+
 						p {
 							&:not(:last-child){
 								margin-bottom: 3.75rem;
@@ -127,7 +131,13 @@
 	
 						.related-body {
 							.swiper-container {
-								padding-bottom: 3rem;
+								padding: 0 4rem 3rem;
+								margin: 0 -4rem;
+
+								@include mobile() {
+									padding: 0 0 2.5rem;
+									margin: 0;
+								}
 								
 								&:hover {
 									.swiper-button-next,

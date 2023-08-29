@@ -109,23 +109,10 @@
                 <i class="fas fa-shopping-cart"></i>
             </button> -->
     
-            
-    
             <div class="header-search-menu">
                 <div class="search-collapse collapse" id="searchCollapse">
                     <div class="container">
-                        <div class="input-group">
-                            <select class="form-select" name="searchType">
-                                <option value="0">Tất cả</option>
-                                <option value="1">Ghế nha khoa - Máy nén</option>
-                                <option value="2">Tay khoan nha khoa</option>
-                                <option value="3">Thiết bị - Phụ tùng</option>
-                                <option value="4">Laboratory</option>
-                                <option value="5">Vật tư - Dụng cụ</option>
-                            </select>
-    
-                            <input type="search" class="form-control" name="searchKey">
-                        </div>
+                        <input type="search" class="form-control" name="searchKey" placeholder="Tìm kiếm..." value="<?php echo isset($s) ? $s : '' ?>">
                     </div>
                 </div>
             </div>
